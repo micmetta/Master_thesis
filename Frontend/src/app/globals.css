@@ -25,3 +25,20 @@ body {
     text-wrap: balance;
   }
 }
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ece9ea;
+}
+
+html {
+  height: 100%;
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: #252d29;
+}

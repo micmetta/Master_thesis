@@ -1,9 +1,16 @@
-"use client"; // Assicurati che il layout sia eseguito lato client
+"use client";
 
-import { AppShell, Burger, MantineProvider } from '@mantine/core'; 
-import { useDisclosure } from '@mantine/hooks';
+import { AppShell, Burger, MantineProvider, Group } from '@mantine/core'; 
+import { useDisclosure, useHeadroom} from '@mantine/hooks';
 import localFont from "next/font/local";
 import "./globals.css";
+import logo from "@/assets/logo.png";
+import classes from "./app-shell.module.css";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
+import AppShellLayout from './AppShellLayout';
+import "@mantine/core/styles.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,38 +28,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   const [opened, { toggle }] = useDisclosure(); // Uso del hook lato client
+  const pinned = useHeadroom({ fixedAt: 40 });
+  const router = useRouter();
 
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         {/* avvolgo l'intera applicazione con MantineProvider */}
         <MantineProvider>
-          <AppShell // appShell
-            header={{ height: 60 }}
-            navbar={{
-              width: 300,
-              breakpoint: 'sm',
-              collapsed: { mobile: !opened },
-            }}
-            padding="md"
-          >
-            <AppShell.Header>
-              <Burger
-                opened={opened}
-                onClick={toggle}
-                hiddenFrom="sm"
-                size="sm"
-              />
-              <div>Logo</div>
-            </AppShell.Header>
-
-            <AppShell.Navbar p="md">Navbar Content</AppShell.Navbar>
-
-            <AppShell.Main>
-              {children}
-            </AppShell.Main>
-          </AppShell>
+          <AppShellLayout>{children}</AppShellLayout>
         </MantineProvider>
       </body>
     </html>

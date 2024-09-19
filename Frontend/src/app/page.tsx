@@ -199,7 +199,7 @@ export default function Home() {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center', marginBottom: '10px', marginTop: '30px', fontWeight: 'bold' }}>
+      <h1 style={{ textAlign: 'center', marginBottom: '10px', marginTop: '80px', fontWeight: 'bold' }}>
         Scrivi qui sotto la query in linguaggio naturale (inglese/italiano) e dopo clicca sul button per generare la query SQL e ottenere i risultati.
       </h1>
 
@@ -279,7 +279,7 @@ export default function Home() {
           <div
             ref={tableContainerRef}
             style={{
-              maxHeight: '400px',
+              maxHeight: '350px',
               overflowY: 'scroll',
               overflowX: 'auto',
               border: '1px solid #ccc',
