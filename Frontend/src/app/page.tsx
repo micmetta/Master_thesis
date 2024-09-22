@@ -6,7 +6,7 @@
 // - useRef per creare una variabile in grado di gestire il comportamento dello scrolling della tabella
 import { Button } from '@mantine/core';
 import { useState, useEffect, useRef } from 'react';
-
+import "./table.css";
 
 export default function Home() {
   // Dichiarazione degli stati (valore attuale dello stato, funzione per aggiornare lo stato e forzare il re-render del componente):
@@ -53,7 +53,7 @@ export default function Home() {
       const response = await fetch(`http://localhost:4000/queryNL?text=${nlQuery}`);
       ////////////////////////////////////////////////////////////////////////////////
 
-      const endTime = performance.now(); // end del timer
+      const endTime = performance.now(); // end timer
       const durationInSeconds  = (endTime - startTime) / 1000; // durata in secondi
       setResponseTime(durationInSeconds); // imposto il tempo di risposta
       
@@ -199,34 +199,51 @@ export default function Home() {
 
   return (
     <div>
-      <h1 style={{ textAlign: 'center', marginBottom: '10px', marginTop: '80px', fontWeight: 'bold' }}>
-        Scrivi qui sotto la query in linguaggio naturale (inglese/italiano) e dopo clicca sul button per generare la query SQL e ottenere i risultati.
+      {/* Titolo principale della pagina */}
+      <h1 style={{ textAlign: 'center', marginTop: '40px', fontWeight: 'bold', fontSize: '36px' }}>
+        Generatore di Query SQL
       </h1>
 
+      {/* Sotto-paragrafo */}
+      <p style={{ textAlign: 'center', marginBottom: '10px', marginTop: '20px', fontWeight: 'bold', fontSize: '18px', lineHeight: '1.5'}}>
+        Scrivi qui sotto la query in linguaggio naturale (Inglese/Italiano) e dopo clicca sul button per generare la query SQL e ottenere i risultati:
+      </p>
+
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '20vh' }}>
+        {/* TextArea */}
         <textarea
           value={nlQuery}
           onChange={(e) => setNlQuery(e.target.value)}
           placeholder="Inserisci query in linguaggio naturale"
           style={{
-            padding: '10px',
-            width: '400px',
-            height: '150px',
-            border: '2px solid #000',
-            borderRadius: '4px',
-            resize: 'vertical',
-            boxShadow: 'none',
-            fontSize: '16px'
+            padding: '12px',
+            width: '450px',
+            height: '160px',
+            border: '2px solid #ccc',  // colore bordo più morbido
+            borderRadius: '15px',  // bordi più arrotondati
+            resize: 'none', // impedisco il ridimensionamento verticale da parte dell'utente
+            boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)', // leggera ombreggiatura
+            fontSize: '16px',
+            transition: 'border-color 0.3s ease, box-shadow 0.3s ease', // transazioni più fluide
+            outline: 'none'
+          }}
+          onFocus={(e) => {
+            e.target.style.borderColor = '#007BFF';  // colore del bordo blu chiaro quando viene cliccata la textarea (feedback visivo)
+            e.target.style.boxShadow = '0px 4px 12px rgba(0, 123, 255, 0.4)'; // ombreggiatura accentuata al click della textarea (feedback visivo)
+          }}
+          onBlur={(e) => {
+            e.target.style.borderColor = '#ccc';  // ritorna al bordo originale
+            e.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.1)'; // ritorna con l'ombreggiatura leggera
           }}
         />
-        {/* Puoi scegliere di utilizzare il button personalizzato o il Button di Mantine */}
         {/* Button personalizzato */}
         <button
           onClick={handleSubmit}
+          disabled={loading} // il button verrà disabilitato fino alla terminazione del caricamento
           style={{
             padding: '10px 20px',
             marginTop: '10px',
-            backgroundColor: '#007BFF',
+            backgroundColor: loading ? '#999' : '#E19243',
             color: 'white',
             border: 'none',
             borderRadius: '5px',
@@ -234,19 +251,11 @@ export default function Home() {
             fontSize: '16px',
             transition: 'background-color 0.3s ease',
           }}
-          onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
-          onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007BFF')}
+          onMouseOver={(e) => !loading && (e.currentTarget.style.backgroundColor = '#C87A39')}
+          onMouseOut={(e) => !loading && (e.currentTarget.style.backgroundColor = "#E19243")}
         >
           Genera SQL
         </button>
-
-        {/* Oppure utilizzare il Button di Mantine */}
-        {/*
-        <Button onClick={handleSubmit} mt="md">
-          Genera SQL
-        </Button>
-        */}
-
         {loading && <p>Caricamento...</p>}
         {error && <p style={{ color: 'red' }}>{error}</p>}
       </div>
@@ -274,49 +283,27 @@ export default function Home() {
           <h3 style={{ fontWeight: 'bold', marginBottom: '10px' }}>
             Risultati della Query (Mostrati {displayedResults.length} di {queryResults.length} risultati):
           </h3>
-
           {/* Contenitore scrollabile per la tabella */}
           <div
             ref={tableContainerRef}
             style={{
-              maxHeight: '350px',
+              maxHeight: '450px',
               overflowY: 'scroll',
               overflowX: 'auto',
               border: '1px solid #ccc',
             }}
           >
-            <table
-              border={1}
-              cellPadding="5"
-              style={{
-                width: '100%',
-                textAlign: 'center',
-                borderCollapse: 'separate',
-                borderSpacing: '0',
-              }}
-            >
-              <thead>
-                <tr>
-                  <th
-                    style={{
-                      position: 'sticky',
-                      top: 0,
-                      zIndex: 1,
-                      backgroundColor: '#f2f2f2',
-                      border: '2px solid black',
-                      padding: '10px',
-                      fontWeight: 'bold',
-                    }}
-                  ></th>
+            <table className='table'>
+              <thead> {/* intestazione tabella */}
+                <tr> 
+                  {/* successive colonne dell'intestazione (nomi colonne) */}
                   {columnNames.map((col, index) => (
-                    <th
-                      key={index}
+                    <th key={index}
                       style={{
                         position: 'sticky',
                         top: 0,
                         zIndex: 1,
-                        backgroundColor: '#f2f2f2',
-                        border: '2px solid black',
+                        border: '1px solid black',
                         padding: '10px',
                         fontWeight: 'bold',
                       }}
@@ -326,13 +313,17 @@ export default function Home() {
                   ))}
                 </tr>
               </thead>
-              <tbody>
+              <tbody> {/* corpo tabella */}
+                {/* con '.map' itero sull'array 'displayedResults', ogni elemento sarà una riga della tabella */}
+                {/* row: array contenente i valori di ogni riga della tabella (no riga intestazione) */}
+                {/* rowIndex: indice incrementale univoco di riga generato dalla map (parte da 0) */}
                 {displayedResults.map((row, rowIndex) => (
-                  <tr key={rowIndex} style={{ borderBottom: '1px solid #ddd' }}>
-                    <td style={{ border: '1px solid #ddd', padding: '8px' }}>{rowCounter[rowIndex]}</td>
+                  <tr key={rowIndex}> {/* per ogni nuova riga creo un nuovo <tr> */}
+                    
+                    {/* itero nuovamente su 'row' per ottenere i singoli valori (cell) di ogni riga*/}
                     {row.map((cell, cellIndex) => (
-                      <td key={cellIndex} style={{ border: '1px solid #ddd', padding: '8px' }}>
-                        {cell !== null ? cell.toString() : 'NULL'}
+                      <td key={cellIndex}> {/* proprietà che in React server per identificare univocamente ogni cella all'interno della riga e ottimizzare la gestione del DOM */}
+                        {cell !== null ? cell.toString() : 'NULL'} {/* se il valore della cella corrente è null allora mostrerò la stringa 'NULL' altrimenti converto il valore in stringa */}
                       </td>
                     ))}
                   </tr>
