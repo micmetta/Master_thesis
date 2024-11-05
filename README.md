@@ -29,21 +29,21 @@ Il file è suddiviso in 3 parti:
 
 1) Variabili di **configurazione** per l'accesso al database **"bioInfoDB"** **(modifica opzionale)**: 
 
-        - POSTGRES_HOST: Specifica l'host del database ma poichè utilizziamo Docker, al posto di localhost, bisogna inserire il nome del servizio definito 
-                         nel docker-compose.yml (che nel nostro caso è 'db') poichè i containers comunicano tra loro utilizzando i nomi dei servizi.
-        - POSTGRES_PORT: Indica la porta su cui il servizio PostgreSQL del database bioInfoDB è in ascolto all'interno del container. Solitamente, la 
-                         porta interna del container è 5432, anche se volendo si potrebbe mappare una porta esterna diversa.
-        - POSTGRES_USER: L'utente utilizzato per accedere al database.
-        - POSTGRES_PASSWORD: La password associata all'utente per accedere al database.
-        - POSTGRES_DB: Il nome del database al quale l'applicazione si connette.
+    - **POSTGRES_HOST**: Specifica l'host del database ma poichè utilizziamo Docker, al posto di localhost, bisogna inserire il nome del servizio definito 
+                     nel docker-compose.yml (che nel nostro caso è 'db') poichè i containers comunicano tra loro utilizzando i nomi dei servizi.
+    - **POSTGRES_PORT**: Indica la porta su cui il servizio PostgreSQL del database bioInfoDB è in ascolto all'interno del container. Solitamente, la 
+                     porta interna del container è 5432, anche se volendo si potrebbe mappare una porta esterna diversa.
+    - **POSTGRES_USER**: L'utente utilizzato per accedere al database.
+    - **POSTGRES_PASSWORD**: La password associata all'utente per accedere al database.
+    - **POSTGRES_DB**: Il nome del database al quale l'applicazione si connette.
 
 2) Variabili di **configurazione** per l'accesso al database **"experimentalDB"** **(modifica opzionale)**: 
 
-        - POSTGRES_HOST: Specifica il nome del servizio definito nel docker-compose.yml (che in questo caso è 'experimentaldb').
-        - POSTGRES_PORT: Indica la porta su cui il servizio PostgreSQL del database experimentalDB è in ascolto all'interno del container.
-        - POSTGRES_USER: L'utente utilizzato per accedere al database.
-        - POSTGRES_PASSWORD: La password associata all'utente.
-        - POSTGRES_DB: Il nome del database sperimentale al quale l'applicazione si connette.
+    - **POSTGRES_HOST**: Specifica il nome del servizio definito nel docker-compose.yml (che in questo caso è 'experimentaldb').
+    - **POSTGRES_PORT**: Indica la porta su cui il servizio PostgreSQL del database experimentalDB è in ascolto all'interno del container.
+    - **POSTGRES_USER**: L'utente utilizzato per accedere al database.
+    - **POSTGRES_PASSWORD**: La password associata all'utente.
+    - **POSTGRES_DB**: Il nome del database sperimentale al quale l'applicazione si connette.
 
 3) Variabili di **configurazione** per la **connessione SSH al server remoto** e per specificare percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(obbligatorio)**:
 
@@ -54,16 +54,17 @@ Il file è suddiviso in 3 parti:
 
     - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assegnare a questa variabile il percorso base che rappresenterà la directory principale sul server remoto nella quale ci saranno, sia gli script che si preoccuperanno di eseguire l'inferenza e sia i file di output delle inferenze richieste da parte degli utenti che poi verranno cancellati una volta che questi non saranno più necessari.  
           
-          In particolare, quest'ultimo percorso verrà utilizzato all'interno dell'applicazione nei seguenti modi:
-            1) Come percorso base per salvare i file di inferenza.  
+        In particolare, quest'ultimo percorso verrà utilizzato all'interno dell'applicazione nei seguenti modi:
+        
+        **1)** Come percorso base per salvare i file di inferenza.  
 
-            2) Per specificare il percorso completo di uno script .sh che sarà eseguito da SLURM (in base al modello selezionato dall'utente).  
+        **2)** Per specificare il percorso completo di uno script .sh che sarà eseguito da SLURM (in base al modello selezionato dall'utente).  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/job_script_${model}.sh`).  
 
-            3) Per costruire il percorso del file di output dell'inferenza di uno specifico utente.  
+        **3)** Per costruire il percorso del file di output dell'inferenza di uno specifico utente.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL_${userId}.txt`).
 
-            4) Per costruire i percorsi dei file di output che dovranno essere cancellati.
+        **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.
                (ad esempio, "rm ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL* ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/slurm*") 
 
 ## 5 - Eseguire il software
