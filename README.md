@@ -64,8 +64,8 @@ Il file è suddiviso in 3 parti:
         **3)** Per costruire il percorso del file di output dell'inferenza di uno specifico utente.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL_${userId}.txt`).
 
-        **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.
-               (ad esempio, "rm ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL* ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/slurm*") 
+        **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
+               (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
 
 ## 5 - Eseguire il software
 
