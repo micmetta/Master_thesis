@@ -2,8 +2,6 @@
 
 import { AppShell, Burger, Group } from "@mantine/core";
 import { useDisclosure, useHeadroom } from "@mantine/hooks";
-import Link from "next/link";
-import classes from "./app-shell.module.css";
 import { useRouter } from "next/navigation";
 import logo from "@/assets/logo.png";
 import Image from "next/image";

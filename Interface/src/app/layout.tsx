@@ -1,14 +1,8 @@
 "use client";
 
-import { AppShell, Burger, MantineProvider, Group } from '@mantine/core'; 
-import { useDisclosure, useHeadroom} from '@mantine/hooks';
+import { MantineProvider } from '@mantine/core'; 
 import localFont from "next/font/local";
 import "./globals.css";
-import logo from "@/assets/logo.png";
-import classes from "./app-shell.module.css";
-import Image from "next/image";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
 import AppShellLayout from './AppShellLayout';
 import "@mantine/core/styles.css";
 
@@ -29,10 +23,6 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   
-  const [opened, { toggle }] = useDisclosure(); // Uso del hook lato client
-  const pinned = useHeadroom({ fixedAt: 40 });
-  const router = useRouter();
-
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

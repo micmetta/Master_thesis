@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/instrumentation.mjs", "src/jobsManager.mjs", "src/lib/slurm/helpersJobsManager.mjs"],
   "exclude": ["node_modules"]
 }

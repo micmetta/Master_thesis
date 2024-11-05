@@ -1,0 +1,60 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:latest
+    restart: always
+    container_name: postgres_db
+    environment:
+      - POSTGRES_DB=bioInfoDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./db_scripts/bioInfoDB.sql:/docker-entrypoint-initdb.d/bioInfoDB.sql
+    networks:
+      - my_network
+
+  experimentaldb:
+    image: postgres:latest
+    restart: always
+    container_name: experimental_db
+    environment:
+      - POSTGRES_DB=experimentalDB
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+    ports:
+      - "5433:5432"
+    volumes:
+      - experimental_data:/var/lib/postgresql/data
+      - ./db_scripts/experimentalDB.sql:/docker-entrypoint-initdb.d/experimentalDB.sql
+    networks:
+      - my_network
+
+  nextjs-app:
+    build:
+      context: .
+      dockerfile: ./Interface/Dockerfile
+      args:
+        NEXT_PUBLIC_SSH_USER: ${NEXT_PUBLIC_SSH_USER}
+        NEXT_PUBLIC_SSH_SERVER: ${NEXT_PUBLIC_SSH_SERVER}
+        NEXT_PUBLIC_PATH_FILE_INFERENCES: ${NEXT_PUBLIC_PATH_FILE_INFERENCES}
+        NEXT_PUBLIC_PATH_DELETE_OUTPUT_FILES: ${NEXT_PUBLIC_PATH_DELETE_OUTPUT_FILES}
+        NEXT_PUBLIC_PATH_DELETE_OUTPUT_FILES_SLURM: ${NEXT_PUBLIC_PATH_DELETE_OUTPUT_FILES_SLURM}
+    container_name: nextjs_app
+    ports:
+      - "3000:3000"
+    networks:
+      - my_network
+    depends_on:
+      - db
+      - experimentaldb
+
+networks:
+  my_network:
+    driver: bridge
+
+volumes:
+  postgres_data:
+  experimental_data:

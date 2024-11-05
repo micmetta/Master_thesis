@@ -1,110 +1,50 @@
-"use client"; // per specificare che questo file sarà eseguito sul client-side nell'app next.js 
+"use client"; // per specificare che questo file sarà eseguito sul client-side nell'app next.js e quindi tutte le le stampe con console.log saranno mostrate nel broswer
 
 // - useState per gestire lo stato di ogni component
-// - useEffect è uno Hook (funzione speciale di Javascript che permette di utilizzare le funzionalità di React)
-//   per gestire il caricamento dati dopo il rendering
+// - useEffect è uno Hook (funzione speciale di Javascript che permette di utilizzare le funzionalità di React) per gestire il caricamento dati dopo il rendering
 // - useRef per creare una variabile in grado di gestire il comportamento dello scrolling della tabella
-import { Button } from '@mantine/core';
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback} from 'react';
+import { handleButtonClick } from '@/lib/page/actionsPage/handleButtonClick';
 import "./table.css";
 
 export default function Home() {
-  // Dichiarazione degli stati (valore attuale dello stato, funzione per aggiornare lo stato e forzare il re-render del componente):
+  // - Dichiarazione degli stati (valore attuale dello stato, funzione per aggiornare lo stato e forzare il re-render del componente):
   const [nlQuery, setNlQuery] = useState<string>('');  // stato per memorizzare la query NL (inizializzato con stringa vuota)
   const [sqlQuery, setSqlQuery] = useState<string>(''); // stato per memorizzare la query SQL generata dal backend
   const [columnNames, setColumnNames] = useState<string[]>([]); // stato per i nomi delle colonne
-  const [queryResults, setQueryResults] = useState<any[][]>([]); // stato per le tuple dei risultati (queryResults conterrà le tuple del resultest restituito dal backend)
-  const [displayedResults, setDisplayedResults] = useState<any[][]>([]); // stato per i risultati mostrati (gruppi di 100)
-  const [loading, setLoading] = useState<boolean>(false); // stato di caricamento
+  const [queryResults, setQueryResults] = useState<string[][]>([]); // stato per le tuple dei risultati (queryResults conterrà le tuple del resultest restituito dal backend)
+  const [displayedResults, setDisplayedResults] = useState<string[][]>([]); // stato per i risultati mostrati (gruppi di 100)
+  const [loading, setLoading] = useState<boolean>(false); // stato di caricamento durante l'inferenza richiesta
   const [error, setError] = useState<string | null>(null); // stato per l'errore
-  const [rowCounter, setRowCounter] = useState<number[]>([]); // stato per il contatore delle righe
+  const [unavailabilityNode, setUnavailabilityNode] = useState<string | null>(null); // stato per informare l'utente sull'indisponibilità momentanea di un nodo di esecuzione dell'inferenza richiesta
   const [page, setPage] = useState<number>(1); // stato per il numero di pagine caricate
   const [responseTime, setResponseTime] = useState<number | null>(null); // stato per calcolare il tempo di risposta
   const RESULTS_PER_PAGE = 100; // numero di risultati per pagina
-  const tableContainerRef = useRef<HTMLDivElement>(null); // riferimento per il contenitore della tabella scrollabile 
-  // utilizzato per caricamento di più risultati quando l'utente scorre
-
-
-  // Funzione asincrona che viene eseguita quando l'utente invierà la query in NL:
-  const handleSubmit = async () => {
-
-    // controllo se la query in NL è vuota
-    if (nlQuery.trim() === '') {
-      alert("ERRORE: La barra di testo non può essere vuota.");
-      return;
-    }
-
-    // setting degli stati
-    setLoading(true);
-    setError(null);
-    setSqlQuery('');
-    setColumnNames([]);
-    setQueryResults([]);
-    setDisplayedResults([]); //(React crea un riferimento all'array 'displayedResults' vuoto)
-    setRowCounter([]);
-    setPage(1);
-    setResponseTime(null);  // reset del timer
-
-
-    const startTime = performance.now(); // start timer
-    try {
-      ////////////////////////////////////////////////////////////////////////////////
-      // richiesta inviata al backend (fetch) e attesa della risposta (await):
-      const response = await fetch(`http://localhost:4000/queryNL?text=${nlQuery}`);
-      ////////////////////////////////////////////////////////////////////////////////
-
-      const endTime = performance.now(); // end timer
-      const durationInSeconds  = (endTime - startTime) / 1000; // durata in secondi
-      setResponseTime(durationInSeconds); // imposto il tempo di risposta
-      
-      ////////////////////////////////////////////////////////////////////////////////
-      // Gestione errori:
-      if (!response.ok) { // se la risposta del server non è un 'successo' allora mostro un messaggio di errore
-        throw new Error('Errore nel recuperare la query SQL. Errore: ${response.status} ${response.statusText}');
-      }
-      const data = await response.json(); // estraggo la risposta in un oggetto json
-      console.log("Risposta dal backend:", data);
-      if (data.SQL_query_generated === 'Nessuna query SQL trovata.') {
-        alert("Nessun risultato trovato nel database.");
-      }
-      if (data.response_execution_query === 'connection_error') {
-        setError("Errore di connessione al database.");
-        return;
-      }
-      if (data.response_execution_query === 'query_error') {
-        setError("Errore durante l'esecuzione della query nel database.");
-        return;
-      }
-      if (Array.isArray(data.response_execution_query) && data.response_execution_query.length === 0) {
-        setError("Il resultset è vuoto. Nessun risultato trovato.");
-      }
-      if (data.response_execution_query === 'generic_error') {
-        setError("Si è verificato un errore imprevisto.");
-        return;
-      }
-      ////////////////////////////////////////////////////////////////////////////////
-
-      //////////////////////////////////////////////////////////////////////////////////
-      // Aggiorno gli stati con tutte le info ottenute nella risposta data dal backend:
-      setSqlQuery(data.SQL_query_generated);
-      setColumnNames(data.columns_names);
-      setQueryResults(data.response_execution_query);
-      setDisplayedResults(data.response_execution_query.slice(0, RESULTS_PER_PAGE));
-      setRowCounter(Array.from({ length: RESULTS_PER_PAGE }, (_, i) => i + 1));
-      //////////////////////////////////////////////////////////////////////////////////
-
-    } catch (error) {
-      console.error('Errore nella chiamata API REST:', error);
-      setError('Errore nel recuperare la query SQL, riprova. ' + error);
-    } finally {
-      setLoading(false);
-    }
+  const tableContainerRef = useRef<HTMLDivElement>(null); // riferimento per il contenitore della tabella scrollabile utilizzato per caricamento di più risultati quando l'utente scorre
+  const [model, setModel] = useState<string>('8B'); // stato che memorizza la scelta del modello selezionato dall'utente (Default: modello 8B) 
+  const [tooltipText, setTooltipText] = useState<string>(''); // Stato per il testo del tooltip
+  
+  // - Definisco 'handleButtonClickWrapper' (compatibile con 'onClick') che al suo interno invoca la 'handleButtonClick' che si preoccuperà di
+  //   gestire la richiesta.
+  const handleButtonClickWrapper = async () => {
+    await handleButtonClick(
+        nlQuery,
+        model,
+        setLoading,
+        setError,
+        setSqlQuery,
+        setColumnNames,
+        setQueryResults,
+        RESULTS_PER_PAGE,
+        setDisplayedResults,
+        setPage,
+        setResponseTime,
+        setUnavailabilityNode
+    );
   };
 
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  // Funzione invocata nel momento in cui l'utente scorre verso il fondo della tabella
-  // per caricare più risultati
-  const loadMoreResults = () => {
+  // Funzione ausiliaria alla 'useEffect()' di sotto.
+  const loadMoreResults = useCallback(() => {
     const nextPage = page + 1; // calcolo pagina successiva (prima pagina = 1)
     const startIndex = (nextPage - 1) * RESULTS_PER_PAGE; // aggiorno l'indice di partenza delle nuove tuple da mostrare basandomi sul numero di pagine precedenti
     // a cui sono arrivato prima di aggiungere la pagina corrente (nextPage - 1) * il numero massimo di tuple che ho già mostrato in ciascuna pagina precedente (RESULTS_PER_PAGE)
@@ -114,44 +54,18 @@ export default function Home() {
     // seleziono dal resultest le tuple che vanno da 'startIndex' (estremo incluso) a 'endIndex' (estremo escluso)
     // (quindi la prima volta: startIndex=0, endIndex=99; la seconda volta startIndex=100, endIndex=199; e così via..)
     const moreResults = queryResults.slice(startIndex, endIndex);
-    //console.log("startIndex:", startIndex);
-    //console.log("endIndex:", endIndex);
-    //console.log("moreResults:", moreResults)
 
-    // aggiorno i risultati (le tuple) da mostrare, in particolare vengono presi i risultati attualmente 
-    // visualizzati (prev) e concatenati con i nuovi risultati (moreResults). 
+    // aggiorno i risultati (le tuple) da mostrare, in particolare vengono presi i risultati attualmente visualizzati (prev) 
+    // e concatenati con i nuovi risultati (moreResults). 
     // - viene eseguita una shallowCopy (maggiore efficienza) e quindi non viene creato un nuovo array ricopiando in altre celle di memoria 
     //   tutti gli elementi precedenti ma semplicemente viene creato un nuovo array che punta non solo ai vecchi elementi (rimasti fisicamente nelle stesse celle) 
     //   ma anche a quelli nuovi che sono stati aggiunti in coda.
-    // - dopo l'esecuzione dell'istruzione qui sotto React sostituirà non farà più riferimento al vecchio array ma bensì a quello nuovo (più completo) e quindi
+    // - dopo l'esecuzione dell'istruzione qui sotto, React non farà più riferimento al vecchio array ma bensì a quello nuovo (più completo) e quindi
     //   il garbage collector potrà eliminare il vecchio array.
     setDisplayedResults(prev => [...prev, ...moreResults]);
-    
-    // Ogni volta che nuove tuple vengono caricate e aggiunte all'array 'displayedResults', il contatore di righe viene aggiornato (esteso) 
-    // per riflettere il numero totale di righe visualizzate.
-    // In questo modo, il contatore di righe si aggiorna dinamicamente ogni volta che carichi nuovi risultati, 
-    // garantendo che ogni riga della tabella abbia un numero univoco crescente.
-    // E quindi qui sotto aggiorno l'array che contiene gli indici incrementali di riga delle tuple (prima colonna vuota della tabella dei risultati):
-    // - prev: rappresenta il valore attuale di rowCounter (cioè l'array contenente i numeri di riga già mostrati prima del caricamento delle nuove tuple)
-    // - [...prev, ...Array.from(...)]: crea un nuovo array concatenando il vecchio array prev (cioè l'attuale contatore di righe) 
-    //                                  con un nuovo array che contiene i contatori aggiuntivi per le nuove tuple
-    // - ...prev: copia tutti gli elementi del vecchio array prev nel nuovo array
-    // - Array.from({ length: moreResults.length }: crea un array con una lunghezza pari al numero delle nuove tuple che l'utente vuole visualizzare perchè ha eseguito lo scrolling verticale
-    // - (_, i) => prev.length + i + 1: per ogni nuovo risultato, crea un numero di riga che continua dal punto in cui si era fermato 
-    //                                  l'array precedente (prev.length). 'i' è l'indice corrente del nuovo array.
-    // - (_, i):  funzione callback usata da Array.from per creare ciascun elemento. 
-    //            Il primo parametro (indicato come _) non viene utilizzato, mentre i è l'indice dell'array, che parte da 0
-    // - prev.length + i + 1:
-    //      - Qui si calcola il nuovo valore del contatore:
-    //          prev.length: questo è il numero di righe che sono già state contate. Quindi, il nuovo contatore inizierà da questo valore 
-    //          i + 1: si aggiunge i + 1 per far sì che il nuovo contatore inizi dalla riga successiva all'ultima già presente in prev
-    setRowCounter(prev => [...prev, ...Array.from({ length: moreResults.length }, (_, i) => prev.length + i + 1)]);
-
     setPage(nextPage); // aggiornamento numero pagine totali
-  };
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  }, [page, RESULTS_PER_PAGE, queryResults]);
+  
   // Funzione speciale per attivare il caricamento di più risultati man mano che l'utente scorre verso il fondo della tabella (Lazy loading).
   useEffect(() => {
     const handleScroll = () => {
@@ -168,13 +82,6 @@ export default function Home() {
         //                        perchè il valore di 'container.scrollHeight' continua ad aumentare ad ogni aggiornamento di caricamento delle nuove tuple e quindi del nuovo contenuto.
         // - Quindi se l'if di sotto è vero vuol dire che l'utente ha raggiunto (oppure è vicino) al fondo 'visualizzabile' della tabella perchè il valore [container.scrollHeight - container.scrollTop] sarà molto
         //   vicino a [container.clientHeight + 10] - il +10 serve per fare l'aggiornamento un pò prima ovvero senza aspettare che veramente l'utente arrivi con lo scrolling fino alla fine corrente e dare quindi una maggiore fluidità all'aggiornamento dell'interfaccia.
-        //console.log("container.clientHeight:", container.clientHeight);
-        //console.log("container.scrollHeight:", container.scrollHeight);
-        //console.log("container.scrollTop:", container.scrollTop);
-        //console.log("container.scrollHeight - container.scrollTop:", container.scrollHeight - container.scrollTop);
-        //console.log("container.clientHeight + 10:", container.clientHeight + 10);
-        //console.log("");
-        //console.log("");
         if (container.scrollHeight - container.scrollTop <= container.clientHeight + 10) {
           if (!loading && displayedResults.length < queryResults.length) { // l'aggiornamento verrà richiesto solo se non c'è già un caricamento e ci sono ancora delle tuple da mostrare
             loadMoreResults();
@@ -182,20 +89,17 @@ export default function Home() {
         }
       }
     };
-
     const container = tableContainerRef.current; // prendo il riferimento alla tabella
     if (container) {
       container.addEventListener('scroll', handleScroll); // aggiungo un listener all'evento di scroll del contenitore della tabella (ogni volta che ci sarà lo scrolling sulla tabella verrà eseguita la funzione 'handleScroll')
     }
-
     return () => {
       if (container) {
         container.removeEventListener('scroll', handleScroll); // rimuovo il listener quando il contenitore della tabella viene rimosso dal DOM
       }
     };
-  }, [displayedResults, queryResults, loading]); // la funzione 'useEffect' verrà eseguita ogni volta che i valori di 'displayedResults', 'queryResults' o 'loading' cambiano.
-  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+  }, [displayedResults, queryResults, loading, loadMoreResults]); // la funzione 'useEffect' verrà eseguita ogni volta che i valori di 'displayedResults', 'queryResults' o 'loading' cambieranno.
+  
 
   return (
     <div>
@@ -204,12 +108,76 @@ export default function Home() {
         Generatore di Query SQL
       </h1>
 
-      {/* Sotto-paragrafo */}
-      <p style={{ textAlign: 'center', marginBottom: '10px', marginTop: '20px', fontWeight: 'bold', fontSize: '18px', lineHeight: '1.5'}}>
-        Scrivi qui sotto la query in linguaggio naturale (Inglese/Italiano) e dopo clicca sul button per generare la query SQL e ottenere i risultati:
+      {/* Sotto-paragrafo (fontSize: 'portato da 18px a16px') */}
+      <p style={{ textAlign: 'center', marginBottom: '30px', marginTop: '20px', fontWeight: 'bold', fontSize: '17px', lineHeight: '1.5'}}>
+        Seleziona prima il modello da utilizzare durante l&aposinferenza, dopodichè scrivi la query in linguaggio naturale (Inglese/Italiano) e infine clicca sul button per generare la query SQL e ottenere i risultati.
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '20vh' }}>
+
+        {/* Selettore per scegliere il modello */}
+        <label htmlFor="modelSelect" style={{ marginBottom: '10px', fontWeight: 'bold', fontSize: '17px' }}>Scegli il modello LLM:</label>
+        
+        <div style={{ position: 'relative', display: 'inline-block' }}>
+        <select
+          id="modelSelect"
+          value={model}
+          onChange={(e) => setModel(e.target.value)}
+          onMouseOver={(e) => {
+            const target = e.target as HTMLSelectElement; // cast a HTMLSelectElement
+            if (target.value === '8B') {
+              setTooltipText("Accuratezza minore (92%-Inglese, 83%-Italiano) - tempo di attesa medio minore (30 secondi)");
+            } else {
+              setTooltipText("Accuratezza maggiore (100%-Inglese, 96%-Italiano) - tempo di attesa medio maggiore (70 secondi)");
+            }
+          }}
+          onMouseOut={() => setTooltipText('')} // nascondo il tooltip quando il mouse esce
+          style={{
+            padding: '5px',
+            fontSize: '16px',
+            marginBottom: '20px',
+            border: '2px solid #ccc',  // colore del bordo
+            borderRadius: '8px',  // per smussare leggermente gli angoli
+            transition: 'border-color 0.3s ease, box-shadow 0.3s ease',  // transizione fluida
+            outline: 'none',
+            height: '40px',
+            width: 'auto',
+          }}
+          onFocus={(e) => {
+            e.target.style.borderColor = '#007BFF';  // colore del bordo quando viene cliccato
+            e.target.style.boxShadow = '0px 4px 12px rgba(0, 123, 255, 0.4)'; // ombreggiatura accentuata al click
+          }}
+          onBlur={(e) => {
+            e.target.style.borderColor = '#ccc';  // ritorna al colore del bordo originale
+            e.target.style.boxShadow = 'none';  // ritorna senza ombreggiatura
+          }}
+        >
+          <option value="8B">Modello 8B</option>
+          <option value="70B">Modello 70B</option>
+        </select>
+
+          {/* Tooltip dinamico */}
+          {tooltipText && (
+            <div
+              style={{
+                position: 'absolute',
+                top: '0%', // centro il tooltip verticalmente rispetto al selettore
+                left: '105%', // sposto il tooltip a destra del selettore
+                backgroundColor: '#333',
+                color: '#fff',
+                padding: '5px 10px',
+                borderRadius: '5px',
+                marginTop: '5px',
+                fontSize: '14px',
+                whiteSpace: 'nowrap',
+                zIndex: 1
+              }}
+            >
+              {tooltipText}
+            </div>
+          )}
+        </div>
+
         {/* TextArea */}
         <textarea
           value={nlQuery}
@@ -236,9 +204,9 @@ export default function Home() {
             e.target.style.boxShadow = '0px 4px 10px rgba(0, 0, 0, 0.1)'; // ritorna con l'ombreggiatura leggera
           }}
         />
-        {/* Button personalizzato */}
+        {/* Button personalizzato - 'Genera SQL' */}
         <button
-          onClick={handleSubmit}
+          onClick={handleButtonClickWrapper} // con file batch
           disabled={loading} // il button verrà disabilitato fino alla terminazione del caricamento
           style={{
             padding: '10px 20px',
@@ -256,10 +224,48 @@ export default function Home() {
         >
           Genera SQL
         </button>
-        {loading && <p>Caricamento...</p>}
-        {error && <p style={{ color: 'red' }}>{error}</p>}
-      </div>
 
+        {loading && (
+          <>
+            <div className="spinner" style={{
+              width: '24px',
+              height: '24px',
+              border: '4px solid #f3f3f3', // colore esterno
+              borderTop: '4px solid #3498db', // colore rotellina
+              borderRadius: '50%',
+              animation: 'spin 1s linear infinite', // animazione circolare
+              marginTop: '20px'
+            }}></div>
+            <p>Caricamento richiesta..</p>
+          </>
+        )}
+
+        {/* se si verifica un errore, esso verrà mostrato in rosso subito sotto il button */}
+        {error && (
+          <p style={{
+            color: 'red',
+            whiteSpace: 'pre-wrap',  // gestisce meglio le nuove righe e gli spazi
+            wordWrap: 'break-word',  // permette al testo di andare a capo senza sforzarsi di stare su una sola linea
+            maxWidth: '100%'  // assicura che il contenitore non abbia una larghezza limitata
+          }}>
+            {error}
+          </p>
+        )}
+
+        {/* se si verifica un tempo eccessivo di attesa, verrà mostrato in blu subito sotto il button questo avviso per l'utente */}
+        {unavailabilityNode && (
+          <p style={{
+            color: 'blue',
+            whiteSpace: 'pre-wrap',  // gestisce meglio le nuove righe e gli spazi
+            wordWrap: 'break-word',  // permette al testo di andare a capo senza sforzarsi di stare su una sola linea
+            maxWidth: '100%'  // assicura che il contenitore non abbia una larghezza limitata
+          }}>
+            {unavailabilityNode}
+          </p>
+        )}
+      
+      </div>
+      
       {sqlQuery && (
         <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '20px' }}>
           <h3 style={{ fontWeight: 'bold' }}>Query SQL generata:</h3>
