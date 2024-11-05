@@ -10,7 +10,7 @@ git clone git@github.com:qBioTurin/NL2SQL.git
 ```
 
 ## 2 - Setting cartella .ssh **(obbligatorio)**
-**Crea e inserisci** all'interno della cartella .ssh un file chiamato **'id_rsa'** che contenga la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
+**Crea e inserisci** all'interno della cartella **".ssh"** un file chiamato **'id_rsa'** che contenga la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
 
 ## 3 - Setting cartella db_scripts (opzionale)
 All'interno della cartella **"db_scripts"** sono presenti questi 2 files:
@@ -22,7 +22,7 @@ aggiornata di tale DB, potrai semplicemente sostituire questo file con il tuo.
 **NON c'è bisogno di modificare/sostituire questo file tranne nel caso in cui si volessero apportare delle modifiche a questo DB**.
 
 ## 4 - Setting file .env.local
-All'interno della sottocartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
+All'interno della cartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
 Esso contiene al proprio interno tutte le variabili di configurazione necessarie per il corretto funzionamento dell'applicazione. 
 
 Il file è suddiviso in 3 parti:
@@ -45,12 +45,11 @@ Il file è suddiviso in 3 parti:
     - **POSTGRES_PASSWORD**: La password associata all'utente.
     - **POSTGRES_DB**: Il nome del database sperimentale al quale l'applicazione si connette.
 
-3) Variabili di **configurazione** per la **connessione SSH al server remoto** e per specificare percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(obbligatorio)**:
+3) Variabili di **configurazione** per la **connessione SSH al server remoto** e per specificare percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(modifica obbligatoria)**:
 
     - **NEXT_PUBLIC_SSH_USER**: Assegnare a questa variabile il nome utente che verrà utilizzato per effettuare la connessione SSH al server remoto.   
 
-    - **NEXT_PUBLIC_SSH_SERVER**: Assegnare a questa variabile l'indirizzo del server SSH remoto al quale verrà effettuata la connessione. Questo server sarà 
-    utilizzato per eseguire script e comandi tramite SSH.
+    - **NEXT_PUBLIC_SSH_SERVER**: Assegnare a questa variabile l'indirizzo del server remoto al quale verrà effettuata la connessione. Sia la connessione, che tutte le successive richieste di esecuzione di script verso questo server, avverranno tramite l'utilizzo del protocollo SSH.
 
     - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assegnare a questa variabile il percorso base che rappresenterà la directory principale sul server remoto nella quale ci saranno, sia gli script che si preoccuperanno di eseguire l'inferenza e sia i file di output delle inferenze richieste da parte degli utenti che poi verranno cancellati una volta che questi non saranno più necessari.  
           
