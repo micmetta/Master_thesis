@@ -10,7 +10,7 @@ git clone git@github.com:qBioTurin/NL2SQL.git
 ```
 
 ## 2 - Setting cartella .ssh **(obbligatorio)**
-**Crea e inserisci** all'interno della cartella **".ssh"** un file chiamato **'id_rsa'** che contenga la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
+**Copia e incolla** all'interno della cartella **".ssh"** il file **'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
 
 ## 3 - Setting cartella db_scripts (opzionale)
 All'interno della cartella **"db_scripts"** sono presenti questi 2 files:
@@ -68,7 +68,7 @@ Il file è suddiviso in 3 parti:
 
 ## 5 - Eseguire il software
 
-**Da questo step in poi bisognerà avere Docker in esecuzione sulla macchina.** 
+**Da questo step in poi dovrai avere Docker in esecuzione sulla tua macchina.** 
 
 - Per lanciare l'applicazione la prima volta e costruire quindi i containers con le immagini e avviarli, basterà posizionarsi all'interno della root del progetto, aprire il terminale ed eseguire questo comando:
 
