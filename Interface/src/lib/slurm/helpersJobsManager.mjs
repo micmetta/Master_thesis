@@ -4,7 +4,7 @@ import { exec } from 'child_process';
 ///////////////////////////////////////////////////// FUNZIONI PER GESTIONE RICHIESTE A SLURM /////////////////////////////////////////////////////
 async function checkIfJobExistsInSLURM(jobId) {
     return new Promise((resolve, reject) => {
-      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "squeue -u mmetta -j ${jobId}"`, (error, stdout, stderr)
+      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "squeue -u mmetta -j ${jobId}"`
       exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "squeue -u ${process.env.NEXT_PUBLIC_SSH_USER} -j ${jobId}"`, (error, stdout, stderr) => {
         if (error) {
             console.error(`Errore durante il controllo di esistenza del job su SLURM: ${error.message}`);
@@ -38,7 +38,7 @@ async function checkExistJob(jobId) {
 // Funzione per cancellare un job da SLURM dopo aver raggiunto il tempo massimo a disposizione
 async function cancelJobInSLURM(jobId) {
     return new Promise((resolve, reject) => {
-      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "scancel ${jobId}"`, (error, stdout, stderr)
+      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "scancel ${jobId}"`
       exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "scancel ${jobId}"`, (error, stdout, stderr) => {
         if (error) {
           console.error(`(error) Errore durante la cancellazione del job su SLURM (tempo max raggiunto in coda): ${error.message}`); // errore grave ottenuto durante l'esecuzione dell'exec (l'esecuzione dell'exec viene interrotta)
@@ -77,7 +77,7 @@ function getResultAfterWait(jobId, userId, waitBeforeExec, updateJobStatus) {
         // Attendo 'waitBeforeExec' secondi prima di eseguire il comando SSH per leggere il file di output
         setTimeout(() => {
           // Eseguo un'unica exec per tentare di leggere il file di output
-          //es. exec(`ssh mmetta@c3sfr1.di.unito.it "cat /beegfs/home/mmetta/Test/TestTesi/output_querySQL_${userId}.txt"`, async (err, result)
+          //es. exec(`ssh mmetta@c3sfr1.di.unito.it "cat /beegfs/home/mmetta/Test/TestTesi/output_querySQL_${userId}.txt"`
           exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cat ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL_${userId}.txt"`, async (err, result) => {
             if (err) {
               // se si verifica un errore (ad esempio, il file non esiste) lo stampo

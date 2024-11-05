@@ -32,10 +32,6 @@ ARG NEXT_PUBLIC_SSH_SERVER
 RUN mkdir -p /root/.ssh && ssh-keyscan -H $NEXT_PUBLIC_SSH_SERVER >> /root/.ssh/known_hosts
 
 # Copia i file necessari dalla fase di build alla directory di lavoro del container nel quale girerà l'app
-#COPY --from=builder /app/node_modules ./node_modules
-#COPY --from=builder /app/.next ./.next
-#COPY --from=builder /app/package.json ./package.json
-#COPY --from=builder /app/next.config.mjs ./next.config.mjs
 COPY --from=builder /app .
 
 # Espone la porta 3000 per l'app

@@ -3,17 +3,20 @@ import { Mutex } from 'async-mutex';
 // istanzio il mutex
 const mutex = new Mutex();
 
-// struttura dati (dizionario) per memorizzare e gestire i jobs attivi:
-global.activeJobs = global.activeJobs || {}; // global serve per la condivisione dello stesso dizionario tra le diverse funzioni di gestione presenti sotto
+// struttura dati (dizionario) per memorizzare e gestire i jobs attivi internamente all'applicazione:
+// - 'global' serve per la condivisione dello stesso dizionario tra i diversi moduli che la utilizzano. 
+// - L'istanziazione del dizionario verrà eseguita non appena verrà mandato in esecuzione il modulo jobsManager.mjs
+global.activeJobs = global.activeJobs || {};
 
 
-///////////////////////////////////////////////////// FUNZIONI PER LA GESTIONE DI global.activeJobs /////////////////////////////////////////////////////
-// Funzione per aggiungere un job attivo con mutex
+///////////////////////////////////////////////////// FUNZIONI PER LA GESTIONE DI global.activeJobs con mutex /////////////////////////////////////////////////////
+
+// Funzione per aggiungere un job attivo
 async function addJob(jobId, userId, selectedModel) {
   const release = await mutex.acquire();
   try {
     global.activeJobs[jobId] = {
-      status: 'running', // valori possibili durante l'esecuzione: 'running', 'completed', 'failed' o 'cancelled'
+      status: 'running', // valori possibili durante l'esecuzione: 'running', 'completed', 'cancelled-timeout' oppure 'cancelled-by-slurm'
       userId: userId,
       result: null, // querySQL generata dal modello
       numControl: 0, // numero di controlli fatti per vedere se il job è ancora in esecuzione o meno (che viene resettato a 0 ogni tot in base alla scelta del modello)
@@ -28,7 +31,7 @@ async function addJob(jobId, userId, selectedModel) {
   }
 }
 
-// Funzione per ottenere tutti i job attivi con mutex
+// Funzione per ottenere tutti i job attivi
 async function getActiveJobs() {
   const release = await mutex.acquire(); // acquisisco il lock prima di leggere
   try {
@@ -38,7 +41,7 @@ async function getActiveJobs() {
   }
 }
 
-// Funzione per ottenere un job attivo con mutex
+// Funzione per ottenere un job attivo
 async function getJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -48,9 +51,9 @@ async function getJob(jobId) {
   }
 }
 
-// Funzione per ottenere tutte le chiavi dei job attivi con mutex
+// Funzione per ottenere tutte le chiavi dei job attivi
 async function getALLKeysJobs() {
-  const release = await mutex.acquire(); // Acquisisce il lock prima di leggere
+  const release = await mutex.acquire();
   try {
     return Object.keys(global.activeJobs);
   } finally {
@@ -58,7 +61,7 @@ async function getALLKeysJobs() {
   }
 }
 
-// Funzione per ottenere il valore del campo 'numControl' del job con mutex
+// Funzione per ottenere il valore del campo 'numControl' del job
 async function getNumControlJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -68,7 +71,7 @@ async function getNumControlJob(jobId) {
   }
 }
 
-// Funzione per ottenere il valore del campo 'numTotalControl' del job con mutex
+// Funzione per ottenere il valore del campo 'numTotalControl' del job
 async function getNumTotalControlJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -78,7 +81,7 @@ async function getNumTotalControlJob(jobId) {
   }
 }
 
-// Funzione per ottenere il valore del campo 'numControl' del job con mutex
+// Funzione per ottenere il valore del campo 'numControl' del job
 async function getSelectedModelJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -88,7 +91,7 @@ async function getSelectedModelJob(jobId) {
   }
 }
 
-// Funzione per aggiornare lo stato del job con mutex
+// Funzione per aggiornare lo stato del job
 async function updateJobStatus(jobId, status, result) {
   const release = await mutex.acquire();
   try {
@@ -114,7 +117,7 @@ async function updateJobCanRemoved(jobId) {
   }
 }
 
-// Funzione per incrementare di 1 il valore di 'numControl' del job con mutex
+// Funzione per incrementare di 1 il valore di 'numControl' del job
 async function updateIncrementJobNumControl(jobId) {
   const release = await mutex.acquire();
   try {
@@ -126,7 +129,7 @@ async function updateIncrementJobNumControl(jobId) {
   }
 }
 
-// Funzione per resettare a 0 il valore di 'numControl' del job con mutex
+// Funzione per resettare a 0 il valore di 'numControl' del job
 async function updateResetJobNumControl(jobId) {
   const release = await mutex.acquire();
   try {
@@ -138,7 +141,7 @@ async function updateResetJobNumControl(jobId) {
   }
 }
 
-// Funzione per incrementare di 1 il valore di 'numTotalControl' del job con mutex
+// Funzione per incrementare di 1 il valore di 'numTotalControl' del job
 async function updateIncrementJobNumTotalControl(jobId) {
   const release = await mutex.acquire();
   try {
@@ -150,7 +153,7 @@ async function updateIncrementJobNumTotalControl(jobId) {
   }
 }
 
-// Funzione per rimuovere un job completato o fallito con mutex
+// Funzione per rimuovere un job
 async function removeJob(jobId) {
   const release = await mutex.acquire();
   try {

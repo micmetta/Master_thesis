@@ -104,26 +104,20 @@ async function startBatchPolling() {
               limit_numMaxTotalControlJob_currentJob = selectedModelJob === '8B' ? LIMIT_MAX_NUM_CONTROL_JOB_MODEL_8B : LIMIT_MAX_NUM_CONTROL_JOB_MODEL_70B
               console.log(`(jobManager.js) limit_numMaxTotalControlJob_currentJob del job ${jobId}: ${limit_numMaxTotalControlJob_currentJob}`);
               
-              /*
-              - Con l'if qui sotto controllo se il job ha raggiunto o meno il limite massimo di tempo in coda (più precisamente il tempo passato 
-                tra i primi 4 job della struttura dati).
-              - Questo controllo garantisce il fatto che un job non potrà continuare a rimanere in coda su SLURM all'infinito.
-              - I passi che verranno eseguiti saranno i seguenti:
-                1) Eseguo "await cancelJobInSLURM(jobId)" per richiedere a SLURM di cancellare il job.
-                  1.1) Se 1) va a buon fine allora eseguo "await updateJobStatus(jobId, 'cancelled');" e "await removeJob(jobId);" 
-                      per informare l'utente e rimuovere il job dalla struttura.
-                  1.2) Se 1) fallisce allora stampo in console il fatto che si è verificato un errore durante la cancellazione e automaticamente
-                      proverò a cancellare il job nel ciclo di pooling successivo.
-              */
               if(numTotalControlJob > limit_numMaxTotalControlJob_currentJob){
-                // Se entro qui vuol dire che il campo 'numTotalControlJob' del job corrente è MAGGIORE di 'limit_numMaxTotalControlJob_currentJob' e
-                // questo vuol dire che il JOB CORRENTE HA RAGGIUNTO IL NUMERO MAX DI TEMPO DI ATTESA A DISPOSIZIONE e quindi quello che farò sarà 
-                // cancellare questo job da SLURM e notificare l'utente dicendogli che ciò è avvenuto a causa del fatto che il job è rimasto 
-                // in coda per troppo tempo oltre il necessario:
+                /*
+                Se entro qui vuol dire che il job ha raggiunto il limite massimo di tempo in coda (più precisamente il tempo passato tra i primi 4 job della struttura dati).
+                - Questo controllo garantisce il fatto che un job non potrà continuare a rimanere in coda su SLURM all'infinito.
+                - I passi che verranno eseguiti saranno i seguenti:
+                  1) Eseguo "await cancelJobInSLURM(jobId)" per richiedere a SLURM di cancellare il job.
+                    1.1) Se 1) va a buon fine allora eseguo "await updateJobStatus(jobId, 'cancelled-timeout');"
+                    1.2) Se 1) fallisce allora stampo in console il fatto che si è verificato un errore durante la cancellazione e automaticamente
+                         proverò a cancellare il job nel ciclo di pooling successivo.
+                */
                 const cancellation_result = await cancelJobInSLURM(jobId);
                 if(cancellation_result === `Job cancellato con successo (tempo max raggiunto in coda)`){
                   console.log(`(jobManager.js) Il job ${jobId} è stato cancellato con successo su SLURM (tempo max raggiunto in coda).\n`);
-                  await updateJobStatus(jobId, 'cancelled-timeout'); // aggiorno lo stato del job in modo tale che la 'checkJobCompletion' presente in "slurm/executeJob.ts/executeJobWithStatus()" veda la cancellazione e notifichi l'utente
+                  await updateJobStatus(jobId, 'cancelled-timeout'); // aggiorno lo stato del job in modo tale che la 'checkJobCompletion' presente in "slurm/executeJob.ts" veda la cancellazione e notifichi l'utente
                   console.log(`(jobManager.js) Il job ${jobId} è stato cancellato per aver raggiunto il tempo max in coda e quindi ho impostato il suo stato a 'cancelled-timeout'.`);
                 }else if(cancellation_result === `error`){
                   console.log(`(jobManager.js) Si è verificato un errore (error) durante la cancellazione del job ${jobId} su SLURM (tempo max raggiunto in coda).\n`);
@@ -157,8 +151,7 @@ async function startBatchPolling() {
               }else {
                 // Se entro qui vuol dire che il campo 'numControlJob' del job corrente è uguale a 'limit_numControlJob_currentJob' 
                 // MA NON HA RAGGIUNTO ANCORA IL NUMERO MAX DI TEMPO DI ATTESA A DISPOSIZIONE e quindi devo controllare se questo job esiste
-                // ancora su SLURM altrimenti vuol dire che è stato cancellato da quest'ultimo a causa di troppe richieste da parte degli utenti.
-                // (SOLUZIONE al problema 2.)
+                // ancora su SLURM altrimenti vuol dire che è stato cancellato da quest'ultimo forse a causa di troppe richieste da parte degli utenti.
                 const exist = await checkExistJob(jobId);
                 if(exist === 'CANCELLED-BY-SLURM'){
                   // aggiorno lo stato del job in modo tale che la POST presente in "executeCommand/route.ts" sappia dell'annullamento e notifichi l'utente
