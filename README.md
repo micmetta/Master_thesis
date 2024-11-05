@@ -71,7 +71,7 @@ Il file è suddiviso in 3 parti:
 
 Da questo step in poi bisognerà avere Docker in esecuzione sulla macchina. 
 
-- Per lanciare l'applicazione la prima volta e costruire quindi i containers con le immagini e avviarli, basterà posizionarsi all'interno della root del  progetto ("TEXT2SQL") ed eseguire questo comando:
+- Per lanciare l'applicazione la prima volta e costruire quindi i containers con le immagini e avviarli, basterà posizionarsi all'interno della root del progetto ed eseguire questo comando:
 
 ```bash
 docker-compose --env-file ./interface/.env.local up --build
