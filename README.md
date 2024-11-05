@@ -22,7 +22,7 @@ aggiornata di tale DB, potrai semplicemente sostituire questo file con il tuo.
 **NON c'è bisogno di modificare/sostituire questo file tranne nel caso in cui si volessero apportare delle modifiche a questo DB**.
 
 ## 4 - Setting file .env.local
-All'interno della sottocartella **"interface"** è presente un file di configurazione chiamato **'.env.local'**.  
+All'interno della sottocartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
 Esso contiene al proprio interno tutte le variabili di configurazione necessarie per il corretto funzionamento dell'applicazione. 
 
 Il file è suddiviso in 3 parti:
