@@ -1,17 +1,18 @@
 import { Mutex } from 'async-mutex';
 
-// istanzio il mutex
-const mutex = new Mutex();
 
 // struttura dati (dizionario) per memorizzare e gestire i jobs attivi internamente all'applicazione:
 // - 'global' serve per la condivisione dello stesso dizionario tra i diversi moduli che la utilizzano. 
 // - L'istanziazione del dizionario verrà eseguita non appena verrà mandato in esecuzione il modulo jobsManager.mjs
 global.activeJobs = global.activeJobs || {};
 
+// istanzio il mutex
+const mutex = new Mutex();
+
 
 ///////////////////////////////////////////////////// FUNZIONI PER LA GESTIONE DI global.activeJobs con mutex /////////////////////////////////////////////////////
 
-// Funzione per aggiungere un job attivo
+// Funzione per aggiungere un job al dizionario
 async function addJob(jobId, userId, selectedModel) {
   const release = await mutex.acquire();
   try {
@@ -31,7 +32,7 @@ async function addJob(jobId, userId, selectedModel) {
   }
 }
 
-// Funzione per ottenere tutti i job attivi
+// Funzione per ottenere tutti i jobs
 async function getActiveJobs() {
   const release = await mutex.acquire(); // acquisisco il lock prima di leggere
   try {
@@ -41,7 +42,7 @@ async function getActiveJobs() {
   }
 }
 
-// Funzione per ottenere un job attivo
+// Funzione per ottenere le info del job
 async function getJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -51,7 +52,7 @@ async function getJob(jobId) {
   }
 }
 
-// Funzione per ottenere tutte le chiavi dei job attivi
+// Funzione per ottenere tutte le chiavi (ids) dei jobs
 async function getALLKeysJobs() {
   const release = await mutex.acquire();
   try {
@@ -81,7 +82,7 @@ async function getNumTotalControlJob(jobId) {
   }
 }
 
-// Funzione per ottenere il valore del campo 'numControl' del job
+// Funzione per ottenere il valore del campo 'selectedModel' del job
 async function getSelectedModelJob(jobId) {
   const release = await mutex.acquire();
   try {
@@ -106,6 +107,7 @@ async function updateJobStatus(jobId, status, result) {
   }
 }
 
+// Funzione che specifica che il job può essere rimosso dal dizionario
 async function updateJobCanRemoved(jobId) {
   const release = await mutex.acquire();
   try {
@@ -163,6 +165,7 @@ async function removeJob(jobId) {
   }
 }
 
+// Funzione che elimina un job dalla struttura
 async function deleteALLCompletedORCancelledJobs(){
   const jobIds = await getALLKeysJobs();
   for (const jobId of jobIds){

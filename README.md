@@ -9,10 +9,7 @@ Puoi scaricare il progetto dal repository GitHub tramite il seguente comando:
 git clone git@github.com:qBioTurin/NL2SQL.git
 ```
 
-## 2 - Setting cartella .ssh **(obbligatorio)**
-**Copia e incolla** all'interno della cartella **".ssh"** il file **'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
-
-## 3 - Setting cartella db_scripts (opzionale)
+## 2 - Setting cartella db_scripts (opzionale)
 All'interno della cartella **"db_scripts"** sono presenti questi 2 files:
 
 1) **'bioinfoDB.sql'**: contenente i comandi SQL utili per creare localmente il database biologico. Qualora avessi a disposizione una versione più
@@ -21,11 +18,11 @@ aggiornata di tale DB, potrai semplicemente sostituire questo file con il tuo.
 2) **'experimentalDB.sql'**: contenente i comandi SQL utili per creare localmente il database che conterrà le queries richieste dagli utenti. 
 **NON c'è bisogno di modificare/sostituire questo file tranne nel caso in cui si volessero apportare delle modifiche a questo DB**.
 
-## 4 - Setting file .env.local
+## 3 - Setting file .env.local
 All'interno della cartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
 Esso contiene al proprio interno tutte le variabili di configurazione necessarie per il corretto funzionamento dell'applicazione. 
 
-Il file è suddiviso in 3 parti:
+Il file è suddiviso in 4 parti:
 
 1) Variabili di **configurazione** per l'accesso al database **"bioInfoDB"** **(modifica opzionale)**: 
 
@@ -66,7 +63,10 @@ Il file è suddiviso in 3 parti:
         **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
 
-## 5 - Eseguire il software
+4) Variabile di **configurazione** del file **contenente la tua chiave privata** **(modifica obbligatoria)**:
+    - **PRIVATE_KEY_PATH**: Assegnare a questa variabile il **percorso del file 'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
+
+## 4 - Eseguire il software
 
 **Da questo step in poi dovrai avere Docker in esecuzione sulla tua macchina.** 
 
@@ -83,6 +83,6 @@ docker-compose --env-file ./interface/.env.local up
 
 - Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app", dopodichè si potrà procedere con lo step 6.
 
-## 6 - Utilizzare l'interfaccia grafica
+## 5 - Utilizzare l'interfaccia grafica
 
 A questo punto basterà aprire un browser qualsiasi e inserire l'indirizzo "http://localhost:3000/" per poter inviare le richieste all'applicazione.

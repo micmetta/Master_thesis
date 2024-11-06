@@ -37,6 +37,7 @@ services:
       context: .
       dockerfile: ./Interface/Dockerfile
       args:
+        PRIVATE_KEY_PATH: ${PRIVATE_KEY_PATH}
         NEXT_PUBLIC_SSH_USER: ${NEXT_PUBLIC_SSH_USER}
         NEXT_PUBLIC_SSH_SERVER: ${NEXT_PUBLIC_SSH_SERVER}
         NEXT_PUBLIC_PATH_FILE_INFERENCES: ${NEXT_PUBLIC_PATH_FILE_INFERENCES}
@@ -50,6 +51,13 @@ services:
     depends_on:
       - db
       - experimentaldb
+    volumes:
+      - "${PRIVATE_KEY_PATH}:/root/.ssh/id_rsa" # Monta la chiave privata SSH dal percorso specificato in PRIVATE_KEY_PATH (file ".env.local") nel container al percorso '/root/.ssh/id_rsa'.
+                                                # Non si usa ':ro' per permettere la modifica dei permessi della chiave privata (richiesto per SSH).
+    entrypoint: ["sh", "-c", "chmod 600 /root/.ssh/id_rsa && npm start"] # 'sh -c' per eseguire più comandi consecutivi nel container:
+                                                                         # 1) 'chmod 600 /root/.ssh/id_rsa' imposta i permessi corretti sulla chiave privata montata,
+                                                                         #     rendendola accessibile solo al proprietario, come richiesto per l'accesso SSH sicuro.
+                                                                         # 2) 'npm start' avvia l'applicazione Next.js dopo che la chiave è pronta.
 
 networks:
   my_network:

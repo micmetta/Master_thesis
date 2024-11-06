@@ -7,6 +7,7 @@ import React, { useState, useEffect, useRef, useCallback} from 'react';
 import { handleButtonClick } from '@/lib/page/actionsPage/handleButtonClick';
 import "./table.css";
 
+
 export default function Home() {
   // - Dichiarazione degli stati (valore attuale dello stato, funzione per aggiornare lo stato e forzare il re-render del componente):
   const [nlQuery, setNlQuery] = useState<string>('');  // stato per memorizzare la query NL (inizializzato con stringa vuota)

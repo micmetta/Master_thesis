@@ -23,10 +23,6 @@ WORKDIR /app
 # Installa strumenti necessari per SSH
 RUN apt update && apt install -y vim inetutils-ping inetutils-telnet openssh-client
 
-# Copia la chiave privata SSH dalla root del progetto
-COPY .ssh/id_rsa /root/.ssh/id_rsa
-RUN chmod 600 /root/.ssh/id_rsa
-
 # Configura il file known_hosts
 ARG NEXT_PUBLIC_SSH_SERVER
 RUN mkdir -p /root/.ssh && ssh-keyscan -H $NEXT_PUBLIC_SSH_SERVER >> /root/.ssh/known_hosts
@@ -37,5 +33,4 @@ COPY --from=builder /app .
 # Espone la porta 3000 per l'app
 EXPOSE 3000
 
-# Avvia l'applicazione
-CMD ["npm", "start"]
+# L'applicazione verrà avviata con l'istruzione 'entrypoint' nel docker-compose.yml 

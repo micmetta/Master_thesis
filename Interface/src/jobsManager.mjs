@@ -1,4 +1,3 @@
-
 import { deleteALLInferenceFiles, getResultAfterWait, checkExistJob, cancelJobInSLURM } from './lib/slurm/helpersJobsManager.mjs';
 import {
   getActiveJobs,

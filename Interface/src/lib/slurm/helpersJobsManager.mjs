@@ -1,7 +1,7 @@
-
 import { exec } from 'child_process';
 
 ///////////////////////////////////////////////////// FUNZIONI PER GESTIONE RICHIESTE A SLURM /////////////////////////////////////////////////////
+
 async function checkIfJobExistsInSLURM(jobId) {
     return new Promise((resolve, reject) => {
       //es. exec(`ssh mmetta@c3sfr1.di.unito.it "squeue -u mmetta -j ${jobId}"`
