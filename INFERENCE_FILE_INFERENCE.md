@@ -40,7 +40,6 @@
         ```bash
         sudo cp /beegfs/home/mmetta/Test/TestTesi/inference_70B.py <base_path_new_account>/FilesInference/scripts
         ```
-    <br>  
 
 5) Eseguire questi comandi per **copiare tutti i file dei modelli** necessari nella sottocartella **models**:
 
