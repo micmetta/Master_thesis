@@ -57,7 +57,7 @@
         /beegfs/home/mmetta/Test/TestTesi/modelli_riaddestrati/meta-llama/Meta-Llama-3-70B-Instruct-base-finetune-text2sql-finetune-TRAINING_2_4bit_4bit_10Epochs <base_path_new_account>/FilesInference/models/model70B
         ```
 
-## CONFIGURAZIONE DEL file ".env.local" DEL PROGETTO
+## CONFIGURAZIONE DEL FILE ".env.local" DEL PROGETTO
 
 - Ora è necessario **andare all'interno della cartella "interface/.env.local" del progetto** e settare in questo modo le seguenti variabili di configurazione:
 
