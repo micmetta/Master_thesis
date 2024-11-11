@@ -9,18 +9,15 @@
 ## COPIA FILE - REMOTE SERVER
 
 1) Creare una **nuova cartella** per "base_path_new_account" sul server remoto chiamandola ad esempio **"FilesInference"**.  
-<br>  
 
 2) Creare all'interno della cartella creata al passo precedente **2 sottocartelle** chiamate:  
     - scripts
     - models
-    <br>  
 
 3) Creare queste sottocartelle nella sottocartella **models**:
     - model8B
     - baseModel70B
     - model70B
-    <br>
 
 4) Eseguire questi comandi per **copiare gli script delle inferenze** necessari nella sottocartella **scripts**:
     
@@ -65,20 +62,25 @@
 
 - Ora è necessario **andare all'interno della cartella "interface/.env.local" del progetto** e settare in questo modo le seguenti variabili di configurazione:
 
-    1) **NEXT_PUBLIC_PATH_FILE_INFERENCES=<base_path_new_account>**/FilesInference/scripts  
-        <br>  
+    ```bash
+    NEXT_PUBLIC_PATH_FILE_INFERENCES=<base_path_new_account>/FilesInference/scripts
+    ```
 
-    2) **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT=meta-llama/Meta-Llama-3-8B-Instruct**  
-        <br>
+    ```bash
+    PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT=meta-llama/Meta-Llama-3-8B-Instruct  
+    ```
 
-    3) **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT=<base_path_new_account>**/FilesInference/models/model8B  
-        <br>
+    ```bash
+    PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT=<base_path_new_account>/FilesInference/models/model8B  
+    ```
 
-    4) **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT=<base_path_new_account>**/FilesInference/models/baseModel70B  
-        <br>
+    ```bash
+    PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT=<base_path_new_account>/FilesInference/models/baseModel70B  
+    ```
 
-    5) **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT=<base_path_new_account>**/FilesInference/models/model70B  
-        <br>
+    ```bash
+    PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT=<base_path_new_account>/FilesInference/models/model70B  
+    ```
 
 
 ## END
