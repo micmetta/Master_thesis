@@ -42,7 +42,7 @@ Il file è suddiviso in 4 parti:
     - **POSTGRES_PASSWORD**: La password associata all'utente.
     - **POSTGRES_DB**: Il nome del database sperimentale al quale l'applicazione si connette.
 
-3) Variabili di **configurazione** per la **connessione SSH al server remoto** e per specificare percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(modifica obbligatoria)**:
+3) Variabili di **configurazione** sia per la **connessione SSH al server remoto**, sia per specificare i percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(modifica obbligatoria)** e sia per gestire **i percorsi dei modelli da richiamare per eseguire le inferenze**:
 
     - **NEXT_PUBLIC_SSH_USER**: Assegnare a questa variabile il nome utente che verrà utilizzato per effettuare la connessione SSH al server remoto.   
 
@@ -62,6 +62,14 @@ Il file è suddiviso in 4 parti:
 
         **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
+
+    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 8B** presente nella cartella del tuo account sul **server remoto**.
+
+    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del modello a **8B riaddestrato** presente nella cartella del tuo account sul **server remoto**. Questo sarà il modello che verrà utilizzato per gestire l'inferenza quando l'utente invierà una richiesta specificando l'uso del modello ad 8B.
+
+    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 70B** presente nella cartella del tuo account sul **server remoto**.
+
+    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assegnare a questa variabile il percorso del modello a **70B riaddestrato** presente nella cartella del tuo account sul **server remoto**. Questo sarà il modello che verrà utilizzato per gestire l'inferenza quando l'utente invierà una richiesta specificando l'uso del modello a 70B.
 
 4) Variabile di **configurazione** del file **contenente la tua chiave privata** **(modifica obbligatoria)**:
     - **PRIVATE_KEY_PATH**: Assegnare a questa variabile il **percorso del file 'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.

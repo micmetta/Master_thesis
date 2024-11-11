@@ -66,8 +66,13 @@ export async function executeJobWithStatus(command: string, question: string, us
     throw new Error('Comando, domanda, userId o modello mancanti');
   }
   
-  const sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\""`;
-  
+  let sshCommand = ""
+  if(selectedModel=="8B"){
+    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\""`;
+  }else{
+    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\""`;
+  }
+
   let jobIdFinally: string = '';
   try {
     const stdout = await executeWithRetries(sshCommand, MAX_RETRY_ATTEMPTS, RETRY_DELAY, userId, selectedModel);
