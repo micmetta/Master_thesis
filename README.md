@@ -91,7 +91,7 @@ docker-compose --env-file ./interface/.env.local up --build
 docker-compose --env-file ./interface/.env.local up
 ```
 
-- Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app", dopodichè si potrà procedere con lo step 6.
+- Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà **attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app"**, dopodichè si potrà procedere con lo step 5.
 
 ## 5 - Utilizzare l'interfaccia grafica
 
