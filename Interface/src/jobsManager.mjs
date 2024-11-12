@@ -67,14 +67,7 @@ async function startBatchPolling() {
             await deleteALLInferenceFiles(failedAttempts); // attendo che la cancellazione di eventuali files su SLURM di jobs già completati venga terminata
             console.log('(jobsManager.mjs) Controllo per la cancellazione dei files completata con successo.\n');
           } catch (error) {
-            
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            // VERIFICA CHE QUESTO MESSAGGIO VENGA STAMPATO SEMPRE PRIMA DELL'AVVISO SULL'INIZIO DEL PROSSIMO CICLO DI POOLING!!!!!!
-            // DOPODICHE' PUOI FARE IL PUSH CON LE MODIFICHE
             console.log(`(jobsManager.mjs) Non ci sono files da cancellare in remoto: ${error.message}`);
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
           }
         } else if((jobIds.length === 0) && (!max_limit) && (failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps >= NUM_MAX_OF_CONSECUTIVE_FILE_DELETION_ATTEMPS)){
           max_limit = true  
@@ -135,7 +128,7 @@ async function startBatchPolling() {
                 console.log(`\n(jobsManager.mjs) Verifico che il job ${jobId} sia stato completato contattando SLURM..`);
                 try {
                   const result = await getResultAfterWait(jobId, job.userId, WAITBEFOREEXEC, updateJobStatus);
-                  console.log(`(jobsManager.mjs) QuerySQL ottenuta: ${result} per il job ${jobId}\n`);
+                  console.log(`(jobsManager.mjs) QuerySQL ottenuta [job ${jobId}]: ${result}\n`);
                 } catch (error) {
                   console.log(`(jobsManager.mjs) Non è ancora stato generato il file di output per il job ${jobId}: \n${error}\n`);
                   await updateIncrementJobNumControl(jobId); // incremento di 1 il valore del campo 'numControl' del job corrente perchè con il controllo 

@@ -62,6 +62,8 @@ Il file è suddiviso in 4 parti:
 
         **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
+    
+    - **EXPORT_PYTHON_PATH**: Assegnare a questa variabile il percorso della directory presente sulla macchina remota contenente tutte le librerie di Python (con le versioni corrette) utili per il corretto funzionamento dei file '.sh' e '.py' per l'esecuzione delle inferenze.
 
     - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 8B** presente nella cartella del tuo account sul **server remoto**.
 
