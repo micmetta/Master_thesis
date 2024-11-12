@@ -193,4 +193,4 @@ export {
     updateResetJobNumControl,
     updateIncrementJobNumTotalControl,
     deleteALLCompletedORCancelledJobs
-  };
+};

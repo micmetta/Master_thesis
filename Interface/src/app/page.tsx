@@ -111,7 +111,7 @@ export default function Home() {
 
       {/* Sotto-paragrafo (fontSize: 'portato da 18px a16px') */}
       <p style={{ textAlign: 'center', marginBottom: '30px', marginTop: '20px', fontWeight: 'bold', fontSize: '17px', lineHeight: '1.5'}}>
-        Seleziona prima il modello da utilizzare durante l&aposinferenza, dopodichè scrivi la query in linguaggio naturale (Inglese/Italiano) e infine clicca sul button per generare la query SQL e ottenere i risultati.
+        Seleziona prima il modello da utilizzare durante l&apos;inferenza, dopodichè scrivi la query in linguaggio naturale (Inglese/Italiano) e infine clicca sul button per generare la query SQL e ottenere i risultati.
       </p>
 
       <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '20vh' }}>

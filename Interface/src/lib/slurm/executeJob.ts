@@ -40,10 +40,9 @@ async function checkJobCompletion(jobId: string): Promise<string | null> {
   return new Promise((resolve) => {
     const pollJobStatus = async () => {
       const jobIsCompleted = await getJob(jobId);
-      
       switch (jobIsCompleted.status) {
         case 'running':
-          break; // il job è ancora in esecuzione quindi non risolvo la promise per permettere che 'pollJobStatus' continui a monitare il job
+          break; // il job è ancora in esecuzione quindi non risolvo la promise per permettere che 'pollJobStatus()' continui a monitare il job
         case 'completed':
           resolve(jobIsCompleted.result); // il job è stato completato e quindi restituisco la querySQL che è stata generata dal modello
           return;
@@ -54,9 +53,10 @@ async function checkJobCompletion(jobId: string): Promise<string | null> {
           resolve('cancelled-timeout');
           return;
         }
-      setTimeout(pollJobStatus, WAITJOBSTATUS); // attendo 'WAITJOBSTATUS' secondi prima di rieseguire la 'pollJobStatus'
+      setTimeout(pollJobStatus, WAITJOBSTATUS); // attendo 'WAITJOBSTATUS' secondi prima di rieseguire la 'pollJobStatus()'
     };
-    pollJobStatus();
+
+    pollJobStatus(); // chiamata
   });
 }
 
@@ -68,9 +68,9 @@ export async function executeJobWithStatus(command: string, question: string, us
   
   let sshCommand = ""
   if(selectedModel=="8B"){
-    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\""`;
+    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT}\\" \\"${process.env.EXPORT_PYTHON_PATH}\\""`;
   }else{
-    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\""`;
+    sshCommand = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cd ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES} && sbatch ${command} \\"${question}\\" \\"${userId}\\" \\"${process.env.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\" \\"${process.env.PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT}\\" \\"${process.env.EXPORT_PYTHON_PATH}\\""`;
   }
 
   let jobIdFinally: string = '';

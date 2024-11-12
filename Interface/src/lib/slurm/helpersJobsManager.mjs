@@ -25,7 +25,7 @@ async function checkExistJob(jobId) {
     try {
       const jobExists = await checkIfJobExistsInSLURM(jobId);
       if (!jobExists) {
-        console.log(`(jobManager.js)-(checkJobCompletion) Il job ${jobId} non esiste più su SLURM. Job cancellato.`);
+        console.log(`(helpersJobsManager.mjs - checkJobCompletion) Il job ${jobId} non esiste più su SLURM. Job cancellato.`);
         return 'CANCELLED-BY-SLURM'; // job non esiste più su SLURM (annullato da SLURM)
       }
       return 'RUNNING'; // job è ancora in esecuzione
@@ -64,7 +64,7 @@ async function deleteALLInferenceFiles(failedAttempts){
           failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps++;
           reject(err)
         } else {
-          console.log(`(jobManager.js - deleteALLInferenceFiles) Tutti i file che iniziano con 'output_querySQL' o 'slurm' sono stati cancellati.`);
+          console.log(`(helpersJobsManager.mjs - deleteALLInferenceFiles) Tutti i file che iniziano con 'output_querySQL' o 'slurm' sono stati cancellati.`);
           resolve();
         }
       });
@@ -80,13 +80,13 @@ function getResultAfterWait(jobId, userId, waitBeforeExec, updateJobStatus) {
           //es. exec(`ssh mmetta@c3sfr1.di.unito.it "cat /beegfs/home/mmetta/Test/TestTesi/output_querySQL_${userId}.txt"`
           exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cat ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL_${userId}.txt"`, async (err, result) => {
             if (err) {
-              // se si verifica un errore (ad esempio, il file non esiste) lo stampo
-              console.error(`(jobManager.js - getResultAfterWait) Errore nel recupero del risultato del job ${jobId}: ${err.message}`);
+              // se si verifica un warning (ad esempio, il file non esiste) lo stampo
+              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Warning nel recupero del risultato del job ${jobId}: ${err.message}`);
               await updateJobStatus(jobId, 'running'); // aggiorno lo stato del job come "running"
-              reject(`Errore nel recupero del risultato del job ${jobId}: ${err.message}`); // restituisco l'errore
+              reject(`Warning nel recupero del risultato del job ${jobId}: ${err.message}`); // restituisco il warning
             } else {
               // se l'output è stato trovato, aggiorno lo stato del job come completato con il risultato
-              console.log(`(jobManager.js - getResultAfterWait) Risultato del job ${jobId}:\n${result}`);
+              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Risultato del job ${jobId}: ${result}`);
               await updateJobStatus(jobId, 'completed', result);
               resolve(result); // risolvo la promise restituendo il risultato
             }

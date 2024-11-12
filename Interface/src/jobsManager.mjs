@@ -36,7 +36,7 @@ async function startBatchPolling() {
       return; // evito di avviare il polling più volte
     } else {
       isPollingStarted = true;
-      console.log('(jobManager.js) Inizio del batch polling per monitorare lo stato dei jobs...');
+      console.log('(jobsManager.mjs) Inizio del batch polling per monitorare lo stato dei jobs...');
       
       while (true) {
         
@@ -44,9 +44,9 @@ async function startBatchPolling() {
         POOLINGINTERVAL = 2500;
         WAITBEFOREEXEC = 1000;
         
-        console.log('\n(jobManager.js) Sto controllando se ci sono jobs attivi...');
-        console.log(`(jobManager.js) Active jobs:`, await getActiveJobs());
-        console.log(`(jobManager.js) failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps:`, failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps);
+        console.log('\n(jobsManager.mjs) Sto controllando se ci sono jobs attivi...');
+        console.log(`(jobsManager.mjs) Active jobs:`, await getActiveJobs());
+        console.log(`(jobsManager.mjs) failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps:`, failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps);
 
         const jobIds = await getALLKeysJobs(); // utilizzo 'await' per attendere il risultato
 
@@ -60,22 +60,29 @@ async function startBatchPolling() {
         */
         if ((jobIds.length === 0) && (((!max_limit) && (failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps < NUM_MAX_OF_CONSECUTIVE_FILE_DELETION_ATTEMPS)) || ((max_limit) && (failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps === 0))) ) {
           max_limit = false
-          console.log("(jobManager.js) Nessun job attivo al momento. (Ho resettato a false il valore di 'max_limit'.");
-          console.log('(jobManager.js) Inizio la verifica per la cancellazione di tutti i files creati durante le inferenze.');
+          console.log("(jobsManager.mjs) Nessun job attivo al momento. (Ho resettato a false il valore di 'max_limit').");
+          console.log('(jobsManager.mjs) Inizio la verifica per la cancellazione di tutti i files creati durante le inferenze.');
           try {
-            console.log('(jobManager.js) Controllo se ci sono files su SLURM da cancellare.\n');
+            console.log('(jobsManager.mjs) Controllo se ci sono files su SLURM da cancellare.\n');
             await deleteALLInferenceFiles(failedAttempts); // attendo che la cancellazione di eventuali files su SLURM di jobs già completati venga terminata
-            console.log('(jobManager.js) Controllo per la cancellazione dei files completata con successo.\n');
+            console.log('(jobsManager.mjs) Controllo per la cancellazione dei files completata con successo.\n');
           } catch (error) {
-            console.error(`(jobManager.js) Non ci sono files da cancellare in remoto: ${error.message}`);
+            
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            // VERIFICA CHE QUESTO MESSAGGIO VENGA STAMPATO SEMPRE PRIMA DELL'AVVISO SULL'INIZIO DEL PROSSIMO CICLO DI POOLING!!!!!!
+            // DOPODICHE' PUOI FARE IL PUSH CON LE MODIFICHE
+            console.log(`(jobsManager.mjs) Non ci sono files da cancellare in remoto: ${error.message}`);
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
           }
         } else if((jobIds.length === 0) && (!max_limit) && (failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps >= NUM_MAX_OF_CONSECUTIVE_FILE_DELETION_ATTEMPS)){
           max_limit = true  
-          console.log('(jobManager.js) Ho raggiunto il numero massimo di tentativi consecutivi di cancellazione dei files su SLURM che sono falliti.\n');
+          console.log('(jobsManager.mjs) Ho raggiunto il numero massimo di tentativi consecutivi di cancellazione dei files su SLURM che sono falliti.\n');
 
         } else if((jobIds.length === 0) && (max_limit)){
           failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps--;
-          console.log('(jobManager.js) Ho decrementato failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps di 1.\n');
+          console.log('(jobsManager.mjs) Ho decrementato failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps di 1.\n');
 
         } else {
           // - Non appena ci sarà anche 1 solo job nella struttura dati, entrerò in questo else e 
@@ -89,19 +96,19 @@ async function startBatchPolling() {
             if (job.status !== "completed") { // entro solo se il job corrente non è ancora stato completato
               
               const numControlJob = await getNumControlJob(jobId);
-              console.log(`(jobManager.js) Valore 'NumControlJob' del job ${jobId}: ${numControlJob}`);
+              console.log(`(jobsManager.mjs) Valore 'NumControlJob' del job ${jobId}: ${numControlJob}`);
 
               const numTotalControlJob = await getNumTotalControlJob(jobId);
-              console.log(`(jobManager.js) Valore 'NumTotalControlJob' del job ${jobId}: ${numTotalControlJob}`);
+              console.log(`(jobsManager.mjs) Valore 'NumTotalControlJob' del job ${jobId}: ${numTotalControlJob}`);
               
               const selectedModelJob = await getSelectedModelJob(jobId);
-              console.log(`(jobManager.js) Valore 'selectedModel' del job ${jobId}: ${selectedModelJob}`);
+              console.log(`(jobsManager.mjs) Valore 'selectedModel' del job ${jobId}: ${selectedModelJob}`);
 
               limit_numControlJob_currentJob = selectedModelJob === '8B' ? LIMIT_NUM_CONTROL_JOB_MODEL_8B : LIMIT_NUM_CONTROL_JOB_MODEL_70B
-              console.log(`(jobManager.js) limit_numControlJob_currentJob del job ${jobId}: ${limit_numControlJob_currentJob}`);
+              console.log(`(jobsManager.mjs) limit_numControlJob_currentJob del job ${jobId}: ${limit_numControlJob_currentJob}`);
               
               limit_numMaxTotalControlJob_currentJob = selectedModelJob === '8B' ? LIMIT_MAX_NUM_CONTROL_JOB_MODEL_8B : LIMIT_MAX_NUM_CONTROL_JOB_MODEL_70B
-              console.log(`(jobManager.js) limit_numMaxTotalControlJob_currentJob del job ${jobId}: ${limit_numMaxTotalControlJob_currentJob}`);
+              console.log(`(jobsManager.mjs) limit_numMaxTotalControlJob_currentJob del job ${jobId}: ${limit_numMaxTotalControlJob_currentJob}`);
               
               if(numTotalControlJob > limit_numMaxTotalControlJob_currentJob){
                 /*
@@ -115,22 +122,22 @@ async function startBatchPolling() {
                 */
                 const cancellation_result = await cancelJobInSLURM(jobId);
                 if(cancellation_result === `Job cancellato con successo (tempo max raggiunto in coda)`){
-                  console.log(`(jobManager.js) Il job ${jobId} è stato cancellato con successo su SLURM (tempo max raggiunto in coda).\n`);
+                  console.log(`(jobsManager.mjs) Il job ${jobId} è stato cancellato con successo su SLURM (tempo max raggiunto in coda).\n`);
                   await updateJobStatus(jobId, 'cancelled-timeout'); // aggiorno lo stato del job in modo tale che la 'checkJobCompletion' presente in "slurm/executeJob.ts" veda la cancellazione e notifichi l'utente
-                  console.log(`(jobManager.js) Il job ${jobId} è stato cancellato per aver raggiunto il tempo max in coda e quindi ho impostato il suo stato a 'cancelled-timeout'.`);
+                  console.log(`(jobsManager.mjs) Il job ${jobId} è stato cancellato per aver raggiunto il tempo max in coda e quindi ho impostato il suo stato a 'cancelled-timeout'.`);
                 }else if(cancellation_result === `error`){
-                  console.log(`(jobManager.js) Si è verificato un errore (error) durante la cancellazione del job ${jobId} su SLURM (tempo max raggiunto in coda).\n`);
+                  console.log(`(jobsManager.mjs) Si è verificato un errore (error) durante la cancellazione del job ${jobId} su SLURM (tempo max raggiunto in coda).\n`);
                 }else{
-                  console.log(`(jobManager.js) E' stato ricevuto un messaggio di errore o di avviso (stderr) dopo la cancellazione del job ${jobId} su SLURM (tempo max raggiunto in coda).\n`);
+                  console.log(`(jobsManager.mjs) E' stato ricevuto un messaggio di errore o di avviso (stderr) dopo la cancellazione del job ${jobId} su SLURM (tempo max raggiunto in coda).\n`);
                 }
               }else if(numControlJob < limit_numControlJob_currentJob){
                 // Se entro qui vuol dire che job ha ancora tempo a disposizione per essere completato.
-                console.log(`\n(jobManager.js) Verifico che il job ${jobId} sia stato completato contattando SLURM..`);
+                console.log(`\n(jobsManager.mjs) Verifico che il job ${jobId} sia stato completato contattando SLURM..`);
                 try {
                   const result = await getResultAfterWait(jobId, job.userId, WAITBEFOREEXEC, updateJobStatus);
-                  console.log(`(jobManager.js) QuerySQL ottenuta: ${result} per il job ${jobId}\n`);
+                  console.log(`(jobsManager.mjs) QuerySQL ottenuta: ${result} per il job ${jobId}\n`);
                 } catch (error) {
-                  console.error(`(jobManager.js) Non è ancora stato generato il file di output per il job ${jobId}: \n${error}\n`);
+                  console.log(`(jobsManager.mjs) Non è ancora stato generato il file di output per il job ${jobId}: \n${error}\n`);
                   await updateIncrementJobNumControl(jobId); // incremento di 1 il valore del campo 'numControl' del job corrente perchè con il controllo 
                   // fatto con la funzione 'getResultAfterWait(..)' ho capito che il suo file di output non è stato ancora generato
                   await updateIncrementJobNumTotalControl(jobId); // incremento anche il numero totale di controlli fatti per il job corrente
@@ -139,11 +146,11 @@ async function startBatchPolling() {
                     if (index < 3) {
                       // Se non sto leggendo il quarto job nel for, aumento WAITBETWEENJOBS
                       WAITBETWEENJOBS = 4000;  // porto WAITBETWEENJOBS a 4s
-                      console.log(`(jobManager.js) Aumentato WAITBETWEENJOBS a: ${WAITBETWEENJOBS}`);
+                      console.log(`(jobsManager.mjs) Aumentato WAITBETWEENJOBS a: ${WAITBETWEENJOBS}`);
                     } else {
                       // Altrimenti, poichè sto leggendo il quarto job nel for, aumento POOLINGINTERVAL
                       POOLINGINTERVAL = 4000; // porto POOLINGINTERVAL a 4s
-                      console.log(`(jobManager.js) Aumentato POOLINGINTERVAL a: ${POOLINGINTERVAL}`);
+                      console.log(`(jobsManager.mjs) Aumentato POOLINGINTERVAL a: ${POOLINGINTERVAL}`);
                     }
                   }
                 }
@@ -155,30 +162,30 @@ async function startBatchPolling() {
                 if(exist === 'CANCELLED-BY-SLURM'){
                   // aggiorno lo stato del job in modo tale che la POST presente in "executeCommand/route.ts" sappia dell'annullamento e notifichi l'utente
                   await updateJobStatus(jobId, 'cancelled-by-slurm');
-                  console.log(`(jobManager.js) Il job ${jobId} è stato cancellato da SLURM prematuramente a causa del sovraccaricamento degli utenti e quindi ho impostato il suo stato a 'cancelled-by-slurm'.`);
+                  console.log(`(jobsManager.mjs) Il job ${jobId} è stato cancellato da SLURM prematuramente a causa del sovraccaricamento degli utenti e quindi ho impostato il suo stato a 'cancelled-by-slurm'.`);
                 }else{
                   await updateResetJobNumControl(jobId); // resetto a 0 il contatore 'numControlJob' del job corrente
-                  console.log(`(jobManager.js) Il job ${jobId} è ancora in coda su SLURM e quindi ho resettato il suo NumControl.\n`);
+                  console.log(`(jobsManager.mjs) Il job ${jobId} è ancora in coda su SLURM e quindi ho resettato il suo NumControl.\n`);
                 }
               }
             }
             // Attendo 'WAITBETWEENJOBS' secondi tra un job e l'altro (potrebbe anche NON esserci nessun job successivo)
-            console.log(`(jobManager.js) Attendo: ${WAITBETWEENJOBS/1000} secondi prima di passare al job successivo..\n`);
+            console.log(`(jobsManager.mjs) Attendo: ${WAITBETWEENJOBS/1000} secondi prima di passare al job successivo..\n`);
             await new Promise((resolve) => setTimeout(resolve, WAITBETWEENJOBS));
           }
 
           // Prima di ripetere il ciclo, cancello dalla struttura dati tutti i jobs che sono già stati completati oppure che sono stati cancellati ('cancelled-timeout' o 'cancelled-by-slurm')
           await deleteALLCompletedORCancelledJobs();
-          console.log("\n(jobManager.js) Ho terminato la pulizia della struttura dati, adesso riprendo il ciclo di controllo dei jobs.");
+          console.log("\n(jobsManager.mjs) Ho terminato la pulizia della struttura dati, adesso riprendo il ciclo di controllo dei jobs.");
         }
 
         // Attendo 'POOLINGINTERVAL' secondi prima del prossimo ciclo di polling
-        console.log(`(jobManager.js) Attendo: ${POOLINGINTERVAL/1000} secondi prima di passare al prossimo ciclo di pooling..`);
+        console.log(`(jobsManager.mjs) Attendo: ${POOLINGINTERVAL/1000} secondi prima di passare al prossimo ciclo di pooling..`);
         await new Promise((resolve) => setTimeout(resolve, POOLINGINTERVAL));
       }
     }
   } catch (error) {
-    console.error('(jobManager.js) ERRORE: Si è verificato un errore dentro la funzione -startBatchPolling-...', error);
+    console.error('(jobsManager.mjs) ERRORE: Si è verificato un errore dentro la funzione -startBatchPolling-...', error);
   }
 }
 
