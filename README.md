@@ -18,7 +18,14 @@ aggiornata di tale DB, potrai semplicemente sostituire questo file con il tuo.
 2) **'experimentalDB.sql'**: contenente i comandi SQL utili per creare localmente il database che conterrà le queries richieste dagli utenti. 
 **NON c'è bisogno di modificare/sostituire questo file tranne nel caso in cui si volessero apportare delle modifiche a questo DB**.
 
-## 3 - Setting file .env.local
+
+## 3 - Setup file sulla macchina remota
+- Aprire il file **'SETUP_INFERENCE_FILES_REMOTE.md'** e seguire i passaggi presenti al suo interno in modo tale da settare correttamente tutti i modelli e gli script sulla macchina remota che verranno richiamati dall'applicazione Next.js.
+
+- Dopodichè tornare qui e continuare con lo step 4.
+
+
+## 4 - Setting file .env.local
 All'interno della cartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
 Esso contiene al proprio interno tutte le variabili di configurazione necessarie per il corretto funzionamento dell'applicazione. 
 
@@ -48,7 +55,9 @@ Il file è suddiviso in 4 parti:
 
     - **NEXT_PUBLIC_SSH_SERVER**: Assegnare a questa variabile l'indirizzo del server remoto al quale verrà effettuata la connessione. Sia la connessione, che tutte le successive richieste di esecuzione di script verso questo server, avverranno tramite l'utilizzo del protocollo SSH.
 
-    - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assegnare a questa variabile il percorso base che rappresenterà la directory principale sul server remoto nella quale ci saranno, sia gli script che si preoccuperanno di eseguire l'inferenza e sia i file di output delle inferenze richieste da parte degli utenti che poi verranno cancellati una volta che questi non saranno più necessari.  
+    I valori delle **variabili successive dipenderanno dai percorsi settati durante lo step [3 - Setup file sulla macchina remota]**:
+
+    - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assegnare a questa variabile il percorso base che rappresenterà la directory principale sul server remoto nella quale ci saranno, sia gli script che si preoccuperanno di eseguire l'inferenza e sia i file di output delle inferenze richieste da parte degli utenti che poi verranno cancellati una volta che questi non saranno più necessari. **Bisogna assicurarsi che nell'ambiente a cui si fa riferimento con questo percorso siano state già installate tutte le librerie necessare per il corretto funzionamento degli script 'inference_8B.py' e 'inference_70B.py' che verranno rispettivamente invocati da 'job_script_8B.sh' e 'job_script_70B.sh'.**
           
         In particolare, quest'ultimo percorso verrà utilizzato all'interno dell'applicazione nei seguenti modi:
         
@@ -63,7 +72,7 @@ Il file è suddiviso in 4 parti:
         **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
                (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
     
-    - **EXPORT_PYTHON_PATH**: Assegnare a questa variabile il percorso della directory presente sulla macchina remota contenente tutte le librerie di Python (con le versioni corrette) utili per il corretto funzionamento dei file '.sh' e '.py' per l'esecuzione delle inferenze.
+    - **EXPORT_PYTHON_PATH**: Assegnare a questa variabile il percorso della cartella presente sulla macchina remota contenente la **versione corretta della libreria PyTorch**.
 
     - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 8B** presente nella cartella del tuo account sul **server remoto**.
 
@@ -76,7 +85,7 @@ Il file è suddiviso in 4 parti:
 4) Variabile di **configurazione** del file **contenente la tua chiave privata** **(modifica obbligatoria)**:
     - **PRIVATE_KEY_PATH**: Assegnare a questa variabile il **percorso del file 'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
 
-## 4 - Eseguire il software
+## 5 - Eseguire il software
 
 **Da questo step in poi dovrai avere Docker in esecuzione sulla tua macchina.** 
 
@@ -91,8 +100,8 @@ docker-compose --env-file ./interface/.env.local up --build
 docker-compose --env-file ./interface/.env.local up
 ```
 
-- Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà **attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app"**, dopodichè si potrà procedere con lo step 5.
+- Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà **attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app"**, dopodichè si potrà procedere con lo step 6.
 
-## 5 - Utilizzare l'interfaccia grafica
+## 6 - Utilizzare l'interfaccia grafica
 
 A questo punto basterà aprire un browser qualsiasi e inserire l'indirizzo "http://localhost:3000/" per poter inviare le richieste all'applicazione.

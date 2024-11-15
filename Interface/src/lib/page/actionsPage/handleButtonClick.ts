@@ -61,6 +61,9 @@ export async function handleButtonClick(
             setColumnNames(result.columns);
             setQueryResults(result.rows);
             setDisplayedResults(result.rows.slice(0, RESULTS_PER_PAGE));
+            if(result.rows.length === 0){
+                setError("Nel database non ci sono dati che rispettano la query SQL generata dal modello.");
+            }
         }else {
             if(result.output != ''){
             setSqlQuery(result.output);

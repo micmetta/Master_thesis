@@ -99,7 +99,7 @@ export async function executeJobWithStatus(command: string, question: string, us
 
   } finally{
     if(jobIdFinally != ''){
-      updateJobCanRemoved(jobIdFinally); // avviso il pooling di 'jobsManager.js' che il job che veniva monitorato può essere rimosso dalla struttura 
+      updateJobCanRemoved(jobIdFinally); // avviso il pooling di 'jobsManager.mjs' che il job che veniva monitorato può essere rimosso dalla struttura 
     }
   }
 }

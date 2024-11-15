@@ -74,6 +74,6 @@ export async function handleButtonClickServer(nlQuery: string, sessionId: string
             console.error("(handleButtonClickServer.ts) - Errore durante l'INSERT in 'ExperimentalDB' per l'utente: " + sessionId + " ("+error+")");
         });
         
-        return result;
+        return result; // restituisco subito il risultato senza attendere insertQueryData()
     }
 }
