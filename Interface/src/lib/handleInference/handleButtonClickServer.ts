@@ -18,7 +18,6 @@ export async function handleButtonClickServer(nlQuery: string, sessionId: string
         rows: [],
         error: null
     }
-
     try {
         // Step 1: Connettersi a SLURM per eseguire il job
         const response_1 = await executeJobWithStatus(

@@ -19,7 +19,8 @@ export async function insertQueryData(data: InsertData): Promise<string> {
       response_execute_query === 'CONNECTION_ERROR' ||
       response_execute_query === 'TIMEOUT_ERROR' ||
       response_execute_query === 'SLURM_ERROR' ||
-      response_execute_query === 'Nessuna_query_SQL_generata'
+      response_execute_query === 'Nessuna_query_SQL_generata' || 
+      response_execute_query?.includes("Clausola non consentita rilevata")
     ) {
       status = response_execute_query;
     } else {
