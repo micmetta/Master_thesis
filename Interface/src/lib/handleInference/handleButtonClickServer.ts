@@ -27,19 +27,31 @@ export async function handleButtonClickServer(nlQuery: string, sessionId: string
             sessionId,
             model
         );
-        if ('output' in response_1 && response_1.output !== 'Nessuna query SQL trovata.') {
-            result.output = response_1.output; // memorizzo subito la querySQL ottenuta, nell'oggetto che restituirò alla fine in modo tale da averla sicuramente nel blocco finally
-            // Step 2: Eseguire la query SQL nel database 'BioInfoDB' per prendere i risultati
-            const response_2 = await executeQuery(response_1.output);
-            result.columns = response_2.columns;
-            // converto ogni riga in un array di stringhe
-            result.rows = response_2.rows.map(row =>
-                Object.values(row).map(value => String(value))
-            );
-            result.error = null;
-        } else{
-            result.error = "Nessuna query SQL generata. Prova a riformulare la query utilizzando parole differenti e/o cambia modello.";
-            response_execution_query_BioInfoDB = 'Nessuna_query_SQL_generata';
+        if('output' in response_1){
+            if(response_1.output.includes("Clausola non consentita rilevata")){
+                // estraggo la clausola non consentita e la query generata
+                const backendOutput: string = response_1.output;
+                const clauseMatch = backendOutput.match(/Clausola non consentita rilevata: (GROUP BY|HAVING|ORDER BY|LIMIT|OFFSET|UNION|JOIN)/);
+                const queryMatch = backendOutput.match(/Query generata (SELECT[\s\S]*?);/);
+                const foundClause: string = clauseMatch ? clauseMatch[1] : "sconosciuta";
+                const generatedQuery: string = queryMatch ? queryMatch[1] : "nessuna query rilevata";
+                // preparo il messaggio di errore completo
+                result.error = `Errore: Clausola non consentita (${foundClause}) nella query generata: ${generatedQuery}`;
+                response_execution_query_BioInfoDB = `Clausola non consentita rilevata (${foundClause})`;
+            } else if(response_1.output !== 'Nessuna query SQL trovata.'){
+                result.output = response_1.output; // memorizzo subito la querySQL ottenuta, nell'oggetto che restituirò alla fine in modo tale da averla sicuramente nel blocco finally
+                // Step 2: Eseguire la query SQL nel database 'BioInfoDB' per prendere i risultati
+                const response_2 = await executeQuery(response_1.output);
+                result.columns = response_2.columns;
+                // converto ogni riga in un array di stringhe
+                result.rows = response_2.rows.map(row =>
+                    Object.values(row).map(value => String(value))
+                );
+                result.error = null;
+            } else {
+                result.error = "Nessuna query SQL generata. Prova a riformulare la query utilizzando parole differenti e/o cambia modello.";
+                response_execution_query_BioInfoDB = 'Nessuna_query_SQL_generata';
+            }
         }
     } catch (error) {
         console.error("(handleButtonClickServer.ts) - " + error);
