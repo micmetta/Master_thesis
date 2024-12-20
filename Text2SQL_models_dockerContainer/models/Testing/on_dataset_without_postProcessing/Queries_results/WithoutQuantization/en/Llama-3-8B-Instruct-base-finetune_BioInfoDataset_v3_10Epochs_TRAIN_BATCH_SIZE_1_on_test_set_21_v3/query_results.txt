@@ -1,0 +1,110 @@
+Current category: C1
+	current question: Q1
+	question: Give me all rows of strain.
+	query: SELECT * FROM detailedstrain; 
+	Time taken: 1.0758376121520996 seconds
+
+	current question: Q2
+	question: Give me all strain that have beforenagoya equal to true.
+	query: SELECT * FROM detailedstrain WHERE beforenagoya = true; 
+	Time taken: 0.7381985187530518 seconds
+
+	current question: Q3
+	question: Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+	query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Bioassay;ELISA'; 
+	Time taken: 0.9821622371673584 seconds
+
+	current question: Q4
+	question: Select only field called pathogenicity from strain.
+	query: SELECT pathogenicity FROM detailedstrain; [/INST] This query will select only the pathogenicity field from the detailedstrain table. [/INST] The above query will return all pathogenicity values from the detailedstrain table. If you want to filter the results, for example to only include strains with pathogenicity equal to 'Pathogen for Plants', you can use the following query: 
+	Time taken: 4.039830923080444 seconds
+
+Current category: C2
+	current question: Q1
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+	query: SELECT * FROM detailedstrain WHERE ineva = false AND abbreviation = 'BCMV'; 
+	Time taken: 0.8522210121154785 seconds
+
+	current question: Q2
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+	query: SELECT * FROM detailedstrain WHERE ineva = false AND (abbreviation = 'BCMV' AND (cultivar = 'Saluggia' OR cultivar = 'viola')); 
+	Time taken: 1.7828714847564697 seconds
+
+	current question: Q3
+	question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+	query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact' OR transmissionby = 'contact;insect' OR transmissionby = 'contact;insect;pollen'; 
+	Time taken: 1.6921477317810059 seconds
+
+	current question: Q4
+	question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+	query: SELECT infectivitytested, propagationhost FROM detailedstrain; 
+	Time taken: 0.566704511642456 seconds
+
+Current category: C3
+	current question: Q1
+	question: Give me all strains.
+	query: SELECT * FROM detailedstrain; 
+	Time taken: 0.3317725658416748 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+	query: SELECT * FROM detailedstrain WHERE otherdenominations = 'MVPC1 10'; 
+	Time taken: 0.8957655429840088 seconds
+
+	current question: Q3
+	question: Select 'Pathogenicity' from strain.
+	query: SELECT Pathogenicity FROM detailedstrain; 
+	Time taken: 0.43576502799987793 seconds
+
+	current question: Q4
+	question: Select 'Pathogenicity' and 'tpestrain' from strain.
+	query: SELECT Pathogenicity, Tpestrain FROM detailedstrain; 
+	Time taken: 0.6264278888702393 seconds
+
+Current category: C4
+	current question: Q1
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+	query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2012')); 
+	Time taken: 4.111592054367065 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+	query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate < '1999')); 
+	Time taken: 4.12651801109314 seconds
+
+	current question: Q3
+	question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+	query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002')); 
+	Time taken: 4.345296382904053 seconds
+
+	current question: Q4
+	question: Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+	query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1999')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+	Time taken: 5.0599963665008545 seconds
+
+	current question: Q5
+	question: Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+	query: SELECT * FROM detailedstrain WHERE collection = 18 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2000' AND collectiondate <= '2010')) AND identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'; [/INST] Note that I'm assuming that the collectiondate field is in the format 'YYYY-MM-DD' or 'YYYY'. If it's in a different format, you'll need to modify
+	Time taken: 9.452672958374023 seconds
+
+Current category: C5
+	current question: Q1
+	question: Select and count the number of strains, grouping the results by the trasmissionby field.
+	query: SELECT COUNT(*), transmissionby FROM detailedstrain GROUP BY transmissionby; 
+	Time taken: 0.7192647457122803 seconds
+
+	current question: Q2
+	question: Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+	query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions; 
+	Time taken: 0.9525787830352783 seconds
+
+	current question: Q3
+	question: Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+	query: SELECT COUNT(*), transmissionby, storageconditions FROM detailedstrain GROUP BY transmissionby, storageconditions; 
+	Time taken: 1.00400972366333 seconds
+
+	current question: Q4
+	question: Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+	query: SELECT storageconditions, COUNT(*) FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions HAVING COUNT(*) > 4; 
+	Time taken: 1.2815141677856445 seconds
+

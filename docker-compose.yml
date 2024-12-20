@@ -49,12 +49,12 @@ services:
       - db
       - experimentaldb
     volumes:
-      - "${PRIVATE_KEY_PATH}:/root/.ssh/id_rsa" # Monta la chiave privata SSH dal percorso specificato in PRIVATE_KEY_PATH (file ".env.local") nel container al percorso '/root/.ssh/id_rsa'.
-                                                # Non si usa ':ro' per permettere la modifica dei permessi della chiave privata (richiesto per SSH).
-    entrypoint: ["sh", "-c", "chmod 600 /root/.ssh/id_rsa && npm start"] # 'sh -c' per eseguire più comandi consecutivi nel container:
-                                                                         # 1) 'chmod 600 /root/.ssh/id_rsa' imposta i permessi corretti sulla chiave privata montata,
-                                                                         #     rendendola accessibile solo al proprietario, come richiesto per l'accesso SSH sicuro.
-                                                                         # 2) 'npm start' avvia l'applicazione Next.js dopo che la chiave è pronta.
+      - "${PRIVATE_KEY_PATH}:/root/.ssh/id_rsa" # Mount the SSH private key from the path specified in PRIVATE_KEY_PATH (file ".env.local") in the container at '/root/.ssh/id_rsa'.
+                                                # Do not use ':ro' to allow changing the private key permissions (required for SSH).
+    entrypoint: ["sh", "-c", "chmod 600 /root/.ssh/id_rsa && npm start"] # 'sh -c' to run multiple consecutive commands in the container:
+                                                                         #  1) 'chmod 600 /root/.ssh/id_rsa' sets the correct permissions on the mounted private key,
+                                                                         #      making it accessible only to the owner, as required for secure SSH access.
+                                                                         #  2) 'npm start' starts the Next.js application after the key is ready.
 
 networks:
   my_network:

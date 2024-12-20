@@ -1,21 +1,19 @@
 import { exec } from 'child_process';
 
-///////////////////////////////////////////////////// FUNZIONI PER GESTIONE RICHIESTE A SLURM /////////////////////////////////////////////////////
+//////////////////////////// FUNCTIONS FOR HANDLING REQUESTS TO SLURM ////////////////////////////
 
 async function checkIfJobExistsInSLURM(jobId) {
     return new Promise((resolve, reject) => {
-      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "squeue -u mmetta -j ${jobId}"`
       exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "squeue -u ${process.env.NEXT_PUBLIC_SSH_USER} -j ${jobId}"`, (error, stdout, stderr) => {
         if (error) {
-            console.error(`Errore durante il controllo di esistenza del job su SLURM: ${error.message}`);
-            reject(`Errore durante il controllo di esistenza del job su SLURM: ${error.message}`);
+            console.error(`Error during job existence check on SLURM: ${error.message}`);
+            reject(`Error during job existence check on SLURM: ${error.message}`);
           } else if (stderr) {
-            console.error(`Stderr durante il controllo dello stato del job: ${stderr}`);
-            reject(`Errore (stderr): ${stderr}`);
+            console.error(`Stderr when checking the status of the job: ${stderr}`);
+            reject(`Error (stderr): ${stderr}`);
           } else {
-            console.log(`stdout di squeue su SLURM: ${stdout}`);
-            // promise completata con successo e restituisco true se il job è ancora presente su SLURM, altrimenti restituisco false
-            resolve(stdout.includes(jobId));
+            console.log(`squeue stdout on SLURM: ${stdout}`);
+            resolve(stdout.includes(jobId)); // promise completed successfully and return true if the job is still present on SLURM, otherwise return false
           }
       });
     })
@@ -25,46 +23,44 @@ async function checkExistJob(jobId) {
     try {
       const jobExists = await checkIfJobExistsInSLURM(jobId);
       if (!jobExists) {
-        console.log(`(helpersJobsManager.mjs - checkJobCompletion) Il job ${jobId} non esiste più su SLURM. Job cancellato.`);
-        return 'CANCELLED-BY-SLURM'; // job non esiste più su SLURM (annullato da SLURM)
+        console.log(`(helpersJobsManager.mjs - checkJobCompletion) Job ${jobId} no longer exists on SLURM. Job deleted.`);
+        return 'CANCELLED-BY-SLURM'; // job no longer exists on SLURM (cancelled by SLURM)
       }
-      return 'RUNNING'; // job è ancora in esecuzione
+      return 'RUNNING'; // job is still running
     } catch (error) {
-      console.error(`Errore durante la verifica dell'esistenza del job ${jobId} su SLURM: ${error}`);
-      return 'CANCELLED-BY-SLURM'; // in caso di errore nella verifica, si considera il job come se fosse stato cancellato da SLURM
+      console.error(`Error when checking the existence of job ${jobId} on SLURM: ${error}`);
+      return 'CANCELLED-BY-SLURM'; // in the event of a verification error, the job is considered to have been deleted from SLURM
     }
 }
   
-// Funzione per cancellare un job da SLURM dopo aver raggiunto il tempo massimo a disposizione
+// Function to delete a job from SLURM after the maximum time has been reached
 async function cancelJobInSLURM(jobId) {
     return new Promise((resolve, reject) => {
-      //es. exec(`ssh mmetta@c3sfr1.di.unito.it "scancel ${jobId}"`
       exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "scancel ${jobId}"`, (error, stdout, stderr) => {
         if (error) {
-          console.error(`(error) Errore durante la cancellazione del job su SLURM (tempo max raggiunto in coda): ${error.message}`); // errore grave ottenuto durante l'esecuzione dell'exec (l'esecuzione dell'exec viene interrotta)
+          console.error(`(error) Error when deleting job on SLURM (max. time reached in queue): ${error.message}`); // serious error obtained during exec execution (exec execution is aborted)
           reject(`error`);
         } else if (stderr) {
-          console.error(`(stderr) durante la cancellazione del job su SLURM (tempo max raggiunto in coda): ${stderr}`); // errore o messaggio di avviso ottenuto durante l'esecuzione dell'exec (non interrompe per forza l'esecuzione dell'exec) 
+          console.error(`(stderr) during job cancellation on SLURM (max. time reached in queue): ${stderr}`); // error or warning message obtained during the execution of the exec (does not necessarily interrupt the execution of the exec) 
           reject(`stderr`);
         } else {
-          console.log(`Job con ID ${jobId} cancellato con successo.`);
-          resolve(`Job cancellato con successo (tempo max raggiunto in coda)`);
+          console.log(`Job with ID ${jobId} successfully deleted.`);
+          resolve(`Job successfully cancelled (max. time reached in queue)`);
         }
       });
     });
 }
   
 async function deleteALLInferenceFiles(failedAttempts){
-    // Comando SSH per cancellare tutti i file che iniziano con 'output_querySQL' o 'slurm' su SLURM:
-    // es. `ssh mmetta@c3sfr1.di.unito.it "rm /beegfs/home/mmetta/Test/TestTesi/output_querySQL* /beegfs/home/mmetta/Test/TestTesi/slurm*"`;
+    // SSH command to delete all files starting with 'output_querySQL' or 'slurm' on SLURM:
     const command = `ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "rm ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL* ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/slurm*"`;
-    return new Promise((resolve, reject) => { // rende la chiamata di exec compatibile con await
-      exec(command, (err) => { // eseguo il comando SSH per cancellare i files corrispondenti ai pattern
+    return new Promise((resolve, reject) => { // makes the exec call compatible with await
+      exec(command, (err) => { // I execute the SSH command to delete the files corresponding to the patterns
         if (err) {
           failedAttempts.num_max_of_consecutive_failed_file_deletion_attemps++;
           reject(err)
         } else {
-          console.log(`(helpersJobsManager.mjs - deleteALLInferenceFiles) Tutti i file che iniziano con 'output_querySQL' o 'slurm' sono stati cancellati.`);
+          console.log(`(helpersJobsManager.mjs - deleteALLInferenceFiles) All files starting with 'output_querySQL' or 'slurm' were deleted.`);
           resolve();
         }
       });
@@ -74,21 +70,20 @@ async function deleteALLInferenceFiles(failedAttempts){
 function getResultAfterWait(jobId, userId, waitBeforeExec, updateJobStatus) {
     return new Promise((resolve, reject) => {
       try {
-        // Attendo 'waitBeforeExec' secondi prima di eseguire il comando SSH per leggere il file di output
+        // I wait 'waitBeforeExec' seconds before running the SSH command to read the output file
         setTimeout(() => {
-          // Eseguo un'unica exec per tentare di leggere il file di output
-          //es. exec(`ssh mmetta@c3sfr1.di.unito.it "cat /beegfs/home/mmetta/Test/TestTesi/output_querySQL_${userId}.txt"`
+          // I execute a single exec to attempt to read the output file
           exec(`ssh ${process.env.NEXT_PUBLIC_SSH_USER}@${process.env.NEXT_PUBLIC_SSH_SERVER} "cat ${process.env.NEXT_PUBLIC_PATH_FILE_INFERENCES}/output_querySQL_${userId}.txt"`, async (err, result) => {
             if (err) {
-              // se si verifica un warning (ad esempio, il file non esiste) lo stampo
-              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Warning nel recupero del risultato del job ${jobId}: ${err.message}`);
-              await updateJobStatus(jobId, 'running'); // aggiorno lo stato del job come "running"
-              reject(`Warning nel recupero del risultato del job ${jobId}: ${err.message}`); // restituisco il warning
+              // if a warning occurs (e.g. the file does not exist) I print it out
+              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Warning in retrieving the job result ${jobId}: ${err.message}`);
+              await updateJobStatus(jobId, 'running'); // I update the job status as ‘running
+              reject(`Warning in retrieving the job result ${jobId}: ${err.message}`); // I return the warning
             } else {
-              // se l'output è stato trovato, aggiorno lo stato del job come completato con il risultato
-              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Risultato del job ${jobId}: ${result}`);
+              // if the output was found, I update the job status as completed with the result
+              console.log(`(helpersJobsManager.mjs - getResultAfterWait) Job result ${jobId}: ${result}`);
               await updateJobStatus(jobId, 'completed', result);
-              resolve(result); // risolvo la promise restituendo il risultato
+              resolve(result); // I solve the promise by returning the result
             }
           });
         }, waitBeforeExec);

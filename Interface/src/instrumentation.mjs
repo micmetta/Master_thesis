@@ -1,9 +1,9 @@
 import { startBatchPolling } from './jobsManager.mjs';
 
 function register() {
-  console.log('Avvio del batch polling all\'avvio del backend');
+  console.log('(instrumentation.mjs - register) - Starting Batch Polling..');
   startBatchPolling();
-  console.log('Batch polling partito con successo.\n\n');
+  console.log('(instrumentation.mjs - register) - Batch polling started successfully.\n\n');
 }
 
 export default {

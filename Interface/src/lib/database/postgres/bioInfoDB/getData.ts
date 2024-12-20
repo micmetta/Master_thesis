@@ -2,16 +2,16 @@ import bioInfoDBPool from "@/lib/database/postgres/bioInfoDB/initDB";
 
 interface QueryResult {
   columns: string[];
-  rows: Record<string, unknown>[]; // array di oggetti con chiavi stringa e valori di tipo sconosciuto
+  rows: Record<string, unknown>[]; // array of objects with string keys and values of unknown type
 }
 
 export async function executeQuery(query: string): Promise<QueryResult> {
   try {
     if (!query) {
-      throw new Error('(bioInfoDB/getData.ts) Query SQL mancante');
+      throw new Error('(bioInfoDB/getData.ts) Missing SQL query');
     }
-    const result = await bioInfoDBPool.query(query); // eseguo query
-    const columnNames = result.fields.map(field => field.name); // estraggo i nomi delle colonne
+    const result = await bioInfoDBPool.query(query);
+    const columnNames = result.fields.map(field => field.name); // I extract the column names
 
     return {
       columns: columnNames,

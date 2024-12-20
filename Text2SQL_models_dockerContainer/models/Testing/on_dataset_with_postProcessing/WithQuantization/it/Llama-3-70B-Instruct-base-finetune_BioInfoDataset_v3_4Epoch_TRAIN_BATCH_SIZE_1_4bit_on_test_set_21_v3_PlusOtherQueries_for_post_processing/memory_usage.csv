@@ -1,0 +1,299 @@
+
+Current category: C0_plus
+
+Current question: Q1
+Dammi tutti gli strain con il campo collection uguale a EMCC e vorganismtype uguale a Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:14,40.58,41.07
+2024-12-19 20:03:15,40.97,41.82
+2024-12-19 20:03:16,40.76,41.96
+2024-12-19 20:03:17,40.77,41.96
+2024-12-19 20:03:18,40.79,41.96
+
+Current question: Q2
+Dammi tutti gli strain con il campo 'collection' uguale a EMCC e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:19,40.61,41.96
+2024-12-19 20:03:20,40.75,41.96
+2024-12-19 20:03:21,40.78,41.96
+2024-12-19 20:03:22,40.82,41.96
+
+Current question: Q3
+Dammi tutti gli strain con il campo 'collection' uguale a fdsfdijfdk e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:23,40.61,41.96
+2024-12-19 20:03:24,40.75,41.96
+2024-12-19 20:03:25,40.78,41.96
+2024-12-19 20:03:26,40.83,41.96
+
+Current question: Q4
+Dammi tutti gli strain con il campo collection uguale a 10 e vorganismtype uguale a Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:27,40.61,41.96
+2024-12-19 20:03:28,40.75,41.96
+2024-12-19 20:03:29,40.79,41.96
+2024-12-19 20:03:30,40.83,41.96
+
+Current question: Q5
+Dammi tutti gli strain con il campo 'collection' uguale a 10 e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:31,40.61,41.96
+2024-12-19 20:03:32,40.76,41.96
+2024-12-19 20:03:33,40.79,41.96
+2024-12-19 20:03:34,40.83,41.96
+
+Current question: Q6
+Dammi tutti gli strain con il campo 'collection' uguale a '10' e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:35,40.61,41.96
+2024-12-19 20:03:36,40.75,41.96
+2024-12-19 20:03:37,40.79,41.96
+2024-12-19 20:03:38,40.82,41.96
+
+Current question: Q7
+Dammi tutti gli strain con il campo 'Pathogenicity' uguale a true e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:39,40.61,41.96
+2024-12-19 20:03:40,40.76,41.96
+2024-12-19 20:03:41,40.8,41.96
+2024-12-19 20:03:42,40.84,41.96
+
+Current question: Q8
+Dammi tutti gli strain con il campo 'tpestrain' uguale a false e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:43,40.61,41.96
+2024-12-19 20:03:44,40.76,41.96
+2024-12-19 20:03:45,40.79,41.96
+2024-12-19 20:03:46,40.85,41.96
+
+Current question: Q9
+Seleziona il campo pathogenicity da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:47,40.61,41.96
+2024-12-19 20:03:48,40.74,41.96
+
+Current category: C1
+
+Current question: Q1
+Dammi tutte le righe di strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:49,40.61,41.96
+2024-12-19 20:03:50,40.74,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno beforenagoya uguale a true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:51,40.61,41.96
+2024-12-19 20:03:52,40.76,41.96
+2024-12-19 20:03:53,40.79,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:54,40.61,41.96
+2024-12-19 20:03:55,40.75,41.96
+2024-12-19 20:03:56,40.79,41.96
+2024-12-19 20:03:57,40.83,41.96
+
+Current question: Q4
+Seleziona solo il campo chiamato pathogenicity da strain
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:03:58,40.61,41.96
+2024-12-19 20:03:59,40.74,41.96
+
+Current category: C2
+
+Current question: Q1
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:00,40.61,41.96
+2024-12-19 20:04:01,40.76,41.96
+2024-12-19 20:04:02,40.8,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:03,40.61,41.96
+2024-12-19 20:04:04,40.75,41.96
+2024-12-19 20:04:05,40.79,41.96
+2024-12-19 20:04:06,40.82,41.96
+2024-12-19 20:04:07,40.86,41.96
+2024-12-19 20:04:08,40.91,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:09,40.61,41.96
+2024-12-19 20:04:10,40.76,41.96
+2024-12-19 20:04:11,40.79,41.96
+2024-12-19 20:04:12,40.83,41.96
+2024-12-19 20:04:13,40.87,41.96
+
+Current question: Q4
+Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:15,40.61,41.96
+2024-12-19 20:04:16,40.75,41.96
+
+Current category: C3
+
+Current question: Q1
+Dammi tutte le righe della tabella strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:17,40.61,41.96
+2024-12-19 20:04:18,40.74,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo 'oterdeminations' uguale a 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:19,40.61,41.96
+2024-12-19 20:04:20,40.76,41.96
+2024-12-19 20:04:21,40.79,41.96
+2024-12-19 20:04:22,40.83,41.96
+
+Current question: Q3
+Seleziona il campo 'Pathogenicity' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:23,40.61,41.96
+2024-12-19 20:04:24,40.74,41.96
+
+Current question: Q4
+Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:25,40.61,41.96
+2024-12-19 20:04:26,40.75,41.96
+
+Current category: C4
+
+Current question: Q1
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:27,40.61,41.96
+2024-12-19 20:04:28,40.76,41.96
+2024-12-19 20:04:29,40.8,41.96
+2024-12-19 20:04:30,40.84,41.96
+2024-12-19 20:04:31,40.89,41.96
+2024-12-19 20:04:32,40.78,41.96
+2024-12-19 20:04:33,40.82,41.96
+2024-12-19 20:04:34,40.86,41.96
+2024-12-19 20:04:35,40.91,41.96
+2024-12-19 20:04:36,40.8,41.96
+2024-12-19 20:04:37,40.86,41.96
+2024-12-19 20:04:38,40.91,41.96
+2024-12-19 20:04:39,40.79,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:40,40.61,41.96
+2024-12-19 20:04:41,40.77,41.96
+2024-12-19 20:04:42,40.81,41.96
+2024-12-19 20:04:43,40.87,41.96
+2024-12-19 20:04:44,40.77,41.96
+2024-12-19 20:04:45,40.82,41.96
+2024-12-19 20:04:46,40.87,41.96
+2024-12-19 20:04:47,40.77,41.96
+2024-12-19 20:04:48,40.84,41.96
+2024-12-19 20:04:49,40.88,41.96
+2024-12-19 20:04:50,40.94,41.96
+2024-12-19 20:04:51,40.82,41.96
+2024-12-19 20:04:52,40.88,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:04:53,40.61,41.96
+2024-12-19 20:04:54,40.77,41.96
+2024-12-19 20:04:55,40.82,41.96
+2024-12-19 20:04:56,40.87,41.96
+2024-12-19 20:04:57,40.77,41.96
+2024-12-19 20:04:58,40.82,41.96
+2024-12-19 20:04:59,40.88,41.96
+2024-12-19 20:05:00,40.77,41.96
+2024-12-19 20:05:01,40.84,41.96
+2024-12-19 20:05:02,40.9,41.96
+2024-12-19 20:05:03,40.8,41.96
+2024-12-19 20:05:04,40.85,41.96
+2024-12-19 20:05:05,40.91,41.96
+
+Current question: Q4
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:06,40.61,41.96
+2024-12-19 20:05:07,40.79,41.96
+2024-12-19 20:05:08,40.85,41.96
+2024-12-19 20:05:09,40.91,41.96
+2024-12-19 20:05:10,40.79,41.96
+2024-12-19 20:05:11,40.86,41.96
+2024-12-19 20:05:12,40.92,41.96
+2024-12-19 20:05:13,40.82,41.96
+2024-12-19 20:05:14,40.87,41.96
+2024-12-19 20:05:15,40.92,41.96
+2024-12-19 20:05:16,40.81,41.96
+2024-12-19 20:05:17,40.89,41.96
+2024-12-19 20:05:18,40.93,41.96
+2024-12-19 20:05:19,40.81,41.96
+2024-12-19 20:05:20,40.87,41.96
+2024-12-19 20:05:21,40.95,41.96
+
+Current question: Q5
+Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:22,40.61,41.96
+2024-12-19 20:05:23,40.78,41.96
+2024-12-19 20:05:24,40.84,41.96
+2024-12-19 20:05:25,40.9,41.96
+2024-12-19 20:05:26,40.8,41.96
+2024-12-19 20:05:27,40.85,41.96
+2024-12-19 20:05:28,40.91,41.96
+2024-12-19 20:05:29,40.8,41.96
+2024-12-19 20:05:30,40.85,41.96
+2024-12-19 20:05:31,40.92,41.96
+2024-12-19 20:05:32,40.79,41.96
+2024-12-19 20:05:33,40.87,41.96
+2024-12-19 20:05:34,40.93,41.96
+2024-12-19 20:05:35,40.8,41.96
+2024-12-19 20:05:36,40.87,41.96
+2024-12-19 20:05:37,40.96,41.96
+2024-12-19 20:05:38,40.82,41.96
+2024-12-19 20:05:39,40.89,41.96
+2024-12-19 20:05:40,40.96,41.96
+2024-12-19 20:05:41,40.83,41.96
+2024-12-19 20:05:42,40.9,41.96
+2024-12-19 20:05:43,40.96,41.96
+2024-12-19 20:05:44,40.84,41.96
+2024-12-19 20:05:45,40.92,41.96
+
+Current category: C5
+
+Current question: Q1
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:46,40.61,41.96
+2024-12-19 20:05:47,40.76,41.96
+2024-12-19 20:05:48,40.81,41.96
+
+Current question: Q2
+Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:49,40.61,41.96
+2024-12-19 20:05:50,40.79,41.96
+2024-12-19 20:05:51,40.83,41.96
+2024-12-19 20:05:52,40.88,41.96
+
+Current question: Q3
+Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:53,40.61,41.96
+2024-12-19 20:05:54,40.76,41.96
+2024-12-19 20:05:55,40.81,41.96
+2024-12-19 20:05:56,40.86,41.96
+
+Current question: Q4
+Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-19 20:05:57,40.61,41.96
+2024-12-19 20:05:58,40.89,41.96
+2024-12-19 20:05:59,40.78,41.96
+2024-12-19 20:06:00,40.84,41.96
+2024-12-19 20:06:01,40.9,41.96

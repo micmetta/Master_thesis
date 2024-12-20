@@ -1,0 +1,52 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q1
+question: Dammi tutte le righe di strain.
+real query: SELECT * FROM detailedstrain;
+generated query: SELECT * FROM strain; 
+
+ID-query: C2-Q3
+question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+real query: SELECT * FROM detailedstrain WHERE transmissionby IN ('contact', 'contact;insect', 'contact;insect;pollen');
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact' OR transmissionby = 'contact;insect' OR transmissionby = 'contact;insect;pollen'; 
+
+ID-query: C2-Q4
+question: Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+real query: SELECT infectivitytested, propagationhost FROM detailedstrain;
+generated query: SELECT infectivitytested, propagationhost FROM strain; 
+
+ID-query: C3-Q1
+question: Dammi tutte le righe della tabella strains.
+real query: SELECT * FROM detailedstrain;
+generated query: SELECT * FROM strains; 
+
+ID-query: C3-Q4
+question: Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+real query: SELECT pathogenicity, typestrain FROM detailedstrain;
+generated query: SELECT Pathogenicity, tpestrain FROM strain; 
+
+ID-query: C4-Q2
+question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate <= '1999'));
+generated query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate < '1999')); 
+
+
+
+Correct answers: 15
+Total questions: 21
+Model accuracy: 71.43%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C1-Q1
+- C2-Q4
+- C3-Q1
+- C3-Q4
+- C4-Q2
+
+Actually correct: 16
+Total questions: 21
+Accuracy model: 76.19%

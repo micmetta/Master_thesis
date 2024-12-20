@@ -1,0 +1,144 @@
+
+Current category: C1
+
+Current question: Q1
+Dammi tutte le righe di strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:36,15.18,15.29
+2024-12-17 11:59:37,15.31,15.71
+
+Current question: Q2
+Dammi tutti gli strain che hanno beforenagoya uguale a true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:38,15.22,15.71
+
+Current question: Q3
+Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:39,15.22,15.91
+
+Current question: Q4
+Seleziona solo il campo chiamato pathogenicity da strain
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:40,15.22,16.12
+
+Current category: C2
+
+Current question: Q1
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:41,15.22,16.12
+
+Current question: Q2
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:42,15.22,16.32
+2024-12-17 11:59:43,15.3,16.54
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:44,15.22,16.54
+2024-12-17 11:59:45,15.3,16.54
+
+Current question: Q4
+Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:46,15.22,16.54
+
+Current category: C3
+
+Current question: Q1
+Dammi tutte le righe della tabella strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:47,15.22,16.54
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo 'oterdeminations' uguale a 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:49,15.22,16.54
+
+Current question: Q3
+Seleziona il campo 'Pathogenicity' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:50,15.22,16.54
+
+Current question: Q4
+Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:51,15.22,16.54
+
+Current category: C4
+
+Current question: Q1
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:52,15.22,16.54
+2024-12-17 11:59:53,15.33,16.54
+2024-12-17 11:59:54,15.33,16.54
+2024-12-17 11:59:55,15.34,16.54
+2024-12-17 11:59:56,15.35,16.54
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 11:59:57,15.22,16.54
+2024-12-17 11:59:58,15.33,16.76
+2024-12-17 11:59:59,15.34,16.76
+2024-12-17 12:00:00,15.35,16.76
+2024-12-17 12:00:01,15.32,16.76
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:02,15.22,16.76
+2024-12-17 12:00:03,15.28,16.76
+2024-12-17 12:00:04,15.29,16.76
+2024-12-17 12:00:05,15.31,16.76
+2024-12-17 12:00:06,15.32,16.76
+
+Current question: Q4
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:07,15.22,16.76
+2024-12-17 12:00:08,15.29,17.0
+2024-12-17 12:00:09,15.3,17.0
+2024-12-17 12:00:10,15.31,17.0
+2024-12-17 12:00:11,15.31,17.0
+2024-12-17 12:00:12,15.31,17.0
+
+Current question: Q5
+Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:13,15.22,17.0
+2024-12-17 12:00:14,15.34,17.0
+2024-12-17 12:00:15,15.35,17.0
+2024-12-17 12:00:16,15.35,17.0
+2024-12-17 12:00:17,15.36,17.0
+2024-12-17 12:00:18,15.36,17.0
+2024-12-17 12:00:19,15.37,17.0
+2024-12-17 12:00:20,15.38,17.0
+
+Current category: C5
+
+Current question: Q1
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:21,15.22,17.0
+
+Current question: Q2
+Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:22,15.22,17.0
+
+Current question: Q3
+Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:23,15.22,17.0
+2024-12-17 12:00:24,15.32,17.0
+
+Current question: Q4
+Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-17 12:00:25,15.22,17.0
+2024-12-17 12:00:26,15.29,17.25

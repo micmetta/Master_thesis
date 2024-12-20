@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        {/* avvolgo l'intera applicazione con MantineProvider */}
+        {/* I wrap the entire application with MantineProvider */}
         <MantineProvider>
           <AppShellLayout>{children}</AppShellLayout>
         </MantineProvider>

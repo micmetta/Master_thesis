@@ -1,0 +1,82 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q3
+question: Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.
+real query: SELECT * FROM detailedstrain WHERE Identificationtechnique = 'Bioassay;ELISA';
+generated query: SELECT *  FROM detailedstrain  WHERE identificationtechnique = 'Bioassay;ELISA.'; 
+
+ID-query: C2-Q2
+question: Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+real query: SELECT * FROM detailedstrain WHERE ineva = FALSE AND abbreviation = 'BCMV' AND (cultivar = 'Saluggia' OR cultivar = 'viola');
+generated query: SELECT *  FROM detailedstrain  WHERE ineva = false AND (abbreviation = 'BCMV' OR cultivar IN ('Saluggia', 'viola')); 
+
+ID-query: C2-Q3
+question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+real query: SELECT * FROM detailedstrain WHERE transmissionby IN ('contact', 'contact;insect', 'contact;insect;pollen');
+generated query: SELECT *  FROM detailedstrain  WHERE transmissionby IN ('contact;', 'contact;insect', 'contact;insect;pollen.'); 
+
+ID-query: C3-Q4
+question: Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+real query: SELECT pathogenicity, typestrain FROM detailedstrain;
+generated query: SELECT Pathogenicity, tpestrain  FROM detailedstrain;  
+
+ID-query: C4-Q1
+question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2012'));
+generated query: SELECT *  FROM detailedstrain  WHERE collection = '18' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-01-01' OR LENGTH(collectiondate) = 4 AND collectiondate < '2012'); 
+
+ID-query: C4-Q2
+question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate <= '1999'));
+generated query: SELECT *  FROM detailedstrain  WHERE collection = 18 AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02' OR LENGTH(collectiondate) = 4 AND collectiondate <= '1999'); 
+
+ID-query: C4-Q3
+question: Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.
+real query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002'));
+generated query: SELECT *  FROM detailedstrain  WHERE pathogenicity = 'Pathogen for Plants' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31' OR LENGTH(collectiondate) = 4 AND collectiondate > '2002'); 
+
+ID-query: C4-Q4
+question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1999')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay');
+generated query: SELECT *  FROM detailedstrain  WHERE collection = '18' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31' OR LENGTH(collectiondate) = 4 AND collectiondate > '1999') AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+
+ID-query: C4-Q5
+question: Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.
+real query: SELECT * FROM detailedstrain WHERE collection = 18 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2000' AND collectiondate <= '2010')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay');
+generated query: SELECT *  FROM detailedstrain  WHERE collection = 18 AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+
+ID-query: C5-Q1
+question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby.
+real query: SELECT COUNT(*), transmissionby FROM detailedstrain GROUP BY transmissionby;
+generated query: SELECT transmissionby, COUNT(*)  FROM detailedstrain  GROUP BY transmissionby; 
+
+ID-query: C5-Q2
+question: Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.
+real query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions;
+generated query: SELECT storageconditions, COUNT(*)  FROM detailedstrain  WHERE ineva = true  GROUP BY storageconditions; 
+
+ID-query: C5-Q3
+question: Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.
+real query: SELECT COUNT(*), transmissionby, storageconditions FROM detailedstrain GROUP BY transmissionby, storageconditions;
+generated query: SELECT transmissionby, storageconditions, COUNT(*)  FROM detailedstrain  GROUP BY transmissionby, storageconditions; 
+
+
+
+Correct answers: 9
+Total questions: 21
+Model accuracy: 42.86%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C1-Q3
+- C2-Q2
+- C2-Q3
+- C3-Q4
+- C4-Q5
+
+Actually correct: 16
+Total questions: 21
+Accuracy model: 76.19%

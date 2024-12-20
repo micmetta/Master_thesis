@@ -1,0 +1,33 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C2-Q2
+question: Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+real query: SELECT * FROM detailedstrain WHERE ineva = FALSE AND abbreviation = 'BCMV' AND (cultivar = 'Saluggia' OR cultivar = 'viola');
+generated query: SELECT *  FROM detailedstrain  WHERE ineva = false AND (abbreviation = 'BCMV' AND (cultivar = 'Saluggia' OR cultivivar = 'viola')); 
+
+ID-query: C2-Q4
+question: Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+real query: SELECT infectivitytested, propagationhost FROM detailedstrain;
+generated query: SELECT propagationhost, infectivitytested FROM detailedstrain; 
+
+ID-query: C5-Q4
+question: Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.
+real query: SELECT storageconditions, COUNT(*) FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions HAVING COUNT(*) > 4;
+generated query: SELECT COUNT(*), storageconditions  FROM detailedstrain  WHERE ineva = TRUE  GROUP BY storageconditions  HAVING COUNT(*) > 4; 
+
+
+
+Correct answers: 18
+Total questions: 21
+Model accuracy: 85.71%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C2-Q2
+
+Actually correct: 20
+Total questions: 21
+Accuracy model: 95.24%

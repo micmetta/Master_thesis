@@ -1,0 +1,110 @@
+Current category: C1
+	current question: Q1
+	question: Give me all rows of strain.
+	query: SELECT * FROM detailedstrain 
+	Time taken: 1.7634503841400146 seconds
+
+	current question: Q2
+	question: Give me all strain that have beforenagoya equal to true.
+	query: SELECT strainid FROM detailedstrain WHERE beforenagoya = true 
+	Time taken: 2.0934834480285645 seconds
+
+	current question: Q3
+	question: Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+	query: SELECT strainid FROM detailedstrain WHERE identificationtechnique = "Bioassay;ELISA" 
+	Time taken: 2.914050340652466 seconds
+
+	current question: Q4
+	question: Select only field called pathogenicity from strain.
+	query: SELECT pathogenicity FROM detailedstrain 
+	Time taken: 1.2667014598846436 seconds
+
+Current category: C2
+	current question: Q1
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+	query: SELECT strainid FROM detailedstrain WHERE ineva = FALSE AND abbreviation = "BCMV" 
+	Time taken: 2.773120880126953 seconds
+
+	current question: Q2
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+	query: SELECT strainid FROM detailedstrain WHERE ineva = FALSE AND abbreviation = "BCMV" AND cultivar = "Saluggia" OR cultivar = "Viola" 
+	Time taken: 5.106883764266968 seconds
+
+	current question: Q3
+	question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+	query: SELECT strainid FROM detailedstrain WHERE transmissionby = "contact" OR transmissionby = "contact;insect" OR transmissionby = "contact;insect;pollen" 
+	Time taken: 5.25602126121521 seconds
+
+	current question: Q4
+	question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+	query: SELECT infectivitytested, propagationhost FROM detailedstrain 
+	Time taken: 1.6700022220611572 seconds
+
+Current category: C3
+	current question: Q1
+	question: Give me all strains.
+	query: SELECT strainid FROM detailedstrain 
+	Time taken: 1.1279520988464355 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+	query: SELECT strainid FROM detailedstrain WHERE otherdenominations = "MVPC1 10" 
+	Time taken: 2.9126484394073486 seconds
+
+	current question: Q3
+	question: Select 'Pathogenicity' from strain.
+	query: SELECT pathogenicity FROM detailedstrain 
+	Time taken: 1.2756335735321045 seconds
+
+	current question: Q4
+	question: Select 'Pathogenicity' and 'tpestrain' from strain.
+	query: SELECT pathogenicity, typestrain FROM detailedstrain 
+	Time taken: 1.673046350479126 seconds
+
+Current category: C4
+	current question: Q1
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate < 2012 
+	Time taken: 2.7631187438964844 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate < '02-03-1999' 
+	Time taken: 3.4590232372283936 seconds
+
+	current question: Q3
+	question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+	query: SELECT strainid FROM detailedstrain WHERE collectiondate > 2002 AND pathogenicity = 'Pathogen for Plants' 
+	Time taken: 3.596971035003662 seconds
+
+	current question: Q4
+	question: Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate > 1999 AND identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay' 
+	Time taken: 5.379464149475098 seconds
+
+	current question: Q5
+	question: Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate BETWEEN 2000 AND 2010 AND identificationtechnique = "ELISA" OR identificationtechnique = "Bioassay" 
+	Time taken: 5.927843332290649 seconds
+
+Current category: C5
+	current question: Q1
+	question: Select and count the number of strains, grouping the results by the trasmissionby field.
+	query: SELECT COUNT(*), transmissionby FROM detailedstrain GROUP BY transmissionby 
+	Time taken: 2.0818684101104736 seconds
+
+	current question: Q2
+	question: Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+	query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions 
+	Time taken: 2.775908946990967 seconds
+
+	current question: Q3
+	question: Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+	query: SELECT COUNT(*), transmissionby, storageconditions FROM detailedstrain GROUP BY transmissionby, storageconditions 
+	Time taken: 2.901170253753662 seconds
+
+	current question: Q4
+	question: Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+	query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions HAVING COUNT(*) > 4 
+	Time taken: 3.7321901321411133 seconds
+

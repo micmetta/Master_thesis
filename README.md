@@ -1,107 +1,104 @@
 # Installazione
 
-Per installare l'applicazione TEXT2SQL, segui i seguenti passaggi:
+To install the TEXT2SQL application, follow these steps:
 
 ## 1 - Scaricare il progetto
-Puoi scaricare il progetto dal repository GitHub tramite il seguente comando:
+You can download the project from the GitHub repository using the following command:
 
 ```bash
 git clone git@github.com:qBioTurin/NL2SQL.git
 ```
 
-## 2 - Setting cartella db_scripts (opzionale)
-All'interno della cartella **"db_scripts"** sono presenti questi 2 files:
+## 2 - Setting cartella db_scripts (optional)
+In the 'db_scripts' directory you will find these 2 files:
 
-1) **'bioinfoDB.sql'**: contenente i comandi SQL utili per creare localmente il database biologico. Qualora avessi a disposizione una versione più
-aggiornata di tale DB, potrai semplicemente sostituire questo file con il tuo.
+1) **'bioinfoDB.sql'**: which contains SQL commands to create the biological database locally. If you have a new version of this DB, you can simply add this file to your.
                     
-2) **'experimentalDB.sql'**: contenente i comandi SQL utili per creare localmente il database che conterrà le queries richieste dagli utenti. 
-**NON c'è bisogno di modificare/sostituire questo file tranne nel caso in cui si volessero apportare delle modifiche a questo DB**.
+2) **'experimentalDB.sql'**: which contains SQL commands useful for creating the biological database locally. This DB will contain the queries requested by the users.
+**There is NO need to edit/replace this file unless you want to make changes to this DB**.
 
 
-## 3 - Setup file sulla macchina remota
-- Aprire il file **'SETUP_INFERENCE_FILES_REMOTE.md'** e seguire i passaggi presenti al suo interno in modo tale da settare correttamente tutti i modelli e gli script sulla macchina remota che verranno richiamati dall'applicazione Next.js.
+## 3 - Setup file on the remote machine
+- Open the file **'SETUP_INFERENCE_FILES_REMOTE.md' e follow the steps in the file**. This will allow you to correctly setup all models and all scripts on the remote machine that will be called by the Next.js application. 
 
-- Dopodichè tornare qui e continuare con lo step 4.
+- **Then, come back here and continue with the step 4**.
 
 
 ## 4 - Setting file .env.local
-All'interno della cartella **"Interface"** è presente un file di configurazione chiamato **'.env.local'**.  
-Esso contiene al proprio interno tutte le variabili di configurazione necessarie per il corretto funzionamento dell'applicazione. 
+Inside the **"Interface"** folder there is a configuration file called **'.env.local'**.
+It contains all the configuration variables needed for the application to work correctly. 
 
-Il file è suddiviso in 4 parti:
+The file consists of 4 parts:
 
-1) Variabili di **configurazione** per l'accesso al database **"bioInfoDB"** **(modifica opzionale)**: 
+1) **Configuration** variables for accessing the **bioInfoDB** database **(optional update)**: 
 
-    - **POSTGRES_HOST**: Specifica l'host del database ma poichè utilizziamo Docker, al posto di localhost, bisogna inserire il nome del servizio definito 
-                     nel docker-compose.yml (che nel nostro caso è 'db') poichè i containers comunicano tra loro utilizzando i nomi dei servizi.
-    - **POSTGRES_PORT**: Indica la porta su cui il servizio PostgreSQL del database bioInfoDB è in ascolto all'interno del container. Solitamente, la 
-                     porta interna del container è 5432, anche se volendo si potrebbe mappare una porta esterna diversa.
-    - **POSTGRES_USER**: L'utente utilizzato per accedere al database.
-    - **POSTGRES_PASSWORD**: La password associata all'utente per accedere al database.
-    - **POSTGRES_DB**: Il nome del database al quale l'applicazione si connette.
+    - **POSTGRES_HOST**: Specify the database host, but since we are using Docker, instead of 'localhost' we need to specify the name of the service defined in docker-compose.yml (which in our case is 'db'), because the containers communicate with each other using the names of the services.
+    - **POSTGRES_PORT**: Specifies the port on which the bioInfoDB database PostgreSQL service listens inside the container. Typically, the internal container port is 5432, although you may want to map a different external port.
+    - **POSTGRES_USER**: The user used to access the database.
+    - **POSTGRES_PASSWORD**: The password associated with the user to access the database.
+    - **POSTGRES_DB**: The name of the database to which the application will connect.
 
-2) Variabili di **configurazione** per l'accesso al database **"experimentalDB"** **(modifica opzionale)**: 
+2) **Configuration** variables for accessing the **"experimentalDB"** database **(optional update)**: 
 
-    - **POSTGRES_HOST**: Specifica il nome del servizio definito nel docker-compose.yml (che in questo caso è 'experimentaldb').
-    - **POSTGRES_PORT**: Indica la porta su cui il servizio PostgreSQL del database experimentalDB è in ascolto all'interno del container.
-    - **POSTGRES_USER**: L'utente utilizzato per accedere al database.
-    - **POSTGRES_PASSWORD**: La password associata all'utente.
-    - **POSTGRES_DB**: Il nome del database sperimentale al quale l'applicazione si connette.
+    - **POSTGRES_HOST**: Specify the name of the service specified in the docker-compose.yml (in this case is 'experimental_db').
+    - **POSTGRES_PORT**: Specify the port on which the PostgreSQL service of the experimentalDB database is listening in the container. 
+    - **POSTGRES_USER**: The user used to access the database.
+    - **POSTGRES_PASSWORD**: The password associated with the user to access the database.
+    - **POSTGRES_DB**: The name of the experimental database to which the application connects.
 
-3) Variabili di **configurazione** sia per la **connessione SSH al server remoto**, sia per specificare i percorsi rilevanti per i **file generati durante l'esecuzione delle inferenze su SLURM** **(modifica obbligatoria)** e sia per gestire **i percorsi dei modelli da richiamare per eseguire le inferenze**:
+3) **Configuration** variables both for **SSH connection to remote server**, and to specify relevant paths for **files generated when running inferences on SLURM** **(required update)**, and to manage **model paths to call to run inferences**:
 
-    - **NEXT_PUBLIC_SSH_USER**: Assegnare a questa variabile il nome utente che verrà utilizzato per effettuare la connessione SSH al server remoto.   
+    - **NEXT_PUBLIC_SSH_USER**: Assign this variable the username that will be used to make the SSH connection to the remote server.  
 
-    - **NEXT_PUBLIC_SSH_SERVER**: Assegnare a questa variabile l'indirizzo del server remoto al quale verrà effettuata la connessione. Sia la connessione, che tutte le successive richieste di esecuzione di script verso questo server, avverranno tramite l'utilizzo del protocollo SSH.
+    - **NEXT_PUBLIC_SSH_SERVER**: Assign this variable the address of the remote server to which the connection will be made. Both the connection and all subsequent script execution requests to this server will be made using the SSH protocol.
 
-    I valori delle **variabili successive dipenderanno dai percorsi settati durante lo step [3 - Setup file sulla macchina remota]**:
+    The values ​​of the **subsequent variables will depend on the paths set during step [3 - Setup file on the remote machine]**:
 
-    - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assegnare a questa variabile il percorso base che rappresenterà la directory principale sul server remoto nella quale ci saranno, sia gli script che si preoccuperanno di eseguire l'inferenza e sia i file di output delle inferenze richieste da parte degli utenti che poi verranno cancellati una volta che questi non saranno più necessari. **Bisogna assicurarsi che nell'ambiente a cui si fa riferimento con questo percorso siano state già installate tutte le librerie necessare per il corretto funzionamento degli script 'inference_8B.py' e 'inference_70B.py' che verranno rispettivamente invocati da 'job_script_8B.sh' e 'job_script_70B.sh'.**
+    - **NEXT_PUBLIC_PATH_FILE_INFERENCES**: Assign to this variable the base path that will represent the main directory on the remote server in which there will be both the scripts that will take care of executing the inference and the output files of the inferences requested by the users that will then be deleted once they are no longer needed. **You must make sure that in the environment referred to with this path, all the libraries necessary for the correct functioning of the scripts 'inference_8B.py' and 'inference_70B.py' have already been installed, which will be respectively invoked by 'job_script_8B.sh' and 'job_script_70B.sh'.**
           
-        In particolare, quest'ultimo percorso verrà utilizzato all'interno dell'applicazione nei seguenti modi:
+        In particular, this last path will be used within the application in the following ways:
         
-        **1)** Come percorso base per salvare i file di inferenza.  
+        **1)** As a base path to save inference files.  
 
-        **2)** Per specificare il percorso completo di uno script .sh che sarà eseguito da SLURM (in base al modello selezionato dall'utente).  
-               (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/job_script_${model}.sh`).  
+        **2)** To specify the full path to a .sh script that will be executed by SLURM (based on the model selected by the user). 
+               (for instance, `NEXT_PUBLIC_PATH_FILE_INFERENCES/job_script_${model}.sh`).  
 
-        **3)** Per costruire il percorso del file di output dell'inferenza di uno specifico utente.  
-               (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL_${userId}.txt`).
+        **3)** To build the path of the inference output file for a specific user.  
+               (for instance, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL_${userId}.txt`).
 
-        **4)** Per costruire i percorsi dei file di output che dovranno essere cancellati.  
-               (ad esempio, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
+        **4)** To build the paths of the output files that will be deleted.  
+               (for instance, `NEXT_PUBLIC_PATH_FILE_INFERENCES/output_querySQL*` e `NEXT_PUBLIC_PATH_FILE_INFERENCES/slurm*`) 
     
-    - **EXPORT_PYTHON_PATH**: Assegnare a questa variabile il percorso della cartella presente sulla macchina remota contenente la **versione corretta della libreria PyTorch**.
+    - **EXPORT_PYTHON_PATH**: Assign this variable the path to the folder on the remote machine containing the **correct version of the PyTorch library**.
 
-    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 8B** presente nella cartella del tuo account sul **server remoto**.
+    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assign this variable the path to the **8B base model** present in your account folder on the **remote server**.
 
-    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assegnare a questa variabile il percorso del modello a **8B riaddestrato** presente nella cartella del tuo account sul **server remoto**. Questo sarà il modello che verrà utilizzato per gestire l'inferenza quando l'utente invierà una richiesta specificando l'uso del modello ad 8B.
+    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_8B_SCRIPT**: Assign this variable the path to the retrained **8B** model in your account folder on the **remote server**. This will be the model that will be used to handle inference when the user sends a request specifying the use of the 8B model.
 
-    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assegnare a questa variabile il percorso del **modello base a 70B** presente nella cartella del tuo account sul **server remoto**.
+    - **PATH_BASE_MODEL_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assign this variable the path to the **base model 70B** present in your account folder on the **remote server**.
 
-    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assegnare a questa variabile il percorso del modello a **70B riaddestrato** presente nella cartella del tuo account sul **server remoto**. Questo sarà il modello che verrà utilizzato per gestire l'inferenza quando l'utente invierà una richiesta specificando l'uso del modello a 70B.
+    - **PATH_MODEL_USE_REMOTE_FOR_INFERENCE_70B_SCRIPT**: Assign this variable the path to the retrained **70B** model in your account folder on the **remote server**. This will be the model that will be used to handle inference when the user sends a request specifying the use of the 70B model.
 
-4) Variabile di **configurazione** del file **contenente la tua chiave privata** **(modifica obbligatoria)**:
-    - **PRIVATE_KEY_PATH**: Assegnare a questa variabile il **percorso del file 'id_rsa'** presente sulla tua macchina che contiene la tua **chiave privata** con la quale ti collegherai al server remoto tramite SSH.
+4) **Configuration** variable of the file **containing your private key** **(required update)**:
+    - **PRIVATE_KEY_PATH**: Assign to this variable the **path to the 'id_rsa'** file on your machine that contains your **private key** with which you will connect to the remote server via SSH.
 
-## 5 - Eseguire il software
+## 5 - Run the software
 
-**Da questo step in poi dovrai avere Docker in esecuzione sulla tua macchina.** 
+**From this step onwards you will need to have Docker running on your machine.** 
 
-- Per lanciare l'applicazione la prima volta e costruire quindi i containers con le immagini e avviarli, basterà posizionarsi all'interno della root del progetto, aprire il terminale ed eseguire questo comando:
+- To launch the application for the first time and then build the containers with the images and start them, just position yourself inside the root of the project, open the terminal and execute this command:
 
 ```bash
 docker-compose --env-file ./interface/.env.local up --build
 ```
 
-- Se invece la build è stata già eseguita, basterà sempre posizionarsi all'interno della root del progetto, aprire il terminale ed eseguire questo comando:
+- If the build has already been executed, you can always just position yourself inside the root of the project, open the terminal and execute this command:
 ```bash
 docker-compose --env-file ./interface/.env.local up
 ```
 
-- Per essere sicuri che l'intera applicazione sia pronta per l'utilizzo, bisognerà **attendere fino a quando nel terminale compariranno solamente messaggi  relativi a "nextjs_app"**, dopodichè si potrà procedere con lo step 6.
+- To make sure that the entire application is ready for use, you will need to **wait until only messages related to "nextjs_app" appear in the terminal**, after which you can proceed with step 6.
 
-## 6 - Utilizzare l'interfaccia grafica
+## 6 - Using the UI
 
-A questo punto basterà aprire un browser qualsiasi e inserire l'indirizzo "http://localhost:3000/" per poter inviare le richieste all'applicazione.
+At this point, just open any browser and enter the address "http://localhost:3000/" to be able to send requests to the application.

@@ -1,0 +1,40 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C2-Q3
+question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+real query: SELECT * FROM detailedstrain WHERE transmissionby IN ('contact', 'contact;insect', 'contact;insect;pollen');
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact' OR transmissionby = 'contact;insect' OR transmissionby = 'contact;insect;pollen'; 
+
+ID-query: C3-Q3
+question: Select 'Pathogenicity' from strain.
+real query: SELECT pathogenicity FROM detailedstrain;
+generated query: SELECT Pathogenicity FROM detailedstrain WHERE accessionnumber = 'ABC123' AND gmoconstructioninfo = 'Gene Knockout'.; 
+
+ID-query: C3-Q4
+question: Select 'Pathogenicity' and 'tpestrain' from strain.
+real query: SELECT pathogenicity, typestrain FROM detailedstrain;
+generated query: SELECT Pathogenicity, tpestrain FROM detailedstrain; 
+
+ID-query: C4-Q2
+question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate <= '1999'));
+generated query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate < '1999')); 
+
+
+
+Correct answers: 17
+Total questions: 21
+Model accuracy: 80.95%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C3-Q3
+- C3-Q4
+- C4-Q2
+
+Actually correct: 18
+Total questions: 21
+Accuracy model: 85.71%

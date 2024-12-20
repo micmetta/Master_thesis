@@ -2,35 +2,35 @@
 FROM node:21-bookworm AS builder
 WORKDIR /app
 
-# Copia i file package.json, package-lock.json e next.config.mjs dalla directory 'Interface' alla directory di lavoro
+# Copy the package.json, package-lock.json and next.config.mjs files from the 'Interface' directory to the working directory
 COPY ./Interface/package.json ./package.json
 COPY ./Interface/package-lock.json ./package-lock.json
 COPY ./Interface/next.config.mjs ./
 
-# Installa le dipendenze
+# Install dependencies
 RUN npm install && npm cache clean --force
 
-# Copia tutto il contenuto della cartella interface nel container
+# Copy all contents of interface folder into container
 COPY ./Interface .
 
-# Costruisce l'applicazione Next.js
+# Builds the Next.js application
 RUN npm run build
 
 # Stage 2: Runner
 FROM node:21-bookworm AS runner
 WORKDIR /app
 
-# Installa strumenti necessari per SSH
+# Install necessary tools for SSH
 RUN apt update && apt install -y vim inetutils-ping inetutils-telnet openssh-client
 
-# Configura il file known_hosts
+# Configure the known_hosts file
 ARG NEXT_PUBLIC_SSH_SERVER
 RUN mkdir -p /root/.ssh && ssh-keyscan -H $NEXT_PUBLIC_SSH_SERVER >> /root/.ssh/known_hosts
 
-# Copia i file necessari dalla fase di build alla directory di lavoro del container nel quale girerà l'app
+# Copy the necessary files from the build phase to the working directory of the container in which the app will run
 COPY --from=builder /app .
 
-# Espone la porta 3000 per l'app
+# Exposes port 3000 for the app
 EXPOSE 3000
 
-# L'applicazione verrà avviata con l'istruzione 'entrypoint' nel docker-compose.yml 
+# The application will be started with the 'entrypoint' statement in "docker-compose.yml".

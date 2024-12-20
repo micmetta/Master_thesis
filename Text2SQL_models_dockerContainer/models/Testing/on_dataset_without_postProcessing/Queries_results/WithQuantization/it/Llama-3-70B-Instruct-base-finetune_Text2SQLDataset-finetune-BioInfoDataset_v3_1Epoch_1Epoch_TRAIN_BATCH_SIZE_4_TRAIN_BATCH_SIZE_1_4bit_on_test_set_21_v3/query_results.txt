@@ -1,0 +1,110 @@
+Current category: C1
+	current question: Q1
+	question: Dammi tutte le righe di strain.
+	query: SELECT * FROM detailedstrain; 
+	Time taken: 1.8712332248687744 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno beforenagoya uguale a true.
+	query: SELECT *  FROM detailedstrain  WHERE beforenagoya = true; 
+	Time taken: 2.3735592365264893 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.
+	query: SELECT *  FROM detailedstrain  WHERE identificationtechnique = 'Bioassay;ELISA.'; 
+	Time taken: 3.1918962001800537 seconds
+
+	current question: Q4
+	question: Seleziona solo il campo chiamato pathogenicity da strain
+	query: SELECT pathogenicity  FROM detailedstrain;  
+	Time taken: 1.6813552379608154 seconds
+
+Current category: C2
+	current question: Q1
+	question: Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV.
+	query: SELECT *  FROM detailedstrain  WHERE ineva = false AND abbreviation = 'BCMV'; 
+	Time taken: 2.9098854064941406 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+	query: SELECT *  FROM detailedstrain  WHERE ineva = false AND (abbreviation = 'BCMV' OR cultivar IN ('Saluggia', 'viola')); 
+	Time taken: 4.843337535858154 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+	query: SELECT *  FROM detailedstrain  WHERE transmissionby IN ('contact;', 'contact;insect', 'contact;insect;pollen.'); 
+	Time taken: 4.298626184463501 seconds
+
+	current question: Q4
+	question: Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+	query: SELECT infectivitytested, propagationhost  FROM detailedstrain;  
+	Time taken: 2.0776586532592773 seconds
+
+Current category: C3
+	current question: Q1
+	question: Dammi tutte le righe della tabella strains.
+	query: SELECT * FROM detailedstrain; 
+	Time taken: 1.1305451393127441 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno il campo 'oterdeminations' uguale a 'MVPC1 10'.
+	query: SELECT *  FROM detailedstrain  WHERE otherdenominations = 'MVPC1 10'; 
+	Time taken: 3.0451853275299072 seconds
+
+	current question: Q3
+	question: Seleziona il campo 'Pathogenicity' da strain.
+	query: SELECT Pathogenicity  FROM detailedstrain;  
+	Time taken: 1.6775484085083008 seconds
+
+	current question: Q4
+	question: Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+	query: SELECT Pathogenicity, tpestrain  FROM detailedstrain;  
+	Time taken: 2.225992202758789 seconds
+
+Current category: C4
+	current question: Q1
+	question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.
+	query: SELECT *  FROM detailedstrain  WHERE collection = '18' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-01-01' OR LENGTH(collectiondate) = 4 AND collectiondate < '2012'); 
+	Time taken: 12.265312194824219 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+	query: SELECT *  FROM detailedstrain  WHERE collection = 18 AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02' OR LENGTH(collectiondate) = 4 AND collectiondate <= '1999'); 
+	Time taken: 12.134966850280762 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.
+	query: SELECT *  FROM detailedstrain  WHERE pathogenicity = 'Pathogen for Plants' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31' OR LENGTH(collectiondate) = 4 AND collectiondate > '2002'); 
+	Time taken: 12.965322732925415 seconds
+
+	current question: Q4
+	question: Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.
+	query: SELECT *  FROM detailedstrain  WHERE collection = '18' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31' OR LENGTH(collectiondate) = 4 AND collectiondate > '1999') AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+	Time taken: 15.00962519645691 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.
+	query: SELECT *  FROM detailedstrain  WHERE collection = 18 AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+	Time taken: 19.401082754135132 seconds
+
+Current category: C5
+	current question: Q1
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby.
+	query: SELECT transmissionby, COUNT(*)  FROM detailedstrain  GROUP BY transmissionby; 
+	Time taken: 2.5003836154937744 seconds
+
+	current question: Q2
+	question: Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.
+	query: SELECT storageconditions, COUNT(*)  FROM detailedstrain  WHERE ineva = true  GROUP BY storageconditions; 
+	Time taken: 3.347215175628662 seconds
+
+	current question: Q3
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.
+	query: SELECT transmissionby, storageconditions, COUNT(*)  FROM detailedstrain  GROUP BY transmissionby, storageconditions; 
+	Time taken: 3.3281989097595215 seconds
+
+	current question: Q4
+	question: Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.
+	query: SELECT storageconditions, COUNT(*)  FROM detailedstrain  WHERE ineva = true  GROUP BY storageconditions  HAVING COUNT(*) > 4; 
+	Time taken: 4.493037462234497 seconds
+

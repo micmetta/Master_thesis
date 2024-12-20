@@ -6,8 +6,8 @@ const { register } = pkg;
 /** @type {import('next').NextConfig} */
 const nextConfig = (phase, { defaultConfig }) => {
   if (phase === PHASE_PRODUCTION_SERVER) {
-    console.log('Avvio del batch polling all\'avvio del backend in produzione');
-    register(); // eseguo la funzione `register()` solo quando l'app è in fase di production
+    console.log('(instrumentation.mjs - PHASE_PRODUCTION_SERVER) Backend started and then I call register() which is in instrumentation.mjs');
+    register(); // I run the `register()` function only when the app is in production
   }
 
   return {

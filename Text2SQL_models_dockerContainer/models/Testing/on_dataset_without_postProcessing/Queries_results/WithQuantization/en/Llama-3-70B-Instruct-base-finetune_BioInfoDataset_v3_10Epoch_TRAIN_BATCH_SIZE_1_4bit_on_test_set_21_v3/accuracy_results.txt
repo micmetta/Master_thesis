@@ -1,0 +1,23 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q3
+question: Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+real query: SELECT * FROM detailedstrain WHERE Identificationtechnique = 'Bioassay;ELISA';
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Bioassay;ELISA.'; 
+
+
+
+Correct answers: 20
+Total questions: 21
+Model accuracy: 95.24%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C1-Q3
+
+Actually correct: 20
+Total questions: 21
+Accuracy model: 95.24%

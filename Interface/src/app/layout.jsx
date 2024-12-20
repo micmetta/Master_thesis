@@ -18,7 +18,7 @@ export default function RootLayout(_a) {
     var children = _a.children;
     return (<html lang="en">
       <body className={"".concat(geistSans.variable, " ").concat(geistMono.variable, " antialiased")}>
-        {/* avvolgo l'intera applicazione con MantineProvider */}
+        {/* I wrap the entire application with MantineProvider */}
         <MantineProvider>
           <AppShellLayout>{children}</AppShellLayout>
         </MantineProvider>
