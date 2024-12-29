@@ -1,0 +1,135 @@
+{   
+    "C0_plus": [
+      {
+        "question": "Dammi tutti gli strain con il campo collection uguale a EMCC e vorganismtype uguale a Virus.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'collection' uguale a EMCC e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'collection' uguale a fdsfdijfdk e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo collection uguale a 10 e vorganismtype uguale a Virus.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'collection' uguale a 10 e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'collection' uguale a '10' e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'Pathogenicity' uguale a true e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain con il campo 'tpestrain' uguale a false e vorganismtype uguale a Bacteria.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona il campo pathogenicity da strain.",
+        "sql_query": ""
+      }
+    ],
+    "C1": [
+      {
+        "question": "Dammi tutte le righe di strain.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno beforenagoya uguale a true.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona solo il campo chiamato pathogenicity da strain",
+        "sql_query": ""
+      }
+    ],
+    "C2": [
+      {
+        "question": "Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.",
+        "sql_query": ""
+      }
+    ],
+    "C3": [
+      {
+        "question": "Dammi tutte le righe della tabella strains.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno il campo 'oterdeminations' uguale a 'MVPC1 10'.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona il campo 'Pathogenicity' da strain.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.",
+        "sql_query": ""
+      }
+    ],
+    "C4": [
+      {
+        "question": "Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.",
+        "sql_query": ""
+      },
+      {
+        "question": "Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.",
+        "sql_query": ""
+      }
+    ],
+    "C5": [
+      {
+        "question": "Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.",
+        "sql_query": ""
+      },
+      {
+        "question": "Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.",
+        "sql_query": ""
+      }
+    ]
+}
+  

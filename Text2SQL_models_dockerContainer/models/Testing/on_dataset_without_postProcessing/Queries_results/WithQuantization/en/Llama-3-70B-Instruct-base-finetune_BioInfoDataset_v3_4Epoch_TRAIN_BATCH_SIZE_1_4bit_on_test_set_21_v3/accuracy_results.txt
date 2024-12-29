@@ -1,0 +1,34 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C2-Q4
+question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+real query: SELECT infectivitytested, propagationhost FROM detailedstrain;
+generated query: SELECT propagationhost, infectivitytested FROM detailedstrain; 
+
+ID-query: C4-Q3
+question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+real query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002'));
+generated query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31' OR LENGTH(collectiondate) = 4 AND collectiondate > '2002'); 
+
+ID-query: C5-Q4
+question: Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+real query: SELECT storageconditions, COUNT(*) FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions HAVING COUNT(*) > 4;
+generated query: SELECT COUNT(*), storageconditions  FROM detailedstrain  WHERE ineva = TRUE  GROUP BY storageconditions  HAVING COUNT(*) > 4; 
+
+
+
+Correct answers: 18
+Total questions: 21
+Model accuracy: 85.71%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+
+-- no errors
+
+Actually correct: 21
+Total questions: 21
+Accuracy model: 100%

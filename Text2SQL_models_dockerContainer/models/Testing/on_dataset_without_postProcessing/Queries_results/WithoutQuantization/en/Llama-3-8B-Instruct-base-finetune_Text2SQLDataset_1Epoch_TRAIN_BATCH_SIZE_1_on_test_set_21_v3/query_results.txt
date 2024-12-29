@@ -1,0 +1,117 @@
+Current category: C1
+	current question: Q1
+	question: Give me all rows of strain.
+	query: SELECT * FROM detailedstrain WHERE axenic = 0 AND genus = "Escherichia" AND species = "Escherichia coli" AND morganismtype = "bacteria" AND qps = 0 AND mriskgroup = 0 AND historyofdeposit = "unknown" AND enzymeproduction = "unknown" AND applications = "unknown" AND plasmids = "unknown" AND plasmidscollectionsfields = "unknown" AND storageconditions = "unknown" AND symptomatologyonisolationhost = "unknown" AND transmissionby = "unknown" AND restrictions = "unknown" AND nagoyaprotocol = "unknown" AND contamination = "unknown" AND infectivitytested = "unknown" AND othernames = "unknown" AND isolationhost = "unknown" AND name = "unknown" AND abbreviation = "unknown" AND propagationhost = "unknown" AND cultivar = "unknown" AND lyticcicle = "unknown" AND pathotypes
+	Time taken: 10.382507562637329 seconds
+
+	current question: Q2
+	question: Give me all strain that have beforenagoya equal to true.
+	query: SELECT * FROM detailedstrain WHERE beforenagoya = "true"
+
+	Time taken: 9.36969542503357 seconds
+
+	current question: Q3
+	question: Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+	query: SELECT * FROM detailedstrain WHERE identificationtechnique = "Bioassay;ELISA" 
+	Time taken: 0.891634464263916 seconds
+
+	current question: Q4
+	question: Select only field called pathogenicity from strain.
+	query: SELECT pathogenicity FROM detailedstrain WHERE mutationtype = "pathogenicity" AND othernames = "pathogenicity" AND name = "pathogenicity" AND abbreviation = "pathogenicity" AND propagationhost = "pathogenicity" AND cultivar = "pathogenicity" AND lyticcicle = "pathogenicity" AND transmissionby = "pathogenicity" AND contamination = "pathogenicity" AND restrictions = "pathogenicity" AND nagoyaprotocol = "pathogenicity" AND ineva = "pathogenicity" AND inmirri = "pathogenicity" AND othernames = "pathogenicity" AND isolationhost = "pathogenicity" AND symptomatologyonisolationhost = "pathogenicity" AND storageconditions = "pathogenicity" AND genus = "pathogenicity" AND species = "pathogenicity" AND euquarantine = "pathogenicity" AND morganismtype = "path
+	Time taken: 9.261945962905884 seconds
+
+Current category: C2
+	current question: Q1
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+	query: SELECT * FROM detailedstrain WHERE ineva = "false" AND abbreviation = "BCMV" AND contamination = "false" AND infectivitytested = "false" AND restrictions = "false" AND nagoyaprotocol = "false" AND storageconditions = "false" AND symptomatologyonisolationhost = "false" AND transmissionby = "false" AND plasmids = "false" AND axenic = "false" AND genotype = "false" AND mriskgroup = "false" AND historyofdeposit = "false" AND enzymeproduction = "false" AND applications = "false" AND plasmidscollectionsfields = "false" AND ploidy = "false" AND interspecifichybrid = "false" AND scientificname = "false" AND ineva = "false" AND inmirri = "false" AND othernames = "false" AND isolationhost = "false" AND propagationhost = "false" AND cultivar = "
+	Time taken: 9.245537996292114 seconds
+
+	current question: Q2
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+	query: SELECT * FROM detailedstrain WHERE ineva = "false" AND abbreviation = "BCMV" AND cultivar = "Saluggia" OR cultivar = "viola"
+
+	Time taken: 9.251983880996704 seconds
+
+	current question: Q3
+	question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+	query: SELECT * FROM detailedstrain WHERE transmissionby = "contact or contact;insect or contact;insect;pollen." 
+	Time taken: 1.2113673686981201 seconds
+
+	current question: Q4
+	question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+	query: SELECT infectivitytested, propagationhost FROM detailedstrain WHERE axenic = 0 AND restrictions = "Restrictions" AND nagoyaprotocol = "Nagoya protocol" AND othernames = "Other names" AND name = "Name" AND abbreviation = "Abbreviation" AND genus = "Genus" AND species = "Species" AND euquarantine = 0 AND morganismtype = "Morganism type" AND qps = 0 AND axenic = 0 AND genotype = "Genotype" AND mriskgroup = "MRisk group" AND historyofdeposit = "History of deposit" AND enzymeproduction = "Enzyme production" AND applications = "Applications" AND plasmids = "Plasmids" AND plasmidscollectionsfields = "Plasmid collections fields" AND ploidy = "Ploidy" AND interspecifichybrid = 0 AND scientificname = "Scientific name" AND
+	Time taken: 9.266394138336182 seconds
+
+Current category: C3
+	current question: Q1
+	question: Give me all strains.
+	query: SELECT strainid FROM detailedstrain WHERE axenic = 0 AND genus = "Escherichia" AND species = "Escherichia coli" AND morganismtype = "bacteria" AND qps = 0 AND axenic = 0 AND genotype = "bacteria" AND mriskgroup = 0 AND historyofdeposit = "bacteria" AND enzymeproduction = "bacteria" AND applications = "bacteria" AND plasmids = "bacteria" AND plasmidscollectionsfields = "bacteria" AND ploidy = "bacteria" AND interspecifichybrid = 0 AND scientificname = "Escherichia coli" AND ineva = 0 AND inmirri = 0 AND othernames = "Escherichia coli" AND isolationhost = "bacteria" AND name = "Escherichia coli" AND abbreviation = "Escherichia coli" AND propagationhost = "bacteria
+	Time taken: 9.264699220657349 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+	query: SELECT * FROM detailedstrain WHERE oterdeminations = "MVPC1 10" 
+	Time taken: 0.8370258808135986 seconds
+
+	current question: Q3
+	question: Select 'Pathogenicity' from strain.
+	query: SELECT pathogenicity FROM detailedstrain WHERE axenic = 0 AND genus = "Escherichia" AND species = "Escherichia coli" AND morganismtype = "Bacteria" AND qps = 0 AND mriskgroup = 0 AND historyofdeposit = "No" AND enzymeproduction = "No" AND plasmids = "No" AND ploidy = "Diploid" AND contamination = "No" AND infectivitytested = "No" AND restrictions = "No" AND nagoyaprotocol = "No" AND storageconditions = "No" AND symptomatologyonisolationhost = "No" AND transmissionby = "No" AND othernames = "No" AND isolationhost = "No" AND name = "No" AND abbreviation = "No" AND propagationhost = "No" AND cultivar = "No" AND lyticcicle = "No" AND pathotypeserotypetype = "No
+	Time taken: 9.273239850997925 seconds
+
+	current question: Q4
+	question: Select 'Pathogenicity' and 'tpestrain' from strain.
+	query: SELECT Pathogenicity, tpestrain FROM detailedstrain WHERE axenic = 0 AND genus = "Escherichia" AND species = "Escherichia coli" AND euquarantine = 0 AND morganismtype = "bacteria" AND qps = 0 AND axenic = 0 AND genotype = "bacteria" AND mriskgroup = 0 AND historyofdeposit = "bacteria" AND enzymeproduction = "bacteria" AND applications = "bacteria" AND plasmids = "bacteria" AND plasmidscollectionsfields = "bacteria" AND ploidy = "bacteria" AND interspecifichybrid = 0 AND scientificname = "Escherichia coli" AND ineva = 0 AND inmirri = 0 AND othernames = "Escherichia coli" AND isolationhost = "bacteria" AND name = "Escherichia coli" AND abbreviation = "
+	Time taken: 9.258719682693481 seconds
+
+Current category: C4
+	current question: Q1
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate < 2012
+
+	Time taken: 4.3964903354644775 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate < '02-03-1999' 
+	Time taken: 1.1187326908111572 seconds
+
+	current question: Q3
+	question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+	query: SELECT * FROM detailedstrain WHERE pathogenicity = "Pathogen for Plants" AND collectiondate > 2002
+
+	Time taken: 9.250901699066162 seconds
+
+	current question: Q4
+	question: Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+	query: SELECT strainid FROM detailedstrain WHERE collection = "18" AND collectiondate > "1999" AND identificationtechnique = "ELISA" OR identificationtechnique = "Bioassay" 
+	Time taken: 1.8543365001678467 seconds
+
+	current question: Q5
+	question: Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+	query: SELECT strainid FROM detailedstrain WHERE collection = 18 AND collectiondate BETWEEN 2000 AND 2010 AND identificationtechnique = "ELISA" OR identificationtechnique = "Bioassay" 
+	Time taken: 1.952996015548706 seconds
+
+Current category: C5
+	current question: Q1
+	question: Select and count the number of strains, grouping the results by the trasmissionby field.
+	query: SELECT COUNT(*), transmissionby FROM detailedstrain GROUP BY transmissionby 
+	Time taken: 0.6551294326782227 seconds
+
+	current question: Q2
+	question: Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+	query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE inmirri = true AND othernames = "ineva" GROUP BY storageconditions
+
+	Time taken: 9.25559687614441 seconds
+
+	current question: Q3
+	question: Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+	query: SELECT COUNT(*), transmissionby, storageconditions FROM detailedstrain GROUP BY transmissionby, storageconditions
+
+	Time taken: 6.905329704284668 seconds
+
+	current question: Q4
+	question: Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+	query: SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = "true" GROUP BY storageconditions HAVING COUNT(*) > 4
+
+	Time taken: 9.25293755531311 seconds
+

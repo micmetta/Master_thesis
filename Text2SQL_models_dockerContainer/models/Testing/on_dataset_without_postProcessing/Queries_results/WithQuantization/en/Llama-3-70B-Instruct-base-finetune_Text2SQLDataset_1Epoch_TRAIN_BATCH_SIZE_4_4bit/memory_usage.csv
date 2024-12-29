@@ -1,0 +1,166 @@
+
+Current category: C1
+
+Current question: Q1
+Give me all rows of strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:33,40.58,41.07
+2024-12-14 11:53:34,40.92,41.8
+
+Current question: Q2
+Give me all strain that have beforenagoya equal to true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:35,40.61,41.96
+2024-12-14 11:53:37,40.75,41.96
+2024-12-14 11:53:38,40.79,41.96
+
+Current question: Q3
+Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:39,40.61,41.96
+2024-12-14 11:53:40,40.76,41.96
+2024-12-14 11:53:41,40.8,41.96
+
+Current question: Q4
+Select only field called pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:42,40.61,41.96
+2024-12-14 11:53:43,40.75,41.96
+
+Current category: C2
+
+Current question: Q1
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:44,40.61,41.96
+2024-12-14 11:53:45,40.76,41.96
+2024-12-14 11:53:46,40.81,41.96
+
+Current question: Q2
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:47,40.61,41.96
+2024-12-14 11:53:48,40.76,41.96
+2024-12-14 11:53:49,40.8,41.96
+2024-12-14 11:53:50,40.85,41.96
+2024-12-14 11:53:51,40.75,41.96
+2024-12-14 11:53:52,40.8,41.96
+
+Current question: Q3
+Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:53,40.61,41.96
+2024-12-14 11:53:54,40.76,41.96
+2024-12-14 11:53:55,40.8,41.96
+2024-12-14 11:53:56,40.84,41.96
+2024-12-14 11:53:57,40.88,41.96
+2024-12-14 11:53:58,40.78,41.96
+
+Current question: Q4
+Select the fields 'infectivitytested' and 'propagationhost' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:53:59,40.61,41.96
+2024-12-14 11:54:00,40.76,41.96
+
+Current category: C3
+
+Current question: Q1
+Give me all strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:01,40.61,41.96
+2024-12-14 11:54:02,40.74,41.96
+
+Current question: Q2
+Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:03,40.61,41.96
+2024-12-14 11:54:04,40.76,41.96
+2024-12-14 11:54:05,40.8,41.96
+
+Current question: Q3
+Select 'Pathogenicity' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:06,40.61,41.96
+2024-12-14 11:54:07,40.74,41.96
+
+Current question: Q4
+Select 'Pathogenicity' and 'tpestrain' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:08,40.61,41.96
+2024-12-14 11:54:09,40.75,41.96
+
+Current category: C4
+
+Current question: Q1
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:10,40.61,41.96
+2024-12-14 11:54:11,40.77,41.96
+2024-12-14 11:54:12,40.82,41.96
+
+Current question: Q2
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:13,40.61,41.96
+2024-12-14 11:54:14,40.78,41.96
+2024-12-14 11:54:15,40.82,41.96
+2024-12-14 11:54:16,40.86,41.96
+
+Current question: Q3
+Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:17,40.61,41.96
+2024-12-14 11:54:18,40.77,41.96
+2024-12-14 11:54:19,40.82,41.96
+2024-12-14 11:54:20,40.86,41.96
+
+Current question: Q4
+Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:21,40.61,41.96
+2024-12-14 11:54:22,40.78,41.96
+2024-12-14 11:54:23,40.83,41.96
+2024-12-14 11:54:24,40.88,41.96
+2024-12-14 11:54:25,40.77,41.96
+2024-12-14 11:54:26,40.85,41.96
+
+Current question: Q5
+Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:27,40.61,41.96
+2024-12-14 11:54:28,40.78,41.96
+2024-12-14 11:54:29,40.82,41.96
+2024-12-14 11:54:30,40.87,41.96
+2024-12-14 11:54:31,40.92,41.96
+2024-12-14 11:54:32,40.82,41.96
+
+Current category: C5
+
+Current question: Q1
+"Select and count the number of strains, grouping the results by the trasmissionby field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:33,40.61,41.96
+2024-12-14 11:54:34,40.76,41.96
+2024-12-14 11:54:35,40.8,41.96
+
+Current question: Q2
+Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:36,40.61,41.96
+2024-12-14 11:54:37,40.77,41.96
+2024-12-14 11:54:38,40.81,41.96
+
+Current question: Q3
+Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:39,40.61,41.96
+2024-12-14 11:54:40,40.76,41.96
+2024-12-14 11:54:41,40.81,41.96
+
+Current question: Q4
+Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2024-12-14 11:54:42,40.61,41.96
+2024-12-14 11:54:43,40.77,41.96
+2024-12-14 11:54:44,40.82,41.96
+2024-12-14 11:54:45,40.87,41.96
