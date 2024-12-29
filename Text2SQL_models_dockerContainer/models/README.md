@@ -21,7 +21,16 @@
 3) **Copy** the folder you just obtained **to the following path: "Text2SQL_models_dockerContainer\models\\_lib"**
 
 
-## STEP 2: Create the virtual environment
+## STEP 2: Download the **bitsandbytes** library
+
+1) Download the zip archive at the following link: https://drive.google.com/file/d/1Snq27PBPR9syZMgGFN9LN15APl1ZdjZu/view?usp=drive_link
+
+2) Unzip the downloaded file to obtain the folder containing the library
+
+3) **Copy** the folder you just obtained **to the following path: "Text2SQL_models_dockerContainer\models\\_lib"**
+
+
+## STEP 3: Create the virtual environment
 
 1) Place yourself on a gracehopper (gh) with this command:
     ```bash
@@ -55,7 +64,7 @@
     pip freeze
     ```
 
-## STEP 3: Install Bitsandbytes library
+## STEP 4: Install Bitsandbytes library
 
 1) Place yourself in "venvText2SQL/models/_lib/bitsandbytes":
     ```bash
