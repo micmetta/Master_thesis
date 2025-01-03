@@ -104,4 +104,4 @@
     ```
 
 ## CONCLUSION 
-- At this point, you can run any script present in any of the 6 main folders mentioned at the beginning of this file (from point 2 to 8).
+- At this point, you can run any script present in any of the 7 main folders mentioned at the beginning of this file (from point 2 to 8).
