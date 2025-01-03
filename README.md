@@ -1,8 +1,8 @@
-# Installazione
+# Installation
 
 To install the TEXT2SQL application, follow these steps:
 
-## 1 - Scaricare il progetto
+## 1 - Download the project
 You can download the project from the GitHub repository using the following command:
 
 ```bash
