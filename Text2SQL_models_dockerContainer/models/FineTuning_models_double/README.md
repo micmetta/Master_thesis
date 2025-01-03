@@ -98,4 +98,4 @@ Always stay inside the **'configuration.env'** configuration file.
       **venvText2SQL/models/FineTuning_models_double/Memory_occupation/<NAME_NEW_MODEL>/memory_usage.csv**  
     <br>
     
-  - The "results" folder generated in "FineTuning_models" can be ignored and even deleted if desired.
+  - The "results" folder generated in "FineTuning_models_double" can be ignored and even deleted if desired.
