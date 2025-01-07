@@ -3,6 +3,11 @@
 
 - In this folder there is a single script **'FT_model.py'** that will allow you to fine-tune an LLM on a particular dataset.
 
+    - You can use the above script in **different ways**:
+
+        1) **Fine-tune an LLM once on a certain dataset, another time possibly on another dataset, and so on.**
+        2) **Decide whether to quantize the base model to 4 bits or not for each fine-tuning.**
+
 - The configuration file called **'configuration.env'**, contains **both the variables with the paths** to configure to run the script 'FT_model.py' correctly and **both those that refer to the configuration of the values ​​of the hyperparameters of the LLM**.
 
 
@@ -16,7 +21,7 @@ The steps to follow are the following.
 
     - **PATH_DATASET**: Set this variable to the relative path to the fine-tuning dataset.
 
-    - **PATH_BASE_MODEL**: Set this variable to the relative path to the folder containing the base model you want to retrain.
+    - **PATH_BASE_MODEL**: Set this variable to the relative path to the folder containing the base model you want to retrain. This path can also be that of a model that has already been fine-tuned once or more.
 
     - **PATH_OFFLOAD_BASE_MODEL_DIR**: Set this variable to the relative path to the folder where you will "offload" parts of the base model, i.e. temporarily move parts of the base model to disk when not in active use, instead of keeping them in RAM or VRAM.
 
@@ -32,6 +37,8 @@ Always stay inside the **'configuration.env'** configuration file.
 - The **most important hyperparameters** to set are the following:
 
   - **WAIT**: Actually, this is NOT a hyperparameter of the LLM but it is used internally by the script to monitor the memory occupation during the fine-tuning and return the results in a .csv file at the end of the computation. To this variable you must assign the number of seconds that must pass between one memory read and another. Consider that the greater the fine-tuning time, the larger the size of the output file that you will obtain at the end. So, if the dataset you plan to use is very large or the LLM has a higher number of weights (greater than 8B), it is recommended to increase the value of this variable.
+
+  - **QUANTIZATION_BASE_MODEL**: This hyperparameter is used in the script to specify whether or not you want to quantize (to 4-bit) the base model.
 
   - **NUM_TRAIN_EPOCHS**: Assign the number of epochs for the fine-tuning of the model.
 

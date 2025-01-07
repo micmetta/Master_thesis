@@ -1,5 +1,5 @@
 #############################################################################################################################################
-# - Script to fine-tune a generic LLM on a certain dataset.
+# - Script to fine-tune a generic LLM on a given dataset.
 #############################################################################################################################################
 
 import os
@@ -8,6 +8,7 @@ from datasets import load_dataset
 from transformers import (
     AutoModelForCausalLM,
     AutoTokenizer,
+    BitsAndBytesConfig,
     TrainingArguments,
 )
 from peft import LoraConfig
@@ -43,6 +44,7 @@ PATH_OFFLOAD_BASE_MODEL_DIR = os.getenv("PATH_OFFLOAD_BASE_MODEL_DIR")
 NAME_NEW_MODEL = os.getenv("NAME_NEW_MODEL")
 NAME_OFFLOAD_CACHE_DIR_NEW_MODEL = os.getenv("NAME_OFFLOAD_CACHE_DIR_NEW_MODEL")
 WAIT = int(os.getenv("WAIT")) # number of seconds between memory reads
+QUANTIZATION_BASE_MODEL = bool(os.getenv("QUANTIZATION_BASE_MODEL", "").lower() == "true")
 
 # Retrieve all variables for LLM hyperparameter setting:
 
@@ -120,9 +122,10 @@ MAX_SEQ_LENGTH = int(MAX_SEQ_LENGTH) if MAX_SEQ_LENGTH and MAX_SEQ_LENGTH.lower(
 # Pack multiple short examples in the same input sequence to increase efficiency
 PACKING = bool(os.getenv("PACKING", "").lower() == "true")
 
-# Load the entire model on the GPU 0 (or use "cpu" to use only RAM of the system or use "auto" to distribute model loading between CPU and GPU)
+# Load the entire model on the GPU 0 (or use "auto" to distribute model loading between CPU and GPU)
 DEVICE_MAP = os.getenv("DEVICE_MAP")
-################################################################################
+##########################################################################################
+
 
 print("")
 print("- Summary of all configuration variables present in 'configuration.env':")
@@ -138,6 +141,7 @@ print("")
 print("- Summary of hyperparameter configuration variables present in 'configuration.env':")
 print("")
 print("WAIT: ", WAIT)
+print("QUANTIZATION_BASE_MODEL: ", QUANTIZATION_BASE_MODEL)
 print("LORA_R: ", LORA_R)
 print("LORA_ALPHA: ", LORA_ALPHA)
 print("LORA_DROPOUT: ", LORA_DROPOUT)
@@ -210,7 +214,7 @@ output_dir = "./results"
 # Step 4: Loading dataset for fine-tuning:
 
 dataset = load_dataset('json', data_files=path_dataset, split="train")
-print(f"Total number of rows in the dataset:: {len(dataset)}")
+print(f"Total number of rows in the dataset: {len(dataset)}")
 print("")
 ##########################################################################################
 
@@ -218,19 +222,43 @@ print("")
 ##########################################################################################
 # Step 5: Fully load the LLM with all the chosen hyperparameter values:
 
-# Load base model
-model = AutoModelForCausalLM.from_pretrained(
-    PATH_BASE_MODEL,
-    device_map=DEVICE_MAP,
-    offload_folder=PATH_OFFLOAD_BASE_MODEL_DIR, # offloading folder
-    cache_dir=PATH_BASE_MODEL, # folder containing all the files of the basic model
-    torch_dtype=torch.float16
+# Quantize or not the base model:
+base_model = None
+bnb_config = None
+if(QUANTIZATION_BASE_MODEL):
+    print("- I PERFORM 4-BIT QUANTIZATION.")
+    print("")
+    # 4-bit quantization
+    bnb_config = BitsAndBytesConfig(
+        load_in_4bit=True,
+        bnb_4bit_compute_dtype=torch.float16,
+        bnb_4bit_quant_type='nf4',
+        bnb_4bit_use_double_quant=False
+    )
+    base_model = AutoModelForCausalLM.from_pretrained(
+        PATH_BASE_MODEL,
+        device_map = {"": 0},
+        offload_folder=PATH_OFFLOAD_BASE_MODEL_DIR,
+        cache_dir=PATH_BASE_MODEL,
+        torch_dtype=torch.float16,
+        quantization_config=bnb_config,
+    )
+else:
+    print("- I DO NOT PERFORM 4-BIT QUANTIZATION.")
+    print("")
+    base_model = AutoModelForCausalLM.from_pretrained(
+        PATH_BASE_MODEL,
+        device_map = {"": 0},
+        offload_folder=PATH_OFFLOAD_BASE_MODEL_DIR,
+        cache_dir=PATH_BASE_MODEL,
+        torch_dtype=torch.float16,
 )
-model.config.use_cache = False
-model.config.pretraining_tp = 1
+base_model.config.use_cache = False
+base_model.config.pretraining_tp = 1
+
 
 # Load LLaMA tokenizer
-tokenizer = AutoTokenizer.from_pretrained(PATH_BASE_MODEL, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(PATH_BASE_MODEL)
 tokenizer.pad_token = tokenizer.eos_token
 tokenizer.padding_side = "right" # Fix weird overflow issue with fp16 training
 
@@ -240,7 +268,7 @@ peft_config = LoraConfig(
     lora_dropout=LORA_DROPOUT,
     r=LORA_R,
     bias="none",
-    task_type="CAUSAL_LM"
+    task_type="CAUSAL_LM",
 )
 
 # Set training parameters
@@ -266,7 +294,7 @@ training_arguments = TrainingArguments(
 
 # Set supervised fine-tuning parameters
 trainer = SFTTrainer(
-    model=model,
+    model=base_model,
     train_dataset=dataset,
     peft_config=peft_config,
     dataset_text_field="text",
@@ -294,6 +322,7 @@ with open(PATH_csv, mode="w", newline="") as file:
     monitor_thread.start() # start thread
     start_time = time.time()
 
+
     # Train model
     print("Start fine-tuning model.")
     trainer.train()
@@ -318,11 +347,11 @@ with open(PATH_csv, mode="w", newline="") as file:
 
 
 print("")
-print("- The new model obtained after the FT has this path: ", new_model)
+print("- The new model obtained after the fine-tuning has this path: ", new_model)
 print("")
-print("- Full path to new model offloading folder after FT:", new_model_offload_dir)
+print("- Full path to new model offloading folder after fine-tuning: ", new_model_offload_dir)
 print("")
-print("- The file containing the info on the memory occupation of the new model after the FT has this path: ", PATH_csv)
+print("- The file containing the info on the memory occupation of the new model after the fine-tuning has this path: ", PATH_csv)
 print("")
 print("Fine-tuning completed successfully.")
 print("")

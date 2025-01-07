@@ -5,11 +5,9 @@
     1) Get support libraries like PyTorch and Bitsandbytes **(_lib)**
     2) Download an LLM from HuggingFace **(Download_models)**
     3) Have training and test datasets available to fine-tune and test an LLM **(Fine_tuning_dataset)**
-    4) Perform standard fine-tuning of an LLM **(FineTuning_models)**
-    5) Perform double fine-tuning of an LLM **(FineTuning_models_double)**
-    6) Perform 4-bit fine-tuning of an LLM **(FineTuning_quantization_models)**
-    7) Test the performance of an LLM **(Testing)**
-    8) Create charts to compare different LLMs **(Graphs)**
+    4) Perform fine-tuning of an LLM **(FineTuning_models)**
+    5) Test the performance of an LLM **(Testing)**
+    6) Create charts to compare different LLMs **(Graphs)**
 
 - **Before trying to follow any of the above points you need to follow the following steps first to be able to create a virtual environment and install all the necessary libraries inside it.**
 
@@ -104,4 +102,4 @@
     ```
 
 ## CONCLUSION 
-- At this point, you can run any script present in any of the 7 main folders mentioned at the beginning of this file (from point 2 to 8).
+- At this point, you can run any script present in any of the 5 main folders mentioned at the beginning of this file (from point 2 to 6).
