@@ -75,17 +75,19 @@ def main():
     print(ans, "\n\n")
     print("ans[0]['generated_text'].split('```')[2]:")
     print(ans[0]['generated_text'].split('```')[2])
-    query = post_processing_query(ans[0]['generated_text'].split('```')[2])
-    print("Query after regex expression:", query)
+    original_query, ilike_query = post_processing_query(ans[0]['generated_text'].split('```')[2])
+    print("Original Query after regex expression:", original_query)
+    print("ilike Query after regex expression:", ilike_query)
     elapsed_time = end_time - start_time
     print(f"Elapsed time: {elapsed_time}\n\n\n\n")
 
     # saving the SQL query generated in the file with the session ID
-    save_query_to_file(query, session_id)
+    save_query_to_file(original_query, ilike_query, session_id)
 
     # Creating the dictionary with the output data
     result_dictionary = {
-        "SQL query generated": query,
+        "original SQL query generated": original_query,
+        "Ilike SQL query generated": ilike_query,
         "Elapsed time": elapsed_time
     }
     print(f"Result dictionary: {result_dictionary}\n\n")
