@@ -1,0 +1,66 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q20
+question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C2-Q10
+question: Seleziona gli strain 'beforenagoya' e 'genus' da strain.
+real variants query: ['SELECT beforenagoya, genus FROM detailedstrain;', 'SELECT genus, beforenagoya FROM detailedstrain;']
+generated query: SELECT *  FROM detailedstrain  WHERE beforenagoya = True AND genus = 'Candida'; 
+
+ID-query: C3-Q4
+question: Dammi aciessionnumber.
+real variants query: ['SELECT accessionnumber FROM detailedstrain;']
+generated query: SELECT accessionnumber FROM detailedstrain WHERE name = 'Dammi'; 
+
+ID-query: C3-Q6
+question: Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Rhodotorula macerans Frederiksen';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Isotype of Rhodotorula mucilaginosa Frederiksen'; 
+
+ID-query: C3-Q9
+question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='soil'; 
+
+ID-query: C3-Q20
+question: Dammi tutti gli strain che hanno il campo 'commentontaaonomy' uguale a Lactobacilluk paraplantarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paraplantarum';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'Lactobacillus paracasei'; 
+
+ID-query: C3-Q23
+question: Dammi cultivkr.
+real variants query: ['SELECT cultivar FROM detailedstrain;']
+generated query: SELECT *  FROM detailedstrain  WHERE cultivar = 'Dammi'; 
+
+ID-query: C3-Q29
+question: Dammi rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT remarks FROM detailedstrain WHERE species = 'dammi'; 
+
+ID-query: C4-Q25
+question: Dammi tutti gli strain che hanno il campo applications uguale a Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); e il campo collectiondate compreso tra 2005 e 2016. Voglio anche che il campo otherdenominations sia Rs T33 C8 o LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT *  FROM detailedstrain  WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)'  AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016'))  AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'); 
+
+ID-query: C4-Q26
+question: Dammi tutti gli strain che hanno il campo scientificname uguale a Carnation mottle virus e il campo depositdate con una data successiva a 1997-10-29.
+real variants query: ["SELECT * FROM detailedstrain WHERE scientificname = 'Carnation mottle virus' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '1997-10-29') OR (LENGTH(depositdate) = 4 AND depositdate >= '1997'));"]
+generated query: SELECT *  FROM detailedstrain  WHERE scientificname = 'Carnation mottle virus' AND depositdate > '1997-10-29'; 
+
+ID-query: C5-Q13
+question: Seleziona e conta tutti i strain che hanno il campo remarks uguale a linkage group: A5; allele mutation: nit M e raggruppa solo quelli che hanno lo stesso campo testedtgmin. Voglio che mi mostri solo i gruppi con più di 5 esempi.
+real variants query: ["SELECT testedtgmin, COUNT(*) FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;", "SELECT COUNT(*), testedtgmin FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;"]
+generated query: SELECT remarks, testedtgmin, COUNT(*)  FROM detailedstrain  GROUP BY remarks, testedtgmin  HAVING COUNT(*) > 5; 
+
+
+
+Correct answers: 139
+Total questions: 150
+Model accuracy: 92.67%
+
+######################################################################################
+

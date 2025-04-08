@@ -1,0 +1,71 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C2-Q15
+question: Give me all strains that have nagoyaconditions equal to 2.0 and the organismtype equal to Cryptophyta and recommendedtemperature is 0.0 or 10.0.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND (recommendedtemperature = 10.0 OR recommendedtemperature = 0.0);", "SELECT * FROM detailedstrain WHERE organismtype = 'Cryptophyta' AND nagoyaconditions = 2.0 AND (recommendedtemperature = 10.0 OR recommendedtemperature = 0.0);", "SELECT * FROM detailedstrain WHERE organismtype = 'Cryptophyta' AND nagoyaconditions = 2.0 AND (recommendedtemperature = 0.0 OR recommendedtemperature = 10.0);", "SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND (recommendedtemperature = 0.0 OR recommendedtemperature = 10.0);"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND recommendedtemperature = 0.0 OR recommendedtemperature = 10.0; 
+
+ID-query: C3-Q3
+question: Give me all strains that have the field morgacismtype equal to Figamentous Fungi.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Filamentous Fungi';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Fungi'; 
+
+ID-query: C3-Q8
+question: Select the field 'cxcronym' from strain.
+real variants query: ['SELECT cacronym FROM detailedstrain;']
+generated query: SELECT cxcronym FROM detailedstrain; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT * FROM detailedstrain WHERE substrate ='shake'; 
+
+ID-query: C3-Q11
+question: Give me all strains that have the field statos equal to Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalisnTurchetti & Buzzini'; 
+
+ID-query: C3-Q18
+question: Give me all strains that have the field transmwssionby equal to coftact.
+real variants query: ["SELECT * FROM detailedstrain WHERE transmissionby = 'contact';"]
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'cofactors'; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'Mann'; 
+
+ID-query: C3-Q20
+question: Give me all strains that have the field 'commentontaaonomy' equal to Lactobacilluk paraplantarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paraplantarum';"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paracasei'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT * FROM detailedstrain WHERE name = 'Sowbana mosaic virus'; 
+
+ID-query: C3-Q29
+question: Give me rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT * FROM detailedstrain WHERE isolationhabitat ='soil'; 
+
+ID-query: C4-Q1
+question: Give me all the strains that have the scientificname field equal to Lettuce Italian necrotic virus and that have the collectiondate field with a date between 1998 and 2008. I also want the pathotypeserotypetype to be 0 or 1.
+real variants query: ["SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND (pathotypeserotypetype = '0' OR pathotypeserotypetype = '1');", "SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND ((pathotypeserotypetype = '0' OR pathotypeserotypetype = '1'));"]
+generated query: SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND (pathotypeserotypetype = 0 OR pathotypeserotypetype = 1); 
+
+ID-query: C4-Q25
+question: Give me all the strains that have the applications field equal to Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); and that have the collectiondate field with a date between 2005 and 2016. I also want the otherdenominations to be Rs T33 C8 or LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'); 
+
+
+
+Correct answers: 138
+Total questions: 150
+Model accuracy: 92.00%
+
+######################################################################################
+

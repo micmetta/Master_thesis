@@ -1,0 +1,34 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Count the number of strains where {column} is {value}.",
+        "sql_template": "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Select all strains where {column} is {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Count the number of strains where {column1} is {value1} and {column2} is {value2}.",
+        "sql_template": "SELECT COUNT(*) FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2};",
+        "possible_sql_queries": [
+            "SELECT COUNT(*) FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2};"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Select all strains where {column1} is {value1} or {column2} is {value2}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column1} = {value1} OR {column2} = {value2};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} OR {column2} = {value2};"
+        ]
+    }
+]

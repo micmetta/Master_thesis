@@ -182,8 +182,7 @@ correct_answers = 0
 total_test_queries = sum(len(questions) for questions in dict_categories_questions.values())
 category_results = {category: {"incorrect": 0, "total": 0} for category in dict_categories_questions.keys()}
 accuracy_results.append(f"\nSUMMARY OF INCORRECT QUERIES\n\n")
-# I open the .csv file to record the monitoring data
-with open(PATH_csv, mode="w", newline="") as file:
+with open(PATH_csv, mode="w", newline="") as file: # I open the .csv file to record the monitoring data
     csv_writer = csv.writer(file)
 
     # Iterate over the categories and questions in the test set:
@@ -197,7 +196,7 @@ with open(PATH_csv, mode="w", newline="") as file:
         for question_data in questions:
             current_question += 1
             question = question_data["question"]
-            expected_sql_query = question_data["sql_query"]
+            expected_sql_query = question_data["sql_query_variants"][0] # there was before "question_data["sql_query"]"
             
             csv_writer.writerow([])
             csv_writer.writerow(["Current question: Q" + str(current_question)])

@@ -1,0 +1,61 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C_generic-Q1
+question: Give me all the Aspergillus strains with Marine sediment
+real variants query: ["SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment';"]
+generated query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND isolationhabitat = 'Marine sediment'; 
+
+ID-query: C_generic-Q5
+question: vorrei tutti i bacteria
+real variants query: ["SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"]
+generated query: SELECT * FROM detailedstrain WHERE organismtype = 'bacterium'; 
+
+ID-query: C_generic-Q21
+question: Give me strains that have depositdate with a date equal to 2022
+real variants query: ["SELECT *  FROM detailedstrain  WHERE depositdate LIKE '%2022';"]
+generated query: SELECT * FROM detailedstrain WHERE depositdate = '2022'; 
+
+ID-query: C_generic-Q22
+question: Give me all the strain of collection called 'TUCC' that are GMO
+real variants query: ["SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND gmo = True", "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND gmo = True"]
+generated query: SELECT * FROM detailedstrain WHERE collection = 'TUCC' AND gmo = True; 
+
+ID-query: C_generic-Q23
+question: Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'
+real variants query: ["SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND substrate = 'Posidonia oceanica'", "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND substrate = 'Posidonia oceanica'"]
+generated query: SELECT * FROM detailedstrain WHERE collection = 'TUCC' AND substrate = 'Posidonia oceanica'; 
+
+ID-query: C_generic-Q26
+question: Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'
+real variants query: ["SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Virus'", "SELECT strainid FROM detailedstrain WHERE organismtype = 'Virus' AND cacronym = 'EMCC'"]
+generated query: SELECT * FROM detailedstrain WHERE collection = 'EMCC' AND organismtype = 'Virus'; 
+
+ID-query: C_generic-Q42
+question: Select the field pathogenicity
+real variants query: ['SELECT pathogenicity FROM detailedstrain;']
+generated query: SELECT pathogenicity FROM detailedstrain; [/INST] I hope it is correct. Let me know if you need anything else. [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST]
+
+ID-query: C_generic-Q44
+question: Seleziona tutti i virus che sono anche degli strain.
+real variants query: ["SELECT * FROM detailedstrain WHERE organismtype = 'Virus';"]
+generated query: SELECT * FROM detailedstrain WHERE species = 'virus'; 
+
+ID-query: C_generic-Q47
+question: Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007
+real variants query: ["SELECT * FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007');"]
+generated query: SELECT * FROM detailedstrain WHERE collectiondate > '2007'; 
+
+ID-query: C_generic-Q48
+question: Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations
+real variants query: ["SELECT collectiondate, otherdenominations FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007');"]
+generated query: SELECT collectiondate, otherdenominations FROM detailedstrain WHERE collectiondate > '2007' AND organismtype = 'virus'; 
+
+
+
+Correct answers: 42
+Total questions: 52
+Model accuracy: 80.77%
+
+######################################################################################
+

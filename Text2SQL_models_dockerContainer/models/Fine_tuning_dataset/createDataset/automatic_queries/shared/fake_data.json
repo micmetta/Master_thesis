@@ -1,0 +1,11 @@
+{
+    "beforenagoya": ["True", "False"],
+    "identificationtechnique": ["Bioassay;UGO", "Bioassay", "ELISA"],
+    "pathogenicity": ["Pathogen for Plants", "Non-pathogenic"],
+    "transmissionby": ["contact", "contact;insect", "airborne"],
+    "storageconditions": ["Lyo", "Frozen", "Room temperature", "Refrigerated"],
+    "abbreviation": ["BCMV", "TMV", "XYZ"],
+    "ineva": ["True", "False"],
+    "cultivar": ["Saluggia", "viola", "genova"],
+    "Collection": [20, 45, 2]
+}

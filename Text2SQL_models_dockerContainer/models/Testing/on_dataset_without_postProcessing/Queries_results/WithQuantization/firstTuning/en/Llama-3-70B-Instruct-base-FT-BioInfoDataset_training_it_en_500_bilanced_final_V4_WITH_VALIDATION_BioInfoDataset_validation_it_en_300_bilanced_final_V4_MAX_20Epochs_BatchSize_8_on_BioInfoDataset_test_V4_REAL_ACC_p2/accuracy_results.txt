@@ -1,0 +1,61 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q20
+question: Give me all strains that have commentontaxonomy equal to BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C3-Q6
+question: Give me strain with stabus equal to Isotkpe of Rhodotorula macerans Frederiksen.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Rhodotorula macerans Frederiksen';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Isotype of Rhodotorula mucilaginosa Frederiksen'; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='shells'; 
+
+ID-query: C3-Q11
+question: Give me all strains that have the field statos equal to Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Holotype of Nagannishia nivalis/Turchetti & Buzzini'; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT *  FROM detailedstrain  WHERE sexualstate = 'MAlpha1'; 
+
+ID-query: C3-Q20
+question: Give me all strains that have the field 'commentontaaonomy' equal to Lactobacilluk paraplantarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paraplantarum';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'Lactobacillus paracasei'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT *  FROM detailedstrain  WHERE othernames = 'Sowbanan mosaic virus'; 
+
+ID-query: C3-Q24
+question: Select the field 'testeltgmax' from strain.
+real variants query: ['SELECT testedtgmax FROM detailedstrain;']
+generated query: SELECT testtgmax  FROM detailedstrain; 
+
+ID-query: C4-Q12
+question: Give me all the strains that have the riskgroup field equal to 2.0 and that have the depositdate field with a date between 2003 and 2016. I also want the species to be gracile or cerevisiae;uvarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND (species = 'gracile' OR species = 'cerevisiae;uvarum');", "SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND ((species = 'gracile' OR species = 'cerevisiae;uvarum'));"]
+generated query: SELECT *  FROM detailedstrain  WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND (species = 'gracile' OR species = 'cerevisiae'); 
+
+ID-query: C4-Q23
+question: Give me all strains that have the applications field equal to  Resistant to hygromicyn B and the inclusiondate field with a date after 2014.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Resistant to hygromicyn B' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2014-12-31') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2014'));"]
+generated query: SELECT *  FROM detailedstrain  WHERE applications = 'Resistant to hygromycin B' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2014-12-31') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2014')); 
+
+
+
+Correct answers: 140
+Total questions: 150
+Model accuracy: 93.33%
+
+######################################################################################
+

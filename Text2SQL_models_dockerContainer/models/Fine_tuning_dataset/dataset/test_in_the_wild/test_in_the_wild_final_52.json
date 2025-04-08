@@ -1,0 +1,385 @@
+{
+    "C_generic": [
+        {
+            "index_template": -1,
+            "question": "Give me all the Aspergillus strains with Marine sediment",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strain with genus equal to Aspergillus and substrate equal to Marine sediment",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain Isolation habitat ugale a  microalgal culture",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE Isolationhabitat ='microalgal culture';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE Isolationhabitat ='marine sediment (water after centrifugation)';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "vorrei tutti i bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "vorrei tutti gli aspergillus",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give all the Aspergillus",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the Aspergillus strains",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strain with fiel organismtype equal to bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc1';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc1';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strains with organismtype equal to bacteria and otherdenomination equal to mvpc1",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc1';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc1';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype diverso da bacteria e otherdenomination uguale a MVPC1 9",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype != 'Bacteria' AND otherdenominations ='MVPC1 9';",
+                "SELECT * FROM detailedstrain WHERE organismtype != 'Bacteria' AND otherdenominations ='MVPC1 9';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc e commentontaxonomy uguale a IIIB group",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc oppure (commentontaxonomy uguale a IIIB group) e mostrami solo i campi organismtype, otherdenominations e commentontaxonomy",
+            "sql_query_variants": [
+                "SELECT organismtype, otherdenominations, commentontaxonomy FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' OR commentontaxonomy = 'IIIB group';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain che hanno ineva uguale a true e collectiondate con una data successiva al 2020 ",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE ineva = True AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2020-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2020'));"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quali sono gli strain che hanno il genus diverso da Nocardioides e species uguale a ambifaria?",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus != 'Nocardioides' AND species = 'ambifaria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Show me the accessionnumber of the strains that have isolationdate not null",
+            "sql_query_variants": [
+                "SELECT accessionnumber FROM detailedstrain WHERE isolationdate IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Tell me how many strains have applications equal to Agroindustry and group them by species field",
+            "sql_query_variants": [
+                "SELECT COUNT(*), species FROM detailedstrain WHERE applications = 'Agroindustry' GROUP BY species;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Which strains have a regroup greater than 10 or a mrisgroup equal to 2?",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE riskgroup > 10 OR mriskgroup = 2;",
+                "SELECT * FROM detailedstrain  WHERE riskgroup > 10 OR mriskgroup = 2.0;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me strains that have depositdate with a date equal to 2022",
+            "sql_query_variants": [
+                "SELECT *  FROM detailedstrain  WHERE depositdate LIKE '%2022';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the strain of collection called 'TUCC' that are GMO",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND gmo = True",
+                "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND gmo = True"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND substrate = 'Posidonia oceanica'",
+                "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND substrate = 'Posidonia oceanica'"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con il campo collectiondate compreso tra il 2002 e il 2005",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2002-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2005-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2002' AND collectiondate <= '2005');",
+                "SELECT * FROM detailedstrain WHERE ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2002-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2005-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2002' AND collectiondate <= '2005'));"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strains that have the field inclusiondate between 1996 and 2001",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE (LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1996-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2001-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1996' AND inclusiondate <= '2001');",
+                "SELECT * FROM detailedstrain WHERE ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1996-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2001-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1996' AND inclusiondate <= '2001'));"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'",
+            "sql_query_variants": [
+                "SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Virus'",
+                "SELECT strainid FROM detailedstrain WHERE organismtype = 'Virus' AND cacronym = 'EMCC'"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quali sono gli strain con collectiondate uguale a 2019?",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE collectiondate = '2019';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con gmo true",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE gmo = TRUE;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me the strains with gmo true",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE gmo = TRUE;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con identificationtechnique non nullo",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE identificationtechnique IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Which strains were collected in 2019 or have a known identification technique?",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE collectiondate = '2019' OR identificationtechnique IS NOT NULL;",
+                "SELECT *  FROM detailedstrain  WHERE collectiondate LIKE '%2019%' OR identificationtechnique IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Which strains have infectivity testing equal true or have a known transmission vector?",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE infectivitytested = True OR transmissionby IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me strains that have the fields restrictions or transmissionby not null",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE restrictions IS NOT NULL OR transmissionby IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me only strain with protocol natoya equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quali sono gli strain che hanno genus uguale Nocardioides, species uguale a albus, applications uguale ad Agroindustry e isolationhabitat non nullo?",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE genus = 'Nocardioides' AND species = 'albus' AND applications = 'Agroindustry' AND isolationhabitat IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con otherdenominations diverso da JN1 che hanno isolationdate diverso da 2015",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE otherdenominations != 'JN1' AND isolationdate != 2015;",
+                "SELECT * FROM detailedstrain WHERE otherdenominations!= 'JN1' AND isolationdate!= '2015';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con accessionnumb diverso da 0008 ma con collection maggiore di 2",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE accessionnumb != '0008' AND collection > 2;",
+                "SELECT * FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me the strains with accessionnumb different from 0008 but with collection greater than 2",
+            "sql_query_variants": [
+                "SELECT * FROM Detailedstrain WHERE accessionnumb != '0008' AND collection > 2;",
+                "SELECT * FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Conta gli strain che non hanno registeredcollection non null e raggruppameli in base allo strainid",
+            "sql_query_variants": [
+                "SELECT COUNT(*) FROM detailedstrain WHERE registeredcollection IS NOT NULL GROUP BY strainid;",
+                "SELECT COUNT(*), strainid FROM detailedstrain WHERE registeredcollection IS NOT NULL GROUP BY strainid;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "I want all strains with temperature greater than or equal to 29 and values not null",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE recommendedtemperature >= 29 AND recommendedtemperature IS NOT NULL;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all rows of strain.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Select the field pathogenicity",
+            "sql_query_variants": [
+                "SELECT pathogenicity FROM detailedstrain;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the viruses that are also strains.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Virus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Seleziona tutti i virus che sono anche degli strain.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Virus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain che hanno il campo availbefordis uguale a true",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE availablefordis = true;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain che hanno il campo vailabefordis uguale a fals",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE availablefordis = false;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007');"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations",
+            "sql_query_variants": [
+                "SELECT collectiondate, otherdenominations FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007');"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all viruses that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.';"
+            ]
+        },
+
+        {
+            "index_template": -1,
+            "question": "Dammi i virus che hanno il campo abbreviation 'LBVV', il campo isolationhost 'Compositae/Lactuca/sp.' e il campo cultivar 'lattuga Lollo bionda'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda';"
+            ]
+        },
+
+        {
+            "index_template": -1,
+            "question": "Give me the strains that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.' and the field cultivar equal to 'lattuga Lollo bionda' and storageconditions equal to 'Lyo'.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda' AND storageconditions = 'Lyo';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quanti strain hanno il campo idetificationtecnique uguale a ELISA?",
+            "sql_query_variants": [
+                "SELECT COUNT(*)  FROM detailedstrain  WHERE identificationtechnique = 'ELISA';"
+            ]
+        }
+    ]
+}

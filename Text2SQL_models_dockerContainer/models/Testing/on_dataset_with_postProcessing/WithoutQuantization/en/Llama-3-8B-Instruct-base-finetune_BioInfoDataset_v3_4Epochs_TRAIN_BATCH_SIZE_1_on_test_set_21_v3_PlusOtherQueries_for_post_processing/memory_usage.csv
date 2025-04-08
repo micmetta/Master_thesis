@@ -4,191 +4,197 @@ Current category: C0_plus
 Current question: Q1
 Give me all strains with the collection field equal to EMCC and vorganismtype equal to Virus.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:32:56,15.18,15.29
-2024-12-19 20:32:57,15.32,15.72
+2024-12-20 14:01:55,15.18,15.29
+2024-12-20 14:01:56,15.3,15.72
 
 Current question: Q2
 Give me all strains with the 'collection' field equal to EMCC and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:32:58,15.22,15.73
+2024-12-20 14:01:57,15.22,15.73
+2024-12-20 14:01:58,15.31,15.93
 
 Current question: Q3
 Give me all strains with the 'collection' field equal to fdsfdijfdk and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:32:59,15.22,15.93
-2024-12-19 20:33:00,15.3,16.14
+2024-12-20 14:01:59,15.22,15.93
+2024-12-20 14:02:00,15.28,16.14
 
 Current question: Q4
 Give me all strains with the collection field equal to 10 and vorganismtype equal to Virus.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:01,15.22,16.14
+2024-12-20 14:02:01,15.22,16.14
 
 Current question: Q5
 Give me all strains with the 'collection' field equal to 10 and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:02,15.22,16.14
-2024-12-19 20:33:03,15.3,16.14
-2024-12-19 20:33:04,15.29,16.14
-2024-12-19 20:33:05,15.33,16.14
-2024-12-19 20:33:06,15.31,16.14
+2024-12-20 14:02:02,15.22,16.14
+2024-12-20 14:02:03,15.29,16.14
+2024-12-20 14:02:04,15.32,16.14
+2024-12-20 14:02:05,15.29,16.14
+2024-12-20 14:02:06,15.32,16.14
+2024-12-20 14:02:07,15.3,16.14
 
 Current question: Q6
 Give me all strains with the 'collection' field equal to '10' and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:07,15.22,16.14
+2024-12-20 14:02:08,15.22,16.14
+2024-12-20 14:02:09,15.29,16.14
 
 Current question: Q7
 Give me all strains with the 'Pathogenicity' field equal to true and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:08,15.22,16.14
+2024-12-20 14:02:10,15.22,16.14
+2024-12-20 14:02:11,15.32,16.14
 
 Current question: Q8
 Give me all strains with the 'tpestrain' field equal to false and vorganismtype equal to Bacteria.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:09,15.22,16.14
+2024-12-20 14:02:12,15.22,16.14
 
 Current question: Q9
 Select the field pathogenicity from strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:10,15.22,16.14
+2024-12-20 14:02:13,15.22,16.14
 
 Current category: C1
 
 Current question: Q1
 Give me all rows of strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:11,15.22,16.14
+2024-12-20 14:02:14,15.22,16.14
 
 Current question: Q2
 Give me all strain that have beforenagoya equal to true.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:12,15.22,16.14
+2024-12-20 14:02:15,15.22,16.14
 
 Current question: Q3
 Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:13,15.22,16.14
+2024-12-20 14:02:16,15.22,16.14
 
 Current question: Q4
 Select only field called pathogenicity from strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:14,15.22,16.14
+2024-12-20 14:02:17,15.22,16.14
 
 Current category: C2
 
 Current question: Q1
 Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:15,15.22,16.14
+2024-12-20 14:02:18,15.22,16.14
 
 Current question: Q2
 Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:16,15.22,16.14
-2024-12-19 20:33:17,15.31,16.35
+2024-12-20 14:02:19,15.22,16.14
+2024-12-20 14:02:20,15.28,16.35
 
 Current question: Q3
 Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:18,15.22,16.35
-2024-12-19 20:33:19,15.3,16.35
+2024-12-20 14:02:21,15.22,16.35
+2024-12-20 14:02:22,15.33,16.35
 
 Current question: Q4
 Select the fields 'infectivitytested' and 'propagationhost' from strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:20,15.22,16.35
+2024-12-20 14:02:23,15.22,16.35
 
 Current category: C3
 
 Current question: Q1
 Give me all strains.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:21,15.22,16.35
+2024-12-20 14:02:24,15.22,16.35
 
 Current question: Q2
 Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:22,15.22,16.35
+2024-12-20 14:02:25,15.22,16.35
 
 Current question: Q3
 Select 'Pathogenicity' from strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:23,15.22,16.35
+2024-12-20 14:02:26,15.22,16.35
 
 Current question: Q4
 Select 'Pathogenicity' and 'tpestrain' from strain.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:24,15.22,16.35
+2024-12-20 14:02:27,15.22,16.35
 
 Current category: C4
 
 Current question: Q1
 Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:25,15.22,16.35
-2024-12-19 20:33:26,15.3,16.57
-2024-12-19 20:33:27,15.28,16.57
-2024-12-19 20:33:28,15.33,16.57
-2024-12-19 20:33:29,15.31,16.57
+2024-12-20 14:02:28,15.22,16.35
+2024-12-20 14:02:29,15.28,16.57
+2024-12-20 14:02:30,15.31,16.57
+2024-12-20 14:02:31,15.34,16.57
+2024-12-20 14:02:32,15.31,16.57
 
 Current question: Q2
 Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:30,15.22,16.57
-2024-12-19 20:33:31,15.31,16.79
-2024-12-19 20:33:32,15.3,16.79
-2024-12-19 20:33:33,15.34,16.79
-2024-12-19 20:33:34,15.31,16.79
+2024-12-20 14:02:33,15.22,16.57
+2024-12-20 14:02:34,15.3,16.79
+2024-12-20 14:02:35,15.34,16.79
+2024-12-20 14:02:36,15.31,16.79
+2024-12-20 14:02:37,15.34,16.79
 
 Current question: Q3
 Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:35,15.22,16.79
-2024-12-19 20:33:36,15.3,16.79
-2024-12-19 20:33:37,15.28,16.79
-2024-12-19 20:33:38,15.32,16.79
-2024-12-19 20:33:39,15.29,16.79
+2024-12-20 14:02:38,15.22,16.79
+2024-12-20 14:02:39,15.29,16.79
+2024-12-20 14:02:40,15.32,16.79
+2024-12-20 14:02:41,15.29,16.79
+2024-12-20 14:02:42,15.33,16.79
 
 Current question: Q4
 Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:40,15.22,16.79
-2024-12-19 20:33:41,15.31,17.02
-2024-12-19 20:33:42,15.29,17.02
-2024-12-19 20:33:43,15.34,17.02
-2024-12-19 20:33:44,15.32,17.02
+2024-12-20 14:02:43,15.22,16.79
+2024-12-20 14:02:44,15.3,17.02
+2024-12-20 14:02:45,15.34,17.02
+2024-12-20 14:02:46,15.3,17.02
+2024-12-20 14:02:47,15.34,17.02
+2024-12-20 14:02:48,15.3,17.02
 
 Current question: Q5
 Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:45,15.22,17.02
-2024-12-19 20:33:46,15.31,17.02
-2024-12-19 20:33:47,15.35,17.02
-2024-12-19 20:33:48,15.32,17.02
-2024-12-19 20:33:49,15.3,17.02
-2024-12-19 20:33:50,15.35,17.02
-2024-12-19 20:33:51,15.32,17.02
-2024-12-19 20:33:52,15.37,17.02
+2024-12-20 14:02:49,15.22,17.02
+2024-12-20 14:02:50,15.3,17.02
+2024-12-20 14:02:51,15.35,17.02
+2024-12-20 14:02:52,15.33,17.02
+2024-12-20 14:02:53,15.31,17.02
+2024-12-20 14:02:54,15.34,17.02
+2024-12-20 14:02:55,15.31,17.02
+2024-12-20 14:02:56,15.36,17.02
 
 Current category: C5
 
 Current question: Q1
 "Select and count the number of strains, grouping the results by the trasmissionby field."
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:53,15.22,17.02
+2024-12-20 14:02:57,15.22,17.02
 
 Current question: Q2
 Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:54,15.22,17.02
+2024-12-20 14:02:58,15.22,17.02
 
 Current question: Q3
 Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:55,15.22,17.02
+2024-12-20 14:02:59,15.22,17.02
+2024-12-20 14:03:00,15.29,17.02
 
 Current question: Q4
 Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
 timestamp,allocated_memory_GB,reserved_memory_GB
-2024-12-19 20:33:56,15.22,17.02
-2024-12-19 20:33:57,15.3,17.02
+2024-12-20 14:03:01,15.22,17.02
+2024-12-20 14:03:02,15.3,17.02

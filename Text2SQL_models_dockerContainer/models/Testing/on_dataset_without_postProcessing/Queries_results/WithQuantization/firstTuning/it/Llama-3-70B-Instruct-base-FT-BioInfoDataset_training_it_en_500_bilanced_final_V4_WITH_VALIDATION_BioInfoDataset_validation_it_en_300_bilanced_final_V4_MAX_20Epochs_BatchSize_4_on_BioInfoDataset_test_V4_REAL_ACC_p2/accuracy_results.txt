@@ -1,0 +1,166 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q1
+question: Seleziona solo il campo chiamato cacronym da strain.
+real variants query: ['SELECT cacronym FROM detailedstrain;']
+generated query: SELECT cacronym FROM strain; 
+
+ID-query: C1-Q3
+question: Seleziona solo il campo chiamato prodofmetabolites da strain.
+real variants query: ['SELECT prodofmetabolites FROM detailedstrain;']
+generated query: SELECT prodofmetabolites FROM strain; 
+
+ID-query: C1-Q8
+question: Seleziona solo il campo chiamato pathotypeserotypetype da strain.
+real variants query: ['SELECT pathotypeserotypetype FROM detailedstrain;']
+generated query: SELECT pathotypeserotypetype FROM strain; 
+
+ID-query: C1-Q10
+question: Seleziona solo il campo chiamato genus da strain.
+real variants query: ['SELECT genus FROM detailedstrain;']
+generated query: SELECT genus FROM strain; 
+
+ID-query: C1-Q17
+question: Seleziona solo il campo chiamato organismtype da strain.
+real variants query: ['SELECT organismtype FROM detailedstrain;']
+generated query: SELECT organismtype FROM strain; 
+
+ID-query: C1-Q18
+question: Seleziona solo il campo chiamato identificationtechnique da strain.
+real variants query: ['SELECT identificationtechnique FROM detailedstrain;']
+generated query: SELECT identificationtechnique FROM strain; 
+
+ID-query: C1-Q20
+question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C1-Q21
+question: Dammi tutti gli strain che hanno status uguale a Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison';"]
+generated query: SELECT * FROM detailedstrain WHERE status IN ('Isotype of Torula utilis Henneberg', 'Isotype of Torula mineralis Hayduck & Haehn ex Harrison'); 
+
+ID-query: C1-Q22
+question: Seleziona solo il campo chiamato abbreviation da strain.
+real variants query: ['SELECT abbreviation FROM detailedstrain;']
+generated query: SELECT abbreviation FROM strain; 
+
+ID-query: C1-Q23
+question: Seleziona solo il campo chiamato sexualstate da strain.
+real variants query: ['SELECT sexualstate FROM detailedstrain;']
+generated query: SELECT sexualstate FROM strain; 
+
+ID-query: C1-Q26
+question: Seleziona solo il campo chiamato collection da strain.
+real variants query: ['SELECT collection FROM detailedstrain;']
+generated query: SELECT collection FROM strain; 
+
+ID-query: C1-Q28
+question: Seleziona solo il campo chiamato nagoyaprotocol da strain.
+real variants query: ['SELECT nagoyaprotocol FROM detailedstrain;']
+generated query: SELECT nagoyaprotocol FROM strain; 
+
+ID-query: C2-Q6
+question: Seleziona gli strain 'nagoyaconditions' e 'nagoyaprotocol' da strain.
+real variants query: ['SELECT nagoyaprotocol, nagoyaconditions FROM detailedstrain;', 'SELECT nagoyaconditions, nagoyaprotocol FROM detailedstrain;']
+generated query: SELECT nagoyaconditions, nagoyaprotocol FROM strain; 
+
+ID-query: C2-Q10
+question: Seleziona gli strain 'beforenagoya' e 'genus' da strain.
+real variants query: ['SELECT beforenagoya, genus FROM detailedstrain;', 'SELECT genus, beforenagoya FROM detailedstrain;']
+generated query: SELECT beforenagoya, genus FROM strain; 
+
+ID-query: C2-Q11
+question: Seleziona i campi collection e otherccnumbers da strain.
+real variants query: ['SELECT collection, otherccnumbers FROM detailedstrain;', 'SELECT otherccnumbers, collection FROM detailedstrain;']
+generated query: SELECT collection, otherccnumbers FROM strain; 
+
+ID-query: C2-Q14
+question: Seleziona i campi geoorigin e testedtgmax da strain.
+real variants query: ['SELECT testedtgmax, geoorigin FROM detailedstrain;', 'SELECT geoorigin, testedtgmax FROM detailedstrain;']
+generated query: SELECT geoorigin, testedtgmax FROM strain; 
+
+ID-query: C2-Q16
+question: Seleziona gli strain 'sexualstate' e 'name' da strain.
+real variants query: ['SELECT sexualstate, name FROM detailedstrain;', 'SELECT name, sexualstate FROM detailedstrain;']
+generated query: SELECT sexualstate, name FROM strain; 
+
+ID-query: C2-Q20
+question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';"]
+generated query: SELECT *  FROM detailedstrain  WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+
+ID-query: C2-Q22
+question: Seleziona gli strain 'propagationhost' e 'otherccnumbers' da strain.
+real variants query: ['SELECT propagationhost, otherccnumbers FROM detailedstrain;', 'SELECT otherccnumbers, propagationhost FROM detailedstrain;']
+generated query: SELECT propagationhost, otherccnumbers FROM strain; 
+
+ID-query: C2-Q23
+question: Seleziona i campi applications e storageconditions da strain.
+real variants query: ['SELECT storageconditions, applications FROM detailedstrain;', 'SELECT applications, storageconditions FROM detailedstrain;']
+generated query: SELECT applications, storageconditions FROM strain WHERE strainid = 1; 
+
+ID-query: C2-Q28
+question: Seleziona i campi confirmed e organismtype da strain.
+real variants query: ['SELECT confirmed, organismtype FROM detailedstrain;', 'SELECT organismtype, confirmed FROM detailedstrain;']
+generated query: SELECT confirmed, organismtype FROM strain WHERE strainid = 144; 
+
+ID-query: C2-Q30
+question: Seleziona gli strain 'prodofmetabolites' e 'pathogenicity' da strain.
+real variants query: ['SELECT pathogenicity, prodofmetabolites FROM detailedstrain;', 'SELECT prodofmetabolites, pathogenicity FROM detailedstrain;']
+generated query: SELECT prodofmetabolites, pathogenicity FROM strain; 
+
+ID-query: C3-Q4
+question: Dammi aciessionnumber.
+real variants query: ['SELECT accessionnumber FROM detailedstrain;']
+generated query: SELECT accessionnumber FROM detailedstrain WHERE accessionnumber = 'MIRRI 101-1'; 
+
+ID-query: C3-Q5
+question: Seleziona 'sirainid' e 'qps' da strain.
+real variants query: ['SELECT strainid, qps FROM detailedstrain;', 'SELECT qps, strainid FROM detailedstrain;']
+generated query: SELECT strainid, qps FROM strain; 
+
+ID-query: C3-Q9
+question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='shke'; 
+
+ID-query: C3-Q11
+question: Dammi tutti gli strain che hanno il campo statos uguale a Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Holotype of Nagamishia nivalis/Turchetti & Buzzini'; 
+
+ID-query: C3-Q19
+question: Dammi tutti gli strain che hanno il campo 'skxualstate' uguale a MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAn1'; 
+
+ID-query: C3-Q23
+question: Dammi cultivkr.
+real variants query: ['SELECT cultivar FROM detailedstrain;']
+generated query: SELECT cultivar FROM detailedstrain WHERE applications = 'Production of beta-carotene' AND mriskgroup = 12.0; 
+
+ID-query: C3-Q25
+question: Seleziona 'organismtipe' e 'beforeuagoya' da strain.
+real variants query: ['SELECT beforenagoya, organismtype FROM detailedstrain;', 'SELECT organismtype, beforenagoya FROM detailedstrain;']
+generated query: SELECT organismtype, beforenagoya FROM strain; 
+
+ID-query: C3-Q29
+question: Dammi rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT remarks FROM detailedstrain WHERE remarks IS NOT NULL; 
+
+ID-query: C5-Q18
+question: Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a KSU 853 e raggruppa solo quelli che hanno lo stesso confirmed.
+real variants query: ["SELECT COUNT(*), confirmed FROM detailedstrain WHERE otherccnumbers = 'KSU 853' GROUP BY confirmed;", "SELECT confirmed, COUNT(*) FROM detailedstrain WHERE otherccnumbers = 'KSU 853' GROUP BY confirmed;"]
+generated query: SELECT COUNT(*), confirmed FROM detailedstrain WHERE otherccnames = 'KSU 853' GROUP BY confirmed; 
+
+
+
+Correct answers: 119
+Total questions: 150
+Model accuracy: 79.33%
+
+######################################################################################
+

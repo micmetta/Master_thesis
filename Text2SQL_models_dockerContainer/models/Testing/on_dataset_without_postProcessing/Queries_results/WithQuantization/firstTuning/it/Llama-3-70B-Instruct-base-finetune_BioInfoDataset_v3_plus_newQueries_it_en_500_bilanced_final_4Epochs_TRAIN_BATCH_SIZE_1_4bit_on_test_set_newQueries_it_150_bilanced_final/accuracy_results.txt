@@ -1,0 +1,211 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q26
+question: Seleziona solo il campo chiamato genus da strain.
+real query: SELECT genus FROM detailedstrain;
+generated query: SELECT genus FROM strain; 
+
+ID-query: C1-Q27
+question: Seleziona solo il campo chiamato species da strain.
+real query: SELECT species FROM detailedstrain;
+generated query: SELECT species FROM strain; 
+
+ID-query: C2-Q1
+question: Seleziona gli strain 'riskgroup' e 'beforenagoya' da strain.
+real query: SELECT riskgroup, beforenagoya FROM detailedstrain;
+generated query: SELECT riskgroup, beforenagoya FROM strain; 
+
+ID-query: C2-Q6
+question: Seleziona gli strain 'typestrain' e 'euquarantine' da strain.
+real query: SELECT typestrain, euquarantine FROM detailedstrain;
+generated query: SELECT *  FROM detailedstrain  WHERE typestrain = 'True' OR euquarantine = 'True'; 
+
+ID-query: C2-Q7
+question: Dammi tutti gli strain che hanno identificationtechnique uguale a Identification techniques used: mor e il campo riskgroup uguale a 2.0 e propagationhost è uguale a Leguminosae/Phaseolus/vulgaris o Compositae/Senecio/cineraria.
+real query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: mor' AND riskgroup = 2.0 AND (propagationhost = 'Leguminosae/Phaseolus/vulgaris' OR propagationhost = 'Compositae/Senecio/cineraria');
+generated query: SELECT *  FROM detailedstrain  WHERE identificationtechnique = Identification techniques used: mor AND riskgroup = 2.0 AND (propagationhost = Leguminosae/Phaseolus/vulgaris OR propagationhost = Compositae/Senecio/cineraria); 
+
+ID-query: C2-Q11
+question: Dammi tutti gli strain che hanno name uguale a Carnation latent virus o Lettuce Italian necrotic virus o Carnation vein mottle virus.
+real query: SELECT * FROM detailedstrain WHERE name IN ('Carnation latent virus', 'Lettuce Italian necrotic virus', 'Carnation vein mottle virus');
+generated query: SELECT *  FROM detailedstrain  WHERE name = 'Carnation latent virus' OR name = 'Lettuce Italian necrotic virus' OR name = 'Carnation vein mottle virus'; 
+
+ID-query: C2-Q12
+question: Dammi tutti gli strain che hanno isolationhost uguale a Ranunculaceae/Anemone/spp o Compositae/Felicia/spp. o Solanaceae/Nicotiana/tabacum.
+real query: SELECT * FROM detailedstrain WHERE isolationhost IN ('Ranunculaceae/Anemone/spp', 'Compositae/Felicia/spp.', 'Solanaceae/Nicotiana/tabacum');
+generated query: SELECT *  FROM detailedstrain  WHERE isolationhost = 'Ranunculaceae/Anemone/spp' OR isolationhost = 'Compositae/Felicia/spp' OR isolationhost = 'Solanaceae/Nicotiana/tabacum'; 
+
+ID-query: C2-Q15
+question: Dammi tutti gli strain che hanno sexualstate uguale a Mata/Matalpha e il campo cultivar uguale a Kennebeck e ineva è uguale a True o True.
+real query: SELECT * FROM detailedstrain WHERE sexualstate = 'Mata/Matalpha' AND cultivar = 'Kennebeck' AND (ineva = True OR ineva = True);
+generated query: SELECT *  FROM detailedstrain  WHERE sexualstate = Mata/Matalpha AND cultivar = Kennebeck AND (ineva = True OR ineva = True); 
+
+ID-query: C2-Q16
+question: Dammi tutti gli strain che hanno userestrictions uguale a 3.0 o 1.0 o 2.0.
+real query: SELECT * FROM detailedstrain WHERE userestrictions IN (3.0, 1.0, 2.0);
+generated query: SELECT *  FROM detailedstrain  WHERE userestrictions = 3.0 OR userestrictions = 1.0 OR userestrictions = 2.0; 
+
+ID-query: C2-Q18
+question: Dammi tutti gli strain che hanno otherccnumbers uguale a IMI 389211 o MIRRI0145673 o JCM 9915; UCD 84-102.
+real query: SELECT * FROM detailedstrain WHERE otherccnumbers IN ('IMI 389211', 'MIRRI0145673', 'JCM 9915; UCD 84-102');
+generated query: SELECT *  FROM detailedstrain  WHERE otherccnumbers = 'IMI 389211' OR otherccnumbers = 'MIRRI0145673' OR otherccnumbers = 'JCM 9915; UCD 84-102'; 
+
+ID-query: C2-Q19
+question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6; IIIB group o IIIB group o homotypic synonym: Glomus mosseae.
+real query: SELECT * FROM detailedstrain WHERE commentontaxonomy IN ('BCC6; IIIB group', 'IIIB group', 'homotypic synonym: Glomus mosseae');
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6; IIIB group' OR commentontaxonomy = 'IIIB group' OR commentontaxonomy = 'homotypic synonym: Glomus mosseae'; 
+
+ID-query: C2-Q21
+question: Dammi tutti gli strain che hanno recommendedtemperature uguale a 35.0 o 24.0 o 26.0.
+real query: SELECT * FROM detailedstrain WHERE recommendedtemperature IN (35.0, 24.0, 26.0);
+generated query: SELECT *  FROM detailedstrain  WHERE recommendedtemperature = 35.0 OR recommendedtemperature = 24.0 OR recommendedtemperature = 26.0; 
+
+ID-query: C2-Q27
+question: Dammi tutti gli strain che hanno substrate uguale a Phoenix canariensis o Grape; Variety of grape: Monica o man nails.
+real query: SELECT * FROM detailedstrain WHERE substrate IN ('Phoenix canariensis', 'Grape; Variety of grape: Monica', 'man nails');
+generated query: SELECT *  FROM detailedstrain  WHERE substrate = 'Phoenix canariensis' OR substrate = 'Grape; Variety of grape: Monica' OR substrate = 'Grape; Variety of grape: Manacils'; 
+
+ID-query: C2-Q28
+question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');
+generated query: SELECT *  FROM detailedstrain  WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION OR DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION OR NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+
+ID-query: C2-Q30
+question: Dammi tutti gli strain che hanno euquarantine uguale a True e (propagationhost è Chepodiaceae/Chepodium/quinoa o substrate è malafou (palm wine)).
+real query: SELECT * FROM detailedstrain WHERE euquarantine = True AND (propagationhost = 'Chepodiaceae/Chepodium/quinoa' OR substrate = 'malafou (palm wine)');
+generated query: SELECT *  FROM detailedstrain  WHERE euquarantine = True AND (propagationhost = 'Chenopodiaceae/Chenopodium/quinoa' OR substrate ='malagua (palm wine)'); 
+
+ID-query: C3-Q1
+question: Dammi tutti gli strain che hanno il campo ineqa uguale a Famse.
+real query: SELECT * FROM detaledstrain WHERE ineva = False;
+generated query: SELECT *  FROM detailedstrain  WHERE ineva = False; 
+
+ID-query: C3-Q2
+question: Seleziona il campo 'stryinid' da strain.
+real query: SELECT strainid FROM detaildstrain;
+generated query: SELECT strainid  FROM detailedstrain; 
+
+ID-query: C3-Q3
+question: Dammi tutti gli strain che hanno il campo riskgrpup uguale a 1u.0.
+real query: SELECT * FROM detaledstrain WHERE riskgroup = 12.0;
+generated query: SELECT *  FROM detailedstrain  WHERE riskgroup = 12.0; 
+
+ID-query: C3-Q5
+question: Seleziona il campo 'recomoendedtemperature' da strain.
+real query: SELECT recommendedtemperature FROM detaildstrain;
+generated query: SELECT recommendedtemperature  FROM detailedstrain; 
+
+ID-query: C3-Q6
+question: Dammi tutti gli strain che hanno il campo 'meuquaranpine' uguale a Ttue.
+real query: SELECT * FROM detaildstrain WHERE meuquarantine = True;
+generated query: SELECT *  FROM detailedstrain  WHERE meuquarantine = True; 
+
+ID-query: C3-Q7
+question: Seleziona il campo 'remfrks' da strain.
+real query: SELECT remarks FROM detaildstrain;
+generated query: SELECT remarks FROM strain; 
+
+ID-query: C3-Q8
+question: Dammi tutti gli strain che hanno il campo 'geoowigin' uguale a 2d20.0.
+real query: SELECT * FROM detaildstrain WHERE geoorigin = 2120.0;
+generated query: SELECT *  FROM detailedstrain  WHERE geoorigin = 220.0; 
+
+ID-query: C3-Q10
+question: Dammi tutti gli strain che hanno il campo mrgskgroup uguale a 12q0.
+real query: SELECT * FROM detaledstrain WHERE mriskgroup = 12.0;
+generated query: SELECT *  FROM detailedstrain  WHERE mriskgroup = 12.0; 
+
+ID-query: C3-Q11
+question: Seleziona il campo 'accessionnuhber' da strain.
+real query: SELECT accessionnumber FROM detaildstrain;
+generated query: SELECT accessionnumber  FROM detailedstrain; 
+
+ID-query: C3-Q12
+question: Dammi tutti gli strain che hanno il campo 'axdnic' uguale a Tlue.
+real query: SELECT * FROM detaildstrain WHERE axenic = True;
+generated query: SELECT *  FROM detailedstrain  WHERE axenic = True; 
+
+ID-query: C3-Q14
+question: Dammi tutti gli strain che hanno il campo 'duauuse' uguale a Trse.
+real query: SELECT * FROM detaildstrain WHERE dualuse = True;
+generated query: SELECT *  FROM detailedstrain  WHERE dualuse = True; 
+
+ID-query: C3-Q15
+question: Dammi tutti gli strain che hanno il campo mkuquarantine uguale a Falne.
+real query: SELECT * FROM detaledstrain WHERE meuquarantine = False;
+generated query: SELECT *  FROM detailedstrain  WHERE meuquarantine = False; 
+
+ID-query: C3-Q18
+question: Seleziona il campo 'applicatiocs' da strain.
+real query: SELECT applications FROM detaildstrain;
+generated query: SELECT applications FROM strain; 
+
+ID-query: C3-Q19
+question: Dammi tutti gli strain che hanno il campo uderestrictions uguale a 2.0.
+real query: SELECT * FROM detaledstrain WHERE userestrictions = 2.0;
+generated query: SELECT *  FROM detailedstrain  WHERE userestrictions = 2.0; 
+
+ID-query: C3-Q20
+question: Seleziona il campo 'otherdenombnations' da strain.
+real query: SELECT otherdenominations FROM detaildstrain;
+generated query: SELECT otherdenominations  FROM detailedstrain; 
+
+ID-query: C3-Q22
+question: Dammi tutti gli strain che hanno il campo stwainid uguale a 146z3.
+real query: SELECT * FROM detaledstrain WHERE strainid = 14693;
+generated query: SELECT *  FROM detailedstrain  WHERE strainid = '14623'; 
+
+ID-query: C3-Q23
+question: Dammi tutti gli strain che hanno il campo tesredtgmax uguale a 28p0.
+real query: SELECT * FROM detaledstrain WHERE testedtgmax = 28.0;
+generated query: SELECT *  FROM detailedstrain  WHERE testedtgmax = 28.0; 
+
+ID-query: C3-Q24
+question: Seleziona il campo 'nagoyaconditimns' da strain.
+real query: SELECT nagoyaconditions FROM detaildstrain;
+generated query: SELECT nagoyaconditions FROM detailedstrain; 
+
+ID-query: C3-Q25
+question: Dammi tutti gli strain che hanno il campo confirked uguale a Trte.
+real query: SELECT * FROM detaledstrain WHERE confirmed = True;
+generated query: SELECT *  FROM detailedstrain  WHERE confirmed = True; 
+
+ID-query: C3-Q26
+question: Seleziona il campo 'sgientificname' da strain.
+real query: SELECT scientificname FROM detaildstrain;
+generated query: SELECT scientificname  FROM strain; 
+
+ID-query: C3-Q27
+question: Seleziona il campo 'organwsmtype' da strain.
+real query: SELECT organismtype FROM detaildstrain;
+generated query: SELECT organismtype  FROM detailedstrain; 
+
+ID-query: C3-Q28
+question: Seleziona il campo 'mriskgrmup' da strain.
+real query: SELECT mriskgroup FROM detaildstrain;
+generated query: SELECT mriskgroup FROM strain; 
+
+ID-query: C3-Q29
+question: Dammi tutti gli strain che hanno il campo abbreviacion uguale a PVY.
+real query: SELECT * FROM detaledstrain WHERE abbreviation = 'PVY';
+generated query: SELECT *  FROM detaildstrain  WHERE abbreviation = 'PVY'; 
+
+ID-query: C3-Q30
+question: Seleziona il campo 'prodofmetabplites' da strain.
+real query: SELECT prodofmetabolites FROM detaildstrain;
+generated query: SELECT prodofmetabolites FROM strain; 
+
+ID-query: C4-Q29
+question: Dammi tutti gli strain che hanno il campo identificationtechnique uguale a Identification techniques used: t e il campo isolationdate con una data successiva a 1996.
+real query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: t' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '1996-12-31') OR (LENGTH(isolationdate) = 4 AND isolationdate > '1996'));
+generated query: SELECT *  FROM detailedstrain  WHERE identificationtechnique = Identification techniques used: t  AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > 1996-12-31)  OR (LENGTH(isolationdate) = 4 AND isolationdate > 1996)); 
+
+
+
+Correct answers: 110
+Total questions: 150
+Model accuracy: 73.33%
+
+######################################################################################
+

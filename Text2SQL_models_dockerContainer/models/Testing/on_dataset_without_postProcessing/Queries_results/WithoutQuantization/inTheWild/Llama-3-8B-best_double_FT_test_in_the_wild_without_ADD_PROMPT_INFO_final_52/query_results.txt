@@ -1,0 +1,261 @@
+Current category: C_generic
+	current question: Q1
+	question: Give me all the Aspergillus strains with Marine sediment
+	query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND isolationhabitat = 'Marine sediment'; 
+	Time taken: 1.94622802734375 seconds
+
+	current question: Q2
+	question: Give me all strain with genus equal to Aspergillus and substrate equal to Marine sediment
+	query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment'; 
+	Time taken: 1.1352789402008057 seconds
+
+	current question: Q3
+	question: dammi gli strain Isolation habitat ugale a  microalgal culture
+	query: SELECT * FROM detailedstrain WHERE isolationhabitat ='microalgal culture'; 
+	Time taken: 0.8797991275787354 seconds
+
+	current question: Q4
+	question: Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)
+	query: SELECT * FROM detailedstrain WHERE Isolation habitat ='marine sediment (water after centrifugation)'; 
+	Time taken: 1.0344245433807373 seconds
+
+	current question: Q5
+	question: vorrei tutti i bacteria
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacterium'; 
+	Time taken: 0.6972036361694336 seconds
+
+	current question: Q6
+	question: vorrei tutti gli aspergillus
+	query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus'; 
+	Time taken: 0.7002296447753906 seconds
+
+	current question: Q7
+	question: Give all the Aspergillus
+	query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus'; 
+	Time taken: 0.7029201984405518 seconds
+
+	current question: Q8
+	question: Give me all the Aspergillus strains
+	query: SELECT * FROM detailedstrain WHERE genus = 'Aspergillus'; 
+	Time taken: 0.700991153717041 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain con organismtype uguale a bacteria
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacteria'; 
+	Time taken: 0.657503604888916 seconds
+
+	current question: Q10
+	question: Give me all strain with fiel organismtype equal to bacteria
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacteria'; 
+	Time taken: 0.6540217399597168 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc1'; 
+	Time taken: 1.1746242046356201 seconds
+
+	current question: Q12
+	question: Give me all strains with organismtype equal to bacteria and otherdenomination equal to mvpc1
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc1'; 
+	Time taken: 1.1681175231933594 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain con organismtype diverso da bacteria e otherdenomination uguale a MVPC1 9
+	query: SELECT * FROM detailedstrain WHERE organismtype!= 'bacteria' AND otherdenominations = 'MVPC1 9'; 
+	Time taken: 1.2570061683654785 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc e commentontaxonomy uguale a IIIB group
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group'; 
+	Time taken: 1.6338560581207275 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc oppure (commentontaxonomy uguale a IIIB group) e mostrami solo i campi organismtype, otherdenominations e commentontaxonomy
+	query: SELECT organismtype, otherdenominations, commentontaxonomy FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' OR commentontaxonomy = 'IIIB group'; 
+	Time taken: 2.156449556350708 seconds
+
+	current question: Q16
+	question: Dammi gli strain che hanno ineva uguale a true e collectiondate con una data successiva al 2020 
+	query: SELECT * FROM detailedstrain WHERE ineva = True AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2020-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2020')); 
+	Time taken: 3.989936590194702 seconds
+
+	current question: Q17
+	question: Quali sono gli strain che hanno il genus diverso da Nocardioides e species uguale a ambifaria?
+	query: SELECT * FROM detailedstrain WHERE genus!= 'Nocardioides' AND species = 'ambifaria'; 
+	Time taken: 1.1205508708953857 seconds
+
+	current question: Q18
+	question: Show me the accessionnumber of the strains that have isolationdate not null
+	query: SELECT accessionnumber FROM detailedstrain WHERE isolationdate IS NOT NULL; 
+	Time taken: 0.6548752784729004 seconds
+
+	current question: Q19
+	question: Tell me how many strains have applications equal to Agroindustry and group them by species field
+	query: SELECT COUNT(*), species FROM detailedstrain WHERE applications = 'Agroindustry' GROUP BY species; 
+	Time taken: 0.9782180786132812 seconds
+
+	current question: Q20
+	question: Which strains have a regroup greater than 10 or a mrisgroup equal to 2?
+	query: SELECT * FROM detailedstrain WHERE riskgroup > 10 OR mriskgroup = 2; 
+	Time taken: 0.932227373123169 seconds
+
+	current question: Q21
+	question: Give me strains that have depositdate with a date equal to 2022
+	query: SELECT * FROM detailedstrain WHERE depositdate = '2022'; 
+	Time taken: 0.6544578075408936 seconds
+
+	current question: Q22
+	question: Give me all the strain of collection called 'TUCC' that are GMO
+	query: SELECT * FROM detailedstrain WHERE collection = 'TUCC' AND gmo = True; 
+	Time taken: 0.8888645172119141 seconds
+
+	current question: Q23
+	question: Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'
+	query: SELECT * FROM detailedstrain WHERE collection = 'TUCC' AND substrate = 'Posidonia oceanica'; 
+	Time taken: 1.0763726234436035 seconds
+
+	current question: Q24
+	question: Dammi gli strain con il campo collectiondate compreso tra il 2002 e il 2005
+	query: SELECT * FROM detailedstrain WHERE ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2002-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2005-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2002' AND collectiondate <= '2005')); 
+	Time taken: 6.422432899475098 seconds
+
+	current question: Q25
+	question: Give me all strains that have the field inclusiondate between 1996 and 2001
+	query: SELECT * FROM detailedstrain WHERE ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1996-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2001-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1996' AND inclusiondate <= '2001')); 
+	Time taken: 6.794849157333374 seconds
+
+	current question: Q26
+	question: Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'
+	query: SELECT * FROM detailedstrain WHERE collection = 'EMCC' AND organismtype = 'Virus'; 
+	Time taken: 0.977992057800293 seconds
+
+	current question: Q27
+	question: Quali sono gli strain con collectiondate uguale a 2019?
+	query: SELECT * FROM detailedstrain WHERE collectiondate = '2019'; 
+	Time taken: 0.6550290584564209 seconds
+
+	current question: Q28
+	question: Dammi gli strain con gmo true
+	query: SELECT * FROM detailedstrain WHERE gmo = True; 
+	Time taken: 0.5620112419128418 seconds
+
+	current question: Q29
+	question: Give me the strains with gmo true
+	query: SELECT * FROM detailedstrain WHERE gmo = True; 
+	Time taken: 0.5619494915008545 seconds
+
+	current question: Q30
+	question: Dammi gli strain con identificationtechnique non nullo
+	query: SELECT * FROM detailedstrain WHERE identificationtechnique IS NOT NULL; 
+	Time taken: 0.6539790630340576 seconds
+
+	current question: Q31
+	question: Which strains were collected in 2019 or have a known identification technique?
+	query: SELECT * FROM detailedstrain WHERE collectiondate = '2019' OR identificationtechnique IS NOT NULL; 
+	Time taken: 1.0323843955993652 seconds
+
+	current question: Q32
+	question: Which strains have infectivity testing equal true or have a known transmission vector?
+	query: SELECT * FROM detailedstrain WHERE infectivitytested = True OR transmissionby IS NOT NULL; 
+	Time taken: 0.8820474147796631 seconds
+
+	current question: Q33
+	question: Give me strains that have the fields restrictions or transmissionby not null
+	query: SELECT * FROM detailedstrain WHERE restrictions IS NOT NULL OR transmissionby IS NOT NULL; 
+	Time taken: 0.838918924331665 seconds
+
+	current question: Q34
+	question: Give me only strain with protocol natoya equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL
+	query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+	Time taken: 1.3049700260162354 seconds
+
+	current question: Q35
+	question: Quali sono gli strain che hanno genus uguale Nocardioides, species uguale a albus, applications uguale ad Agroindustry e isolationhabitat non nullo?
+	query: SELECT * FROM detailedstrain WHERE genus = 'Nocardioides' AND species = 'albus' AND applications = 'Agroindustry' AND isolationhabitat IS NOT NULL; 
+	Time taken: 1.8045618534088135 seconds
+
+	current question: Q36
+	question: Dammi gli strain con otherdenominations diverso da JN1 che hanno isolationdate diverso da 2015
+	query: SELECT * FROM detailedstrain WHERE otherdenominations!= 'JN1' AND isolationdate!= '2015'; 
+	Time taken: 1.1735105514526367 seconds
+
+	current question: Q37
+	question: Dammi gli strain con accessionnumb diverso da 0008 ma con collection maggiore di 2
+	query: SELECT * FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2; 
+	Time taken: 0.9252786636352539 seconds
+
+	current question: Q38
+	question: Give me the strains with accessionnumb different from 0008 but with collection greater than 2
+	query: SELECT * FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2; 
+	Time taken: 0.9316904544830322 seconds
+
+	current question: Q39
+	question: Conta gli strain che non hanno registeredcollection non null e raggruppameli in base allo strainid
+	query: SELECT COUNT(*), strainid FROM detailedstrain WHERE registeredcollection IS NOT NULL GROUP BY strainid; 
+	Time taken: 0.9794168472290039 seconds
+
+	current question: Q40
+	question: I want all strains with temperature greater than or equal to 29 and values not null
+	query: SELECT * FROM detailedstrain WHERE recommendedtemperature >= 29 AND recommendedtemperature IS NOT NULL; 
+	Time taken: 0.8849775791168213 seconds
+
+	current question: Q41
+	question: Give me all rows of strain.
+	query: SELECT * FROM detailedstrain; 
+	Time taken: 0.33253908157348633 seconds
+
+	current question: Q42
+	question: Select the field pathogenicity
+	query: SELECT pathogenicity FROM detailedstrain; [/INST] I hope it is correct. Let me know if you need anything else. [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST]
+	Time taken: 9.3158278465271 seconds
+
+	current question: Q43
+	question: Give me all the viruses that are also strains.
+	query: SELECT * FROM detailedstrain WHERE organismtype = 'virus'; 
+	Time taken: 0.6514697074890137 seconds
+
+	current question: Q44
+	question: Seleziona tutti i virus che sono anche degli strain.
+	query: SELECT * FROM detailedstrain WHERE species = 'virus'; 
+	Time taken: 0.6116683483123779 seconds
+
+	current question: Q45
+	question: dammi gli strain che hanno il campo availbefordis uguale a true
+	query: SELECT * FROM detailedstrain WHERE availablefordis = True; 
+	Time taken: 0.6096222400665283 seconds
+
+	current question: Q46
+	question: dammi gli strain che hanno il campo vailabefordis uguale a fals
+	query: SELECT * FROM detailedstrain WHERE availablefordis = False; 
+	Time taken: 0.6105327606201172 seconds
+
+	current question: Q47
+	question: Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007
+	query: SELECT * FROM detailedstrain WHERE collectiondate > '2007'; 
+	Time taken: 0.6534361839294434 seconds
+
+	current question: Q48
+	question: Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations
+	query: SELECT collectiondate, otherdenominations FROM detailedstrain WHERE collectiondate > '2007' AND organismtype = 'virus'; 
+	Time taken: 1.300246000289917 seconds
+
+	current question: Q49
+	question: Give me all viruses that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.'
+	query: SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.'; 
+	Time taken: 1.2976486682891846 seconds
+
+	current question: Q50
+	question: Dammi i virus che hanno il campo abbreviation 'LBVV', il campo isolationhost 'Compositae/Lactuca/sp.' e il campo cultivar 'lattuga Lollo bionda'
+	query: SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda'; 
+	Time taken: 1.9004004001617432 seconds
+
+	current question: Q51
+	question: Give me the strains that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.' and the field cultivar equal to 'lattuga Lollo bionda' and storageconditions equal to 'Lyo'.
+	query: SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda' AND storageconditions = 'Lyo'; 
+	Time taken: 2.269577741622925 seconds
+
+	current question: Q52
+	question: Quanti strain hanno il campo idetificationtecnique uguale a ELISA?
+	query: SELECT COUNT(*)  FROM detailedstrain  WHERE identificationtechnique = 'ELISA'; 
+	Time taken: 0.8362565040588379 seconds
+

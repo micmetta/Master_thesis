@@ -2,7 +2,9 @@
 
 - **The only purpose of this script is to see how the model structures the generated queries according to the post-processing used in the final application.**
 
-- In this folder there is a single script, **'test_dataset.py'**, that allows you to observe what queries the model will generate using post-processing. The queries are taken from a particular test dataset.
+- In this folder there are 2 scripts, **'test_dataset.py'** and **test_dataset_improved.py**, that allows you to observe what queries the model will generate using post-processing. The queries are taken from a particular test dataset.
+
+- **The difference between 'test_dataset.py' and 'test_dataset_improved.py'** is that the first script does not take advantage of the different acceptable versions of the test sql queries. So since the models might generate a slightly different query than a single reference query, using 'test_dataset.py' will generally yield lower accuracy results than using 'test_dataset_improved.py'. 
 
 - The **"utils" folder** contains both the file **'post_processing_functions.py'**, which contains the functions that implement the application's post-processing, and the file **'stopping_criteria.py'**, which instead contains the class that allows the LLM to stop generating the text as soon as one of the possible termination tokens is generated.
 

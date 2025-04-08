@@ -1,0 +1,1012 @@
+
+Current category: C1
+
+Current question: Q1
+Select only field called transmissionby from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:35,15.18,15.29
+2025-02-13 20:11:36,15.27,15.71
+
+Current question: Q2
+Give me all strains that have cacronym equal to UBYBCC.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:37,15.22,15.71
+
+Current question: Q3
+Select only field called otherccnumbers from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:38,15.22,15.91
+
+Current question: Q4
+Select only field called othernames from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:39,15.22,15.91
+
+Current question: Q5
+Select only field called organismtype from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:40,15.22,15.91
+
+Current question: Q6
+Select only field called meuquarantine from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:41,15.22,15.91
+
+Current question: Q7
+Select only field called beforenagoya from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:42,15.22,15.91
+
+Current question: Q8
+Select only field called status from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:43,15.22,15.91
+
+Current question: Q9
+Give me all strains that have isolationhost equal to Brassica campestris.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:44,15.22,15.91
+
+Current question: Q10
+Select only field called identificationtechnique from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:45,15.22,16.11
+
+Current question: Q11
+Give me all strains that have strainid equal to 12786.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:46,15.22,16.11
+
+Current question: Q12
+Select only field called cacronym from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:47,15.22,16.11
+
+Current question: Q13
+Give me all strains that have recommendedtemperature equal to 37.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:48,15.22,16.11
+
+Current question: Q14
+Select only field called registeredcollection from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:49,15.22,16.11
+
+Current question: Q15
+Select only field called infrasubspecificnames from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:50,15.22,16.11
+
+Current question: Q16
+Select only field called typestrain from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:51,15.22,16.11
+
+Current question: Q17
+Give me all strains that have propagationhost equal to Gentianaceae/Eustoma/grandiflorum.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:52,15.22,16.11
+2025-02-13 20:11:53,15.31,16.32
+
+Current question: Q18
+Give me all strains that have commentontaxonomy equal to doi:10.1099/ijsem.0.004107.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:54,15.22,16.32
+2025-02-13 20:11:55,15.32,16.53
+
+Current question: Q19
+Give me all strains that have registeredcollection equal to False.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:57,15.22,16.53
+
+Current question: Q20
+Give me all strains that have isolationhabitat equal to seeds shipped in bags.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:58,15.22,16.53
+
+Current question: Q21
+Select only field called pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:11:59,15.22,16.53
+
+Current question: Q22
+Give me all strains that have riskgroup equal to 12.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:00,15.22,16.53
+
+Current question: Q23
+Select only field called collection from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:01,15.22,16.53
+
+Current question: Q24
+Select only field called dualuse from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:02,15.22,16.53
+
+Current question: Q25
+Give me all strains that have scientificname equal to Lettuce big-vein virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:03,15.22,16.53
+
+Current question: Q26
+Give me all strains that have sexualstate equal to MAT2.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:04,15.22,16.53
+
+Current question: Q27
+Give me all strains that have otherccnumbers equal to ATCC 22022; CBS 6023; CCRC 21651; IFO 1497; JCM 9452; TI-0020.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:05,15.22,16.53
+2025-02-13 20:12:06,15.32,16.75
+2025-02-13 20:12:07,15.32,16.75
+2025-02-13 20:12:08,15.31,16.75
+
+Current question: Q28
+Give me all strains that have abbreviation equal to EMDV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:09,15.22,16.75
+
+Current question: Q29
+Select only field called remarks from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:10,15.22,16.75
+
+Current question: Q30
+Select only field called confirmed from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:11,15.22,16.75
+
+Current category: C2
+
+Current question: Q1
+Select the fields 'userestrictions' and 'sexualstate' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:12,15.22,16.75
+
+Current question: Q2
+Give me all strains that have typestrain equal to True and (symptomatologyonisolationhost is systemic symptoms or nagoyaprotocol is DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:13,15.22,16.75
+2025-02-13 20:12:14,15.33,16.98
+2025-02-13 20:12:15,15.32,16.98
+
+Current question: Q3
+Give me all strains that have accessionnumber equal to 10045 and (availablefordis is True or substrate is Yoghurt).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:16,15.22,16.98
+2025-02-13 20:12:17,15.31,16.98
+
+Current question: Q4
+Select the fields 'otherdenominations' and 'isolationhost' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:18,15.22,16.98
+
+Current question: Q5
+Select the fields 'typestrain' and 'meuquarantine' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:19,15.22,16.98
+
+Current question: Q6
+Give me all strains that have commentontaxonomy equal to Lactobacillus casei or synonym: Rhizophagus irregularis; basionym: Glomus irregulare or IIB group.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:20,15.22,16.98
+2025-02-13 20:12:21,15.32,16.98
+2025-02-13 20:12:22,15.31,16.98
+2025-02-13 20:12:23,15.31,16.98
+2025-02-13 20:12:24,15.3,16.98
+
+Current question: Q7
+Select the fields qps and cacronym from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:25,15.22,16.98
+
+Current question: Q8
+Select the fields storageconditions and dualuse from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:26,15.22,16.98
+
+Current question: Q9
+Give me all strains that have identificationtechnique equal to Identification techniques used and morganismtype equal to Archaea.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:27,15.22,16.98
+2025-02-13 20:12:28,15.31,16.98
+
+Current question: Q10
+Select the fields qps and userestrictions from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:29,15.22,16.98
+
+Current question: Q11
+Give me all strains that have ineva equal to True and the remarks equal to Organic corn and pathogenicity is Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. or Plant.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:30,15.22,16.98
+2025-02-13 20:12:31,15.33,17.22
+2025-02-13 20:12:32,15.32,17.22
+2025-02-13 20:12:33,15.32,17.22
+
+Current question: Q12
+Give me all strains that have restrictions equal to ONLY FOR NON-COMMERCIAL PURPOSES and the beforenagoya equal to False and storageconditions is Liquid nitrogen or Lyo.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:34,15.22,17.22
+2025-02-13 20:12:35,15.32,17.22
+2025-02-13 20:12:36,15.33,17.22
+
+Current question: Q13
+Select the fields 'cultivar' and 'nagoyaconditions' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:37,15.22,17.22
+
+Current question: Q14
+Give me all strains that have identificationtechnique equal to Immuno blot and applications equal to Degrades alkanes (paraffin oil) as sole carbon source (comparably to glucose); produces biosurfactant..
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:38,15.22,17.22
+2025-02-13 20:12:39,15.32,17.22
+2025-02-13 20:12:40,15.34,17.22
+
+Current question: Q15
+Give me all strains that have pathogenicity equal to Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. or Castanea spp or Geophilic species (i.e. residing in the soil) with low pathogenic value. Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans..
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:41,15.22,17.22
+2025-02-13 20:12:42,15.36,17.49
+2025-02-13 20:12:43,15.37,17.49
+2025-02-13 20:12:44,15.37,17.49
+2025-02-13 20:12:45,15.3,17.49
+2025-02-13 20:12:46,15.3,17.49
+2025-02-13 20:12:47,15.39,17.49
+2025-02-13 20:12:48,15.38,17.49
+2025-02-13 20:12:49,15.37,17.49
+
+Current question: Q16
+Give me all strains that have availablefordis equal to False and the organismtype equal to Cyanobacteria and symptomatologyonisolationhost is local lesions or systemic symptoms.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:50,15.22,17.49
+2025-02-13 20:12:51,15.34,17.49
+2025-02-13 20:12:52,15.33,17.49
+
+Current question: Q17
+Select the fields 'nagoyaconditions' and 'name' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:53,15.22,17.49
+
+Current question: Q18
+Give me all strains that have scientificname equal to Impatiens necrotic spot orthotospovirus and (nagoyaprotocol is DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION or registeredcollection is True).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:54,15.22,17.49
+2025-02-13 20:12:55,15.35,17.49
+2025-02-13 20:12:56,15.35,17.49
+
+Current question: Q19
+Select the fields sexualstate and propagationhost from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:57,15.22,17.49
+
+Current question: Q20
+Give me all strains that have storageconditions equal to Liquid nitrogen and the propagationhost equal to Solanaceae/Nicotiana/rustica and strainid is 22667 or 16846.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:12:58,15.22,17.49
+2025-02-13 20:12:59,15.33,17.49
+2025-02-13 20:13:00,15.33,17.49
+
+Current question: Q21
+Give me all strains that have riskgroup equal to 1.0 or 12.0 or 2.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:01,15.22,17.49
+2025-02-13 20:13:02,15.27,17.49
+
+Current question: Q22
+Give me all strains that have morganismtype equal to Cyanobacteria and the axenic equal to False and mriskgroup is 2.0 or 1.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:03,15.22,17.49
+2025-02-13 20:13:04,15.28,17.49
+
+Current question: Q23
+Select the fields 'identificationtechnique' and 'name' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:05,15.22,17.49
+
+Current question: Q24
+Give me all strains that have transmissionby equal to contact;nematodes or contact;insect;pollen or contact;fungi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:06,15.22,17.49
+2025-02-13 20:13:07,15.33,17.49
+
+Current question: Q25
+Give me all strains that have otherdenominations equal to VAT1-9 and accessionnumber equal to UPCC4535.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:08,15.22,17.49
+2025-02-13 20:13:09,15.33,17.49
+
+Current question: Q26
+Give me all strains that have genus equal to Didymogenes or Gordonia or Arthrographis.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:10,15.22,17.49
+2025-02-13 20:13:11,15.32,17.49
+
+Current question: Q27
+"Give me all strains that have nagoyaprotocol equal to STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION or NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL or DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:12,15.22,17.49
+2025-02-13 20:13:13,15.35,17.49
+2025-02-13 20:13:14,15.35,17.49
+2025-02-13 20:13:15,15.3,17.49
+
+Current question: Q28
+Give me all strains that have riskgroup equal to 12.0 and strainid equal to 3567.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:16,15.22,17.49
+2025-02-13 20:13:17,15.32,17.49
+
+Current question: Q29
+Give me all strains that have cacronym equal to ACUF and (pathotypeserotypetype is 0 or cultivar is stella di natale).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:18,15.22,17.49
+2025-02-13 20:13:19,15.33,17.49
+
+Current question: Q30
+Give me all strains that have substrate equal to sand by sea water and the gmo equal to True and symptomatologyonisolationhost is local lesions or systemic symptoms.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:20,15.22,17.49
+2025-02-13 20:13:21,15.33,17.49
+2025-02-13 20:13:22,15.34,17.49
+
+Current category: C3
+
+Current question: Q1
+Give me all strains that have the field accessiwnnumber equal to 8w67.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:23,15.22,17.49
+
+Current question: Q2
+Give me all strains that have the field 'prodosmetabolites' equal to Alternariol monomethylgether.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:24,15.22,17.49
+2025-02-13 20:13:25,15.33,17.49
+
+Current question: Q3
+Give me strain with applicatoons equal to Produces molecules with emulsffication activity..
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:26,15.22,17.49
+
+Current question: Q4
+Select the field 'qps' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:27,15.22,17.49
+
+Current question: Q5
+Give me all strains that have the field ckcronym equal to TUjC.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:28,15.22,17.49
+
+Current question: Q6
+Give me all strains that have the field isolationhabitat equal to wastwwater.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:29,15.22,17.49
+
+Current question: Q7
+Select 'beforezagoya' and 'testadtgmin' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:30,15.22,17.49
+
+Current question: Q8
+Select the field 'othetnames' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:31,15.22,17.49
+
+Current question: Q9
+Give me cuztivar.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:32,15.22,17.49
+
+Current question: Q10
+Give me all strains that have the field colleution equal to 7.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:33,15.22,17.49
+
+Current question: Q11
+Select the field 'segualstate' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:34,15.22,17.49
+
+Current question: Q12
+Give me all strains that have the field otherqenominations equal to ERp6.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:35,15.22,17.49
+
+Current question: Q13
+Select 'nmgoyaconditions' and 'substrbte' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:36,15.22,17.49
+
+Current question: Q14
+Give me all strains that have the field isolationhast equal to Brissica campestris.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:37,15.22,17.49
+
+Current question: Q15
+Give me all strains that have the field applicatmons equal to cycloheximide resistant. Usel olive oil as sole carbon source (comparable to glucose)..
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:38,15.22,17.49
+2025-02-13 20:13:39,15.33,17.49
+
+Current question: Q16
+Give me all strains that have the field accessionnumser equal to 118w1.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:40,15.22,17.49
+
+Current question: Q17
+Give me mrsskgroup.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:41,15.22,17.49
+
+Current question: Q18
+Give me abbrdviation.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:42,15.22,17.49
+
+Current question: Q19
+Give me all strains that have the field testextgmax equal to 3w.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:43,15.22,17.49
+
+Current question: Q20
+Select the field 'identificationtgchnique' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:44,15.22,17.49
+
+Current question: Q21
+Give me all strains that have the field applinations equal to It prodices yellowish pigment.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:45,15.22,17.49
+
+Current question: Q22
+Give me geooridin.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:46,15.22,17.49
+
+Current question: Q23
+Give me restrlctions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:47,15.22,17.49
+
+Current question: Q24
+Give me strain with tesmedtgmax equal to 4v.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:48,15.22,17.49
+
+Current question: Q25
+Select 'nade' and 'isolationhoit' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:49,15.22,17.49
+
+Current question: Q26
+Select the field 'tespedtgmax' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:50,15.22,17.49
+
+Current question: Q27
+Give me all strains that have the field 'ineya' equal to Trie.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:51,15.22,17.49
+
+Current question: Q28
+Give me propagatibnhost.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:52,15.22,17.49
+
+Current question: Q29
+Give me strain with otqernames equal to tomato spotted wilt orthotospovirus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:53,15.22,17.49
+2025-02-13 20:13:54,15.32,17.49
+
+Current question: Q30
+Give me symptomatologyonisqlationhost.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:55,15.22,17.49
+
+Current category: C4
+
+Current question: Q1
+Give me all strains that have the species field equal to lipsiense and the inclusiondate field between 1995 and 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:13:56,15.22,17.49
+2025-02-13 20:13:57,15.31,17.49
+2025-02-13 20:13:58,15.3,17.49
+2025-02-13 20:13:59,15.31,17.49
+2025-02-13 20:14:00,15.33,17.49
+2025-02-13 20:14:01,15.32,17.49
+2025-02-13 20:14:02,15.3,17.49
+2025-02-13 20:14:03,15.32,17.49
+
+Current question: Q2
+Give me all strains that have the substrate field equal to Garlic and the inclusiondate field with a date before 1994.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:04,15.22,17.49
+2025-02-13 20:14:05,15.3,17.49
+2025-02-13 20:14:06,15.3,17.49
+2025-02-13 20:14:07,15.31,17.49
+2025-02-13 20:14:08,15.31,17.49
+
+Current question: Q3
+Give me all strains that have the dualuse field equal to False and the inclusiondate field between 2005 and 2014.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:09,15.22,17.49
+2025-02-13 20:14:10,15.31,17.49
+2025-02-13 20:14:11,15.32,17.49
+2025-02-13 20:14:12,15.34,17.49
+2025-02-13 20:14:13,15.31,17.49
+2025-02-13 20:14:14,15.31,17.49
+2025-02-13 20:14:15,15.32,17.49
+2025-02-13 20:14:16,15.34,17.49
+
+Current question: Q4
+Give me all strains that have the infrasubspecificnames field equal to subsp. bulgaricus and the isolationdate field with a date after 2000-12-06.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:17,15.22,17.49
+2025-02-13 20:14:18,15.32,17.49
+2025-02-13 20:14:19,15.33,17.49
+2025-02-13 20:14:20,15.34,17.49
+2025-02-13 20:14:21,15.33,17.49
+2025-02-13 20:14:22,15.31,17.49
+
+Current question: Q5
+Give me all strains that have the riskgroup field equal to 12.0 and the inclusiondate field with a date before 1990.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:23,15.22,17.49
+2025-02-13 20:14:24,15.33,17.49
+2025-02-13 20:14:25,15.31,17.49
+2025-02-13 20:14:26,15.3,17.49
+2025-02-13 20:14:27,15.33,17.49
+
+Current question: Q6
+Give me all strains that have the storageconditions field equal to Lyo and the depositdate field with a date after 1992-02-13.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:28,15.22,17.49
+2025-02-13 20:14:29,15.3,17.49
+2025-02-13 20:14:30,15.29,17.49
+2025-02-13 20:14:31,15.3,17.49
+2025-02-13 20:14:32,15.31,17.49
+
+Current question: Q7
+Give me all strains that have the registeredcollection field equal to False and the inclusiondate field between 1994 and 2003.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:33,15.22,17.49
+2025-02-13 20:14:34,15.33,17.49
+2025-02-13 20:14:35,15.28,17.49
+2025-02-13 20:14:36,15.28,17.49
+2025-02-13 20:14:37,15.33,17.49
+2025-02-13 20:14:38,15.32,17.49
+2025-02-13 20:14:39,15.31,17.49
+2025-02-13 20:14:40,15.31,17.49
+
+Current question: Q8
+Give me all strains that have the restrictions field equal to NO KNOWN RESTRICTION APPLY and the collectiondate field with a date before 2015-05-01.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:41,15.22,17.49
+2025-02-13 20:14:42,15.33,17.49
+2025-02-13 20:14:43,15.3,17.49
+2025-02-13 20:14:44,15.29,17.49
+2025-02-13 20:14:45,15.29,17.49
+2025-02-13 20:14:46,15.35,17.49
+
+Current question: Q9
+Give me all strains that have the isolationhabitat field equal to bark shipped in bags and the isolationdate field with a date after 2015-06-30.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:47,15.22,17.49
+2025-02-13 20:14:48,15.33,17.49
+2025-02-13 20:14:49,15.31,17.49
+2025-02-13 20:14:50,15.29,17.49
+2025-02-13 20:14:51,15.35,17.49
+2025-02-13 20:14:52,15.34,17.49
+
+Current question: Q10
+Give me all strains that have the cultivar field equal to GIADA_OLTER and the collectiondate field between 1992 and 1997.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:14:53,15.22,17.49
+2025-02-13 20:14:54,15.32,17.49
+2025-02-13 20:14:55,15.3,17.49
+2025-02-13 20:14:56,15.29,17.49
+2025-02-13 20:14:57,15.29,17.49
+2025-02-13 20:14:58,15.34,17.49
+2025-02-13 20:14:59,15.33,17.49
+2025-02-13 20:15:00,15.31,17.49
+2025-02-13 20:15:01,15.3,17.49
+
+Current question: Q11
+Give me all strains that have the strainid field equal to 12454 and the inclusiondate field with a date before 1995.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:02,15.22,17.49
+2025-02-13 20:15:03,15.28,17.49
+2025-02-13 20:15:04,15.28,17.49
+2025-02-13 20:15:05,15.3,17.49
+2025-02-13 20:15:06,15.3,17.49
+
+Current question: Q12
+Give me all strains that have the beforenagoya field equal to False and the isolationdate field between 1998 and 2004.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:07,15.22,17.49
+2025-02-13 20:15:08,15.31,17.49
+2025-02-13 20:15:09,15.3,17.49
+2025-02-13 20:15:10,15.29,17.49
+2025-02-13 20:15:11,15.35,17.49
+2025-02-13 20:15:12,15.34,17.49
+2025-02-13 20:15:13,15.33,17.49
+2025-02-13 20:15:14,15.32,17.49
+2025-02-13 20:15:15,15.31,17.49
+
+Current question: Q13
+Give me all strains that have the nagoyaprotocol field equal to DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION and the isolationdate field with a date after 2003-03-29.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:16,15.22,17.49
+2025-02-13 20:15:17,15.31,17.49
+2025-02-13 20:15:18,15.31,17.49
+2025-02-13 20:15:19,15.3,17.49
+2025-02-13 20:15:20,15.35,17.49
+2025-02-13 20:15:21,15.34,17.49
+2025-02-13 20:15:22,15.33,17.49
+
+Current question: Q14
+Give me all strains that have the nagoyaprotocol field equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL and the isolationdate field with a date after 2006-05-13.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:23,15.22,17.49
+2025-02-13 20:15:24,15.33,17.49
+2025-02-13 20:15:25,15.31,17.49
+2025-02-13 20:15:26,15.3,17.49
+2025-02-13 20:15:27,15.35,17.49
+2025-02-13 20:15:28,15.35,17.49
+2025-02-13 20:15:29,15.32,17.49
+
+Current question: Q15
+Give me all strains that have the mriskgroup field equal to 2.0 and the depositdate field with a date after 2015-10-02.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:30,15.22,17.49
+2025-02-13 20:15:31,15.31,17.49
+2025-02-13 20:15:32,15.32,17.49
+2025-02-13 20:15:33,15.31,17.49
+2025-02-13 20:15:34,15.31,17.49
+2025-02-13 20:15:35,15.29,17.49
+
+Current question: Q16
+Give me all strains that have the restrictions field equal to NO KNOWN RESTRICTION APPLY and the inclusiondate field with a date before 2012-05-06.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:36,15.22,17.49
+2025-02-13 20:15:37,15.31,17.49
+2025-02-13 20:15:38,15.29,17.49
+2025-02-13 20:15:39,15.28,17.49
+2025-02-13 20:15:40,15.33,17.49
+2025-02-13 20:15:41,15.32,17.49
+
+Current question: Q17
+Give me all strains that have the nagoyaprotocol field equal to DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION and the isolationdate field with a date after 2002-05-08.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:42,15.22,17.49
+2025-02-13 20:15:43,15.31,17.49
+2025-02-13 20:15:44,15.3,17.49
+2025-02-13 20:15:45,15.29,17.49
+2025-02-13 20:15:46,15.35,17.49
+2025-02-13 20:15:47,15.34,17.49
+2025-02-13 20:15:48,15.33,17.49
+
+Current question: Q18
+Give me all strains that have the registeredcollection field equal to True and the isolationdate field with a date before 1997.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:49,15.22,17.49
+2025-02-13 20:15:50,15.31,17.49
+2025-02-13 20:15:51,15.3,17.49
+2025-02-13 20:15:52,15.29,17.49
+2025-02-13 20:15:53,15.34,17.49
+2025-02-13 20:15:54,15.32,17.49
+
+Current question: Q19
+Give me all strains that have the geoorigin field equal to 1945.0 and the depositdate field with a date before 2004.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:15:55,15.22,17.49
+2025-02-13 20:15:56,15.31,17.49
+2025-02-13 20:15:57,15.31,17.5
+2025-02-13 20:15:58,15.3,17.5
+2025-02-13 20:15:59,15.29,17.5
+2025-02-13 20:16:00,15.28,17.5
+
+Current question: Q20
+Give me all strains that have the sexualstate field equal to MAT1 and the inclusiondate field between 2001 and 2008.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:01,15.22,17.5
+2025-02-13 20:16:02,15.31,17.5
+2025-02-13 20:16:03,15.31,17.5
+2025-02-13 20:16:04,15.3,17.5
+2025-02-13 20:16:05,15.3,17.5
+2025-02-13 20:16:06,15.3,17.5
+2025-02-13 20:16:07,15.29,17.5
+2025-02-13 20:16:08,15.35,17.5
+2025-02-13 20:16:09,15.35,17.5
+
+Current question: Q21
+Give me all strains that have the storageconditions field equal to Lyo and the inclusiondate field with a date after 2006-05-06.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:10,15.22,17.5
+2025-02-13 20:16:11,15.31,17.5
+2025-02-13 20:16:12,15.31,17.5
+2025-02-13 20:16:13,15.31,17.5
+2025-02-13 20:16:14,15.3,17.5
+2025-02-13 20:16:15,15.29,17.5
+
+Current question: Q22
+Give me all the strains that have the cacronym field equal to CM-ICB and that have the isolationdate field with a date between 1995 and 2007. I also want the availablefordis to be True or False.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:16,15.22,17.5
+2025-02-13 20:16:17,15.32,17.5
+2025-02-13 20:16:18,15.32,17.5
+2025-02-13 20:16:19,15.31,17.5
+2025-02-13 20:16:20,15.3,17.5
+2025-02-13 20:16:21,15.34,17.5
+2025-02-13 20:16:22,15.32,17.5
+2025-02-13 20:16:23,15.3,17.5
+2025-02-13 20:16:24,15.37,17.5
+2025-02-13 20:16:25,15.34,17.5
+
+Current question: Q23
+Give me all strains that have the collection field equal to 12 and the depositdate field with a date before 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:26,15.22,17.5
+2025-02-13 20:16:27,15.31,17.5
+2025-02-13 20:16:28,15.3,17.5
+2025-02-13 20:16:29,15.28,17.5
+2025-02-13 20:16:30,15.33,17.5
+
+Current question: Q24
+Give me all strains that have the pathogenicity field equal to Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. and the inclusiondate field with a date after 2010-08-16.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:31,15.22,17.5
+2025-02-13 20:16:32,15.33,17.5
+2025-02-13 20:16:33,15.33,17.5
+2025-02-13 20:16:34,15.33,17.5
+
+Current question: Q25
+Give me all strains that have the isolationhabitat field equal to commercial paper tissue and the collectiondate field with a date after 1996-07-09.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:35,15.22,17.5
+2025-02-13 20:16:36,15.32,17.5
+2025-02-13 20:16:37,15.31,17.5
+2025-02-13 20:16:38,15.3,17.5
+2025-02-13 20:16:39,15.28,17.5
+2025-02-13 20:16:40,15.34,17.5
+
+Current question: Q26
+Give me all the strains that have the infrasubspecificnames field equal to subsp. bulgaricus and that have the inclusiondate field with a date between 1994 and 2002. I also want the typestrain to be True or False.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:41,15.22,17.5
+2025-02-13 20:16:42,15.32,17.5
+2025-02-13 20:16:43,15.32,17.5
+2025-02-13 20:16:44,15.31,17.5
+2025-02-13 20:16:45,15.3,17.5
+2025-02-13 20:16:46,15.29,17.5
+2025-02-13 20:16:47,15.36,17.5
+2025-02-13 20:16:48,15.35,17.5
+2025-02-13 20:16:49,15.36,17.5
+2025-02-13 20:16:50,15.34,17.5
+
+Current question: Q27
+Give me all strains that have the substrate field equal to Raphanus (Cruciferae) and the depositdate field between 1999 and 2008.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:16:51,15.22,17.5
+2025-02-13 20:16:52,15.32,17.5
+2025-02-13 20:16:53,15.3,17.5
+2025-02-13 20:16:54,15.28,17.5
+2025-02-13 20:16:55,15.34,17.5
+2025-02-13 20:16:56,15.33,17.5
+2025-02-13 20:16:57,15.31,17.5
+2025-02-13 20:16:58,15.31,17.5
+2025-02-13 20:16:59,15.3,17.5
+
+Current question: Q28
+Give me all strains that have the cultivar field equal to Spagnolet nano lamon and the isolationdate field between 2003 and 2014.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:00,15.22,17.5
+2025-02-13 20:17:01,15.3,17.5
+2025-02-13 20:17:02,15.3,17.5
+2025-02-13 20:17:03,15.28,17.5
+2025-02-13 20:17:04,15.35,17.5
+2025-02-13 20:17:05,15.34,17.5
+2025-02-13 20:17:06,15.34,17.5
+
+Current question: Q29
+Give me all strains that have the dualuse field equal to  False and the depositdate field with a date after 2000.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:07,15.22,17.5
+2025-02-13 20:17:08,15.31,17.5
+2025-02-13 20:17:09,15.29,17.5
+2025-02-13 20:17:10,15.29,17.5
+2025-02-13 20:17:11,15.33,17.5
+
+Current question: Q30
+Give me all strains that have the status field equal to ex type (received as F.lateritium) and the inclusiondate field between 1990 and 2005.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:12,15.22,17.5
+2025-02-13 20:17:13,15.31,17.5
+2025-02-13 20:17:14,15.3,17.5
+2025-02-13 20:17:15,15.29,17.5
+2025-02-13 20:17:16,15.34,17.5
+2025-02-13 20:17:17,15.32,17.5
+2025-02-13 20:17:18,15.3,17.5
+2025-02-13 20:17:19,15.29,17.5
+2025-02-13 20:17:20,15.36,17.5
+
+Current category: C5
+
+Current question: Q1
+"Select and count the number of strains, grouping the results by the organismtype field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:21,15.22,17.5
+
+Current question: Q2
+"Select and count the number of strains, grouping the results by the nagoyaprotocol field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:22,15.22,17.5
+2025-02-13 20:17:23,15.31,17.5
+
+Current question: Q3
+Select and count all strains that have the symptomatologyonisolationhost field equal to systemic symptoms and group only those that have the same isolationhost field. I want it to also show only the groups that have more than 4 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:24,15.22,17.5
+2025-02-13 20:17:25,15.32,17.5
+2025-02-13 20:17:26,15.31,17.5
+
+Current question: Q4
+Select and count all the strains that have the recommendedtemperature field equal to 28.0 and group only those that have the same othernames.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:27,15.22,17.5
+2025-02-13 20:17:28,15.31,17.5
+
+Current question: Q5
+Select and count all the strains that have the recommendedtemperature field equal to 23.0 and group only those that have the same userestrictions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:29,15.22,17.5
+2025-02-13 20:17:30,15.31,17.5
+
+Current question: Q6
+Select and count the number of strains by grouping them based on the mriskgroup and meuquarantine fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:31,15.22,17.5
+2025-02-13 20:17:32,15.31,17.5
+
+Current question: Q7
+Select and count the number of strains by grouping them based on the pathogenicity and userestrictions fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:33,15.22,17.5
+2025-02-13 20:17:34,15.32,17.5
+
+Current question: Q8
+"Select and count the number of strains, grouping the results by the genus field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:35,15.22,17.5
+
+Current question: Q9
+Select and count the number of strains by grouping them based on the organismtype and species fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:36,15.22,17.5
+2025-02-13 20:17:37,15.31,17.5
+
+Current question: Q10
+Select and count the number of strains by grouping them based on the otherccnumbers and status fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:38,15.22,17.5
+2025-02-13 20:17:39,15.31,17.5
+
+Current question: Q11
+Select and count the number of strains by grouping them based on the species and morganismtype fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:40,15.22,17.5
+2025-02-13 20:17:41,15.31,17.5
+
+Current question: Q12
+Select and count all strains that have the recommendedtemperature field equal to 37.0 and group only those that have the same organismtype field. I want it to also show only the groups that have more than 2 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:42,15.22,17.5
+2025-02-13 20:17:43,15.32,17.5
+
+Current question: Q13
+Select and count all strains that have the testedtgmax field equal to 45.0 and group only those that have the same testedtgmin field. I want it to also show only the groups that have more than 2 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:44,15.22,17.5
+2025-02-13 20:17:45,15.33,17.5
+
+Current question: Q14
+Select and count all the strains that have the abbreviation field equal to BCMV and group only those that have the same symptomatologyonisolationhost.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:46,15.22,17.5
+2025-02-13 20:17:47,15.31,17.5
+
+Current question: Q15
+Select and count all strains that have the typestrain field equal to True and group only those that have the same confirmed field. I want it to also show only the groups that have more than 9 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:48,15.22,17.5
+2025-02-13 20:17:49,15.31,17.5
+
+Current question: Q16
+Select and count the number of strains by grouping them based on the abbreviation and nagoyaprotocol fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:50,15.22,17.5
+2025-02-13 20:17:51,15.31,17.5
+
+Current question: Q17
+Select and count the number of strains by grouping them based on the status and cacronym fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:52,15.22,17.5
+2025-02-13 20:17:53,15.31,17.5
+
+Current question: Q18
+"Select and count the number of strains, grouping the results by the cacronym field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:54,15.22,17.5
+
+Current question: Q19
+Select and count all the strains that have the meuquarantine field equal to True and group only those that have the same testedtgmax.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:55,15.22,17.5
+2025-02-13 20:17:56,15.32,17.5
+
+Current question: Q20
+"Select and count the number of strains, grouping the results by the abbreviation field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:57,15.22,17.5
+
+Current question: Q21
+Select and count all strains that have the strainid field equal to 21850 and group only those that have the same dualuse field. I want it to also show only the groups that have more than 4 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:17:58,15.22,17.5
+2025-02-13 20:17:59,15.32,17.5
+
+Current question: Q22
+Select and count all strains that have the pathogenicity field equal to Pathogen for Plants and group only those that have the same geoorigin field. I want it to also show only the groups that have more than 5 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:00,15.22,17.5
+2025-02-13 20:18:01,15.32,17.5
+
+Current question: Q23
+Select and count the number of strains by grouping them based on the nagoyaprotocol and pathotypeserotypetype fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:02,15.22,17.5
+2025-02-13 20:18:03,15.31,17.5
+
+Current question: Q24
+Select and count the number of strains by grouping them based on the axenic and restrictions fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:04,15.22,17.5
+2025-02-13 20:18:05,15.31,17.5
+
+Current question: Q25
+Select and count the number of strains by grouping them based on the scientificname and infrasubspecificnames fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:06,15.22,17.5
+2025-02-13 20:18:07,15.31,17.5
+
+Current question: Q26
+Select and count the number of strains by grouping them based on the registeredcollection and cacronym fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:08,15.22,17.5
+2025-02-13 20:18:09,15.3,17.5
+
+Current question: Q27
+Select and count the number of strains by grouping them based on the userestrictions and cacronym fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:10,15.22,17.5
+2025-02-13 20:18:11,15.31,17.5
+
+Current question: Q28
+Select and count all strains that have the applications field equal to It produces yellow pigment and group only those that have the same abbreviation field. I want it to also show only the groups that have more than 9 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:12,15.22,17.5
+2025-02-13 20:18:13,15.32,17.5
+
+Current question: Q29
+Select and count all the strains that have the axenic field equal to True and group only those that have the same organismtype.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:14,15.22,17.5
+2025-02-13 20:18:15,15.31,17.5
+
+Current question: Q30
+Select and count all the strains that have the name field equal to Pelargonium line pattern and group only those that have the same dualuse.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-13 20:18:16,15.22,17.5
+2025-02-13 20:18:17,15.31,17.5

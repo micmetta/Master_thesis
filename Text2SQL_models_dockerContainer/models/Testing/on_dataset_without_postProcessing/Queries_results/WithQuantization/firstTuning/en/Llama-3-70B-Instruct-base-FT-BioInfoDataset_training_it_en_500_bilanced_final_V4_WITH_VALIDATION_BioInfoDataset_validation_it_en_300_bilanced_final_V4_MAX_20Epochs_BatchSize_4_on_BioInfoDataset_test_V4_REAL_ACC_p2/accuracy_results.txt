@@ -1,0 +1,131 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q3
+question: Select only field called prodofmetabolites from strain.
+real variants query: ['SELECT prodofmetabolites FROM detailedstrain;']
+generated query: SELECT prodofmetabolites FROM strain; 
+
+ID-query: C1-Q6
+question: Select only field called symptomatologyonisolationhost from strain.
+real variants query: ['SELECT symptomatologyonisolationhost FROM detailedstrain;']
+generated query: SELECT symptomatologyonisolationhost FROM strain; 
+
+ID-query: C1-Q7
+question: Select only field called meuquarantine from strain.
+real variants query: ['SELECT meuquarantine FROM detailedstrain;']
+generated query: SELECT meuquarantine FROM strain; 
+
+ID-query: C1-Q8
+question: Select only field called pathotypeserotypetype from strain.
+real variants query: ['SELECT pathotypeserotypetype FROM detailedstrain;']
+generated query: SELECT pathotypeserotypetype FROM strain; 
+
+ID-query: C1-Q10
+question: Select only field called genus from strain.
+real variants query: ['SELECT genus FROM detailedstrain;']
+generated query: SELECT genus FROM strain; 
+
+ID-query: C1-Q12
+question: Select only field called confirmed from strain.
+real variants query: ['SELECT confirmed FROM detailedstrain;']
+generated query: SELECT confirmed FROM strain; 
+
+ID-query: C1-Q13
+question: Select only field called status from strain.
+real variants query: ['SELECT status FROM detailedstrain;']
+generated query: SELECT status FROM strain; 
+
+ID-query: C1-Q16
+question: Select only field called gmo from strain.
+real variants query: ['SELECT gmo FROM detailedstrain;']
+generated query: SELECT gmo FROM strain; 
+
+ID-query: C1-Q17
+question: Select only field called organismtype from strain.
+real variants query: ['SELECT organismtype FROM detailedstrain;']
+generated query: SELECT organismtype FROM strain; 
+
+ID-query: C1-Q18
+question: Select only field called identificationtechnique from strain.
+real variants query: ['SELECT identificationtechnique FROM detailedstrain;']
+generated query: SELECT identificationtechnique FROM strain; 
+
+ID-query: C1-Q20
+question: Give me all strains that have commentontaxonomy equal to BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C1-Q22
+question: Select only field called abbreviation from strain.
+real variants query: ['SELECT abbreviation FROM detailedstrain;']
+generated query: SELECT abbreviation FROM strain; 
+
+ID-query: C1-Q23
+question: Select only field called sexualstate from strain.
+real variants query: ['SELECT sexualstate FROM detailedstrain;']
+generated query: SELECT sexualstate FROM strain; 
+
+ID-query: C1-Q26
+question: Select only field called collection from strain.
+real variants query: ['SELECT collection FROM detailedstrain;']
+generated query: SELECT collection FROM strain; 
+
+ID-query: C1-Q28
+question: Select only field called nagoyaprotocol from strain.
+real variants query: ['SELECT nagoyaprotocol FROM detailedstrain;']
+generated query: SELECT nagoyaprotocol FROM strain; 
+
+ID-query: C1-Q30
+question: Select only field called nagoyaconditions from strain.
+real variants query: ['SELECT nagoyaconditions FROM detailedstrain;']
+generated query: SELECT nagoyaconditions FROM strain; 
+
+ID-query: C2-Q20
+question: Give me all strains that have nagoyaprotocol equal to STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION or DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION or NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';"]
+generated query: SELECT *  FROM detailedstrain  WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION or DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION or NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+
+ID-query: C3-Q3
+question: Give me all strains that have the field morgacismtype equal to Figamentous Fungi.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Filamentous Fungi';"]
+generated query: SELECT *  FROM detailedstrain  WHERE morganismtype = 'Fungous Fungi'; 
+
+ID-query: C3-Q5
+question: Select 'sirainid' and 'qps' from strain.
+real variants query: ['SELECT strainid, qps FROM detailedstrain;', 'SELECT qps, strainid FROM detailedstrain;']
+generated query: SELECT strainid, qps FROM strain; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='shke'; 
+
+ID-query: C3-Q11
+question: Give me all strains that have the field statos equal to Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Holotype of Naganoishia nivalis/Turchetti & Buzzini'; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT *  FROM detailedstrain  WHERE sexualstate = 'MAn1'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT *  FROM detailedstrain  WHERE othernames = 'Sowbanan mosaic virus'; 
+
+ID-query: C5-Q18
+question: Select and count all the strains that have the otherccnumbers field equal to KSU 853 and group only those that have the same confirmed.
+real variants query: ["SELECT COUNT(*), confirmed FROM detailedstrain WHERE otherccnumbers = 'KSU 853' GROUP BY confirmed;", "SELECT confirmed, COUNT(*) FROM detailedstrain WHERE otherccnumbers = 'KSU 853' GROUP BY confirmed;"]
+generated query: SELECT COUNT(*), confirmed FROM detailedstrain WHERE otherccnames = 'KSU 853' GROUP BY confirmed; 
+
+
+
+Correct answers: 126
+Total questions: 150
+Model accuracy: 84.00%
+
+######################################################################################
+

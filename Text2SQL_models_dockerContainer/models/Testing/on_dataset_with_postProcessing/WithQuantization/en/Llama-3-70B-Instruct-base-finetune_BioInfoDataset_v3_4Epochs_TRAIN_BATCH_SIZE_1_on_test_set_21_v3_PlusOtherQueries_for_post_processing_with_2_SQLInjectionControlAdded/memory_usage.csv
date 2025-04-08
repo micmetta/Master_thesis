@@ -1,0 +1,293 @@
+
+Current category: C0_plus
+
+Current question: Q1
+Give me all strains with the collection field equal to EMCC and vorganismtype equal to Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:34:49,40.58,41.07
+2025-02-22 10:34:50,40.96,41.83
+2025-02-22 10:34:51,40.78,41.96
+2025-02-22 10:34:52,40.83,41.96
+
+Current question: Q2
+Give me all strains with the 'collection' field equal to EMCC and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:34:53,40.61,41.96
+2025-02-22 10:34:54,40.78,41.96
+2025-02-22 10:34:55,40.75,41.96
+2025-02-22 10:34:56,40.78,41.96
+
+Current question: Q3
+Give me all strains with the 'collection' field equal to fdsfdijfdk and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:34:57,40.61,41.96
+2025-02-22 10:34:58,40.76,41.96
+2025-02-22 10:34:59,40.79,41.96
+2025-02-22 10:35:00,40.83,41.96
+
+Current question: Q4
+Give me all strains with the collection field equal to 10 and vorganismtype equal to Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:01,40.61,41.96
+2025-02-22 10:35:02,40.77,41.96
+2025-02-22 10:35:03,40.79,41.96
+
+Current question: Q5
+Give me all strains with the 'collection' field equal to 10 and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:04,40.61,41.96
+2025-02-22 10:35:05,40.76,41.96
+2025-02-22 10:35:06,40.79,41.96
+
+Current question: Q6
+Give me all strains with the 'collection' field equal to '10' and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:07,40.61,41.96
+2025-02-22 10:35:08,40.76,41.96
+2025-02-22 10:35:09,40.79,41.96
+2025-02-22 10:35:10,40.82,41.96
+
+Current question: Q7
+Give me all strains with the 'Pathogenicity' field equal to true and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:11,40.61,41.96
+2025-02-22 10:35:12,40.76,41.96
+2025-02-22 10:35:13,40.8,41.96
+2025-02-22 10:35:14,40.83,41.96
+
+Current question: Q8
+Give me all strains with the 'tpestrain' field equal to false and vorganismtype equal to Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:15,40.61,41.96
+2025-02-22 10:35:16,40.77,41.96
+2025-02-22 10:35:17,40.8,41.96
+
+Current question: Q9
+Select the field pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:18,40.61,41.96
+2025-02-22 10:35:19,40.74,41.96
+
+Current category: C1
+
+Current question: Q1
+Give me all rows of strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:20,40.61,41.96
+2025-02-22 10:35:21,40.74,41.96
+
+Current question: Q2
+Give me all strain that have beforenagoya equal to true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:22,40.61,41.96
+2025-02-22 10:35:23,40.74,41.96
+2025-02-22 10:35:24,40.79,41.96
+
+Current question: Q3
+Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:25,40.61,41.96
+2025-02-22 10:35:26,40.77,41.96
+2025-02-22 10:35:27,40.8,41.96
+
+Current question: Q4
+Select only field called pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:28,40.61,41.96
+2025-02-22 10:35:29,40.75,41.96
+
+Current category: C2
+
+Current question: Q1
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:30,40.61,41.96
+2025-02-22 10:35:31,40.76,41.96
+2025-02-22 10:35:32,40.8,41.96
+
+Current question: Q2
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:33,40.61,41.96
+2025-02-22 10:35:34,40.76,41.96
+2025-02-22 10:35:35,40.82,41.96
+2025-02-22 10:35:36,40.85,41.96
+2025-02-22 10:35:37,40.75,41.96
+2025-02-22 10:35:38,40.8,41.96
+
+Current question: Q3
+Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:39,40.61,41.96
+2025-02-22 10:35:40,40.76,41.96
+2025-02-22 10:35:41,40.8,41.96
+2025-02-22 10:35:42,40.84,41.96
+2025-02-22 10:35:43,40.88,41.96
+
+Current question: Q4
+Select the fields 'infectivitytested' and 'propagationhost' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:44,40.61,41.96
+2025-02-22 10:35:45,40.77,41.96
+
+Current category: C3
+
+Current question: Q1
+Give me all strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:46,40.61,41.96
+2025-02-22 10:35:47,40.74,41.96
+
+Current question: Q2
+Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:48,40.61,41.96
+2025-02-22 10:35:49,40.76,41.96
+2025-02-22 10:35:50,40.8,41.96
+
+Current question: Q3
+Select 'Pathogenicity' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:51,40.61,41.96
+2025-02-22 10:35:52,40.74,41.96
+
+Current question: Q4
+Select 'Pathogenicity' and 'tpestrain' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:53,40.61,41.96
+2025-02-22 10:35:54,40.75,41.96
+
+Current category: C4
+
+Current question: Q1
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:35:55,40.61,41.96
+2025-02-22 10:35:56,40.77,41.96
+2025-02-22 10:35:57,40.81,41.96
+2025-02-22 10:35:58,40.86,41.96
+2025-02-22 10:35:59,40.76,41.96
+2025-02-22 10:36:00,40.81,41.96
+2025-02-22 10:36:01,40.86,41.96
+2025-02-22 10:36:02,40.9,41.96
+2025-02-22 10:36:03,40.79,41.96
+2025-02-22 10:36:04,40.86,41.96
+2025-02-22 10:36:05,40.92,41.96
+2025-02-22 10:36:06,40.81,41.96
+2025-02-22 10:36:07,40.85,41.96
+
+Current question: Q2
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:36:08,40.61,41.96
+2025-02-22 10:36:09,40.77,41.96
+2025-02-22 10:36:10,40.82,41.96
+2025-02-22 10:36:11,40.86,41.96
+2025-02-22 10:36:12,40.91,41.96
+2025-02-22 10:36:13,40.79,41.96
+2025-02-22 10:36:14,40.84,41.96
+2025-02-22 10:36:15,40.89,41.96
+2025-02-22 10:36:16,40.8,41.96
+2025-02-22 10:36:17,40.85,41.96
+2025-02-22 10:36:18,40.9,41.96
+2025-02-22 10:36:19,40.78,41.96
+2025-02-22 10:36:20,40.84,41.96
+
+Current question: Q3
+Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:36:21,40.61,41.96
+2025-02-22 10:36:22,40.77,41.96
+2025-02-22 10:36:23,40.81,41.96
+2025-02-22 10:36:24,40.87,41.96
+2025-02-22 10:36:25,40.77,41.96
+2025-02-22 10:36:26,40.81,41.96
+2025-02-22 10:36:27,40.86,41.96
+2025-02-22 10:36:28,40.91,41.96
+2025-02-22 10:36:29,40.8,41.96
+2025-02-22 10:36:30,40.86,41.96
+2025-02-22 10:36:31,40.92,41.96
+2025-02-22 10:36:32,40.8,41.96
+2025-02-22 10:36:33,40.84,41.96
+
+Current question: Q4
+Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:36:34,40.61,41.96
+2025-02-22 10:36:35,40.77,41.96
+2025-02-22 10:36:36,40.82,41.96
+2025-02-22 10:36:37,40.88,41.96
+2025-02-22 10:36:38,40.93,41.96
+2025-02-22 10:36:39,40.82,41.96
+2025-02-22 10:36:40,40.87,41.96
+2025-02-22 10:36:41,40.93,41.96
+2025-02-22 10:36:42,40.81,41.96
+2025-02-22 10:36:43,40.87,41.96
+2025-02-22 10:36:44,40.94,41.96
+2025-02-22 10:36:45,40.79,41.96
+2025-02-22 10:36:46,40.85,41.96
+2025-02-22 10:36:47,40.92,41.96
+2025-02-22 10:36:48,40.8,41.96
+2025-02-22 10:36:49,40.84,41.96
+
+Current question: Q5
+Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:36:50,40.61,41.96
+2025-02-22 10:36:51,40.77,41.96
+2025-02-22 10:36:52,40.81,41.96
+2025-02-22 10:36:53,40.85,41.96
+2025-02-22 10:36:54,40.91,41.96
+2025-02-22 10:36:55,40.79,41.96
+2025-02-22 10:36:56,40.84,41.96
+2025-02-22 10:36:57,40.89,41.96
+2025-02-22 10:36:58,40.93,41.96
+2025-02-22 10:36:59,40.82,41.96
+2025-02-22 10:37:00,40.87,41.96
+2025-02-22 10:37:01,40.91,41.96
+2025-02-22 10:37:02,40.8,41.96
+2025-02-22 10:37:03,40.86,41.96
+2025-02-22 10:37:04,40.91,41.96
+2025-02-22 10:37:05,40.96,41.96
+2025-02-22 10:37:06,40.83,41.96
+2025-02-22 10:37:07,40.88,41.96
+2025-02-22 10:37:08,40.95,41.96
+2025-02-22 10:37:09,40.81,41.96
+2025-02-22 10:37:10,40.87,41.96
+2025-02-22 10:37:11,40.92,41.96
+2025-02-22 10:37:12,40.96,41.96
+2025-02-22 10:37:13,40.81,41.96
+
+Current category: C5
+
+Current question: Q1
+"Select and count the number of strains, grouping the results by the trasmissionby field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:37:14,40.61,41.96
+2025-02-22 10:37:15,40.76,41.96
+2025-02-22 10:37:16,40.81,41.96
+
+Current question: Q2
+Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:37:17,40.61,41.96
+2025-02-22 10:37:18,40.77,41.96
+2025-02-22 10:37:19,40.82,41.96
+2025-02-22 10:37:20,40.86,41.96
+
+Current question: Q3
+Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:37:21,40.61,41.96
+2025-02-22 10:37:22,40.76,41.96
+2025-02-22 10:37:23,40.8,41.96
+2025-02-22 10:37:24,40.84,41.96
+
+Current question: Q4
+Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:37:25,40.61,41.96
+2025-02-22 10:37:26,40.78,41.96
+2025-02-22 10:37:27,40.83,41.96
+2025-02-22 10:37:28,40.88,41.96
+2025-02-22 10:37:29,40.77,41.96

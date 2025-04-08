@@ -1,0 +1,42 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Conta il numero di strain con {column} uguale a {value}.",
+        "sql_template": "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Seleziona tutti gli strain con {column} uguale a {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Conta gli strain dove il campo {column} è uguale a {value}.",
+        "sql_template": "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT COUNT(*) FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Seleziona tutti gli strain dove {column} è uguale a {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 4,
+        "question_template": "Conta gli strain dove il campo {column} è nullo.",
+        "sql_template": "SELECT COUNT(*) FROM detailedstrain WHERE {column} IS NULL;",
+        "possible_sql_queries": [
+            "SELECT COUNT(*) FROM detailedstrain WHERE {column} IS NULL;"
+        ]
+    }
+]

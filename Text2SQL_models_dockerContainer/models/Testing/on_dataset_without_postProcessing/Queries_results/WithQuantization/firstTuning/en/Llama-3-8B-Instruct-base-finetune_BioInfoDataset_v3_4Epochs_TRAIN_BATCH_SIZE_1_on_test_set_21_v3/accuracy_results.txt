@@ -1,0 +1,71 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q1
+question: Give me all rows of strain.
+real query: SELECT * FROM detailedstrain;
+generated query: SELECT * FROM strain; 
+
+ID-query: C2-Q3
+question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+real query: SELECT * FROM detailedstrain WHERE transmissionby IN ('contact', 'contact;insect', 'contact;insect;pollen');
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact' OR transmissionby = 'contact;insect' OR transmissionby = 'contact;insect;pollen'; 
+
+ID-query: C2-Q4
+question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+real query: SELECT infectivitytested, propagationhost FROM detailedstrain;
+generated query: SELECT 'infectivitytested' and 'propagationhost' FROM strain; 
+
+ID-query: C3-Q3
+question: Select 'Pathogenicity' from strain.
+real query: SELECT pathogenicity FROM detailedstrain;
+generated query: SELECT Pathogenicity FROM strain; 
+
+ID-query: C3-Q4
+question: Select 'Pathogenicity' and 'tpestrain' from strain.
+real query: SELECT pathogenicity, typestrain FROM detailedstrain;
+generated query: SELECT Pathogenicity, tpestrain FROM strain; 
+
+ID-query: C4-Q2
+question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate <= '1999'));
+generated query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate < '1999')); 
+
+ID-query: C4-Q3
+question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+real query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002'));
+generated query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || SUBSTR(collectiondate, 4, 2) || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002')); 
+
+ID-query: C4-Q4
+question: Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+real query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1999')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay');
+generated query: SELECT * FROM detailedstrain WHERE collection = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || SUBSTR(collectiondate, 4, 2) || SUBSTR(collectiondate, 1, 2) > '1999') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1999')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'); 
+
+ID-query: C4-Q5
+question: Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+real query: SELECT * FROM detailedstrain WHERE collection = 18 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2000' AND collectiondate <= '2010')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay');
+generated query: SELECT * FROM detailedstrain WHERE collection = 18 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || SUBSTR(collectiondate, 4, 2) || SUBSTR(collectiondate, 1, 2) >= '2000' && SUBSTR(collectiondate, 7, 4) || SUBSTR(collectiondate, 4, 2) || SUBSTR(collectiondate, 1, 2) <= '2010') OR (LENGTH(collectiondate) = 15 AND SUBSTR(collectiondate, 7, 4) || SUBSTR(collectiondate, 4, 2) || SUBSTR(collectiondate, 1, 2) ||'' || SUBSTR(collectiondate, 12, 2) ||'' || SUBSTR(collectiondate, 15, 2) >= '2000-01-01' && SUBSTR(collectiondate, 7, 4) || SUBSTR
+
+
+
+Correct answers: 12
+Total questions: 21
+Model accuracy: 57.14%
+
+######################################################################################
+
+# - After my control:
+The queries that the model really got wrong are:
+- C1-Q1
+- C2-Q4
+- C3-Q3
+- C3-Q4
+- C4-Q2
+- C4-Q4
+- C4-Q5
+
+Actually correct: 14
+Total questions: 21
+Accuracy model: 66.66%
+
+- Quantizing the base model to 4 bits during inference produced worse results.

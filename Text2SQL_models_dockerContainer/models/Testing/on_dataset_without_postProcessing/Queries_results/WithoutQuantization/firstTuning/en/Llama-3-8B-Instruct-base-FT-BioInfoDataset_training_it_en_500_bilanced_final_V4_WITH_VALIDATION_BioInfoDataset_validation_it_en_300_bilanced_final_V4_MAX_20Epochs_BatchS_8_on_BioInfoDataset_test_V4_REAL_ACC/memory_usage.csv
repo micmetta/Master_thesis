@@ -1,0 +1,185 @@
+
+Current category: C1
+
+Current question: Q1
+Select only field called cacronym from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:34,15.18,15.29
+2025-02-15 20:25:35,15.3,15.71
+2025-02-15 20:25:36,15.31,15.71
+2025-02-15 20:25:37,15.32,15.71
+2025-02-15 20:25:38,15.29,15.71
+2025-02-15 20:25:39,15.32,15.71
+2025-02-15 20:25:40,15.3,15.71
+2025-02-15 20:25:41,15.31,15.71
+2025-02-15 20:25:42,15.3,15.71
+2025-02-15 20:25:43,15.32,15.71
+2025-02-15 20:25:44,15.31,15.71
+
+Current question: Q2
+Give me all strains that have symptomatologyonisolationhost equal to local lesions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:45,15.22,15.71
+
+Current question: Q3
+Select only field called prodofmetabolites from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:46,15.22,15.91
+
+Current question: Q4
+Select only field called substrate from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:47,15.22,15.91
+2025-02-15 20:25:48,15.27,15.91
+2025-02-15 20:25:49,15.29,15.91
+2025-02-15 20:25:50,15.31,15.91
+2025-02-15 20:25:51,15.33,15.91
+2025-02-15 20:25:52,15.28,15.91
+2025-02-15 20:25:53,15.3,15.91
+2025-02-15 20:25:54,15.32,15.91
+2025-02-15 20:25:55,15.34,15.91
+2025-02-15 20:25:56,15.36,15.91
+
+Current question: Q5
+Give me all strains that have abbreviation equal to LMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:57,15.22,15.91
+
+Current question: Q6
+Select only field called symptomatologyonisolationhost from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:58,15.22,15.91
+
+Current question: Q7
+Select only field called meuquarantine from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:25:59,15.22,15.91
+
+Current question: Q8
+Select only field called pathotypeserotypetype from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:00,15.22,15.91
+
+Current question: Q9
+Give me all strains that have mriskgroup equal to 12.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:01,15.22,15.91
+
+Current question: Q10
+Select only field called genus from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:02,15.22,15.91
+2025-02-15 20:26:03,15.28,15.91
+2025-02-15 20:26:04,15.3,15.91
+2025-02-15 20:26:05,15.32,15.91
+2025-02-15 20:26:06,15.33,15.91
+2025-02-15 20:26:07,15.29,15.91
+2025-02-15 20:26:08,15.31,15.91
+2025-02-15 20:26:09,15.33,15.91
+2025-02-15 20:26:10,15.36,15.91
+
+Current question: Q11
+Give me all strains that have propagationhost equal to Chenopodiaceae/Chenopodium/amaranticolor.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:11,15.22,15.91
+2025-02-15 20:26:12,15.32,16.12
+
+Current question: Q12
+Select only field called confirmed from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:13,15.22,16.12
+2025-02-15 20:26:14,15.27,16.12
+2025-02-15 20:26:15,15.29,16.12
+2025-02-15 20:26:16,15.3,16.12
+2025-02-15 20:26:17,15.32,16.12
+2025-02-15 20:26:18,15.34,16.12
+2025-02-15 20:26:19,15.3,16.12
+2025-02-15 20:26:20,15.32,16.12
+2025-02-15 20:26:21,15.34,16.12
+2025-02-15 20:26:22,15.36,16.12
+
+Current question: Q13
+Select only field called status from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:23,15.22,16.12
+
+Current question: Q14
+Give me all strains that have prodofmetabolites equal to Fumonisin B2.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:24,15.22,16.12
+
+Current question: Q15
+Select only field called otherccnumbers from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:25,15.22,16.12
+
+Current question: Q16
+Select only field called gmo from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:26,15.22,16.12
+2025-02-15 20:26:27,15.28,16.12
+2025-02-15 20:26:28,15.29,16.12
+2025-02-15 20:26:29,15.31,16.12
+2025-02-15 20:26:30,15.32,16.12
+2025-02-15 20:26:31,15.33,16.12
+2025-02-15 20:26:32,15.29,16.12
+2025-02-15 20:26:33,15.3,16.12
+2025-02-15 20:26:34,15.32,16.12
+2025-02-15 20:26:35,15.34,16.12
+
+Current question: Q17
+Select only field called organismtype from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:36,15.22,16.12
+2025-02-15 20:26:37,15.27,16.12
+2025-02-15 20:26:38,15.28,16.12
+2025-02-15 20:26:39,15.29,16.12
+2025-02-15 20:26:40,15.31,16.12
+2025-02-15 20:26:41,15.33,16.12
+2025-02-15 20:26:42,15.3,16.12
+2025-02-15 20:26:43,15.3,16.12
+2025-02-15 20:26:44,15.33,16.12
+2025-02-15 20:26:45,15.35,16.12
+
+Current question: Q18
+Select only field called identificationtechnique from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:46,15.22,16.12
+
+Current question: Q19
+Give me all strains that have otherdenominations equal to LC-4A1M17.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:47,15.22,16.12
+
+Current question: Q20
+Give me all strains that have commentontaxonomy equal to BCC6 p.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:48,15.22,16.12
+
+Current question: Q21
+Give me all strains that have status equal to Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:49,15.22,16.12
+2025-02-15 20:26:50,15.29,16.34
+
+Current question: Q22
+Select only field called abbreviation from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:26:51,15.22,16.34
+2025-02-15 20:26:52,15.28,16.34
+2025-02-15 20:26:53,15.29,16.34
+2025-02-15 20:26:54,15.31,16.34
+2025-02-15 20:26:55,15.33,16.34
+2025-02-15 20:26:56,15.34,16.34
+2025-02-15 20:26:57,15.3,16.34
+2025-02-15 20:26:58,15.32,16.34
+2025-02-15 20:26:59,15.34,16.34
+2025-02-15 20:27:00,15.36,16.34
+
+Current question: Q23
+Select only field called sexualstate from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-15 20:27:01,15.22,16.34
+2025-02-15 20:27:02,15.28,16.34
+2025-02-15 20:27:03,15.3,16.34
+2025-02-15 20:27:04,15.32,16.34

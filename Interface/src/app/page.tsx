@@ -104,9 +104,9 @@ export default function Home() {
           onMouseOver={(e) => {
             const target = e.target as HTMLSelectElement; // cast to HTMLSelectElement
             if (target.value === '8B') {
-              setTooltipText("Lower accuracy (81%-English, 81%-Italian) - Lower average waiting time (30 seconds)");
+              setTooltipText("Lower accuracy (92%-English, 89%-Italian) - Lower average waiting time (30 seconds)");
             } else {
-              setTooltipText("Higher accuracy (100%-English, 95%-Italian) - Longer average waiting time (70 seconds)");
+              setTooltipText("Higher accuracy (96%-English, 93%-Italian) - Longer average waiting time (70 seconds)");
             }
           }}
           onMouseOut={() => setTooltipText('')} // I hide the tooltip when the mouse exits

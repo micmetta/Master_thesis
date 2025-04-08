@@ -1,0 +1,51 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value} e il campo {column_data} con una data precedente a {date}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) < '{date}') OR (LENGTH({column_data}) = 4 AND {column_data} <= '{year}'));",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) < '{date}') OR (LENGTH({column_data}) = 4 AND {column_data} <= '{year}'));"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value} e il campo {column_data} con una data successiva a {date}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) > '{date}') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{year}'));",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) > '{date}') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{year}'));"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value} e il campo {column_data} con una data precedente a {year}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) < '{year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} < '{year}'));",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) < '{year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} < '{year}'));"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value} e il campo {column_data} con una data successiva a {year}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) > '{year}-12-31') OR (LENGTH({column_data}) = 4 AND {column_data} > '{year}'));",
+        "possible_sql_queries":[
+            "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) > '{year}-12-31') OR (LENGTH({column_data}) = 4 AND {column_data} > '{year}'));"
+        ]
+    },
+    {   
+        "index_template": 4,
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value} e il campo {column_data} compreso tra {start_year} e {end_year}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) >= '{start_year}-01-01' AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) <= '{end_year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{start_year}' AND {column_data} <= '{end_year}'));",
+        "possible_sql_queries":[
+            "SELECT * FROM detailedstrain WHERE {column} = {value} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) >= '{start_year}-01-01' AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) <= '{end_year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{start_year}' AND {column_data} <= '{end_year}'));"
+        ]
+    },
+    {   
+        "index_template": 5,
+        "question_template": "Dammi tutti gli strain che hanno il campo {colum1} uguale a {value1} e il campo {column_data} compreso tra {start_year} e {end_year}. Voglio anche che il campo {column2} sia {value2} o {value3}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {colum1} = {value1} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) >= '{start_year}-01-01' AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) <= '{end_year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{start_year}' AND {column_data} <= '{end_year}')) AND ({column2} = {value2} OR {column2} = {value3});",
+        "possible_sql_queries":[
+            "SELECT * FROM detailedstrain WHERE {colum1} = {value1} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) >= '{start_year}-01-01' AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) <= '{end_year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{start_year}' AND {column_data} <= '{end_year}')) AND ({column2} = {value2} OR {column2} = {value3});",
+            "SELECT * FROM detailedstrain WHERE {colum1} = {value1} AND ((LENGTH({column_data}) = 10 AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) >= '{start_year}-01-01' AND SUBSTR({column_data}, 7, 4) || '-' || SUBSTR({column_data}, 4, 2) || '-' || SUBSTR({column_data}, 1, 2) <= '{end_year}-01-01') OR (LENGTH({column_data}) = 4 AND {column_data} >= '{start_year}' AND {column_data} <= '{end_year}')) AND (({column2} = {value2} OR {column2} = {value3}));"
+        ]
+    }
+]

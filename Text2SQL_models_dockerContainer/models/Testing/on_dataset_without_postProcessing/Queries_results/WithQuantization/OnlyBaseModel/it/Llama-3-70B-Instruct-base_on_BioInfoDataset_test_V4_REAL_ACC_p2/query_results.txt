@@ -1,0 +1,766 @@
+Current category: C1
+	current question: Q1
+	question: Seleziona solo il campo chiamato cacronym da strain.
+	query: SELECT cacronym FROM detailedstrain; 
+	Time taken: 1.765599012374878 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno symptomatologyonisolationhost uguale a local lesions.
+	query: SELECT * FROM detailedstrain WHERE symptomatologyonisolationhost = 'local lesions'; 
+	Time taken: 2.0961902141571045 seconds
+
+	current question: Q3
+	question: Seleziona solo il campo chiamato prodofmetabolites da strain.
+	query: SELECT prodofmetabolites FROM detailedstrain; 
+	Time taken: 1.4072802066802979 seconds
+
+	current question: Q4
+	question: Seleziona solo il campo chiamato substrate da strain.
+	query: SELECT substrate FROM detailedstrain; 
+	Time taken: 0.9693193435668945 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno abbreviation uguale a LMV.
+	query: SELECT * FROM detailedstrain WHERE abbreviation = 'LMV'; 
+	Time taken: 1.693784236907959 seconds
+
+	current question: Q6
+	question: Seleziona solo il campo chiamato symptomatologyonisolationhost da strain.
+	query: SELECT symptomatologyonisolationhost FROM detailedstrain; 
+	Time taken: 1.4062304496765137 seconds
+
+	current question: Q7
+	question: Seleziona solo il campo chiamato meuquarantine da strain.
+	query: SELECT meuquarantine FROM detailedstrain; 
+	Time taken: 1.3059086799621582 seconds
+
+	current question: Q8
+	question: Seleziona solo il campo chiamato pathotypeserotypetype da strain.
+	query: SELECT pathotypeserotypetype FROM detailedstrain; 
+	Time taken: 1.4113237857818604 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno mriskgroup uguale a 12.0.
+	query: SELECT * FROM detailedstrain WHERE mriskgroup = 12.0; 
+	Time taken: 1.9784107208251953 seconds
+
+	current question: Q10
+	question: Seleziona solo il campo chiamato genus da strain.
+	query: SELECT genus FROM detailedstrain; 
+	Time taken: 0.9729835987091064 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno propagationhost uguale a Chenopodiaceae/Chenopodium/amaranticolor.
+	query: SELECT * FROM detailedstrain WHERE propagationhost = 'Chenopodiaceae/Chenopodium/amaranticolor'; 
+	Time taken: 3.4147768020629883 seconds
+
+	current question: Q12
+	question: Seleziona solo il campo chiamato confirmed da strain.
+	query: SELECT confirmed FROM detailedstrain; 
+	Time taken: 1.011885404586792 seconds
+
+	current question: Q13
+	question: Seleziona solo il campo chiamato status da strain.
+	query: SELECT status FROM detailedstrain; 
+	Time taken: 1.0457029342651367 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain che hanno prodofmetabolites uguale a Fumonisin B2.
+	query: SELECT * FROM detailedstrain WHERE prodofmetabolites = 'Fumonisin B2'; 
+	Time taken: 2.8543074131011963 seconds
+
+	current question: Q15
+	question: Seleziona solo il campo chiamato otherccnumbers da strain.
+	query: SELECT otherccnumbers FROM detailedstrain; 
+	Time taken: 1.1964068412780762 seconds
+
+	current question: Q16
+	question: Seleziona solo il campo chiamato gmo da strain.
+	query: SELECT gmo FROM detailedstrain; 
+	Time taken: 1.088681697845459 seconds
+
+	current question: Q17
+	question: Seleziona solo il campo chiamato organismtype da strain.
+	query: SELECT organismtype FROM detailedstrain; 
+	Time taken: 1.0861785411834717 seconds
+
+	current question: Q18
+	question: Seleziona solo il campo chiamato identificationtechnique da strain.
+	query: SELECT identificationtechnique FROM detailedstrain; 
+	Time taken: 1.1979475021362305 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno otherdenominations uguale a LC-4A1M17.
+	query: SELECT * FROM detailedstrain WHERE otherdenominations = 'LC-4A1M17'; 
+	Time taken: 2.782857656478882 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+	query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p.'; 
+	Time taken: 2.611618995666504 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno status uguale a Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+	query: SELECT * FROM detailedstrain WHERE status IN ('Isotype of Torula utilis Henneberg', 'Isotype of Torula mineralis Hayduck & Haehn ex Harrison'); 
+	Time taken: 4.672788858413696 seconds
+
+	current question: Q22
+	question: Seleziona solo il campo chiamato abbreviation da strain.
+	query: SELECT abbreviation FROM detailedstrain; 
+	Time taken: 1.0243456363677979 seconds
+
+	current question: Q23
+	question: Seleziona solo il campo chiamato sexualstate da strain.
+	query: SELECT sexualstate FROM detailedstrain; 
+	Time taken: 1.1537480354309082 seconds
+
+	current question: Q24
+	question: Seleziona solo il campo chiamato testedtgmax da strain.
+	query: SELECT testedtgmax FROM detailedstrain; 
+	Time taken: 1.283060073852539 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno restrictions uguale a NO KNOWN RESTRICTION APPLY.
+	query: SELECT * FROM detailedstrain WHERE restrictions = 'NO KNOWN RESTRICTION APPLY'; 
+	Time taken: 2.5540554523468018 seconds
+
+	current question: Q26
+	question: Seleziona solo il campo chiamato collection da strain.
+	query: SELECT collection FROM detailedstrain; 
+	Time taken: 0.9747288227081299 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno sexualstate uguale a MAT2.
+	query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAT2'; 
+	Time taken: 1.9580423831939697 seconds
+
+	current question: Q28
+	question: Seleziona solo il campo chiamato nagoyaprotocol da strain.
+	query: SELECT nagoyaprotocol FROM detailedstrain; 
+	Time taken: 1.6118109226226807 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno accessionnumber uguale a 4832.
+	query: SELECT * FROM detailedstrain WHERE accessionnumber = '4832'; 
+	Time taken: 2.026231288909912 seconds
+
+	current question: Q30
+	question: Seleziona solo il campo chiamato nagoyaconditions da strain.
+	query: SELECT nagoyaconditions FROM detailedstrain; 
+	Time taken: 1.3579893112182617 seconds
+
+Current category: C2
+	current question: Q1
+	question: Dammi tutti gli strain che hanno transmissionby uguale a contact e (registeredcollection è True o userestrictions è 2.0).
+	query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact' AND (registeredcollection = TRUE OR userestrictions = 2.0); 
+	Time taken: 4.047277927398682 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 1.0 o 3.0 o 2.0.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions IN (1.0, 2.0, 3.0); 
+	Time taken: 3.6303722858428955 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno name uguale a Radish mosaic virus o Fuchsia latent virus o Tobacco mosaic virus.
+	query: SELECT * FROM detailedstrain WHERE name IN ('Radish mosaic virus', 'Fuchsia latent virus', 'Tobacco mosaic virus'); 
+	Time taken: 3.909515857696533 seconds
+
+	current question: Q4
+	question: Dammi tutti gli strain che hanno mriskgroup uguale a 12.0 o 1.0 o 2.0.
+	query: SELECT * FROM detailedstrain WHERE mriskgroup IN (12.0, 1.0, 2.0); 
+	Time taken: 3.6315648555755615 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno identificationtechnique uguale a Identification techniques used: alt-a1, gpd, calm gene. e (cacronym è DBVPG o testedtgmin è 15.0).
+	query: SELECT * FROM detailedstrain WHERE identificationtechnique IN ('alt-a1', 'gpd', 'calm gene') AND (cacronym = 'DBVPG' OR testedtgmin = 15.0); 
+	Time taken: 6.184054374694824 seconds
+
+	current question: Q6
+	question: Seleziona gli strain 'nagoyaconditions' e 'nagoyaprotocol' da strain.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions IS NOT NULL AND nagoyaprotocol IS NOT NULL; 
+	Time taken: 3.2332940101623535 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno testedtgmax uguale a 30.0 e il campo accessionnumber uguale a 5503 e testedtgmin è uguale a 15.0 o 25.0.
+	query: SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = '5503' AND (testedtgmin = 15.0 OR testedtgmin = 25.0); 
+	Time taken: 5.9353437423706055 seconds
+
+	current question: Q8
+	question: Dammi tutti gli strain che hanno testedtgmax uguale a 28.0 o 30.0 o 35.0.
+	query: SELECT * FROM detailedstrain WHERE testedtgmax IN (28.0, 30.0, 35.0); 
+	Time taken: 3.644416570663452 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno collection uguale a 8 o 10 o 3.
+	query: SELECT * FROM detailedstrain WHERE collection IN (8, 10, 3); 
+	Time taken: 2.5671708583831787 seconds
+
+	current question: Q10
+	question: Seleziona gli strain 'beforenagoya' e 'genus' da strain.
+	query: SELECT genus, beforenagoya  FROM detailedstrain  WHERE strain LIKE '%Seleziona%'; 
+	Time taken: 3.1164116859436035 seconds
+
+	current question: Q11
+	question: Seleziona i campi collection e otherccnumbers da strain.
+	query: SELECT collection, otherccnumbers FROM detailedstrain; 
+	Time taken: 1.6412205696105957 seconds
+
+	current question: Q12
+	question: Dammi tutti gli strain che hanno pathotypeserotypetype uguale a diverso e il campo remarks uguale a NT81 e mriskgroup è uguale a 2.0 o 12.0.
+	query: SELECT * FROM detailedstrain WHERE pathotypeserotypetype!= '' AND remarks = 'NT81' AND mriskgroup IN (2.0, 12.0); 
+	Time taken: 5.034620523452759 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain che hanno cacronym uguale a PLAVIT o MEGic o CE-ICB.
+	query: SELECT * FROM detailedstrain WHERE cacronym IN ('PLAVIT', 'MEGic', 'CE-ICB'); 
+	Time taken: 3.6658668518066406 seconds
+
+	current question: Q14
+	question: Seleziona i campi geoorigin e testedtgmax da strain.
+	query: SELECT geoorigin, testedtgmax FROM detailedstrain; 
+	Time taken: 1.7922327518463135 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e il campo organismtype uguale a Cryptophyta e recommendedtemperature è uguale a 0.0 o 10.0.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND (recommendedtemperature = 0.0 OR recommendedtemperature = 10.0); 
+	Time taken: 5.856060266494751 seconds
+
+	current question: Q16
+	question: Seleziona gli strain 'sexualstate' e 'name' da strain.
+	query: SELECT sexualstate, name FROM detailedstrain WHERE strain = 'Seleziona gli'; 
+	Time taken: 2.6013152599334717 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno genus uguale a Polyporus e (dualuse è True o nagoyaconditions è 1.0).
+	query: SELECT * FROM detailedstrain WHERE genus = 'Polyporus' AND (dualuse = TRUE OR nagoyaconditions = 1.0); 
+	Time taken: 4.366149187088013 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e identificationtechnique uguale a Electron microscopy.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND identificationtechnique = 'Electron microscopy'; 
+	Time taken: 3.5470383167266846 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno name uguale a Amaranthus leaf mottle virus o Chrysanthemum virus B o Tobacco ringspot virus.
+	query: SELECT * FROM detailedstrain WHERE name IN ('Amaranthus leaf mottle virus', 'Chrysanthemum virus B', 'Tobacco ringspot virus'); 
+	Time taken: 5.037291526794434 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+	query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION OR DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION OR NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.'; 
+	Time taken: 9.019462585449219 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION e il campo beforenagoya uguale a True e dualuse è uguale a True o False.
+	query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' AND beforenagoya = True AND (dualuse = True OR dualuse = False); 
+	Time taken: 7.061868190765381 seconds
+
+	current question: Q22
+	question: Seleziona gli strain 'propagationhost' e 'otherccnumbers' da strain.
+	query: SELECT propagationhost, otherccnumbers  FROM detailedstrain  WHERE strain = 'Seleziona gli'; 
+	Time taken: 3.1364049911499023 seconds
+
+	current question: Q23
+	question: Seleziona i campi applications e storageconditions da strain.
+	query: SELECT applications, storageconditions FROM detailedstrain; 
+	Time taken: 1.5190272331237793 seconds
+
+	current question: Q24
+	question: Dammi tutti gli strain che hanno sexualstate uguale a MAT2 e (typestrain è False o ineva è True).
+	query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAT2' AND (typestrain = FALSE OR ineva = TRUE); 
+	Time taken: 3.6756982803344727 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno userestrictions uguale a 2.0 o 1.0 o 3.0.
+	query: SELECT * FROM detailedstrain WHERE userestrictions IN (1.0, 2.0, 3.0); 
+	Time taken: 3.664900064468384 seconds
+
+	current question: Q26
+	question: Dammi tutti gli strain che hanno organismtype uguale a Virus o Filamentous Fungi o Cryptophyta.
+	query: SELECT * FROM detailedstrain WHERE organismtype IN ('Virus', 'Filamentous Fungi', 'Cryptophyta'); 
+	Time taken: 3.675732135772705 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno pathotypeserotypetype uguale a 1 e riskgroup uguale a 1.0.
+	query: SELECT * FROM detailedstrain WHERE pathotypeserotypetype = 1 AND riskgroup = 1.0; 
+	Time taken: 3.4120540618896484 seconds
+
+	current question: Q28
+	question: Seleziona i campi confirmed e organismtype da strain.
+	query: SELECT organismtype, confirmed FROM detailedstrain WHERE confirmed = 1; 
+	Time taken: 2.1959095001220703 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno pathogenicity uguale a Solanum tuberosum o Castanea spp o pathogen for animals and humans (cause of dermatological infections).
+	query: SELECT * FROM detailedstrain WHERE pathogenicity IN ('Solanum tuberosum', 'Castanea spp', 'dermatological infections'); 
+	Time taken: 4.3424072265625 seconds
+
+	current question: Q30
+	question: Seleziona gli strain 'prodofmetabolites' e 'pathogenicity' da strain.
+	query: SELECT prodofmetabolites, pathogenicity  FROM detailedstrain  WHERE strain = 'Seleziona gli'; 
+	Time taken: 3.5339536666870117 seconds
+
+Current category: C3
+	current question: Q1
+	question: Seleziona il campo 'riskgroqp' da strain.
+	query: SELECT riskgroup FROM detailedstrain; 
+	Time taken: 1.2430884838104248 seconds
+
+	current question: Q2
+	question: Seleziona 'cacronzm' e 'meuqoarantine' da strain.
+	query: SELECT * FROM detailedstrain WHERE cacronym = 'cacronzm' AND meuquarantine = TRUE; 
+	Time taken: 3.2628095149993896 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo morgacismtype uguale a Figamentous Fungi.
+	query: SELECT * FROM detailedstrain WHERE morganismtype = 'Figamentous Fungi'; 
+	Time taken: 2.72068452835083 seconds
+
+	current question: Q4
+	question: Dammi aciessionnumber.
+	query: SELECT accessionnumber FROM detailedstrain WHERE name = 'Dammi'; 
+	Time taken: 2.0508978366851807 seconds
+
+	current question: Q5
+	question: Seleziona 'sirainid' e 'qps' da strain.
+	query: SELECT * FROM detailedstrain WHERE qps ='sirainid'; 
+	Time taken: 2.3129920959472656 seconds
+
+	current question: Q6
+	question: Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+	query: SELECT * FROM detailedstrain WHERE genus = 'Rhodotorula' AND species ='macerans' AND strain LIKE '%Dammi gli%'; 
+	Time taken: 4.485799074172974 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno il campo 'conmentontaxonomy' uguale a Lactobecillus brevis.
+	query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobecillus brevis'; 
+	Time taken: 2.8653364181518555 seconds
+
+	current question: Q8
+	question: Seleziona il campo 'cxcronym' da strain.
+	query: SELECT cacronym FROM detailedstrain; 
+	Time taken: 1.237666130065918 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+	query: SELECT * FROM detailedstrain WHERE substrate ='shke'; 
+	Time taken: 1.9114551544189453 seconds
+
+	current question: Q10
+	question: Dammi tutti gli strain che hanno il campo 'mriskgrzup' uguale a 1.0.
+	query: SELECT * FROM detailedstrain WHERE mriskgroup = 1.0; 
+	Time taken: 2.316267967224121 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno il campo statos uguale a Holotype of Naganishia nivalisnTurchetti & Buzzini.
+	query: SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalisnTurchetti & Buzzini'; 
+	Time taken: 3.9393417835235596 seconds
+
+	current question: Q12
+	question: Seleziona il campo 'ideztificationtechnique' da strain.
+	query: SELECT identificationtechnique FROM detailedstrain; 
+	Time taken: 1.3789217472076416 seconds
+
+	current question: Q13
+	question: Seleziona 'recommendedtempeqature' e 'userestrictiods' da strain.
+	query: SELECT recommendedtemperature, userestrictions FROM detailedstrain WHERE strain = 'Seleziona'; 
+	Time taken: 2.712064266204834 seconds
+
+	current question: Q14
+	question: Seleziona 'otherccnumaers' e 'availablefofdis' da strain.
+	query: SELECT otherccnumbers, availablefordis FROM detailedstrain WHERE strain = 'Seleziona'; 
+	Time taken: 2.8573758602142334 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno il campo 'collewtion' uguale a 17.
+	query: SELECT * FROM detailedstrain WHERE collection = 17; 
+	Time taken: 1.7842962741851807 seconds
+
+	current question: Q16
+	question: Dammi tutti gli strain che hanno il campo 'resgrictions' uguale a ONLY FOR NOb-COMMERCIAL PURPOSES.
+	query: SELECT * FROM detailedstrain WHERE restrictions = 'ONLY FOR NOB-COMMERCIAL PURPOSES'; 
+	Time taken: 3.139150857925415 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno il campo 'axehic' uguale a Tque.
+	query: SELECT * FROM detailedstrain WHERE axenic = TRUE; 
+	Time taken: 1.7788410186767578 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno il campo transmwssionby uguale a coftact.
+	query: SELECT * FROM detailedstrain WHERE transmissionby = 'coftact'; 
+	Time taken: 2.1779301166534424 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno il campo 'skxualstate' uguale a MAn1.
+	query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAn1'; 
+	Time taken: 2.1812710762023926 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno il campo 'commentontaaonomy' uguale a Lactobacilluk paraplantarum.
+	query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacilluk paraplantarum'; 
+	Time taken: 3.404592990875244 seconds
+
+	current question: Q21
+	question: Seleziona il campo 'sexualstabe' da strain.
+	query: SELECT sexualstate FROM detailedstrain; 
+	Time taken: 1.2399823665618896 seconds
+
+	current question: Q22
+	question: Dammi tutti gli strain che hanno il campo 'nawe' uguale a Sowbana mosaic virus.
+	query: SELECT * FROM detailedstrain WHERE virus = 'Sowbana mosaic virus' AND nawe = 'nawe'; 
+	Time taken: 3.6763837337493896 seconds
+
+	current question: Q23
+	question: Dammi cultivkr.
+	query: SELECT *
+
+	Time taken: 2.5838429927825928 seconds
+
+	current question: Q24
+	question: Seleziona il campo 'testeltgmax' da strain.
+	query: SELECT testeltgmax FROM detailedstrain; 
+	Time taken: 1.514716625213623 seconds
+
+	current question: Q25
+	question: Seleziona 'organismtipe' e 'beforeuagoya' da strain.
+	query: SELECT organismtype, beforenagoya FROM detailedstrain; 
+	Time taken: 1.9147906303405762 seconds
+
+	current question: Q26
+	question: Dammi gli strain con dualune uguale a Trze.
+	query: SELECT * FROM detailedstrain WHERE strain LIKE '%Dammi%' AND dualuse = 1; 
+	Time taken: 2.998056173324585 seconds
+
+	current question: Q27
+	question: Seleziona il campo 'otherlcnumbers' da strain.
+	query: SELECT otherlcnumbers FROM detailedstrain; 
+	Time taken: 1.3853240013122559 seconds
+
+	current question: Q28
+	question: Seleziona 'cacronzm' e 'irfrasubspecificnames' da strain.
+	query: SELECT cacronym, infrasubspecificnames  FROM detailedstrain  WHERE strain = 'Seleziona'; 
+	Time taken: 3.266433000564575 seconds
+
+	current question: Q29
+	question: Dammi rekarks.
+	query: SELECT remarks FROM detailedstrain WHERE remarks LIKE '%Dammi rekarks%'; 
+	Time taken: 2.318866729736328 seconds
+
+	current question: Q30
+	question: Dammi tutti gli strain che hanno il campo morganmsmtype uguale a Micrealgae.
+	query: SELECT * FROM detailedstrain WHERE morganismtype = 'Micrealgae'; 
+	Time taken: 2.462476968765259 seconds
+
+Current category: C4
+	current question: Q1
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Lettuce Italian necrotic virus e il campo collectiondate compreso tra 1998 e 2008. Voglio anche che il campo pathotypeserotypetype sia 0 o 1.
+	query: SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND collectiondate BETWEEN '1998-01-01' AND '2008-12-31' AND pathotypeserotypetype IN (0, 1); 
+	Time taken: 7.477351665496826 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno il campo recommendedtemperature uguale a 24.0 e il campo isolationdate con una data precedente a 1998-10-28.
+	query: SELECT * FROM detailedstrain WHERE recommendedtemperature = 24.0 AND isolationdate < '1998-10-28'; 
+	Time taken: 3.6725151538848877 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo beforenagoya uguale a False e il campo depositdate con una data precedente a 1991.
+	query: SELECT * FROM detailedstrain WHERE beforenagoya = FALSE AND depositdate < '1991-01-01'; 
+	Time taken: 3.531789779663086 seconds
+
+	current question: Q4
+	question: Dammi tutti gli strain che hanno il campo propagationhost uguale a Caryophyllaceae/Dianthus/barbatus e il campo isolationdate compreso tra 1990 e 1997.
+	query: SELECT * FROM detailedstrain WHERE propagationhost = 'Caryophyllaceae/Dianthus/barbatus' AND isolationdate BETWEEN '1990-01-01' AND '1997-12-31'; 
+	Time taken: 6.1281657218933105 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno il campo ineva uguale a False e il campo collectiondate con una data successiva a 2003.
+	query: SELECT * FROM detailedstrain WHERE ineva = FALSE AND collectiondate > '2003-01-01'; 
+	Time taken: 3.2652790546417236 seconds
+
+	current question: Q6
+	question: Dammi tutti gli strain che hanno il campo availablefordis uguale a True e il campo depositdate compreso tra 2005 e 2019. Voglio anche che il campo transmissionby sia contact;insect;seeds o contact;pollen;seeds.
+	query: SELECT * 
+
+	Time taken: 8.153208255767822 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno il campo restrictions uguale a ONLY FOR NON-COMMERCIAL PURPOSES e il campo inclusiondate con una data precedente a 2010.
+	query: SELECT * FROM detailedstrain WHERE restrictions = 'ONLY FOR NON-COMMERCIAL PURPOSES' AND inclusiondate < '2010-01-01'; 
+	Time taken: 4.619856834411621 seconds
+
+	current question: Q8
+	question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo isolationdate con una data successiva a 1999-03-14.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND isolationdate > '1999-03-14'; 
+	Time taken: 3.816494941711426 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno il campo commentontaxonomy uguale a doi:10.1099/ijsem.0.004107 e il campo inclusiondate con una data successiva a 2013-02-12.
+	query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND inclusiondate > '2013-02-12'; 
+	Time taken: 5.581063270568848 seconds
+
+	current question: Q10
+	question: Dammi tutti gli strain che hanno il campo beforenagoya uguale a True e il campo depositdate con una data precedente a 2011-11-02.
+	query: SELECT * FROM detailedstrain WHERE beforenagoya = TRUE AND depositdate < '2011-11-02'; 
+	Time taken: 3.5388967990875244 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo depositdate con una data precedente a 2013.
+	query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND depositdate < '2013-01-01'; 
+	Time taken: 3.6795694828033447 seconds
+
+	current question: Q12
+	question: Dammi tutti gli strain che hanno il campo riskgroup uguale a 2.0 e il campo depositdate compreso tra 2003 e 2016. Voglio anche che il campo species sia gracile o cerevisiae;uvarum.
+	query: SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND depositdate BETWEEN '2003-01-01' AND '2016-12-31' AND species IN ('gracile', 'cerevisiae', 'uvarum'); 
+	Time taken: 7.492739200592041 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;seeds e il campo collectiondate con una data successiva a 2004.
+	query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact;seeds' AND collectiondate > '2004-01-01'; 
+	Time taken: 3.9363138675689697 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain che hanno il campo identificationtechnique uguale a Bioassay;Immuno blot e il campo depositdate compreso tra 2003 e 2012.
+	query: SELECT * FROM detailedstrain WHERE identificationtechnique IN ('Bioassay', 'Immuno blot') AND depositdate BETWEEN '2003-01-01' AND '2012-12-31'; 
+	Time taken: 5.855734586715698 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;fungi e il campo inclusiondate con una data precedente a 1995.
+	query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact;fungi' AND inclusiondate < '1995-01-01'; 
+	Time taken: 3.957345724105835 seconds
+
+	current question: Q16
+	question: Dammi tutti gli strain che hanno il campo testedtgmax uguale a 35.0 e il campo collectiondate compreso tra 1998 e 2012.
+	query: SELECT * FROM detailedstrain WHERE testedtgmax = 35.0 AND collectiondate BETWEEN '1998-01-01' AND '2012-12-31'; 
+	Time taken: 5.039235353469849 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo inclusiondate con una data precedente a 1995-04-16.
+	query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND inclusiondate < '1995-04-16'; 
+	Time taken: 3.8203389644622803 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno il campo cacronym uguale a BNSS e il campo inclusiondate con una data precedente a 2012.
+	query: SELECT * FROM detailedstrain WHERE cacronym = 'BNSS' AND inclusiondate < '2012-01-01'; 
+	Time taken: 3.691472053527832 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. paracasei e il campo isolationdate compreso tra 2005 e 2018.
+	query: SELECT * FROM detailedstrain WHERE infrasubspecificnames ='subsp. paracasei' AND isolationdate BETWEEN '2005-01-01' AND '2018-12-31'; 
+	Time taken: 5.9767515659332275 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno il campo morganismtype uguale a Archaea e il campo inclusiondate compreso tra 1997 e 2003.
+	query: SELECT * FROM detailedstrain WHERE morganismtype = 'Archaea' AND inclusiondate BETWEEN '1997-01-01' AND '2003-12-31'; 
+	Time taken: 5.167799949645996 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo collectiondate con una data successiva a 2010.
+	query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND collectiondate > '2010-01-01'; 
+	Time taken: 3.6906816959381104 seconds
+
+	current question: Q22
+	question: Dammi tutti gli strain che hanno il campo propagationhost uguale a Solanaceae/Petunia/x hybrida e il campo inclusiondate con una data precedente a 1997-09-10.
+	query: SELECT * FROM detailedstrain WHERE propagationhost = 'Solanaceae/Petunia/x hybrida' AND inclusiondate < '1997-09-10'; 
+	Time taken: 4.902403116226196 seconds
+
+	current question: Q23
+	question: Dammi tutti gli strain che hanno il campo applications uguale a Resistant to hygromicyn B e il campo inclusiondate con una data successiva a 2014.
+	query: SELECT * FROM detailedstrain WHERE applications = 'Resistant to hygromicyn B' AND inclusiondate > '2014-01-01'; 
+	Time taken: 4.496032476425171 seconds
+
+	current question: Q24
+	question: Dammi tutti gli strain che hanno il campo sexualstate uguale a Mata/Matalpha e il campo isolationdate con una data precedente a 1996-04-26.
+	query: SELECT * FROM detailedstrain WHERE sexualstate IN ('Mata', 'Matalpha') AND isolationdate < '1996-04-26'; 
+	Time taken: 4.342855215072632 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno il campo applications uguale a Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); e il campo collectiondate compreso tra 2005 e 2016. Voglio anche che il campo otherdenominations sia Rs T33 C8 o LB5A6B05.
+	query: SELECT * FROM detailedstrain WHERE applications LIKE '%Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)%' AND collectiondate BETWEEN '2005-01-01' AND '2016-12-31' AND otherdenominations IN ('Rs T33 C8', 'LB5A6B05'); 
+	Time taken: 10.20900821685791 seconds
+
+	current question: Q26
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Carnation mottle virus e il campo depositdate con una data successiva a 1997-10-29.
+	query: SELECT * FROM detailedstrain WHERE scientificname = 'Carnation mottle virus' AND depositdate > '1997-10-29'; 
+	Time taken: 4.079939603805542 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Pepper mild mottle virus e il campo inclusiondate con una data precedente a 1991-09-20.
+	query: SELECT * FROM detailedstrain WHERE scientificname = 'Pepper mild mottle virus' AND inclusiondate < '1991-09-20'; 
+	Time taken: 4.233320236206055 seconds
+
+	current question: Q28
+	question: Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. bulgaricus e il campo collectiondate con una data successiva a 2000-02-24.
+	query: SELECT * FROM detailedstrain WHERE infrasubspecificnames ='subsp. bulgaricus' AND collectiondate > '2000-02-24'; 
+	Time taken: 4.629028558731079 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno il campo meuquarantine uguale a True e il campo depositdate con una data precedente a 1997-12-06.
+	query: SELECT * FROM detailedstrain WHERE meuquarantine = TRUE AND depositdate < '1997-12-06'; 
+	Time taken: 3.542952060699463 seconds
+
+	current question: Q30
+	question: Dammi tutti gli strain che hanno il campo sexualstate uguale a MAT2 e il campo isolationdate con una data precedente a 2005.
+	query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAT2' AND isolationdate < '2005-01-01'; 
+	Time taken: 3.6766915321350098 seconds
+
+Current category: C5
+	current question: Q1
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e recommendedtemperature.
+	query: SELECT organismtype, recommendedtemperature, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY organismtype, recommendedtemperature; 
+	Time taken: 3.8032443523406982 seconds
+
+	current question: Q2
+	question: Seleziona e conta tutti i strain che hanno il campo accessionnumber uguale a MUT00006186 e raggruppa solo quelli che hanno lo stesso abbreviation.
+	query: SELECT abbreviation, COUNT(*) 
+
+	Time taken: 4.225706577301025 seconds
+
+	current question: Q3
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo dualuse.
+	query: SELECT dualuse, COUNT(strain) AS num_strains FROM detailedstrain GROUP BY dualuse; 
+	Time taken: 3.000336170196533 seconds
+
+	current question: Q4
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e infrasubspecificnames.
+	query: SELECT organismtype, infrasubspecificnames, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY organismtype, infrasubspecificnames; 
+	Time taken: 4.627417087554932 seconds
+
+	current question: Q5
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi genus e riskgroup.
+	query: SELECT genus, riskgroup, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY genus, riskgroup; 
+	Time taken: 3.548360824584961 seconds
+
+	current question: Q6
+	question: Seleziona e conta tutti i strain che hanno il campo beforenagoya uguale a True e raggruppa solo quelli che hanno lo stesso campo applications. Voglio che mi mostri solo i gruppi con più di 1 esempi.
+	query: SELECT applications, COUNT(*) as count  FROM detailedstrain  WHERE beforenagoya = TRUE  GROUP BY applications  HAVING COUNT(*) > 1; 
+	Time taken: 4.619543790817261 seconds
+
+	current question: Q7
+	question: Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a CBS 121057;IBT 28362 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 6 esempi.
+	query: SELECT propagationhost, COUNT(*)  FROM detailedstrain  WHERE otherccnumbers LIKE '%CBS 121057;IBT 28362%'  GROUP BY propagationhost  HAVING COUNT(*) > 6; 
+	Time taken: 5.94735050201416 seconds
+
+	current question: Q8
+	question: Seleziona e conta tutti i strain che hanno il campo strainid uguale a 9 e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+	query: SELECT otherccnumbers, COUNT(*)  FROM detailedstrain  WHERE strainid = 9  GROUP BY otherccnumbers; 
+	Time taken: 3.6784379482269287 seconds
+
+	current question: Q9
+	question: Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso pathogenicity.
+	query: SELECT pathogenicity, COUNT(*)  FROM detailedstrain  WHERE symptomatologyonisolationhost = 'local lesions'  GROUP BY pathogenicity; 
+	Time taken: 4.3646321296691895 seconds
+
+	current question: Q10
+	question: Seleziona e conta tutti i strain che hanno il campo pathogenicity uguale a Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+	query: SELECT otherccnumbers, COUNT(*)  FROM detailedstrain  WHERE pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.'  GROUP BY otherccnumbers; 
+	Time taken: 7.9411046504974365 seconds
+
+	current question: Q11
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi scientificname e isolationhost.
+	query: SELECT scientificname, isolationhost, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY scientificname, isolationhost; 
+	Time taken: 3.8125083446502686 seconds
+
+	current question: Q12
+	question: Seleziona e conta tutti i strain che hanno il campo identificationtechnique uguale a Identification techniques used: ITS e raggruppa solo quelli che hanno lo stesso symptomatologyonisolationhost.
+	query: SELECT symptomatologyonisolationhost, COUNT(*) 
+
+	Time taken: 4.895620584487915 seconds
+
+	current question: Q13
+	question: Seleziona e conta tutti i strain che hanno il campo remarks uguale a linkage group: A5; allele mutation: nit M e raggruppa solo quelli che hanno lo stesso campo testedtgmin. Voglio che mi mostri solo i gruppi con più di 5 esempi.
+	query: SELECT testedtgmin, COUNT(*) 
+
+	Time taken: 6.9123992919921875 seconds
+
+	current question: Q14
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo nagoyaconditions.
+	query: SELECT nagoyaconditions, COUNT(*) as num_strains  FROM detailedstrain  GROUP BY nagoyaconditions; 
+	Time taken: 3.2793025970458984 seconds
+
+	current question: Q15
+	question: Seleziona e conta tutti i strain che hanno il campo organismtype uguale a Yeasts e raggruppa solo quelli che hanno lo stesso restrictions.
+	query: SELECT restrictions, COUNT(*) 
+
+	Time taken: 3.8152897357940674 seconds
+
+	current question: Q16
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e nagoyaprotocol.
+	query: SELECT COUNT(*) 
+
+	Time taken: 3.8097329139709473 seconds
+
+	current question: Q17
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e infrasubspecificnames.
+	query: SELECT COUNT(*) 
+
+	Time taken: 3.1319615840911865 seconds
+
+	current question: Q18
+	question: Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a KSU 853 e raggruppa solo quelli che hanno lo stesso confirmed.
+	query: SELECT confirmed, COUNT(*)  FROM detailedstrain  WHERE otherccnumbers = 'KSU 853'  GROUP BY confirmed; 
+	Time taken: 3.807694911956787 seconds
+
+	current question: Q19
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi axenic e isolationhabitat.
+	query: SELECT axenic, isolationhabitat, COUNT(*)  FROM detailedstrain  GROUP BY axenic, isolationhabitat; 
+	Time taken: 3.5497782230377197 seconds
+
+	current question: Q20
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e scientificname.
+	query: SELECT organismtype, scientificname, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY organismtype, scientificname; 
+	Time taken: 3.794198751449585 seconds
+
+	current question: Q21
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo othernames.
+	query: SELECT othernames, COUNT(strain) AS num_strains  FROM detailedstrain  GROUP BY othernames; 
+	Time taken: 3.2733726501464844 seconds
+
+	current question: Q22
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo ineva.
+	query: SELECT ineva, COUNT(*) AS num_strains  FROM detailedstrain  GROUP BY ineva; 
+	Time taken: 2.995070695877075 seconds
+
+	current question: Q23
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi pathogenicity e geoorigin.
+	query: SELECT pathogenicity, geoorigin, COUNT(*) as count_of_strains  FROM detailedstrain  GROUP BY pathogenicity, geoorigin; 
+	Time taken: 4.228657245635986 seconds
+
+	current question: Q24
+	question: Seleziona e conta tutti i strain che hanno il campo strainid uguale a 25068 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 4 esempi.
+	query: SELECT propagationhost, COUNT(*) as count 
+
+	Time taken: 5.44956111907959 seconds
+
+	current question: Q25
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e registeredcollection.
+	query: SELECT COUNT(*)  FROM detailedstrain  WHERE userestrictions = 1 AND registeredcollection = 1; 
+	Time taken: 3.2721405029296875 seconds
+
+	current question: Q26
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi restrictions e registeredcollection.
+	query: SELECT COUNT(*) 
+
+	Time taken: 3.1386122703552246 seconds
+
+	current question: Q27
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo riskgroup.
+	query: SELECT riskgroup, COUNT(*) as num_strains  FROM detailedstrain  GROUP BY riskgroup; 
+	Time taken: 2.984761953353882 seconds
+
+	current question: Q28
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e dualuse.
+	query: SELECT COUNT(*) 
+
+	Time taken: 3.529369831085205 seconds
+
+	current question: Q29
+	question: Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso status.
+	query: SELECT status, COUNT(*)  FROM detailedstrain  WHERE symptomatologyonisolationhost = 'local lesions'  GROUP BY status; 
+	Time taken: 3.8187339305877686 seconds
+
+	current question: Q30
+	question: Seleziona e conta tutti i strain che hanno il campo axenic uguale a True e raggruppa solo quelli che hanno lo stesso identificationtechnique.
+	query: SELECT identificationtechnique, COUNT(*)  FROM detailedstrain  WHERE axenic = TRUE  GROUP BY identificationtechnique; 
+	Time taken: 3.5472710132598877 seconds
+

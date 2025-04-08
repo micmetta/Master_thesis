@@ -1,0 +1,81 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q17
+question: Seleziona solo il campo chiamato organismtype da strain.
+real variants query: ['SELECT organismtype FROM detailedstrain;']
+generated query: SELECT organismtype  FROM strain; 
+
+ID-query: C1-Q20
+question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C1-Q21
+question: Dammi tutti gli strain che hanno status uguale a Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Isotype of Torula utilis Henneberg' OR status = 'Isotype of Torula mineralis Hayduck & Haehn ex Harrison'; 
+
+ID-query: C2-Q11
+question: Seleziona i campi collection e otherccnumbers da strain.
+real variants query: ['SELECT collection, otherccnumbers FROM detailedstrain;', 'SELECT otherccnumbers, collection FROM detailedstrain;']
+generated query: SELECT collection, otherccnumbers  FROM strain; 
+
+ID-query: C2-Q14
+question: Seleziona i campi geoorigin e testedtgmax da strain.
+real variants query: ['SELECT testedtgmax, geoorigin FROM detailedstrain;', 'SELECT geoorigin, testedtgmax FROM detailedstrain;']
+generated query: SELECT geoorigin, testedtgmax  FROM strain; 
+
+ID-query: C2-Q28
+question: Seleziona i campi confirmed e organismtype da strain.
+real variants query: ['SELECT confirmed, organismtype FROM detailedstrain;', 'SELECT organismtype, confirmed FROM detailedstrain;']
+generated query: SELECT confirmed, organismtype  FROM strain; 
+
+ID-query: C3-Q4
+question: Dammi aciessionnumber.
+real variants query: ['SELECT accessionnumber FROM detailedstrain;']
+generated query: SELECT accessionnumber FROM detailedstrain WHERE accessionnumber = 'DAMMI'; 
+
+ID-query: C3-Q5
+question: Seleziona 'sirainid' e 'qps' da strain.
+real variants query: ['SELECT strainid, qps FROM detailedstrain;', 'SELECT qps, strainid FROM detailedstrain;']
+generated query: SELECT strainid, qps  FROM strain; 
+
+ID-query: C3-Q6
+question: Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Rhodotorula macerans Frederiksen';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate = 'Isotopes of Rhodotorula macerans Frederiksen'; 
+
+ID-query: C3-Q9
+question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='ske'; 
+
+ID-query: C3-Q19
+question: Dammi tutti gli strain che hanno il campo 'skxualstate' uguale a MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT *  FROM detailedstrain  WHERE sexualstate = 'MAn1'; 
+
+ID-query: C3-Q20
+question: Dammi tutti gli strain che hanno il campo 'commentontaaonomy' uguale a Lactobacilluk paraplantarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paraplantarum';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'Lactobacillus paracasei'; 
+
+ID-query: C3-Q23
+question: Dammi cultivkr.
+real variants query: ['SELECT cultivar FROM detailedstrain;']
+generated query: SELECT cultivar FROM detailedstrain WHERE cultivar = 'Dammi'; 
+
+ID-query: C3-Q29
+question: Dammi rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT remarks FROM detailedstrain WHERE name = 'Dammi'; 
+
+
+
+Correct answers: 136
+Total questions: 150
+Model accuracy: 90.67%
+
+######################################################################################
+

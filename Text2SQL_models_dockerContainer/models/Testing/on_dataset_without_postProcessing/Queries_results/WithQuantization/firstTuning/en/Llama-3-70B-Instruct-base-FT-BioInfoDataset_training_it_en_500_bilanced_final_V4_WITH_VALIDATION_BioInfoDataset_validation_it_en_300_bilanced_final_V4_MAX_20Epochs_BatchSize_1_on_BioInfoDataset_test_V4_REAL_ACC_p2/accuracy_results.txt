@@ -1,0 +1,56 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q17
+question: Select only field called organismtype from strain.
+real variants query: ['SELECT organismtype FROM detailedstrain;']
+generated query: SELECT organismtype  FROM strain; 
+
+ID-query: C1-Q20
+question: Give me all strains that have commentontaxonomy equal to BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C1-Q21
+question: Give me all strains that have status equal to Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison';"]
+generated query: SELECT *  FROM detailedstrain  WHERE status = 'Isotype of Torula utilis Henneberg' OR status = 'Isotype of Torula mineralis Hayduck & Haehn ex Harrison'; 
+
+ID-query: C3-Q5
+question: Select 'sirainid' and 'qps' from strain.
+real variants query: ['SELECT strainid, qps FROM detailedstrain;', 'SELECT qps, strainid FROM detailedstrain;']
+generated query: SELECT strainid, qps  FROM strain; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT *  FROM detailedstrain  WHERE substrate ='ske'; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT *  FROM detailedstrain  WHERE sexualstate = 'MAn1'; 
+
+ID-query: C3-Q20
+question: Give me all strains that have the field 'commentontaaonomy' equal to Lactobacilluk paraplantarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus paraplantarum';"]
+generated query: SELECT *  FROM detailedstrain  WHERE commentontaxonomy = 'Lactobacillus paracasei'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT *  FROM detailedstrain  WHERE name = 'Sowban mosaic virus'; 
+
+ID-query: C4-Q25
+question: Give me all the strains that have the applications field equal to Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); and that have the collectiondate field with a date between 2005 and 2016. I also want the otherdenominations to be Rs T33 C8 or LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT *  FROM detailedstrain  WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'); 
+
+
+
+Correct answers: 141
+Total questions: 150
+Model accuracy: 94.00%
+
+######################################################################################
+

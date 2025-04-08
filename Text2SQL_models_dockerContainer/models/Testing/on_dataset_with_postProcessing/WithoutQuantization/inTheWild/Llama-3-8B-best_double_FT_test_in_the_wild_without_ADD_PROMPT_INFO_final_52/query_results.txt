@@ -1,0 +1,261 @@
+Current category: C_generic
+	current question: Q1
+	question: Give me all the Aspergillus strains with Marine sediment
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus' AND isolationhabitat = 'Marine sediment');
+	Time taken: 2.062830924987793 seconds
+
+	current question: Q2
+	question: Give me all strain with genus equal to Aspergillus and substrate equal to Marine sediment
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment');
+	Time taken: 1.2356131076812744 seconds
+
+	current question: Q3
+	question: dammi gli strain Isolation habitat ugale a  microalgal culture
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE isolationhabitat ='microalgal culture');
+	Time taken: 0.8632750511169434 seconds
+
+	current question: Q4
+	question: Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE Isolation substrate ='marine sediment (water after centrifugation)');
+	Time taken: 1.1228816509246826 seconds
+
+	current question: Q5
+	question: vorrei tutti i bacteria
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacterium');
+	Time taken: 0.7618293762207031 seconds
+
+	current question: Q6
+	question: vorrei tutti gli aspergillus
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus');
+	Time taken: 0.769115686416626 seconds
+
+	current question: Q7
+	question: Give all the Aspergillus
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus');
+	Time taken: 0.7665309906005859 seconds
+
+	current question: Q8
+	question: Give me all the Aspergillus strains
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus');
+	Time taken: 0.7673952579498291 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain con organismtype uguale a bacteria
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria');
+	Time taken: 0.7064611911773682 seconds
+
+	current question: Q10
+	question: Give me all strain with fiel organismtype equal to bacteria
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria');
+	Time taken: 0.7128121852874756 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc1');
+	Time taken: 1.2795219421386719 seconds
+
+	current question: Q12
+	question: Give me all strains with organismtype equal to bacteria and otherdenomination equal to mvpc1
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc1');
+	Time taken: 1.2671229839324951 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain con organismtype diverso da bacteria e otherdenomination uguale a MVPC1 9
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype!= 'bacteria' AND otherdenominations = 'MVPC1 9');
+	Time taken: 1.3673813343048096 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc e commentontaxonomy uguale a IIIB group
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group');
+	Time taken: 1.7712829113006592 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc oppure (commentontaxonomy uguale a IIIB group) e mostrami solo i campi organismtype, otherdenominations e commentontaxonomy
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' OR commentontaxonomy = 'IIIB group');
+	Time taken: 2.3370633125305176 seconds
+
+	current question: Q16
+	question: Dammi gli strain che hanno ineva uguale a true e collectiondate con una data successiva al 2020 
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE ineva = True AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2020-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2020')));
+	Time taken: 4.355932235717773 seconds
+
+	current question: Q17
+	question: Quali sono gli strain che hanno il genus diverso da Nocardioides e species uguale a ambifaria?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus!= 'Nocardioides' AND species = 'ambifaria');
+	Time taken: 1.2175261974334717 seconds
+
+	current question: Q18
+	question: Show me the accessionnumber of the strains that have isolationdate not null
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE isolationdate IS NOT NULL);
+	Time taken: 0.7093167304992676 seconds
+
+	current question: Q19
+	question: Tell me how many strains have applications equal to Agroindustry and group them by species field
+	query: Error: Generated query SELECT COUNT(*), species FROM detailedstrain WHERE applications = 'Agroindustry' GROUP BY species;. Illegal clause detected: GROUP BY.
+	Time taken: 1.0677061080932617 seconds
+
+	current question: Q20
+	question: Which strains have a regroup greater than 10 or a mrisgroup equal to 2?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE riskgroup > 10 OR mriskgroup = 2);
+	Time taken: 1.010673999786377 seconds
+
+	current question: Q21
+	question: Give me strains that have depositdate with a date equal to 2022
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE depositdate = '2022');
+	Time taken: 0.7115561962127686 seconds
+
+	current question: Q22
+	question: Give me all the strain of collection called 'TUCC' that are GMO
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'TUCC' AND gmo = True);
+	Time taken: 0.9685459136962891 seconds
+
+	current question: Q23
+	question: Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'TUCC' AND substrate = 'Posidonia oceanica');
+	Time taken: 1.173250436782837 seconds
+
+	current question: Q24
+	question: Dammi gli strain con il campo collectiondate compreso tra il 2002 e il 2005
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2002-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2005-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2002' AND collectiondate <= '2005')));
+	Time taken: 6.980434417724609 seconds
+
+	current question: Q25
+	question: Give me all strains that have the field inclusiondate between 1996 and 2001
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1996-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2001-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1996' AND inclusiondate <= '2001')));
+	Time taken: 7.380070686340332 seconds
+
+	current question: Q26
+	question: Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Virus');
+	Time taken: 1.062990427017212 seconds
+
+	current question: Q27
+	question: Quali sono gli strain con collectiondate uguale a 2019?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate = '2019');
+	Time taken: 0.7086396217346191 seconds
+
+	current question: Q28
+	question: Dammi gli strain con gmo true
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE gmo = True);
+	Time taken: 0.6146414279937744 seconds
+
+	current question: Q29
+	question: Give me the strains with gmo true
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE gmo = True);
+	Time taken: 0.6152932643890381 seconds
+
+	current question: Q30
+	question: Dammi gli strain con identificationtechnique non nullo
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE identificationtechnique IS NOT NULL);
+	Time taken: 0.7144510746002197 seconds
+
+	current question: Q31
+	question: Which strains were collected in 2019 or have a known identification technique?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate = '2019' OR identificationtechnique IS NOT NULL);
+	Time taken: 1.1241412162780762 seconds
+
+	current question: Q32
+	question: Which strains have infectivity testing equal true or have a known transmission vector?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE infectivitytested = True OR transmissionby IS NOT NULL);
+	Time taken: 0.9611866474151611 seconds
+
+	current question: Q33
+	question: Give me strains that have the fields restrictions or transmissionby not null
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE restrictions IS NOT NULL OR transmissionby IS NOT NULL);
+	Time taken: 0.9174680709838867 seconds
+
+	current question: Q34
+	question: Give me only strain with protocol natoya equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');
+	Time taken: 1.422515630722046 seconds
+
+	current question: Q35
+	question: Quali sono gli strain che hanno genus uguale Nocardioides, species uguale a albus, applications uguale ad Agroindustry e isolationhabitat non nullo?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Nocardioides' AND species = 'albus' AND applications = 'Agroindustry' AND isolationhabitat IS NOT NULL);
+	Time taken: 1.9749469757080078 seconds
+
+	current question: Q36
+	question: Dammi gli strain con otherdenominations diverso da JN1 che hanno isolationdate diverso da 2015
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE otherdenominations!= 'JN1' AND isolationdate!= '2015');
+	Time taken: 1.2715404033660889 seconds
+
+	current question: Q37
+	question: Dammi gli strain con accessionnumb diverso da 0008 ma con collection maggiore di 2
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2);
+	Time taken: 1.0149576663970947 seconds
+
+	current question: Q38
+	question: Give me the strains with accessionnumb different from 0008 but with collection greater than 2
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE accessionnumber!= '0008' AND collection > 2);
+	Time taken: 1.014366626739502 seconds
+
+	current question: Q39
+	question: Conta gli strain che non hanno registeredcollection non null e raggruppameli in base allo strainid
+	query: Error: Generated query SELECT COUNT(*), strainid FROM detailedstrain WHERE registeredcollection IS NOT NULL GROUP BY strainid;. Illegal clause detected: GROUP BY.
+	Time taken: 1.0658328533172607 seconds
+
+	current question: Q40
+	question: I want all strains with temperature greater than or equal to 29 and values not null
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE recommendedtemperature >= 29 AND recommendedtemperature IS NOT NULL);
+	Time taken: 0.9620108604431152 seconds
+
+	current question: Q41
+	question: Give me all rows of strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.365398645401001 seconds
+
+	current question: Q42
+	question: Select the field pathogenicity
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 10.119520902633667 seconds
+
+	current question: Q43
+	question: Give me all the viruses that are also strains.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'virus');
+	Time taken: 0.7111837863922119 seconds
+
+	current question: Q44
+	question: Seleziona tutti i virus che sono anche degli strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE species = 'virus');
+	Time taken: 0.6663391590118408 seconds
+
+	current question: Q45
+	question: dammi gli strain che hanno il campo availbefordis uguale a true
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE availablefordis = True);
+	Time taken: 0.6646113395690918 seconds
+
+	current question: Q46
+	question: dammi gli strain che hanno il campo vailabefordis uguale a fals
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE availablefordis = False);
+	Time taken: 0.6646842956542969 seconds
+
+	current question: Q47
+	question: Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate > '2007');
+	Time taken: 0.7160851955413818 seconds
+
+	current question: Q48
+	question: Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate > '2007' AND organismtype = 'virus');
+	Time taken: 1.4275915622711182 seconds
+
+	current question: Q49
+	question: Give me all viruses that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.'
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.');
+	Time taken: 1.4210858345031738 seconds
+
+	current question: Q50
+	question: Dammi i virus che hanno il campo abbreviation 'LBVV', il campo isolationhost 'Compositae/Lactuca/sp.' e il campo cultivar 'lattuga Lollo bionda'
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda');
+	Time taken: 2.0705156326293945 seconds
+
+	current question: Q51
+	question: Give me the strains that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.' and the field cultivar equal to 'lattuga Lollo bionda' and storageconditions equal to 'Lyo'.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda' AND storageconditions = 'Lyo');
+	Time taken: 2.480234146118164 seconds
+
+	current question: Q52
+	question: Quanti strain hanno il campo idetificationtecnique uguale a ELISA?
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain  WHERE identificationtechnique = 'ELISA');
+	Time taken: 0.9166343212127686 seconds
+

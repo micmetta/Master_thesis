@@ -1,0 +1,28 @@
+{
+    "C_generic": [
+        {
+            "index_template": -1,
+            "question": "Give me all the strain of collection called 'TUCC' that are GMO",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND gmo = True",
+                "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND gmo = True"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE cacronym = 'TUCC' AND substrate = 'Posidonia oceanica'",
+                "SELECT * FROM detailedstrain WHERE cacronym ILIKE '%TUCC%' AND substrate = 'Posidonia oceanica'"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'",
+            "sql_query_variants": [
+                "SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Virus'",
+                "SELECT strainid FROM detailedstrain WHERE organismtype = 'Virus' AND cacronym = 'EMCC'"
+            ]
+        }
+    ]
+}

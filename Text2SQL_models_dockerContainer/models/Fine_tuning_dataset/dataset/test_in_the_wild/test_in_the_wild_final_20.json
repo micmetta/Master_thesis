@@ -1,0 +1,153 @@
+{
+    "C_generic": [
+        {
+            "index_template": -1,
+            "question": "Give me all the Aspergillus strains with Marine sediment",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strain with genus equal to Aspergillus and substrate equal to Marine sediment",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain Isolation habitat ugale a  microalgal culture",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE Isolationhabitat ='microalgal culture';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE Isolationhabitat ='marine sediment (water after centrifugation)';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "vorrei tutti i bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "vorrei tutti gli aspergillus",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give all the Aspergillus",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus = 'Aspergillus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all strain with fiel organismtype equal to bacteria",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc1';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc1';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc1';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc1';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype diverso da bacteria e otherdenomination uguale a MVPC1 9",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype != 'Bacteria' AND otherdenominations ='MVPC1 9';",
+                "SELECT * FROM detailedstrain WHERE organismtype != 'Bacteria' AND otherdenominations ='MVPC1 9';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc e commentontaxonomy uguale a IIIB group",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE morganismtype = 'Bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group';",
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Bacteria' AND otherdenominations ='mvpc' AND commentontaxonomy = 'IIIB group';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc oppure (commentontaxonomy uguale a IIIB group) e mostrami solo i campi organismtype, otherdenominations e commentontaxonomy",
+            "sql_query_variants": [
+                "SELECT morganismtype, otherdenominations, commentontaxonomy FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' OR commentontaxonomy = 'IIIB group';",
+                "SELECT organismtype, otherdenominations, commentontaxonomy FROM detailedstrain WHERE organismtype = 'bacteria' AND otherdenominations ='mvpc' OR commentontaxonomy = 'IIIB group';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi gli strain che hanno ineva uguale a true e collectiondate con una data successiva al 2020 ",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE ineva = True AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2020-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2020'));"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quali sono gli strain che hanno il genus diverso da Nocardioides e species uguale ad ambifaria?",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE genus != 'Nocardioides' AND species = 'ambifaria';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Show me the accessionumber field of the strains with isolate date after 1998-02-14",
+            "sql_query_variants": [
+                "SELECT accessionnumber FROM detailedstrain WHERE (LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1998-02-14') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998');"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Tell me how many strains have applications equal to Agroindustry and group them by species field",
+            "sql_query_variants": [
+                "SELECT COUNT(*), species FROM detailedstrain WHERE applications = 'Agroindustry' GROUP BY species;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Which strains have a regroup greater than 10 or a mrisgroup equal to 2?",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE riskgroup > 10 OR mriskgroup = 2;",
+                "SELECT * FROM detailedstrain  WHERE riskgroup > 10 OR mriskgroup = 2.0;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me strain with depositdate after 2022",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2003-12-31' OR (LENGTH(depositdate) = 4 AND depositdate >= '2003');"
+            ]
+        }
+    ]
+}

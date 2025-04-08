@@ -1,0 +1,156 @@
+Current category: C0_plus
+	current question: Q1
+	question: Give me all strains with the collection field equal to EMCC and vorganismtype equal to Virus.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Virus');
+	Time taken: 1.766869068145752 seconds
+
+	current question: Q2
+	question: Give me all strains with the 'collection' field equal to EMCC and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'EMCC' AND organismtype = 'Bacteria');
+	Time taken: 0.983795166015625 seconds
+
+	current question: Q3
+	question: Give me all strains with the 'collection' field equal to fdsfdijfdk and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = 'fdsfdijfdk' AND organismtype = 'Bacteria');
+	Time taken: 1.1796698570251465 seconds
+
+	current question: Q4
+	question: Give me all strains with the collection field equal to 10 and vorganismtype equal to Virus.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collection = 10 AND organismtype = 'Virus');
+	Time taken: 0.8905284404754639 seconds
+
+	current question: Q5
+	question: Give me all strains with the 'collection' field equal to 10 and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE (collection = 10) AND ((organismtype = 'Bacteria') OR (typestrain = TRUE AND pathogenicity = 'Plant Pathogen') OR (gmo = TRUE AND gmoconstructioninfo = 'Gene Knockout and Verification: Gene deleted is essential for plant pathogenicity. Before: Pathogen. After: Non-Pathogen. Comment: This strain is a result of a scientific experiment and not a natural occurrence.')) );
+	Time taken: 4.657301425933838 seconds
+
+	current question: Q6
+	question: Give me all strains with the 'collection' field equal to '10' and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = '10' AND organismtype = 'Bacteria');
+	Time taken: 0.9414956569671631 seconds
+
+	current question: Q7
+	question: Give me all strains with the 'Pathogenicity' field equal to true and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE Pathogenicity = true AND organismtype = 'Bacteria');
+	Time taken: 0.9416022300720215 seconds
+
+	current question: Q8
+	question: Give me all strains with the 'tpestrain' field equal to false and vorganismtype equal to Bacteria.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE typestrain = false AND organismtype = 'Bacteria');
+	Time taken: 0.9425108432769775 seconds
+
+	current question: Q9
+	question: Select the field pathogenicity from strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.38188791275024414 seconds
+
+Current category: C1
+	current question: Q1
+	question: Give me all rows of strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.33459019660949707 seconds
+
+	current question: Q2
+	question: Give me all strain that have beforenagoya equal to true.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE beforenagoya = true);
+	Time taken: 0.6650078296661377 seconds
+
+	current question: Q3
+	question: Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE identificationtechnique = 'Bioassay;ELISA');
+	Time taken: 0.89107346534729 seconds
+
+	current question: Q4
+	question: Select only field called pathogenicity from strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.42964744567871094 seconds
+
+Current category: C2
+	current question: Q1
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE ineva = false AND abbreviation = 'BCMV');
+	Time taken: 0.8421924114227295 seconds
+
+	current question: Q2
+	question: Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE ineva = false AND abbreviation = 'BCMV' AND (cultivar = 'Saluggia' OR cultivar = 'viola'));
+	Time taken: 1.6743700504302979 seconds
+
+	current question: Q3
+	question: Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE transmissionby = 'contact' OR transmissionby = 'contact;insect' OR transmissionby = 'contact;insect;pollen');
+	Time taken: 1.6831471920013428 seconds
+
+	current question: Q4
+	question: Select the fields 'infectivitytested' and 'propagationhost' from strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.5221822261810303 seconds
+
+Current category: C3
+	current question: Q1
+	question: Give me all strains.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.33241772651672363 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE otherdenominations = 'MVPC1 10');
+	Time taken: 0.8849997520446777 seconds
+
+	current question: Q3
+	question: Select 'Pathogenicity' from strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain);
+	Time taken: 0.431873083114624 seconds
+
+	current question: Q4
+	question: Select 'Pathogenicity' and 'tpestrain' from strain.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM DetailedStrain);
+	Time taken: 0.7009758949279785 seconds
+
+Current category: C4
+	current question: Q1
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2012')));
+	Time taken: 4.0601890087127686 seconds
+
+	current question: Q2
+	question: Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '1999-03-02') OR (LENGTH(collectiondate) = 4 AND collectiondate < '1999')));
+	Time taken: 4.058621406555176 seconds
+
+	current question: Q3
+	question: Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE pathogenicity = 'Pathogen for Plants' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2002-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2002')));
+	Time taken: 4.2858006954193115 seconds
+
+	current question: Q4
+	question: Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE cacronym = '18' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1999-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1999')) AND (identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay'));
+	Time taken: 4.971261739730835 seconds
+
+	current question: Q5
+	question: Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+	query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collection = 18 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2000-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2010-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2000' AND collectiondate <= '2010')) AND identificationtechnique = 'ELISA' OR identificationtechnique = 'Bioassay');
+	Time taken: 7.502501487731934 seconds
+
+Current category: C5
+	current question: Q1
+	question: Select and count the number of strains, grouping the results by the trasmissionby field.
+	query: Error: Generated query SELECT COUNT(*), transmissionby FROM detailedstrain GROUP BY transmissionby;. Illegal clause detected: GROUP BY.
+	Time taken: 0.7008066177368164 seconds
+
+	current question: Q2
+	question: Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+	query: Error: Generated query SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions;. Illegal clause detected: GROUP BY.
+	Time taken: 0.9382658004760742 seconds
+
+	current question: Q3
+	question: Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+	query: Error: Generated query SELECT COUNT(*), transmissionby, storageconditions FROM detailedstrain GROUP BY transmissionby, storageconditions;. Illegal clause detected: GROUP BY.
+	Time taken: 0.9823970794677734 seconds
+
+	current question: Q4
+	question: Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+	query: Error: Generated query SELECT COUNT(*), storageconditions FROM detailedstrain WHERE ineva = TRUE GROUP BY storageconditions HAVING COUNT(*) > 4;. Illegal clause detected: GROUP BY.
+	Time taken: 1.2678043842315674 seconds
+

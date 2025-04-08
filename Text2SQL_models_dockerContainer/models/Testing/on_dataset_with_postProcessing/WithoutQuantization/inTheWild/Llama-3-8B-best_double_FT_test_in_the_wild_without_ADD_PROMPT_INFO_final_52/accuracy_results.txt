@@ -1,0 +1,46 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C_generic-Q1
+question: Give me all the Aspergillus strains with Marine sediment
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus' AND substrate = 'Marine sediment');"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE genus = 'Aspergillus' AND isolationhabitat = 'Marine sediment');
+
+ID-query: C_generic-Q4
+question: Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE Isolationhabitat ='marine sediment (water after centrifugation)');"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE Isolation substrate ='marine sediment (water after centrifugation)');
+
+ID-query: C_generic-Q5
+question: vorrei tutti i bacteria
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'Bacteria');"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'bacterium');
+
+ID-query: C_generic-Q21
+question: Give me strains that have depositdate with a date equal to 2022
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE depositdate LIKE '%2022');"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE depositdate = '2022');
+
+ID-query: C_generic-Q44
+question: Seleziona tutti i virus che sono anche degli strain.
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE organismtype = 'Virus');"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE species = 'virus');
+
+ID-query: C_generic-Q47
+question: Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007'));"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate > '2007');
+
+ID-query: C_generic-Q48
+question: Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations
+real variants query: ["SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2007-12-31' OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2007'));"]
+generated query: SELECT syntheticstrain.* FROM syntheticstrain WHERE strainid IN (SELECT strainid FROM detailedstrain WHERE collectiondate > '2007' AND organismtype = 'virus');
+
+
+
+Correct answers: 45
+Total questions: 52
+Model accuracy: 86.54%
+
+######################################################################################
+

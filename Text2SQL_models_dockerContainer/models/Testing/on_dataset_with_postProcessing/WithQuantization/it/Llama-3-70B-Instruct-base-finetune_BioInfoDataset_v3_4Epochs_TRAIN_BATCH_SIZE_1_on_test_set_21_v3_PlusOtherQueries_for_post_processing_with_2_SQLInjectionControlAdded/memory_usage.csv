@@ -1,0 +1,300 @@
+
+Current category: C0_plus
+
+Current question: Q1
+Dammi tutti gli strain con il campo collection uguale a EMCC e vorganismtype uguale a Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:16,40.58,41.07
+2025-02-22 10:41:17,40.99,41.84
+2025-02-22 10:41:18,40.78,41.96
+2025-02-22 10:41:19,40.75,41.96
+2025-02-22 10:41:20,40.86,41.96
+
+Current question: Q2
+Dammi tutti gli strain con il campo 'collection' uguale a EMCC e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:21,40.61,41.96
+2025-02-22 10:41:22,40.86,41.96
+2025-02-22 10:41:23,40.87,41.96
+2025-02-22 10:41:24,40.88,41.96
+
+Current question: Q3
+Dammi tutti gli strain con il campo 'collection' uguale a fdsfdijfdk e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:25,40.61,41.96
+2025-02-22 10:41:26,40.87,41.96
+2025-02-22 10:41:27,40.87,41.96
+2025-02-22 10:41:28,40.88,41.96
+
+Current question: Q4
+Dammi tutti gli strain con il campo collection uguale a 10 e vorganismtype uguale a Virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:29,40.61,41.96
+2025-02-22 10:41:30,40.86,41.96
+2025-02-22 10:41:31,40.88,41.96
+2025-02-22 10:41:32,40.88,41.96
+
+Current question: Q5
+Dammi tutti gli strain con il campo 'collection' uguale a 10 e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:33,40.61,41.96
+2025-02-22 10:41:34,40.88,41.96
+2025-02-22 10:41:35,40.87,41.96
+2025-02-22 10:41:36,40.88,41.96
+
+Current question: Q6
+Dammi tutti gli strain con il campo 'collection' uguale a '10' e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:37,40.61,41.96
+2025-02-22 10:41:38,40.87,41.96
+2025-02-22 10:41:39,40.87,41.96
+2025-02-22 10:41:40,40.88,41.96
+
+Current question: Q7
+Dammi tutti gli strain con il campo 'Pathogenicity' uguale a true e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:41,40.61,41.96
+2025-02-22 10:41:42,40.87,41.96
+2025-02-22 10:41:43,40.88,41.96
+2025-02-22 10:41:44,40.89,41.96
+
+Current question: Q8
+Dammi tutti gli strain con il campo 'tpestrain' uguale a false e vorganismtype uguale a Bacteria.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:45,40.61,41.96
+2025-02-22 10:41:46,40.87,41.96
+2025-02-22 10:41:47,40.87,41.96
+2025-02-22 10:41:48,40.89,41.96
+
+Current question: Q9
+Seleziona il campo pathogenicity da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:49,40.61,41.96
+2025-02-22 10:41:50,40.84,41.96
+
+Current category: C1
+
+Current question: Q1
+Dammi tutte le righe di strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:51,40.61,41.96
+2025-02-22 10:41:52,40.85,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno beforenagoya uguale a true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:53,40.61,41.96
+2025-02-22 10:41:54,40.87,41.96
+2025-02-22 10:41:55,40.74,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno identificationtechnique uguale a Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:41:56,40.61,41.96
+2025-02-22 10:41:57,40.87,41.96
+2025-02-22 10:41:58,40.76,41.96
+2025-02-22 10:41:59,40.78,41.96
+
+Current question: Q4
+Seleziona solo il campo chiamato pathogenicity da strain
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:00,40.61,41.96
+2025-02-22 10:42:01,40.87,41.96
+
+Current category: C2
+
+Current question: Q1
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:02,40.61,41.96
+2025-02-22 10:42:03,40.88,41.96
+2025-02-22 10:42:04,40.76,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno ineva uguale a false e abbreviation uguale a BCMV e cultivar è uguale a Saluggia o viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:05,40.61,41.96
+2025-02-22 10:42:06,40.89,41.96
+2025-02-22 10:42:07,40.77,41.96
+2025-02-22 10:42:08,40.79,41.96
+2025-02-22 10:42:09,40.81,41.96
+2025-02-22 10:42:10,40.83,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo transmissionby uguale a contact; o contact;insect o contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:11,40.61,41.96
+2025-02-22 10:42:12,40.88,41.96
+2025-02-22 10:42:13,40.76,41.96
+2025-02-22 10:42:14,40.79,41.96
+2025-02-22 10:42:15,40.81,41.96
+
+Current question: Q4
+Seleziona il campo 'infectivitytested' e il campo 'propagationhost' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:16,40.61,41.96
+2025-02-22 10:42:17,40.74,41.96
+
+Current category: C3
+
+Current question: Q1
+Dammi tutte le righe della tabella strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:18,40.61,41.96
+2025-02-22 10:42:19,40.86,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo 'oterdeminations' uguale a 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:20,40.61,41.96
+2025-02-22 10:42:21,40.75,41.96
+2025-02-22 10:42:22,40.77,41.96
+2025-02-22 10:42:23,40.8,41.96
+
+Current question: Q3
+Seleziona il campo 'Pathogenicity' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:24,40.61,41.96
+2025-02-22 10:42:25,40.87,41.96
+
+Current question: Q4
+Seleziona il campo 'Pathogenicity' e il campo 'tpestrain' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:26,40.61,41.96
+2025-02-22 10:42:27,40.87,41.96
+
+Current category: C4
+
+Current question: Q1
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:28,40.61,41.96
+2025-02-22 10:42:29,40.75,41.96
+2025-02-22 10:42:30,40.79,41.96
+2025-02-22 10:42:31,40.81,41.96
+2025-02-22 10:42:32,40.83,41.96
+2025-02-22 10:42:33,40.85,41.96
+2025-02-22 10:42:34,40.88,41.96
+2025-02-22 10:42:35,40.91,41.96
+2025-02-22 10:42:36,40.79,41.96
+2025-02-22 10:42:37,40.81,41.96
+2025-02-22 10:42:38,40.84,41.96
+2025-02-22 10:42:39,40.87,41.96
+2025-02-22 10:42:40,40.89,41.96
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data precedente al '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:41,40.61,41.96
+2025-02-22 10:42:42,40.76,41.96
+2025-02-22 10:42:43,40.78,41.96
+2025-02-22 10:42:44,40.81,41.96
+2025-02-22 10:42:45,40.83,41.96
+2025-02-22 10:42:46,40.85,41.96
+2025-02-22 10:42:47,40.88,41.96
+2025-02-22 10:42:48,40.93,41.96
+2025-02-22 10:42:49,40.8,41.96
+2025-02-22 10:42:50,40.83,41.96
+2025-02-22 10:42:51,40.86,41.96
+2025-02-22 10:42:52,40.88,41.96
+2025-02-22 10:42:53,40.91,41.96
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo pathogenicity uguale a 'Pathogen for Plants' e che hanno il campo collectiondate con una data successiva al 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:42:54,40.61,41.96
+2025-02-22 10:42:55,40.75,41.96
+2025-02-22 10:42:56,40.78,41.96
+2025-02-22 10:42:57,40.81,41.96
+2025-02-22 10:42:58,40.84,41.96
+2025-02-22 10:42:59,40.87,41.96
+2025-02-22 10:43:00,40.9,41.96
+2025-02-22 10:43:01,40.77,41.96
+2025-02-22 10:43:02,40.81,41.96
+2025-02-22 10:43:03,40.84,41.96
+2025-02-22 10:43:04,40.86,41.96
+2025-02-22 10:43:05,40.9,41.96
+2025-02-22 10:43:06,40.93,41.96
+2025-02-22 10:43:07,40.96,41.96
+
+Current question: Q4
+Dammi tutti gli strain che hanno il campo collection uguale a '18' e che hanno il campo collectiondate con una data successiva al '1999'. Voglio inoltre che l'identificationtecnichnique sia 'ELISA' oppure 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:08,40.61,41.96
+2025-02-22 10:43:09,40.92,41.96
+2025-02-22 10:43:10,40.81,41.96
+2025-02-22 10:43:11,40.84,41.96
+2025-02-22 10:43:12,40.87,41.96
+2025-02-22 10:43:13,40.91,41.96
+2025-02-22 10:43:14,40.95,41.96
+2025-02-22 10:43:15,40.81,41.96
+2025-02-22 10:43:16,40.84,41.96
+2025-02-22 10:43:17,40.87,41.96
+2025-02-22 10:43:18,40.92,41.96
+2025-02-22 10:43:19,40.95,41.96
+2025-02-22 10:43:20,40.8,41.96
+2025-02-22 10:43:21,40.84,41.96
+2025-02-22 10:43:22,40.89,41.96
+2025-02-22 10:43:23,40.93,41.96
+
+Current question: Q5
+Dammi tutti gli strains che hanno il campo collection uguale a 18 e che hanno il campo collectiondate con una data compresa tra il 2000 e il 2010. Voglio anche che l'identificationtechnique sia ELISA o Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:24,40.61,41.96
+2025-02-22 10:43:25,40.77,41.96
+2025-02-22 10:43:26,40.81,41.96
+2025-02-22 10:43:27,40.85,41.96
+2025-02-22 10:43:28,40.89,41.96
+2025-02-22 10:43:29,40.92,41.96
+2025-02-22 10:43:30,40.94,41.96
+2025-02-22 10:43:31,40.81,41.96
+2025-02-22 10:43:32,40.85,41.96
+2025-02-22 10:43:33,40.87,41.96
+2025-02-22 10:43:34,40.91,41.96
+2025-02-22 10:43:35,40.96,41.96
+2025-02-22 10:43:36,40.81,41.96
+2025-02-22 10:43:37,40.87,41.96
+2025-02-22 10:43:38,40.88,41.96
+2025-02-22 10:43:39,40.92,41.96
+2025-02-22 10:43:40,40.96,41.96
+2025-02-22 10:43:41,40.81,41.96
+2025-02-22 10:43:42,40.85,41.96
+2025-02-22 10:43:43,40.88,41.96
+2025-02-22 10:43:44,40.93,41.96
+2025-02-22 10:43:45,40.97,41.96
+2025-02-22 10:43:46,41.02,41.96
+2025-02-22 10:43:47,40.85,41.96
+
+Current category: C5
+
+Current question: Q1
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo trasmissionby."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:48,40.61,41.96
+2025-02-22 10:43:49,40.76,41.96
+2025-02-22 10:43:50,40.79,41.96
+
+Current question: Q2
+Seleziona e conta tutti gli strain che hanno il campo 'ineva' uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il campo storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:51,40.61,41.96
+2025-02-22 10:43:52,40.77,41.96
+2025-02-22 10:43:53,40.79,41.96
+2025-02-22 10:43:54,40.82,41.96
+
+Current question: Q3
+Seleziona e conta il numero di strain raggruppandoli in base ai campi transmissionby e storageconditions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:55,40.61,41.96
+2025-02-22 10:43:56,40.75,41.96
+2025-02-22 10:43:57,40.78,41.96
+2025-02-22 10:43:58,40.81,41.96
+
+Current question: Q4
+Seleziona e conta tutti gli strain che hanno il campo ineva uguale a true e raggruppami solo quelli che hanno lo stesso storageconditions. Voglio che mi mostri anche il  campo storageconditions e solo i gruppi che hanno una quantità di esempi maggiore di 4.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-22 10:43:59,40.61,41.96
+2025-02-22 10:44:00,40.88,41.96
+2025-02-22 10:44:01,40.92,41.96
+2025-02-22 10:44:02,40.79,41.96
+2025-02-22 10:44:03,40.83,41.96

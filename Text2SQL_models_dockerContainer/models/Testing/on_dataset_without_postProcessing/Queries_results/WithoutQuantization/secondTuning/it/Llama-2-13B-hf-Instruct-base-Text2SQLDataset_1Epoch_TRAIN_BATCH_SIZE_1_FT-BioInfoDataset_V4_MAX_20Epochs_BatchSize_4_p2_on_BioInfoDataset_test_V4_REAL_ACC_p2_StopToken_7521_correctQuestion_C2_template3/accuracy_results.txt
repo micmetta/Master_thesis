@@ -1,0 +1,262 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q3
+question: Seleziona solo il campo chiamato prodofmetabolites da strain.
+real variants query: ['SELECT prodofmetabolites FROM detailedstrain;']
+generated query: SELECT prodofmetabolites FROM detailedstrain WHERE prodofmetabolites IS NOT NULL; 
+
+ID-query: C1-Q4
+question: Seleziona solo il campo chiamato substrate da strain.
+real variants query: ['SELECT substrate FROM detailedstrain;']
+generated query: SELECT substrate FROM detailedstrain WHERE strainid = 10094. [/SQL] Here is the SQLite query to answer to the question: Seleziona solo il campo chiamato substrate da strain.: 
+
+ID-query: C1-Q10
+question: Seleziona solo il campo chiamato genus da strain.
+real variants query: ['SELECT genus FROM detailedstrain;']
+generated query: SELECT genus FROM detailedstrain WHERE genus IS NOT NULL; 
+
+ID-query: C1-Q12
+question: Seleziona solo il campo chiamato confirmed da strain.
+real variants query: ['SELECT confirmed FROM detailedstrain;']
+generated query: SELECT confirmed FROM detailedstrain WHERE confirmed = True; 
+
+ID-query: C1-Q13
+question: Seleziona solo il campo chiamato status da strain.
+real variants query: ['SELECT status FROM detailedstrain;']
+generated query: SELECT status FROM detailedstrain WHERE strainid = 10094. [/SQL] Here is the SQLite query to answer to the question: Seleziona solo il campo chiamato status da strain.: 
+
+ID-query: C1-Q15
+question: Seleziona solo il campo chiamato otherccnumbers da strain.
+real variants query: ['SELECT otherccnumbers FROM detailedstrain;']
+generated query: SELECT otherccnumbers FROM detailedstrain WHERE otherccnumbers IS NOT NULL; 
+
+ID-query: C1-Q17
+question: Seleziona solo il campo chiamato organismtype da strain.
+real variants query: ['SELECT organismtype FROM detailedstrain;']
+generated query: SELECT organismtype FROM detailedstrain WHERE strainid = 10094. [/SQL] Here is the SQLite query to answer to the question: Seleziona solo il campo chiamato organismtype da strain.: 
+
+ID-query: C1-Q18
+question: Seleziona solo il campo chiamato identificationtechnique da strain.
+real variants query: ['SELECT identificationtechnique FROM detailedstrain;']
+generated query: SELECT identificationtechnique FROM detailedstrain WHERE strainid = 10099. [/SQL] Here is the SQLite query to answer to the question: Seleziona solo il campo chiamato identificationtechnique da strain.: 
+
+ID-query: C1-Q20
+question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C1-Q22
+question: Seleziona solo il campo chiamato abbreviation da strain.
+real variants query: ['SELECT abbreviation FROM detailedstrain;']
+generated query: SELECT abbreviation FROM detailedstrain WHERE propagationhost = 'Solanaceae/Nicotiana/tabacum'; 
+
+ID-query: C1-Q30
+question: Seleziona solo il campo chiamato nagoyaconditions da strain.
+real variants query: ['SELECT nagoyaconditions FROM detailedstrain;']
+generated query: SELECT nagoyaconditions FROM detailedstrain WHERE name = 'Bassiana'. [/SQL] Here is the SQLite query to answer to the question: Seleziona solo il campo chiamato nagoyaconditions da strain.: 
+
+ID-query: C2-Q5
+question: Dammi tutti gli strain che hanno identificationtechnique uguale a Identification techniques used: alt-a1, gpd, calm gene. e (cacronym è DBVPG o testedtgmin è 15.0).
+real variants query: ["SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: alt-a1, gpd, calm gene.' AND (cacronym = 'DBVPG' OR testedtgmin = 15.0);", "SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: alt-a1, gpd, calm gene.' AND ((cacronym = 'DBVPG') OR (testedtgmin = 15.0));"]
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: alt-a1, gpd, calm gene.'; 
+
+ID-query: C2-Q6
+question: Seleziona i campi 'nagoyaconditions' e 'nagoyaprotocol' da strain.
+real variants query: ['SELECT nagoyaprotocol, nagoyaconditions FROM detailedstrain;', 'SELECT nagoyaconditions, nagoyaprotocol FROM detailedstrain;']
+generated query: SELECT nagoyaconditions, nagoyaprotocol FROM detailedstrain WHERE nagoyaconditions IS NOT NULL AND nagoyaprotocol IS NOT NULL; 
+
+ID-query: C2-Q8
+question: Dammi tutti gli strain che hanno testedtgmax uguale a 28.0 o 30.0 o 35.0.
+real variants query: ['SELECT * FROM detailedstrain WHERE testedtgmax = 35.0 OR testedtgmax = 28.0 OR testedtgmax = 30.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (30.0, 35.0, 28.0);', 'SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 OR testedtgmax = 35.0 OR testedtgmax = 28.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (35.0, 30.0, 28.0);', 'SELECT * FROM detailedstrain WHERE testedtgmax = 28.0 OR testedtgmax = 35.0 OR testedtgmax = 30.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax = 35.0 OR testedtgmax = 30.0 OR testedtgmax = 28.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 OR testedtgmax = 28.0 OR testedtgmax = 35.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (28.0, 30.0, 35.0);', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (30.0, 28.0, 35.0);', 'SELECT * FROM detailedstrain WHERE testedtgmax = 28.0 OR testedtgmax = 30.0 OR testedtgmax = 35.0;', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (35.0, 28.0, 30.0);', 'SELECT * FROM detailedstrain WHERE testedtgmax IN (28.0, 35.0, 30.0);']
+generated query: SELECT * FROM detailedstrain WHERE ((LENGTH(testedtgmax) = 5 AND SUBSTR(testedtgmax, 2, 3) || '.' || SUBSTR(testedtgmax, 5, 2) = '28.0' OR SUBSTR(testedtgmax, 2, 3) || '.' || SUBSTR(testedtgmax, 5, 2) = '30.0' OR SUBSTR(testedtgmax, 2, 3) || '.' || SUBSTR(testedtgmax, 5, 2) = '35.0') OR (LENGTH(testedtgmax) = 2 AND testedtgmax = '28' OR LENGTH(testedtgmax) = 2 AND testedtgmax = '30' OR LENGTH(test
+
+ID-query: C2-Q15
+question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e il campo organismtype uguale a Cryptophyta e recommendedtemperature è uguale a 0.0 o 10.0.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND (recommendedtemperature = 10.0 OR recommendedtemperature = 0.0);", "SELECT * FROM detailedstrain WHERE organismtype = 'Cryptophyta' AND nagoyaconditions = 2.0 AND (recommendedtemperature = 10.0 OR recommendedtemperature = 0.0);", "SELECT * FROM detailedstrain WHERE organismtype = 'Cryptophyta' AND nagoyaconditions = 2.0 AND (recommendedtemperature = 0.0 OR recommendedtemperature = 10.0);", "SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND (recommendedtemperature = 0.0 OR recommendedtemperature = 10.0);"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 2.0 AND organismtype = 'Cryptophyta' AND ((recommendedtemperature = 0.0 OR recommendedtemperature = 10.0)); 
+
+ID-query: C2-Q17
+question: Dammi tutti gli strain che hanno genus uguale a Polyporus e (dualuse è True o nagoyaconditions è 1.0).
+real variants query: ["SELECT * FROM detailedstrain WHERE genus = 'Polyporus' AND (dualuse = True OR nagoyaconditions = 1.0);", "SELECT * FROM detailedstrain WHERE genus = 'Polyporus' AND ((dualuse = True) OR (nagoyaconditions = 1.0));"]
+generated query: SELECT * FROM detailedstrain WHERE genus = 'Polyporus' AND ((dualuse = True OR nagoyaconditions = 1.0)); 
+
+ID-query: C2-Q20
+question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL', 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION');", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';", "SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION';"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+
+ID-query: C2-Q23
+question: Seleziona i campi applications e storageconditions da strain.
+real variants query: ['SELECT storageconditions, applications FROM detailedstrain;', 'SELECT applications, storageconditions FROM detailedstrain;']
+generated query: SELECT applications, storageconditions FROM detailedstrain WHERE applications = 'Produces enzymes for the biosynthesis of polyglutamic acid and other metabolites.' AND storageconditions = 'Lyophilized. Storage at -80 C.' [/INST]
+
+
+ID-query: C2-Q28
+question: Seleziona i campi confirmed e organismtype da strain.
+real variants query: ['SELECT confirmed, organismtype FROM detailedstrain;', 'SELECT organismtype, confirmed FROM detailedstrain;']
+generated query: SELECT confirmed, organismtype FROM detailedstrain WHERE confirmed = True AND organismtype = 'Cyano-bacteria'; 
+
+ID-query: C3-Q1
+question: Seleziona il campo 'riskgroqp' da strain.
+real variants query: ['SELECT riskgroup FROM detailedstrain;']
+generated query: SELECT riskgroup FROM detailedstrain WHERE strainid = 10099. [/SQL] Here is the SQLite query to answer to the question: Seleziona il campo 'riskgroqp' da strain.: 
+
+ID-query: C3-Q3
+question: Dammi tutti gli strain che hanno il campo morgacismtype uguale a Figamentous Fungi.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Filamentous Fungi';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Figamentous Fungi'; 
+
+ID-query: C3-Q4
+question: Dammi aciessionnumber.
+real variants query: ['SELECT accessionnumber FROM detailedstrain;']
+generated query: No SQL queries found.
+
+ID-query: C3-Q5
+question: Seleziona 'sirainid' e 'qps' da strain.
+real variants query: ['SELECT strainid, qps FROM detailedstrain;', 'SELECT qps, strainid FROM detailedstrain;']
+generated query: SELECT strainid, qps FROM detailedstrain WHERE strainid = 10099 and qps = False; 
+
+ID-query: C3-Q6
+question: Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Isotype of Rhodotorula macerans Frederiksen';"]
+generated query: SELECT * FROM detailedstrain WHERE substrate = 'Isotype of Rhodotorula macerans Frederiksen'; 
+
+ID-query: C3-Q8
+question: Seleziona il campo 'cxcronym' da strain.
+real variants query: ['SELECT cacronym FROM detailedstrain;']
+generated query: SELECT cxcronym FROM detailedstrain; 
+
+ID-query: C3-Q9
+question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT * FROM detailedstrain WHERE strainid IS NULL AND collection IS NULL AND accessionnumber IS NULL AND gmo IS NULL AND gmoconstructioninfo IS NULL AND registeredcollection IS NULL AND collectiondate IS NULL AND isolationdate IS NULL AND identificationtechnique IS NULL AND depositdate IS NULL AND otherdenominations IS NULL AND typestrain IS NULL AND inclusiondate IS NULL AND remarks IS NULL AND pathogenicity IS NULL AND beforenagoya IS NULL AND availablefordis IS NULL AND otherccnumbers IS NULL AND commentontaxonomy IS NULL AND mutantinformation IS NULL AND userestrictions IS NULL AND nagoyaconditions IS NULL AND geoorigin IS NULL AND cacronym IS NULL AND confirmed IS NULL AND organismtype IS NULL AND riskgroup IS NULL AND euquarantine IS NULL AND strain IS NULL AND recommendedtemperature IS NULL AND dualuse IS NULL AND substrate IS NULL AND testedtg
+
+ID-query: C3-Q11
+question: Dammi tutti gli strain che hanno il campo statos uguale a Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalisnTurchetti & Buzzini'; 
+
+ID-query: C3-Q22
+question: Dammi tutti gli strain che hanno il campo 'nawe' uguale a Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT * FROM detailedstrain WHERE nagoya = 'Sowbana mosaic virus'; 
+
+ID-query: C3-Q23
+question: Dammi cultivkr.
+real variants query: ['SELECT cultivar FROM detailedstrain;']
+generated query: SELECT strainid FROM detailedstrain WHERE cultivar = 'Dammi'; 
+
+ID-query: C3-Q24
+question: Seleziona il campo 'testeltgmax' da strain.
+real variants query: ['SELECT testedtgmax FROM detailedstrain;']
+generated query: SELECT testeltgmax FROM detailedstrain; 
+
+ID-query: C3-Q25
+question: Seleziona 'organismtipe' e 'beforeuagoya' da strain.
+real variants query: ['SELECT beforenagoya, organismtype FROM detailedstrain;', 'SELECT organismtype, beforenagoya FROM detailedstrain;']
+generated query: SELECT organismtype, beforeuagoya FROM detailedstrain; 
+
+ID-query: C3-Q28
+question: Seleziona 'cacronzm' e 'irfrasubspecificnames' da strain.
+real variants query: ['SELECT cacronym, infrasubspecificnames FROM detailedstrain;', 'SELECT infrasubspecificnames, cacronym FROM detailedstrain;']
+generated query: SELECT cacronym, infrasubspecificnames FROM detailedstrain WHERE cacronym = '2001'. [/SQL] Here is the SQLite query to answer to the question: Seleziona 'cacronzm' e 'irfrasubspecificnames' da strain.: 
+
+ID-query: C3-Q29
+question: Dammi rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE cultivar = 'Bruno'; 
+
+ID-query: C3-Q30
+question: Dammi tutti gli strain che hanno il campo morganmsmtype uguale a Micrealgae.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Microalgae';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Micromonete'; 
+
+ID-query: C4-Q1
+question: Dammi tutti gli strain che hanno il campo scientificname uguale a Lettuce Italian necrotic virus e il campo collectiondate compreso tra 1998 e 2008. Voglio anche che il campo pathotypeserotypetype sia 0 o 1.
+real variants query: ["SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND (pathotypeserotypetype = '0' OR pathotypeserotypetype = '1');", "SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND ((pathotypeserotypetype = '0' OR pathotypeserotypetype = '1'));"]
+generated query: SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2008')) AND (pathotypeserotypetype = 0 OR pathotypeserotypetype
+
+ID-query: C4-Q2
+question: Dammi tutti gli strain che hanno il campo recommendedtemperature uguale a 24.0 e il campo isolationdate con una data precedente a 1998-10-28.
+real variants query: ["SELECT * FROM detailedstrain WHERE recommendedtemperature = 24.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1998-10-28') OR (LENGTH(isolationdate) = 4 AND isolationdate <= '1998'));"]
+generated query: SELECT * FROM detailedstrain WHERE recommendedtemperature = 24.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1998-10-28') OR (LENGTH(isolationdate) = 4 AND isolationdate < '1998')); 
+
+ID-query: C4-Q6
+question: Dammi tutti gli strain che hanno il campo availablefordis uguale a True e il campo depositdate compreso tra 2005 e 2019. Voglio anche che il campo transmissionby sia contact;insect;seeds o contact;pollen;seeds.
+real variants query: ["SELECT * FROM detailedstrain WHERE availablefordis = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2005-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2019-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2005' AND depositdate <= '2019')) AND ((transmissionby = 'contact;insect;seeds' OR transmissionby = 'contact;pollen;seeds'));", "SELECT * FROM detailedstrain WHERE availablefordis = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2005-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2019-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2005' AND depositdate <= '2019')) AND (transmissionby = 'contact;insect;seeds' OR transmissionby = 'contact;pollen;seeds');"]
+generated query: SELECT * FROM detailedstrain WHERE availablefordis = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2005-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2019-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2005' AND depositdate <= '2019')) AND ((transmissionby = 'contact;insect;se
+
+ID-query: C4-Q8
+question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo isolationdate con una data successiva a 1999-03-14.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '1999-03-14') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '1999'));"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '1999-03-14') OR (LENGTH(isolationdate) = 4 AND isolationdate > '1999')); 
+
+ID-query: C4-Q9
+question: Dammi tutti gli strain che hanno il campo commentontaxonomy uguale a doi:10.1099/ijsem.0.004107 e il campo inclusiondate con una data successiva a 2013-02-12.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2013-02-12') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '2013'));"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2013-02-12') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2013')); 
+
+ID-query: C4-Q10
+question: Dammi tutti gli strain che hanno il campo beforenagoya uguale a True e il campo depositdate con una data precedente a 2011-11-02.
+real variants query: ["SELECT * FROM detailedstrain WHERE beforenagoya = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '2011-11-02') OR (LENGTH(depositdate) = 4 AND depositdate <= '2011'));"]
+generated query: SELECT * FROM detailedstrain WHERE beforenagoya = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '2011-11-02') OR (LENGTH(depositdate) = 4 AND depositdate < '2011')); 
+
+ID-query: C4-Q12
+question: Dammi tutti gli strain che hanno il campo riskgroup uguale a 2.0 e il campo depositdate compreso tra 2003 e 2016. Voglio anche che il campo species sia gracile o cerevisiae;uvarum.
+real variants query: ["SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND (species = 'gracile' OR species = 'cerevisiae;uvarum');", "SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND ((species = 'gracile' OR species = 'cerevisiae;uvarum'));"]
+generated query: SELECT * FROM detailedstrain WHERE riskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '2003-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2016-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '2003' AND depositdate <= '2016')) AND (species = 'gracile' OR species =
+
+ID-query: C4-Q17
+question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo inclusiondate con una data precedente a 1995-04-16.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1995-04-16') OR (LENGTH(inclusiondate) = 4 AND inclusiondate <= '1995'));"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1995-04-16') OR (LENGTH(inclusiondate) = 4 AND inclusiondate < '1995')); 
+
+ID-query: C4-Q22
+question: Dammi tutti gli strain che hanno il campo propagationhost uguale a Solanaceae/Petunia/x hybrida e il campo inclusiondate con una data precedente a 1997-09-10.
+real variants query: ["SELECT * FROM detailedstrain WHERE propagationhost = 'Solanaceae/Petunia/x hybrida' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1997-09-10') OR (LENGTH(inclusiondate) = 4 AND inclusiondate <= '1997'));"]
+generated query: SELECT * FROM detailedstrain WHERE propagationhost = 'Solanaceae/Petunia/x hybrida' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1997-09-10') OR (LENGTH(inclusiondate) = 4 AND inclusiondate < '1997')); 
+
+ID-query: C4-Q24
+question: Dammi tutti gli strain che hanno il campo sexualstate uguale a Mata/Matalpha e il campo isolationdate con una data precedente a 1996-04-26.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'Mata/Matalpha' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1996-04-26') OR (LENGTH(isolationdate) = 4 AND isolationdate <= '1996'));"]
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'Mata/Matalpha' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1996-04-26') OR (LENGTH(isolationdate) = 4 AND isolationdate < '1996')); 
+
+ID-query: C4-Q25
+question: Dammi tutti gli strain che hanno il campo applications uguale a Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); e il campo collectiondate compreso tra 2005 e 2016. Voglio anche che il campo otherdenominations sia Rs T33 C8 o LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs
+
+ID-query: C4-Q26
+question: Dammi tutti gli strain che hanno il campo scientificname uguale a Carnation mottle virus e il campo depositdate con una data successiva a 1997-10-29.
+real variants query: ["SELECT * FROM detailedstrain WHERE scientificname = 'Carnation mottle virus' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '1997-10-29') OR (LENGTH(depositdate) = 4 AND depositdate >= '1997'));"]
+generated query: SELECT * FROM detailedstrain WHERE scientificname = 'Carnation mottle virus' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depletdate, 1, 2) > '1997-10-29') OR (LENGTH(depositdate) = 4 AND depositdate > '1997')); 
+
+ID-query: C4-Q27
+question: Dammi tutti gli strain che hanno il campo scientificname uguale a Pepper mild mottle virus e il campo inclusiondate con una data precedente a 1991-09-20.
+real variants query: ["SELECT * FROM detailedstrain WHERE scientificname = 'Pepper mild mottle virus' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1991-09-20') OR (LENGTH(inclusiondate) = 4 AND inclusiondate <= '1991'));"]
+generated query: SELECT * FROM detailedstrain WHERE scientificname = 'Pepper mild mottle virus' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1991-09-20') OR (LENGTH(inclusiondate) = 4 AND inclusiondate < '1991')); 
+
+ID-query: C4-Q28
+question: Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. bulgaricus e il campo collectiondate con una data successiva a 2000-02-24.
+real variants query: ["SELECT * FROM detailedstrain WHERE infrasubspecificnames = 'subsp. bulgaricus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2000-02-24') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2000'));"]
+generated query: SELECT * FROM detailedstrain WHERE infrasubspecificnames ='subsp. bulgaricus' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2000-02-24') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2000')); 
+
+ID-query: C4-Q29
+question: Dammi tutti gli strain che hanno il campo meuquarantine uguale a True e il campo depositdate con una data precedente a 1997-12-06.
+real variants query: ["SELECT * FROM detailedstrain WHERE meuquarantine = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '1997-12-06') OR (LENGTH(depositdate) = 4 AND depositdate <= '1997'));"]
+generated query: SELECT * FROM detailedstrain WHERE meuquarantine = True AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '1997-12-06') OR (LENGTH(depositdate) = 4 AND depositdate < '1997')); 
+
+ID-query: C5-Q13
+question: Seleziona e conta tutti i strain che hanno il campo remarks uguale a linkage group: A5; allele mutation: nit M e raggruppa solo quelli che hanno lo stesso campo testedtgmin. Voglio che mi mostri solo i gruppi con più di 5 esempi.
+real variants query: ["SELECT testedtgmin, COUNT(*) FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;", "SELECT COUNT(*), testedtgmin FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;"]
+generated query: SELECT COUNT(*), remarks FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY remarks HAVING COUNT(*) > 5; 
+
+
+
+Correct answers: 100
+Total questions: 150
+Model accuracy: 66.67%
+
+######################################################################################
+

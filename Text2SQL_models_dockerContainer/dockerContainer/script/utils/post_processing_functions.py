@@ -6,21 +6,52 @@ from rapidfuzz.distance import Levenshtein
 def ensure_select_clause(generated_output):
     match = re.match(r'^\bSELECT\b', generated_output.strip(), re.IGNORECASE)  # check if the query starts with 'SELECT'
     if not match:
-        generated_output = re.sub(r'^\w+', 'SELECT', generated_output.strip(),
-                                  flags=re.IGNORECASE)  # replace the first word with 'SELECT'
+        generated_output = re.sub(r'^\w+', 'SELECT', generated_output.strip(), flags=re.IGNORECASE)  # replace the first word with 'SELECT'
         print("Adjusted query to start with SELECT:", generated_output)
 
     return generated_output
 
+def contains_dangerous_keywords(query):
+    DANGEROUS_KEYWORDS = [
+        r'\bDROP\b', r'\bDELETE\b', r'\bUPDATE\b', r'\bINSERT\b', r'\bALTER\b',
+        r'\bTRUNCATE\b', r'\bEXEC\b', r'\bMERGE\b', r'\bGRANT\b', r'\bREVOKE\b',
+        r'\bCREATE\b', r'\bREPLACE\b', r'\bDISABLE\b', r'\bENABLE\b', r'\bSET\b',
+        r'\bCALL\b', r'\bBEGIN\b', r'\bEND\b', r'\bCOMMIT\b', r'\bROLLBACK\b'
+    ]
+    for keyword in DANGEROUS_KEYWORDS:
+        if re.search(keyword, query, re.IGNORECASE):
+            return True
+    return False
 
-# Remove any incorrect tail characters (such as '[/')
-def remove_trailing_characters(generated_output):
-    generated_output = generated_output.strip()  # remove leading/trailing spaces
-    if re.search(r'\[/\s*$', generated_output):
-        generated_output = re.sub(r'\[/\s*$', '', generated_output)
-        print("Removed trailing '[/' from the query:", generated_output)
+def contains_dangerous_comments(query):
+    """
+    dangerous comments:
+    - `--` (end-of-line comments)
+    - `#` (MySQL comments)
+    - `/* ... */` (multi-line comments)
+    """
+    comment_pattern = r'(--|#|/\*.*?\*/)'
+    if re.search(comment_pattern, query, flags=re.DOTALL):
+        return True
+    return False
 
-    return generated_output
+def clean_query_tail(query):
+    """
+    SQL query cleaning by removing:
+    - Symbols [/INST] and [/CODE] with any extra text immediately after the ';'
+    - Incorrect characters at the end of the query such as '[/'
+    - Unnecessary leading and trailing spaces
+    """
+    query = query.strip()  # remove starting and trailing spaces
+
+    # remove symbols [/INST] e [/CODE] dopo il ';'
+    query = re.sub(r';\s*(\[/INST\]|\[/CODE\]).*$', ';', query, flags=re.IGNORECASE)
+
+    # remove '[/' to the end of the query
+    query = re.sub(r'\[/\s*$', '', query)
+
+    print("SQL query after 'clean_query_tail()' function: ", query)
+    return query
 
 
 # 1) Force the SELECT clause includes only 'strainid' field.
@@ -109,8 +140,7 @@ def fix_column_names(query_sql):
             last_index = 0
 
             for col, start, end in not_columns_of_detailedstrain:
-                similar_col, similarity = extractOne(col.lower(), normalized_columns,
-                                                     scorer=Levenshtein.normalized_similarity)[:2]
+                similar_col, similarity = extractOne(col.lower(), normalized_columns, scorer=Levenshtein.normalized_similarity)[:2]
                 print(f"I replace '{col}' with '{similar_col}' (similarity: {similarity:.2f})")
                 corrected_query_parts.append(query_sql[last_index:start])
                 corrected_query_parts.append(similar_col)
@@ -150,14 +180,28 @@ def create_ilike_query(query_sql):
 # - It locates the generated sql query within the complete response of the model and creates the subquery.
 def post_processing_query(generated_output):
     generated_output = ensure_select_clause(generated_output)  # I make sure the query starts with SELECT
+
+    # block dangerous keywords (added control)
+    if contains_dangerous_keywords(generated_output):
+        print("Query blocked! Contains dangerous keywords.")
+        return "No SQL query found.", "No SQL query found."
+
+    # block queries with dangerous comments (added control)
+    if contains_dangerous_comments(generated_output):
+        print("Query blocked! Found harmful SQL comments.")
+        return "No SQL query found.", "No SQL query found."
+
+
     match = re.search(r'\bSELECT\b(.*?)\bFROM\b', generated_output, re.IGNORECASE | re.DOTALL)
 
     if not match:
         query_sql = "No SQL query found."
+        ilike_query_sql = "No SQL query found."
         print("No SQL query found.")
-        return query_sql
 
-    query_sql = remove_trailing_characters(generated_output)
+        return query_sql, ilike_query_sql
+
+    query_sql = clean_query_tail(generated_output)
 
     # remove illegal clauses after WHERE or FROM (the WHERE clause might not even be there)
     clauses_from_WHERE_or_FROM_onwards = re.compile(r'(.*?\b(WHERE|FROM)\b.*?)(GROUP BY|HAVING|ORDER BY|LIMIT|OFFSET|UNION|JOIN)', re.IGNORECASE | re.DOTALL)

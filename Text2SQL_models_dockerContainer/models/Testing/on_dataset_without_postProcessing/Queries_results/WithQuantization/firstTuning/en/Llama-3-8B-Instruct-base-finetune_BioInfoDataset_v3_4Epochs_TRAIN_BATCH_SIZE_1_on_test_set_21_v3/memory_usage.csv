@@ -1,0 +1,155 @@
+
+Current category: C1
+
+Current question: Q1
+Give me all rows of strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:18,5.88,5.99
+2025-01-07 12:30:19,5.97,6.51
+
+Current question: Q2
+Give me all strain that have beforenagoya equal to true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:20,5.91,6.51
+
+Current question: Q3
+Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:21,5.91,6.71
+2025-01-07 12:30:22,5.99,6.91
+
+Current question: Q4
+Select only field called pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:23,5.91,6.91
+
+Current category: C2
+
+Current question: Q1
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:24,5.91,6.91
+2025-01-07 12:30:25,6.0,6.91
+
+Current question: Q2
+Give me all strains that have ineva equal to false and the abbreviation equal to BCMV and cultivar is Saluggia or viola.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:26,5.91,6.91
+2025-01-07 12:30:27,6.01,7.12
+2025-01-07 12:30:28,6.02,7.12
+
+Current question: Q3
+Give me all strains that have transmissionby equal to contact or contact;insect or contact;insect;pollen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:29,5.91,7.12
+2025-01-07 12:30:30,6.01,7.12
+2025-01-07 12:30:31,6.03,7.12
+
+Current question: Q4
+Select the fields 'infectivitytested' and 'propagationhost' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:32,5.91,7.12
+2025-01-07 12:30:33,6.01,7.12
+
+Current category: C3
+
+Current question: Q1
+Give me all strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:34,5.91,7.12
+
+Current question: Q2
+Give me all strains that have the field 'oterdeminations' equal to 'MVPC1 10'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:35,5.91,7.12
+2025-01-07 12:30:36,5.99,7.12
+
+Current question: Q3
+Select 'Pathogenicity' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:37,5.91,7.12
+
+Current question: Q4
+Select 'Pathogenicity' and 'tpestrain' from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:38,5.91,7.12
+
+Current category: C4
+
+Current question: Q1
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '2012'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:39,5.91,7.12
+2025-01-07 12:30:40,5.98,7.34
+2025-01-07 12:30:41,6.03,7.34
+2025-01-07 12:30:42,6.01,7.34
+2025-01-07 12:30:43,6.0,7.34
+
+Current question: Q2
+Give me all strains that have the field 'collection' equal to '18' and that have the field 'collectiondate' with a date before '02-03-1999'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:44,5.91,7.34
+2025-01-07 12:30:45,6.0,7.56
+2025-01-07 12:30:46,5.99,7.56
+2025-01-07 12:30:47,5.99,7.56
+2025-01-07 12:30:48,5.99,7.56
+
+Current question: Q3
+Give me all the strains that have the pathogenicity field equal to 'Pathogen for Plants' and that have the collectiondate field with a date after 2002.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:49,5.91,7.56
+2025-01-07 12:30:50,6.0,7.56
+2025-01-07 12:30:51,6.0,7.56
+2025-01-07 12:30:52,5.99,7.56
+2025-01-07 12:30:53,5.99,7.56
+
+Current question: Q4
+Give me all the strains that have the collection field equal to '18' and that have the collectiondate field with a date after '1999'. I also want the identificationtechnique to be 'ELISA' or 'Bioassay'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:30:54,5.91,7.56
+2025-01-07 12:30:55,6.01,7.79
+2025-01-07 12:30:56,6.02,7.79
+2025-01-07 12:30:57,6.02,7.79
+2025-01-07 12:30:58,6.03,7.79
+2025-01-07 12:30:59,6.04,7.79
+
+Current question: Q5
+Give me all the strains that have the collection field equal to 18 and that have the collectiondate field with a date between 2000 and 2010. I also want the identificationtechnique to be ELISA or Bioassay.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:31:00,5.91,7.79
+2025-01-07 12:31:01,6.01,7.79
+2025-01-07 12:31:02,6.03,7.79
+2025-01-07 12:31:03,6.04,7.79
+2025-01-07 12:31:04,6.04,7.79
+2025-01-07 12:31:05,6.06,7.79
+2025-01-07 12:31:06,6.0,7.79
+2025-01-07 12:31:07,6.0,7.79
+2025-01-07 12:31:08,6.02,7.79
+2025-01-07 12:31:09,6.03,7.79
+2025-01-07 12:31:10,6.03,7.79
+2025-01-07 12:31:11,6.04,7.79
+
+Current category: C5
+
+Current question: Q1
+"Select and count the number of strains, grouping the results by the trasmissionby field."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:31:12,5.91,7.79
+
+Current question: Q2
+Select and count all the strains that have the 'ineva' field equal to true and group only those that have the same storageconditions. I want you to also show me the storageconditions field.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:31:13,5.91,7.79
+2025-01-07 12:31:14,6.02,7.79
+
+Current question: Q3
+Select and count the number of strains by grouping them based on the transmissionby and storageconditions fields.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:31:15,5.91,7.79
+2025-01-07 12:31:16,6.0,7.79
+
+Current question: Q4
+Select and count all strains that have the ineva field equal to true and group only those that have the same storageconditions. I want it to also show me the storageconditions field and only the groups that have more than 4 examples.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-07 12:31:17,5.91,7.79
+2025-01-07 12:31:18,6.02,7.79

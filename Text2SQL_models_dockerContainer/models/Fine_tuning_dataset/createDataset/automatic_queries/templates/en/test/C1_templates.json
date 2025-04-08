@@ -1,0 +1,18 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Give me all strains that have {column} equal to {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Select only field called {column} from strain.",
+        "sql_template": "SELECT {column} FROM detailedstrain;",
+        "possible_sql_queries":[
+            "SELECT {column} FROM detailedstrain;"
+        ]
+    }
+]

@@ -1,0 +1,112 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q20
+question: Give me all strains that have commentontaxonomy equal to BCC6 p.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p';"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6 p.'; 
+
+ID-query: C2-Q7
+question: Give me all strains that have testedtgmax equal to 30.0 and the accessionnumber equal to 5503 and testedtgmin is 15.0 or 25.0.
+real variants query: ["SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = '5503' AND (testedtgmin = 15.0 OR testedtgmin = 25.0);", "SELECT * FROM detailedstrain WHERE accessionnumber = '5503' AND testedtgmax = 30.0 AND (testedtgmin = 15.0 OR testedtgmin = 25.0);", "SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = '5503' AND (testedtgmin = 25.0 OR testedtgmin = 15.0);", "SELECT * FROM detailedstrain WHERE accessionnumber = '5503' AND testedtgmax = 30.0 AND (testedtgmin = 25.0 OR testedtgmin = 15.0);"]
+generated query: SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = 5503 AND ((testedtgmin = 15.0) OR (testedtgmin = 25.0)); 
+
+ID-query: C2-Q29
+question: Give me all strains that have pathogenicity equal to Solanum tuberosum or Castanea spp or pathogen for animals and humans (cause of dermatological infections).
+real variants query: ["SELECT * FROM detailedstrain WHERE pathogenicity = 'Solanum tuberosum' OR pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)' OR pathogenicity = 'Castanea spp';", "SELECT * FROM detailedstrain WHERE pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)' OR pathogenicity = 'Castanea spp' OR pathogenicity = 'Solanum tuberosum';", "SELECT * FROM detailedstrain WHERE pathogenicity = 'Castanea spp' OR pathogenicity = 'Solanum tuberosum' OR pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)';", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('pathogen for animals and humans (cause of dermatological infections)', 'Solanum tuberosum', 'Castanea spp');", "SELECT * FROM detailedstrain WHERE pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)' OR pathogenicity = 'Solanum tuberosum' OR pathogenicity = 'Castanea spp';", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('Solanum tuberosum', 'Castanea spp', 'pathogen for animals and humans (cause of dermatological infections)');", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('pathogen for animals and humans (cause of dermatological infections)', 'Castanea spp', 'Solanum tuberosum');", "SELECT * FROM detailedstrain WHERE pathogenicity = 'Castanea spp' OR pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)' OR pathogenicity = 'Solanum tuberosum';", "SELECT * FROM detailedstrain WHERE pathogenicity = 'Solanum tuberosum' OR pathogenicity = 'Castanea spp' OR pathogenicity = 'pathogen for animals and humans (cause of dermatological infections)';", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('Castanea spp', 'pathogen for animals and humans (cause of dermatological infections)', 'Solanum tuberosum');", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('Castanea spp', 'Solanum tuberosum', 'pathogen for animals and humans (cause of dermatological infections)');", "SELECT * FROM detailedstrain WHERE pathogenicity IN ('Solanum tuberosum', 'pathogen for animals and humans (cause of dermatological infections)', 'Castanea spp');"]
+generated query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Solanum tuberosum' OR pathogenicity = 'Castanea spp' OR (pathogenicity = 'pathogen for animals and humans' AND symptomatologyonisolationhost = 'dermatological infections'); 
+
+ID-query: C3-Q3
+question: Give me all strains that have the field morgacismtype equal to Figamentous Fungi.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Filamentous Fungi';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Fungiamentous'; 
+
+ID-query: C3-Q4
+question: Give me aciessionnumber.
+real variants query: ['SELECT accessionnumber FROM detailedstrain;']
+generated query: SELECT accessionnumber FROM detailedstrain WHERE strainid = 12345; 
+
+ID-query: C3-Q8
+question: Select the field 'cxcronym' from strain.
+real variants query: ['SELECT cacronym FROM detailedstrain;']
+generated query: SELECT cccronym FROM detailedstrain; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT * FROM detailedstrain WHERE substrate ='shake'; 
+
+ID-query: C3-Q11
+question: Give me all strains that have the field statos equal to Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalisnTurchetti & Buzzini'; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'MA1'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'Sowbana mosaic virus'; 
+
+ID-query: C3-Q23
+question: Give me cultivkr.
+real variants query: ['SELECT cultivar FROM detailedstrain;']
+generated query: SELECT cultivar FROM detailedstrain; [/INST] Let me know if you need any other question answered. [/INST] I'll be happy to help. [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/INST] [/
+
+ID-query: C3-Q29
+question: Give me rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT * FROM detailedstrain WHERE restrictions = 'User restrictions: Only for scientific purposes. Available for non-commercial use under conditions of article 14.2. EU quarantine: No.' AND availablefordis = False; 
+
+ID-query: C3-Q30
+question: Give me all strains that have the field morganmsmtype equal to Micrealgae.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Microalgae';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Micromelgae'; 
+
+ID-query: C4-Q8
+question: Give me all strains that have the nagoyaconditions field equal to 3.0 and the isolationdate field with a date after 1999-03-14.
+real variants query: ["SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '1999-03-14') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '1999'));"]
+generated query: SELECT * FROM detailedstrain WHERE nagoyaconditions = 3.0 AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '1999-03-14') OR (LENGTH(isolationdate) = 4 AND isolationdate > '1999')); 
+
+ID-query: C4-Q9
+question: Give me all strains that have the commentontaxonomy field equal to doi:10.1099/ijsem.0.004107 and the inclusiondate field with a date after 2013-02-12.
+real variants query: ["SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2013-02-12') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '2013'));"]
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2013-02-12') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2013')); 
+
+ID-query: C4-Q15
+question: Give me all strains that have the transmissionby field equal to contact;fungi and the inclusiondate field with a date before 1995.
+real variants query: ["SELECT * FROM detailedstrain WHERE transmissionby = 'contact;fungi' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1995-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate < '1995'));"]
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact;fungi' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '1995-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate <= '1995')); 
+
+ID-query: C4-Q16
+question: Give me all strains that have the testedtgmax field equal to 35.0 and the collectiondate field between 1998 and 2012.
+real variants query: ["SELECT * FROM detailedstrain WHERE testedtgmax = 35.0 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1998-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2012-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1998' AND collectiondate <= '2012'));"]
+generated query: SELECT * FROM detailedstrain WHERE testedtgmax = 35.0 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1998-12-31' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2012-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1998' AND collectiondate < '2012')); 
+
+ID-query: C4-Q25
+question: Give me all the strains that have the applications field equal to Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); and that have the collectiondate field with a date between 2005 and 2016. I also want the otherdenominations to be Rs T33 C8 or LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'); 
+
+ID-query: C5-Q7
+question: Select and count all strains that have the otherccnumbers field equal to CBS 121057;IBT 28362 and group only those that have the same propagationhost field. I want it to also show only the groups that have more than 6 examples.
+real variants query: ["SELECT COUNT(*), propagationhost FROM detailedstrain WHERE otherccnumbers = 'CBS 121057;IBT 28362' GROUP BY propagationhost HAVING COUNT(*) > 6;", "SELECT propagationhost, COUNT(*) FROM detailedstrain WHERE otherccnumbers = 'CBS 121057;IBT 28362' GROUP BY propagationhost HAVING COUNT(*) > 6;"]
+generated query: SELECT propagationhost, COUNT(*), FROM detailedstrain WHERE otherccnumbers = 'CBS 121057;IBT 28362' GROUP BY propagationhost HAVING COUNT(*) > 6; 
+
+ID-query: C5-Q13
+question: Select and count all strains that have the remarks field equal to linkage group: A5; allele mutation: nit M and group only those that have the same testedtgmin field. I want it to also show only the groups that have more than 5 examples.
+real variants query: ["SELECT testedtgmin, COUNT(*) FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;", "SELECT COUNT(*), testedtgmin FROM detailedstrain WHERE remarks = 'linkage group: A5; allele mutation: nit M' GROUP BY testedtgmin HAVING COUNT(*) > 5;"]
+generated query: SELECT testedtgmin, COUNT(*), remarks FROM detailedstrain GROUP BY testedtgmin, remarks HAVING COUNT(*) > 5 AND remarks = 'linkage group: A5; allele mutation: nit M' ORDER BY testedtgmin; 
+
+
+
+Correct answers: 130
+Total questions: 150
+Model accuracy: 86.67%
+
+######################################################################################
+
+# GOOD RESULTS BUT NOT THE BEST FOR THE LLAMA MODEL 3-8B-INSTRUCT.

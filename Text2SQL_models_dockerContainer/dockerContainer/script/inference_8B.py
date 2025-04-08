@@ -16,38 +16,43 @@ def main():
     parser = argparse.ArgumentParser(description='Process natural language query.')
     parser.add_argument('--question', type=str, help='The natural language query to process')
     parser.add_argument('--session_id', type=str, help='Unique session ID for this job')
-    parser.add_argument('--PATH_BASE_MODEL_REMOTE_FOR_INFERENCE', type=str, help='PATH_BASE_MODEL_REMOTE_FOR_INFERENCE')
-    parser.add_argument('--PATH_MODEL_USE_REMOTE_FOR_INFERENCE', type=str, help='PATH_MODEL_USE_REMOTE_FOR_INFERENCE')
+    parser.add_argument('--PATH_BASE_MODEL_FOR_INFERENCE', type=str, help='PATH_BASE_MODEL_FOR_INFERENCE')
+    parser.add_argument('--PATH_LoRA1_FOR_INFERENCE', type=str, help='PATH_LoRA1_FOR_INFERENCE')
+    parser.add_argument('--PATH_LoRA2_FOR_INFERENCE', type=str, help='PATH_LoRA2_FOR_INFERENCE')
 
     args = parser.parse_args()
     question_NL = args.question
     session_id = args.session_id
-    PATH_BASE_MODEL_REMOTE_FOR_INFERENCE = args.PATH_BASE_MODEL_REMOTE_FOR_INFERENCE
-    PATH_MODEL_USE_REMOTE_FOR_INFERENCE = args.PATH_MODEL_USE_REMOTE_FOR_INFERENCE
+    PATH_BASE_MODEL_FOR_INFERENCE = args.PATH_BASE_MODEL_FOR_INFERENCE
+    PATH_LoRA1_FOR_INFERENCE = args.PATH_LoRA1_FOR_INFERENCE
+    PATH_LoRA2_FOR_INFERENCE = args.PATH_LoRA2_FOR_INFERENCE
 
     # print the parameters obtained from the next.js application
     print(f"\nProcessing question: {question_NL}")
     print(f"Session ID: {session_id}")
-    print(f"PATH_BASE_MODEL_REMOTE_FOR_INFERENCE: {PATH_BASE_MODEL_REMOTE_FOR_INFERENCE}")
-    print(f"PATH_MODEL_USE_REMOTE_FOR_INFERENCE: {PATH_MODEL_USE_REMOTE_FOR_INFERENCE}\n\n")
+    print(f"PATH_BASE_MODEL_FOR_INFERENCE: {PATH_BASE_MODEL_FOR_INFERENCE}")
+    print(f"PATH_LoRA1_FOR_INFERENCE: {PATH_LoRA1_FOR_INFERENCE}")
+    print(f"PATH_LoRA2_FOR_INFERENCE: {PATH_LoRA2_FOR_INFERENCE}\n\n")
 
-    # base model:
-    model_name = PATH_BASE_MODEL_REMOTE_FOR_INFERENCE
 
-    # fine-tuned model:
-    new_model = PATH_MODEL_USE_REMOTE_FOR_INFERENCE
+    # adapters LoRA1 (get after first Fine-tuning)
+    LoRA1 = PATH_LoRA1_FOR_INFERENCE
 
-    # load model
-    base_model = AutoModelForCausalLM.from_pretrained(
-        model_name,
+    # adapters LoRA1 (get after second Fine-tuning)
+    LoRA2 = PATH_LoRA2_FOR_INFERENCE
+
+    # load model - (original_model + LoRA1 = model with improvement of 1° fine_tuning)
+    base_model_with_LoRA1 = AutoModelForCausalLM.from_pretrained(
+        LoRA1,
         device_map = {"": 0}, # load model on GPU
         torch_dtype=torch.float16,
     )
 
-    model = PeftModel.from_pretrained(base_model, new_model)
+    # (base_model_with_LoRA1 + LoRA2 = model with improvement of both 1st and 2nd fine_tuning)
+    model = PeftModel.from_pretrained(base_model_with_LoRA1, LoRA2)
 
     # load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained(LoRA1, trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "right"
 

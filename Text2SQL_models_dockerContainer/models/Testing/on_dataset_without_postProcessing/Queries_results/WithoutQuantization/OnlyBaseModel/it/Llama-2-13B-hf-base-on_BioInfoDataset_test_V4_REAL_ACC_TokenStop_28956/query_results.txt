@@ -1,0 +1,755 @@
+Current category: C1
+	current question: Q1
+	question: Seleziona solo il campo chiamato cacronym da strain.
+	query: SELECT cacronym FROM detailedstrain WHERE cacronym = 'Cacronym' 
+	Time taken: 9.724599361419678 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno symptomatologyonisolationhost uguale a local lesions.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 8.942834377288818 seconds
+
+	current question: Q3
+	question: Seleziona solo il campo chiamato prodofmetabolites da strain.
+	query: SELECT prodofmetabolites FROM detailedstrain WHERE strainid = 1 
+	Time taken: 8.924962043762207 seconds
+
+	current question: Q4
+	question: Seleziona solo il campo chiamato substrate da strain.
+	query: SELECT substrate FROM detailedstrain WHERE strainid = 1 
+	Time taken: 8.923688411712646 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno abbreviation uguale a LMV.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 8.933990240097046 seconds
+
+	current question: Q6
+	question: Seleziona solo il campo chiamato symptomatologyonisolationhost da strain.
+	query: SELECT symptomatologyonisolationhost FROM detailedstrain 
+	Time taken: 9.549802780151367 seconds
+
+	current question: Q7
+	question: Seleziona solo il campo chiamato meuquarantine da strain.
+	query: SELECT meuquarantine FROM detailedstrain 
+	Time taken: 9.6748948097229 seconds
+
+	current question: Q8
+	question: Seleziona solo il campo chiamato pathotypeserotypetype da strain.
+	query: SELECT pathotypeserotypetype FROM detailedstrain 
+	Time taken: 9.703207969665527 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno mriskgroup uguale a 12.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.44350004196167 seconds
+
+	current question: Q10
+	question: Seleziona solo il campo chiamato genus da strain.
+	query: SELECT genus FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.294227123260498 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno propagationhost uguale a Chenopodiaceae/Chenopodium/amaranticolor.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.649553537368774 seconds
+
+	current question: Q12
+	question: Seleziona solo il campo chiamato confirmed da strain.
+	query: SELECT confirmed FROM detailedstrain 
+	Time taken: 10.63302493095398 seconds
+
+	current question: Q13
+	question: Seleziona solo il campo chiamato status da strain.
+	query: SELECT status FROM detailedstrain 
+	Time taken: 10.62946891784668 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain che hanno prodofmetabolites uguale a Fumonisin B2.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.631123542785645 seconds
+
+	current question: Q15
+	question: Seleziona solo il campo chiamato otherccnumbers da strain.
+	query: SELECT otherccnumbers FROM detailedstrain 
+	Time taken: 10.62808632850647 seconds
+
+	current question: Q16
+	question: Seleziona solo il campo chiamato gmo da strain.
+	query: SELECT gmo FROM detailedstrain 
+	Time taken: 10.631268739700317 seconds
+
+	current question: Q17
+	question: Seleziona solo il campo chiamato organismtype da strain.
+	query: SELECT organismtype FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.621059656143188 seconds
+
+	current question: Q18
+	question: Seleziona solo il campo chiamato identificationtechnique da strain.
+	query: SELECT identificationtechnique FROM detailedstrain 
+	Time taken: 10.615830898284912 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno otherdenominations uguale a LC-4A1M17.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.660832405090332 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.708484172821045 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno status uguale a Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.743514060974121 seconds
+
+	current question: Q22
+	question: Seleziona solo il campo chiamato abbreviation da strain.
+	query: SELECT abbreviation FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.732312440872192 seconds
+
+	current question: Q23
+	question: Seleziona solo il campo chiamato sexualstate da strain.
+	query: SELECT sexualstate FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.741508722305298 seconds
+
+	current question: Q24
+	question: Seleziona solo il campo chiamato testedtgmax da strain.
+	query: SELECT testedtgmax FROM strain 
+	Time taken: 10.721426248550415 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno restrictions uguale a NO KNOWN RESTRICTION APPLY.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.724799394607544 seconds
+
+	current question: Q26
+	question: Seleziona solo il campo chiamato collection da strain.
+	query: SELECT collection FROM detailedstrain 
+	Time taken: 10.745965242385864 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno sexualstate uguale a MAT2.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.738917827606201 seconds
+
+	current question: Q28
+	question: Seleziona solo il campo chiamato nagoyaprotocol da strain.
+	query: SELECT nagoyaprotocol FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.743757963180542 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno accessionnumber uguale a 4832.
+	query: SELECT * FROM detailedstrain WHERE accessionnumber = '4832'; 
+	Time taken: 10.734539031982422 seconds
+
+	current question: Q30
+	question: Seleziona solo il campo chiamato nagoyaconditions da strain.
+	query: SELECT nagoyaconditions FROM detailedstrain 
+	Time taken: 10.7391357421875 seconds
+
+Current category: C2
+	current question: Q1
+	question: Dammi tutti gli strain che hanno transmissionby uguale a contact e (registeredcollection è True o userestrictions è 2.0).
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.736616611480713 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 1.0 o 3.0 o 2.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.738794803619385 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno name uguale a Radish mosaic virus o Fuchsia latent virus o Tobacco mosaic virus.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.715388536453247 seconds
+
+	current question: Q4
+	question: Dammi tutti gli strain che hanno mriskgroup uguale a 12.0 o 1.0 o 2.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.728269338607788 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno identificationtechnique uguale a Identification techniques used: alt-a1, gpd, calm gene. e (cacronym è DBVPG o testedtgmin è 15.0).
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.766499042510986 seconds
+
+	current question: Q6
+	question: Seleziona gli strain 'nagoyaconditions' e 'nagoyaprotocol' da strain.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.738694190979004 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno testedtgmax uguale a 30.0 e il campo accessionnumber uguale a 5503 e testedtgmin è uguale a 15.0 o 25.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.745321989059448 seconds
+
+	current question: Q8
+	question: Dammi tutti gli strain che hanno testedtgmax uguale a 28.0 o 30.0 o 35.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.732012510299683 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno collection uguale a 8 o 10 o 3.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.722445487976074 seconds
+
+	current question: Q10
+	question: Seleziona gli strain 'beforenagoya' e 'genus' da strain.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.703509092330933 seconds
+
+	current question: Q11
+	question: Seleziona i campi collection e otherccnumbers da strain.
+	query: SELECT collection, otherccnumbers FROM detailedstrain 
+	Time taken: 10.703985691070557 seconds
+
+	current question: Q12
+	question: Dammi tutti gli strain che hanno pathotypeserotypetype uguale a diverso e il campo remarks uguale a NT81 e mriskgroup è uguale a 2.0 o 12.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.699985980987549 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain che hanno cacronym uguale a PLAVIT o MEGic o CE-ICB.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.7301344871521 seconds
+
+	current question: Q14
+	question: Seleziona i campi geoorigin e testedtgmax da strain.
+	query: SELECT geoorigin, testedtgmax FROM detailedstrain 
+	Time taken: 10.748290300369263 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e il campo organismtype uguale a Cryptophyta e recommendedtemperature è uguale a 0.0 o 10.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.72768259048462 seconds
+
+	current question: Q16
+	question: Seleziona gli strain 'sexualstate' e 'name' da strain.
+	query: SELECT strain.sexualstate, strain.name FROM detailedstrain WHERE strain.sexualstate ='male' AND strain.name = 'Escherichia coli' 
+	Time taken: 10.72249722480774 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno genus uguale a Polyporus e (dualuse è True o nagoyaconditions è 1.0).
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.70978593826294 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e identificationtechnique uguale a Electron microscopy.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.722127199172974 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno name uguale a Amaranthus leaf mottle virus o Chrysanthemum virus B o Tobacco ringspot virus.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.717860221862793 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.703553915023804 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION e il campo beforenagoya uguale a True e dualuse è uguale a True o False.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.694103002548218 seconds
+
+	current question: Q22
+	question: Seleziona gli strain 'propagationhost' e 'otherccnumbers' da strain.
+	query: SELECT strain.propagationhost, strain.otherccnumbers FROM detailedstrain WHERE strain.propagationhost = 'Arabidopsis thaliana' AND strain.otherccnumbers = 'ATCC 10029' 
+	Time taken: 10.706425428390503 seconds
+
+	current question: Q23
+	question: Seleziona i campi applications e storageconditions da strain.
+	query: SELECT applications, storageconditions FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.727936744689941 seconds
+
+	current question: Q24
+	question: Dammi tutti gli strain che hanno sexualstate uguale a MAT2 e (typestrain è False o ineva è True).
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.717471361160278 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno userestrictions uguale a 2.0 o 1.0 o 3.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.718751192092896 seconds
+
+	current question: Q26
+	question: Dammi tutti gli strain che hanno organismtype uguale a Virus o Filamentous Fungi o Cryptophyta.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.718186616897583 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno pathotypeserotypetype uguale a 1 e riskgroup uguale a 1.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.71565580368042 seconds
+
+	current question: Q28
+	question: Seleziona i campi confirmed e organismtype da strain.
+	query: SELECT confirmed, organismtype FROM detailedstrain WHERE confirmed = 1 AND organismtype = 'Bacteria' 
+	Time taken: 10.732959747314453 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno pathogenicity uguale a Solanum tuberosum o Castanea spp o pathogen for animals and humans (cause of dermatological infections).
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.7089262008667 seconds
+
+	current question: Q30
+	question: Seleziona gli strain 'prodofmetabolites' e 'pathogenicity' da strain.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.698493480682373 seconds
+
+Current category: C3
+	current question: Q1
+	question: Seleziona il campo 'riskgroqp' da strain.
+	query: SELECT strain.riskgroup FROM detailedstrain WHERE strain.riskgroup = 1 
+	Time taken: 10.693752527236938 seconds
+
+	current question: Q2
+	question: Seleziona 'cacronzm' e 'meuqoarantine' da strain.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.720199346542358 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo morgacismtype uguale a Figamentous Fungi.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.7144775390625 seconds
+
+	current question: Q4
+	question: Dammi aciessionnumber.
+	query: SELECT accessionnumber FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.698318243026733 seconds
+
+	current question: Q5
+	question: Seleziona 'sirainid' e 'qps' da strain.
+	query: SELECT strainid, qps FROM detailedstrain WHERE qps = 1 
+	Time taken: 10.728501319885254 seconds
+
+	current question: Q6
+	question: Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.700268745422363 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno il campo 'conmentontaxonomy' uguale a Lactobecillus brevis.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.718497514724731 seconds
+
+	current question: Q8
+	question: Seleziona il campo 'cxcronym' da strain.
+	query: SELECT cxcronym FROM strain 
+	Time taken: 10.715529203414917 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+	query: SELECT * FROM detailedstrain WHERE sqbstrate ='shke'; 
+	Time taken: 10.696285009384155 seconds
+
+	current question: Q10
+	question: Dammi tutti gli strain che hanno il campo 'mriskgrzup' uguale a 1.0.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.712164640426636 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno il campo statos uguale a Holotype of Naganishia nivalisnTurchetti & Buzzini.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.71180009841919 seconds
+
+	current question: Q12
+	question: Seleziona il campo 'ideztificationtechnique' da strain.
+	query: SELECT strainid, identificationtechnique FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.726879119873047 seconds
+
+	current question: Q13
+	question: Seleziona 'recommendedtempeqature' e 'userestrictiods' da strain.
+	query: SELECT recommendedtemperature, userestrictions FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.71085500717163 seconds
+
+	current question: Q14
+	question: Seleziona 'otherccnumaers' e 'availablefofdis' da strain.
+	query: SELECT otherccnumbers, availablefordis FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.707056045532227 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno il campo 'collewtion' uguale a 17.
+	query: SELECT * FROM detailedstrain WHERE collection = 17; 
+	Time taken: 10.697235822677612 seconds
+
+	current question: Q16
+	question: Dammi tutti gli strain che hanno il campo 'resgrictions' uguale a ONLY FOR NOb-COMMERCIAL PURPOSES.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.718488454818726 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno il campo 'axehic' uguale a Tque.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.714066982269287 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno il campo transmwssionby uguale a coftact.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.717799663543701 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno il campo 'skxualstate' uguale a MAn1.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.714046001434326 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno il campo 'commentontaaonomy' uguale a Lactobacilluk paraplantarum.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.704351902008057 seconds
+
+	current question: Q21
+	question: Seleziona il campo 'sexualstabe' da strain.
+	query: SELECT sexualstate FROM detailedstrain 
+	Time taken: 10.719930648803711 seconds
+
+	current question: Q22
+	question: Dammi tutti gli strain che hanno il campo 'nawe' uguale a Sowbana mosaic virus.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.709437131881714 seconds
+
+	current question: Q23
+	question: Dammi cultivkr.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.716641902923584 seconds
+
+	current question: Q24
+	question: Seleziona il campo 'testeltgmax' da strain.
+	query: SELECT testeltgmax FROM strain 
+	Time taken: 10.720004320144653 seconds
+
+	current question: Q25
+	question: Seleziona 'organismtipe' e 'beforeuagoya' da strain.
+	query: SELECT organismtype, beforeuagoya FROM detailedstrain 
+	Time taken: 10.72157096862793 seconds
+
+	current question: Q26
+	question: Dammi gli strain con dualune uguale a Trze.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.722692966461182 seconds
+
+	current question: Q27
+	question: Seleziona il campo 'otherlcnumbers' da strain.
+	query: SELECT otherlcnumbers FROM detailedstrain 
+	Time taken: 10.719438076019287 seconds
+
+	current question: Q28
+	question: Seleziona 'cacronzm' e 'irfrasubspecificnames' da strain.
+	query: SELECT cacronym, infrasubspecificnames FROM detailedstrain WHERE strainid = 1 
+	Time taken: 10.70473599433899 seconds
+
+	current question: Q29
+	question: Dammi rekarks.
+	query: SELECT * FROM detailedstrain WHERE strainid = 100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+	Time taken: 10.696957349777222 seconds
+
+	current question: Q30
+	question: Dammi tutti gli strain che hanno il campo morganmsmtype uguale a Micrealgae.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.695894241333008 seconds
+
+Current category: C4
+	current question: Q1
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Lettuce Italian necrotic virus e il campo collectiondate compreso tra 1998 e 2008. Voglio anche che il campo pathotypeserotypetype sia 0 o 1.
+	query: SELECT * FROM detailedstrain WHERE scientificname = 'Lettuce Italian necrotic virus' AND collectiondate BETWEEN '1998' AND '2008' AND pathotypeserotypetype = 0 OR pathotypeserotypetype = 1; 
+	Time taken: 10.723232984542847 seconds
+
+	current question: Q2
+	question: Dammi tutti gli strain che hanno il campo recommendedtemperature uguale a 24.0 e il campo isolationdate con una data precedente a 1998-10-28.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.723137617111206 seconds
+
+	current question: Q3
+	question: Dammi tutti gli strain che hanno il campo beforenagoya uguale a False e il campo depositdate con una data precedente a 1991.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.74998664855957 seconds
+
+	current question: Q4
+	question: Dammi tutti gli strain che hanno il campo propagationhost uguale a Caryophyllaceae/Dianthus/barbatus e il campo isolationdate compreso tra 1990 e 1997.
+	query: SELECT * FROM detailedstrain WHERE propagationhost = 'Caryophyllaceae/Dianthus/barbatus' AND isolationdate BETWEEN '1990' AND '1997'; 
+	Time taken: 10.73426604270935 seconds
+
+	current question: Q5
+	question: Dammi tutti gli strain che hanno il campo ineva uguale a False e il campo collectiondate con una data successiva a 2003.
+	query: SELECT * FROM detailedstrain WHERE ineva = False AND collectiondate > '2003-01-01' 
+	Time taken: 10.76793622970581 seconds
+
+	current question: Q6
+	question: Dammi tutti gli strain che hanno il campo availablefordis uguale a True e il campo depositdate compreso tra 2005 e 2019. Voglio anche che il campo transmissionby sia contact;insect;seeds o contact;pollen;seeds.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.749335527420044 seconds
+
+	current question: Q7
+	question: Dammi tutti gli strain che hanno il campo restrictions uguale a ONLY FOR NON-COMMERCIAL PURPOSES e il campo inclusiondate con una data precedente a 2010.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.747392654418945 seconds
+
+	current question: Q8
+	question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo isolationdate con una data successiva a 1999-03-14.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.753945350646973 seconds
+
+	current question: Q9
+	question: Dammi tutti gli strain che hanno il campo commentontaxonomy uguale a doi:10.1099/ijsem.0.004107 e il campo inclusiondate con una data successiva a 2013-02-12.
+	query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107' AND inclusiondate > '2013-02-12' 
+	Time taken: 10.73635983467102 seconds
+
+	current question: Q10
+	question: Dammi tutti gli strain che hanno il campo beforenagoya uguale a True e il campo depositdate con una data precedente a 2011-11-02.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.739465951919556 seconds
+
+	current question: Q11
+	question: Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo depositdate con una data precedente a 2013.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.770329236984253 seconds
+
+	current question: Q12
+	question: Dammi tutti gli strain che hanno il campo riskgroup uguale a 2.0 e il campo depositdate compreso tra 2003 e 2016. Voglio anche che il campo species sia gracile o cerevisiae;uvarum.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.776595115661621 seconds
+
+	current question: Q13
+	question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;seeds e il campo collectiondate con una data successiva a 2004.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.75215196609497 seconds
+
+	current question: Q14
+	question: Dammi tutti gli strain che hanno il campo identificationtechnique uguale a Bioassay;Immuno blot e il campo depositdate compreso tra 2003 e 2012.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.741881847381592 seconds
+
+	current question: Q15
+	question: Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;fungi e il campo inclusiondate con una data precedente a 1995.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.752314567565918 seconds
+
+	current question: Q16
+	question: Dammi tutti gli strain che hanno il campo testedtgmax uguale a 35.0 e il campo collectiondate compreso tra 1998 e 2012.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.742199897766113 seconds
+
+	current question: Q17
+	question: Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo inclusiondate con una data precedente a 1995-04-16.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.750456809997559 seconds
+
+	current question: Q18
+	question: Dammi tutti gli strain che hanno il campo cacronym uguale a BNSS e il campo inclusiondate con una data precedente a 2012.
+	query: SELECT * FROM detailedstrain WHERE cacronym = 'BNSS' AND inclusiondate < '2012-01-01' 
+	Time taken: 10.760245323181152 seconds
+
+	current question: Q19
+	question: Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. paracasei e il campo isolationdate compreso tra 2005 e 2018.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.747490644454956 seconds
+
+	current question: Q20
+	question: Dammi tutti gli strain che hanno il campo morganismtype uguale a Archaea e il campo inclusiondate compreso tra 1997 e 2003.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.741978883743286 seconds
+
+	current question: Q21
+	question: Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo collectiondate con una data successiva a 2010.
+	query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND collectiondate > '2010-01-01' 
+	Time taken: 10.717757940292358 seconds
+
+	current question: Q22
+	question: Dammi tutti gli strain che hanno il campo propagationhost uguale a Solanaceae/Petunia/x hybrida e il campo inclusiondate con una data precedente a 1997-09-10.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.719302415847778 seconds
+
+	current question: Q23
+	question: Dammi tutti gli strain che hanno il campo applications uguale a Resistant to hygromicyn B e il campo inclusiondate con una data successiva a 2014.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.741278409957886 seconds
+
+	current question: Q24
+	question: Dammi tutti gli strain che hanno il campo sexualstate uguale a Mata/Matalpha e il campo isolationdate con una data precedente a 1996-04-26.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.744136810302734 seconds
+
+	current question: Q25
+	question: Dammi tutti gli strain che hanno il campo applications uguale a Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); e il campo collectiondate compreso tra 2005 e 2016. Voglio anche che il campo otherdenominations sia Rs T33 C8 o LB5A6B05.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.744717836380005 seconds
+
+	current question: Q26
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Carnation mottle virus e il campo depositdate con una data successiva a 1997-10-29.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.735943078994751 seconds
+
+	current question: Q27
+	question: Dammi tutti gli strain che hanno il campo scientificname uguale a Pepper mild mottle virus e il campo inclusiondate con una data precedente a 1991-09-20.
+	query: SELECT * FROM detailedstrain WHERE scientificname = 'Pepper mild mottle virus' AND inclusiondate < '1991-09-20'; 
+	Time taken: 10.740956544876099 seconds
+
+	current question: Q28
+	question: Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. bulgaricus e il campo collectiondate con una data successiva a 2000-02-24.
+	query: SELECT strainid, collection, accessionnumber, gmo, gmoconstructioninfo, registeredcollection, collectiondate, isolationdate, identificationtechnique, depositdate, otherdenominations, typestrain, inclusiondate, remarks, pathogenicity, beforenagoya, availablefordis, otherccnumbers, commentontaxonomy, mutantinformation, userestrictions, nagoyaconditions, geoorigin, cacronym, confirmed, organismtype, riskgroup, euquarantine, strain, recommendedtemperature, dualuse, substrate, testedtgmin, testedtgmax, morganismtype, sexualstate, mtafile, prodofmetabolites, genus, species, meuquarantine, isolationhabitat, status, infrasubspecificnames, qps, axenic, genotype, mriskgroup, historyofdeposit
+	Time taken: 10.737878561019897 seconds
+
+	current question: Q29
+	question: Dammi tutti gli strain che hanno il campo meuquarantine uguale a True e il campo depositdate con una data precedente a 1997-12-06.
+	query: SELECT * FROM detailedstrain WHERE meuquarantine = True AND depositdate < '1997-12-06' 
+	Time taken: 10.73610520362854 seconds
+
+	current question: Q30
+	question: Dammi tutti gli strain che hanno il campo sexualstate uguale a MAT2 e il campo isolationdate con una data precedente a 2005.
+	query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAT2' AND isolationdate < '2005-01-01' 
+	Time taken: 10.744104385375977 seconds
+
+Current category: C5
+	current question: Q1
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e recommendedtemperature.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE organismtype = 'Bacteria' AND recommendedtemperature = 37; 
+	Time taken: 10.761770963668823 seconds
+
+	current question: Q2
+	question: Seleziona e conta tutti i strain che hanno il campo accessionnumber uguale a MUT00006186 e raggruppa solo quelli che hanno lo stesso abbreviation.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE accessionnumber = 'MUT00006186' GROUP BY abbreviation 
+	Time taken: 10.741731882095337 seconds
+
+	current question: Q3
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo dualuse.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE dualuse = 1; 
+	Time taken: 10.724574565887451 seconds
+
+	current question: Q4
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e infrasubspecificnames.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE organismtype = 'Bacteria' AND infrasubspecificnames = 'Bacillus' 
+	Time taken: 10.736534833908081 seconds
+
+	current question: Q5
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi genus e riskgroup.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE genus = 'Bacillus' AND riskgroup = 1 
+	Time taken: 10.722291946411133 seconds
+
+	current question: Q6
+	question: Seleziona e conta tutti i strain che hanno il campo beforenagoya uguale a True e raggruppa solo quelli che hanno lo stesso campo applications. Voglio che mi mostri solo i gruppi con più di 1 esempi.
+	query: SELECT COUNT(DISTINCT applications) FROM detailedstrain WHERE beforenagoya = True GROUP BY applications HAVING COUNT(DISTINCT applications) > 1 
+	Time taken: 10.729197025299072 seconds
+
+	current question: Q7
+	question: Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a CBS 121057;IBT 28362 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 6 esempi.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE otherccnumbers = 'CBS 121057';IBT 28362' GROUP BY propagationhost HAVING COUNT(DISTINCT strainid) > 6; 
+	Time taken: 10.720283508300781 seconds
+
+	current question: Q8
+	question: Seleziona e conta tutti i strain che hanno il campo strainid uguale a 9 e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE strainid = 9 GROUP BY otherccnumbers 
+	Time taken: 10.722576379776001 seconds
+
+	current question: Q9
+	question: Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso pathogenicity.
+	query: SELECT strainid, COUNT(strainid) AS count FROM detailedstrain WHERE symptomatologyonisolationhost = 'local lesions' GROUP BY strainid HAVING count > 1 
+	Time taken: 10.732671976089478 seconds
+
+	current question: Q10
+	question: Seleziona e conta tutti i strain che hanno il campo pathogenicity uguale a Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+	query: SELECT strainid, COUNT(*) FROM detailedstrain WHERE pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value.' GROUP BY otherccnumbers; 
+	Time taken: 10.746506690979004 seconds
+
+	current question: Q11
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi scientificname e isolationhost.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE scientificname = 'Xanthomonas axonopodis pv. citri' AND isolationhost = 'Citrus sinensis' 
+	Time taken: 10.729954481124878 seconds
+
+	current question: Q12
+	question: Seleziona e conta tutti i strain che hanno il campo identificationtechnique uguale a Identification techniques used: ITS e raggruppa solo quelli che hanno lo stesso symptomatologyonisolationhost.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: ITS' GROUP BY symptomatologyonisolationhost 
+	Time taken: 10.749064683914185 seconds
+
+	current question: Q13
+	question: Seleziona e conta tutti i strain che hanno il campo remarks uguale a linkage group: A5; allele mutation: nit M e raggruppa solo quelli che hanno lo stesso campo testedtgmin. Voglio che mi mostri solo i gruppi con più di 5 esempi.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE remarks = 'linkage group: A5' AND allele mutation = 'nit M' GROUP BY testedtgmin HAVING COUNT(DISTINCT strainid) > 5 
+	Time taken: 10.740036725997925 seconds
+
+	current question: Q14
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo nagoyaconditions.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE nagoyaconditions = 1; 
+	Time taken: 10.727006435394287 seconds
+
+	current question: Q15
+	question: Seleziona e conta tutti i strain che hanno il campo organismtype uguale a Yeasts e raggruppa solo quelli che hanno lo stesso restrictions.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE organismtype = 'Yeasts' GROUP BY restrictions 
+	Time taken: 10.745389223098755 seconds
+
+	current question: Q16
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e nagoyaprotocol.
+	query: SELECT COUNT(DISTINCT propagationhost) FROM detailedstrain WHERE nagoyaprotocol = 'Nagoya Protocol' 
+	Time taken: 10.74984335899353 seconds
+
+	current question: Q17
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e infrasubspecificnames.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE propagationhost = 'Cucurbita pepo' AND infrasubspecificnames = 'Cucurbita pepo var. Styriaca' 
+	Time taken: 10.742395401000977 seconds
+
+	current question: Q18
+	question: Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a KSU 853 e raggruppa solo quelli che hanno lo stesso confirmed.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE otherccnumbers = 'KSU 853' GROUP BY confirmed 
+	Time taken: 10.732210159301758 seconds
+
+	current question: Q19
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi axenic e isolationhabitat.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE axenic = 1 AND isolationhabitat ='soil' 
+	Time taken: 10.740580081939697 seconds
+
+	current question: Q20
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e scientificname.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE organismtype = 'Bacteria' AND scientificname = 'Escherichia coli' 
+	Time taken: 10.741678476333618 seconds
+
+	current question: Q21
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo othernames.
+	query: SELECT COUNT(strainid) FROM detailedstrain GROUP BY othernames; 
+	Time taken: 10.740499258041382 seconds
+
+	current question: Q22
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo ineva.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE ineva = '1' 
+	Time taken: 10.711553812026978 seconds
+
+	current question: Q23
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi pathogenicity e geoorigin.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE pathogenicity = 'pathogenic' AND geoorigin = 'Europe' 
+	Time taken: 10.725459337234497 seconds
+
+	current question: Q24
+	question: Seleziona e conta tutti i strain che hanno il campo strainid uguale a 25068 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 4 esempi.
+	query: SELECT strainid, propagationhost, COUNT(*) FROM detailedstrain WHERE strainid = 25068 GROUP BY propagationhost HAVING COUNT(*) > 4 
+	Time taken: 10.736765623092651 seconds
+
+	current question: Q25
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e registeredcollection.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE userestrictions = 1 AND registeredcollection = 1 
+	Time taken: 10.743352890014648 seconds
+
+	current question: Q26
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi restrictions e registeredcollection.
+	query: SELECT COUNT(DISTINCT strainid) FROM detailedstrain WHERE restrictions = 1 AND registeredcollection = 1 
+	Time taken: 10.73430347442627 seconds
+
+	current question: Q27
+	question: Seleziona e conta il numero di strain, raggruppando i risultati in base al campo riskgroup.
+	query: SELECT COUNT(riskgroup) FROM detailedstrain WHERE riskgroup = 1; 
+	Time taken: 10.750625848770142 seconds
+
+	current question: Q28
+	question: Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e dualuse.
+	query: SELECT COUNT(strainid) FROM detailedstrain WHERE userestrictions = 1 OR dualuse = 1 
+	Time taken: 10.741037368774414 seconds
+
+	current question: Q29
+	question: Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso status.
+	query: SELECT strainid, COUNT(strainid) AS count FROM detailedstrain WHERE symptomatologyonisolationhost = 'local lesions' GROUP BY strainid HAVING count > 1 
+	Time taken: 10.74198603630066 seconds
+
+	current question: Q30
+	question: Seleziona e conta tutti i strain che hanno il campo axenic uguale a True e raggruppa solo quelli che hanno lo stesso identificationtechnique.
+	query: SELECT COUNT(axenic) AS axenic, identificationtechnique FROM detailedstrain WHERE axenic = 'True' GROUP BY identificationtechnique 
+	Time taken: 10.74270510673523 seconds
+

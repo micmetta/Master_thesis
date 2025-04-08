@@ -11,7 +11,31 @@ def ensure_select_clause(generated_output):
     
     return generated_output
 
+def contains_dangerous_keywords(query):
+    DANGEROUS_KEYWORDS = [
+        r'\bDROP\b', r'\bDELETE\b', r'\bUPDATE\b', r'\bINSERT\b', r'\bALTER\b',
+        r'\bTRUNCATE\b', r'\bEXEC\b', r'\bMERGE\b', r'\bGRANT\b', r'\bREVOKE\b',
+        r'\bCREATE\b', r'\bREPLACE\b', r'\bDISABLE\b', r'\bENABLE\b', r'\bSET\b',
+        r'\bCALL\b', r'\bBEGIN\b', r'\bEND\b', r'\bCOMMIT\b', r'\bROLLBACK\b'
+    ]
+    for keyword in DANGEROUS_KEYWORDS:
+        if re.search(keyword, query, re.IGNORECASE):
+            return True
+    return False
 
+def contains_dangerous_comments(query):
+    """
+    dangerous comments:
+    - `--` (end-of-line comments)
+    - `#` (MySQL comments)
+    - `/* ... */` (multi-line comments)
+    """
+    comment_pattern = r'(--|#|/\*.*?\*/)'
+    if re.search(comment_pattern, query, flags=re.DOTALL):
+        return True
+    return False
+
+'''
 # Remove any incorrect tail characters (such as '[/')
 def remove_trailing_characters(generated_output):
     generated_output = generated_output.strip()  # remove leading/trailing spaces
@@ -20,6 +44,24 @@ def remove_trailing_characters(generated_output):
         print("Removed trailing '[/' from the query:", generated_output)
 
     return generated_output
+'''
+def clean_query_tail(query):
+    """
+    SQL query cleaning by removing:
+    - Symbols [/INST] and [/CODE] with any extra text immediately after the ';'
+    - Incorrect characters at the end of the query such as '[/'
+    - Unnecessary leading and trailing spaces
+    """
+    query = query.strip()  # Rimuove spazi iniziali e finali
+
+    # Rimuove simboli [/INST] e [/CODE] dopo il ';'
+    query = re.sub(r';\s*(\[/INST\]|\[/CODE\]).*$', ';', query, flags=re.IGNORECASE)
+
+    # Rimuove eventuali '[/' alla fine della query
+    query = re.sub(r'\[/\s*$', '', query)
+
+    print("SQL query after 'clean_query_tail()' function: ", query)
+    return query
 
 
 # 1) Force the SELECT clause includes only 'strainid' field.
@@ -87,9 +129,10 @@ def fix_column_names(query_sql):
             
         for match in re.finditer(individual_condition_regex, where_clause, re.IGNORECASE):
             column_name = match.group(1) # incorrect column name
-            start_index = where_start + match.start(1) # start index of the column found in the query_sql
-            end_index = where_start  + match.end(1) # end index of the column found in the query_sql
-            column_names_where_clause.append((column_name, start_index, end_index))
+            if column_name not in ["AND", "OR"]:
+                start_index = where_start + match.start(1) # start index of the column found in the query_sql
+                end_index = where_start  + match.end(1) # end index of the column found in the query_sql
+                column_names_where_clause.append((column_name, start_index, end_index))
 
         print("Columns found in the query_sql with their indexes:", column_names_where_clause)
 
@@ -120,19 +163,36 @@ def fix_column_names(query_sql):
     return query_sql
 
 
-
 # - It locates the generated sql query within the complete response of the model and creates the subquery.
 # - Simpler post-processing function because it only allows the use of the WHERE clause.
 def post_processing_query(generated_output):
+    # examples of SQL Injection Attack: 
+    #generated_output = "SELECT * FROM detailedstrain WHERE id = 1; -- SQL Injection Attack"
+    #generated_output = "SELECT * FROM detailedstrain WHERE strainid IN (SELECT 1); DROP TABLE syntheticstrain; --);"
+    #generated_output = "SELECT * FROM detailedstrain WHERE strainid IN (SELECT 1); DROP VIEW syntheticstrain;"
+    #generated_output = "DROP VIEW syntheticstrain;"
+
     generated_output = ensure_select_clause(generated_output) # I make sure the query starts with SELECT
-    match = re.search(r'\bSELECT\b(.*?)\bFROM\b', generated_output, re.IGNORECASE | re.DOTALL)
+
+    # block dangerous keywords (added control)
+    if contains_dangerous_keywords(generated_output):
+        print("Query blocked! Contains dangerous keywords.")
+        return "No SQL query found.", "No SQL query found."
+
+    # block queries with dangerous comments (added control)
+    if contains_dangerous_comments(generated_output): 
+        print("Query blocked! Found harmful SQL comments.")
+        return "No SQL query found.", "No SQL query found."
     
+    match = re.search(r'\bSELECT\b(.*?)\bFROM\b', generated_output, re.IGNORECASE | re.DOTALL)
     if not match:
         query_sql = "No SQL query found."
         print("No SQL query found.")
         return query_sql
     
-    query_sql = remove_trailing_characters(generated_output)
+    #query_sql = remove_trailing_characters(generated_output)
+    query_sql = clean_query_tail(generated_output)
+
     invalid_clauses = re.compile(r'\b(GROUP BY|HAVING|ORDER BY|LIMIT|OFFSET|UNION|JOIN)\b', re.IGNORECASE) # defining the pattern for non-allowed clauses
     invalid_clause_match = invalid_clauses.search(query_sql) # check if there are any prohibited clauses
     if invalid_clause_match:

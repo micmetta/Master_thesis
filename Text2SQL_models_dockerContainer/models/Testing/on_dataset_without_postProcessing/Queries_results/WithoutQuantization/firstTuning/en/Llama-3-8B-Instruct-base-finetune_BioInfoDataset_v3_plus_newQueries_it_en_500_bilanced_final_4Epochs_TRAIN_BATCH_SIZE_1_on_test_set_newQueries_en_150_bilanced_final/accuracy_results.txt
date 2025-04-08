@@ -1,0 +1,216 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q10
+question: Select only field called confirmed from strain.
+real query: SELECT confirmed FROM detailedstrain;
+generated query: SELECT confirmed FROM strain;  
+
+ID-query: C1-Q27
+question: Select only field called species from strain.
+real query: SELECT species FROM detailedstrain;
+generated query: SELECT species FROM strain;  
+
+ID-query: C2-Q4
+question: Give me all strains that have substrate equal to molasses and (name is Potato virus A or cacronym is UMCC).
+real query: SELECT * FROM detailedstrain WHERE substrate = 'molasses' AND (name = 'Potato virus A' OR cacronym = 'UMCC');
+generated query: SELECT * FROM detailedstrain WHERE substrate ='molasses' AND ((name = 'Potato virus A') OR (cacronym = 'UMCC')); 
+
+ID-query: C2-Q7
+question: Give me all strains that have identificationtechnique equal to Identification techniques used: mor and the riskgroup equal to 2.0 and propagationhost is Leguminosae/Phaseolus/vulgaris or Compositae/Senecio/cineraria.
+real query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: mor' AND riskgroup = 2.0 AND (propagationhost = 'Leguminosae/Phaseolus/vulgaris' OR propagationhost = 'Compositae/Senecio/cineraria');
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used: mor' AND (riskgroup = 2.0 OR riskgroup = 12.0) AND (propagationhost = 'Leguminosae/Phaseolus/vulgaris' OR propagationhost = 'Compositae/Senecio/cineraria'); 
+
+ID-query: C2-Q10
+question: Give me all strains that have abbreviation equal to INSV and (species is stuartii or cultivar is Scarola).
+real query: SELECT * FROM detailedstrain WHERE abbreviation = 'INSV' AND (species = 'stuartii' OR cultivar = 'Scarola');
+generated query: SELECT * FROM detailedstrain WHERE abbreviation = 'INSV' AND ((species ='stuartii') OR (cultivar = 'Scarola')); 
+
+ID-query: C2-Q11
+question: Give me all strains that have name equal to Carnation latent virus or Lettuce Italian necrotic virus or Carnation vein mottle virus.
+real query: SELECT * FROM detailedstrain WHERE name IN ('Carnation latent virus', 'Lettuce Italian necrotic virus', 'Carnation vein mottle virus');
+generated query: SELECT * FROM detailedstrain WHERE name = 'Carnation latent virus' OR name = 'Lettuce Italian necrotic virus' OR name = 'Carnation vein mottle virus'; 
+
+ID-query: C2-Q12
+question: Give me all strains that have isolationhost equal to Ranunculaceae/Anemone/spp or Compositae/Felicia/spp. or Solanaceae/Nicotiana/tabacum.
+real query: SELECT * FROM detailedstrain WHERE isolationhost IN ('Ranunculaceae/Anemone/spp', 'Compositae/Felicia/spp.', 'Solanaceae/Nicotiana/tabacum');
+generated query: SELECT * FROM detailedstrain WHERE isolationhost = 'Ranunculaceae/Anemone/spp' OR isolationhost = 'Compositae/Felicia/spp.' OR isolationhost = 'Solanaceae/Nicotiana/tabacum'; 
+
+ID-query: C2-Q15
+question: Give me all strains that have sexualstate equal to Mata/Matalpha and the cultivar equal to Kennebeck and ineva is True or True.
+real query: SELECT * FROM detailedstrain WHERE sexualstate = 'Mata/Matalpha' AND cultivar = 'Kennebeck' AND (ineva = True OR ineva = True);
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'Mata/Matalpha' AND (cultivar = 'Kennebeck' OR ineva = True); 
+
+ID-query: C2-Q16
+question: Give me all strains that have userestrictions equal to 3.0 or 1.0 or 2.0.
+real query: SELECT * FROM detailedstrain WHERE userestrictions IN (3.0, 1.0, 2.0);
+generated query: SELECT * FROM detailedstrain WHERE userestrictions = 3.0 OR userestrictions = 1.0 OR userestrictions = 2.0; 
+
+ID-query: C2-Q18
+question: Give me all strains that have otherccnumbers equal to IMI 389211 or MIRRI0145673 or JCM 9915; UCD 84-102.
+real query: SELECT * FROM detailedstrain WHERE otherccnumbers IN ('IMI 389211', 'MIRRI0145673', 'JCM 9915; UCD 84-102');
+generated query: SELECT * FROM detailedstrain WHERE otherccnumbers = 'IMI 389211' OR otherccnumbers = 'MIRRI0145673' OR otherccnumbers = 'JCM 9915; UCD 84-102'; 
+
+ID-query: C2-Q19
+question: Give me all strains that have commentontaxonomy equal to BCC6; IIIB group or IIIB group or homotypic synonym: Glomus mosseae.
+real query: SELECT * FROM detailedstrain WHERE commentontaxonomy IN ('BCC6; IIIB group', 'IIIB group', 'homotypic synonym: Glomus mosseae');
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'BCC6; IIIB group' OR commentontaxonomy = 'IIIB group' OR commentontaxonomy = 'homotypic synonym: Glomus mosseae'; 
+
+ID-query: C2-Q21
+question: Give me all strains that have recommendedtemperature equal to 35.0 or 24.0 or 26.0.
+real query: SELECT * FROM detailedstrain WHERE recommendedtemperature IN (35.0, 24.0, 26.0);
+generated query: SELECT * FROM detailedstrain WHERE recommendedtemperature = 35.0 OR recommendedtemperature = 24.0 OR recommendedtemperature = 26.0; 
+
+ID-query: C2-Q22
+question: Give me all strains that have symptomatologyonisolationhost equal to systemic symptoms and the storageconditions equal to Liquid nitrogen and abbreviation is LMV or TAV.
+real query: SELECT * FROM detailedstrain WHERE symptomatologyonisolationhost = 'systemic symptoms' AND storageconditions = 'Liquid nitrogen' AND (abbreviation = 'LMV' OR abbreviation = 'TAV');
+generated query: SELECT * FROM detailedstrain WHERE symptomatologyonisolationhost ='systemic symptoms' AND (storageconditions = 'Liquid nitrogen' AND abbreviation = 'LMV') OR (storageconditions = 'Liquid nitrogen' AND abbreviation = 'TAV'); 
+
+ID-query: C2-Q27
+question: Give me all strains that have substrate equal to Phoenix canariensis or Grape; Variety of grape: Monica or man nails.
+real query: SELECT * FROM detailedstrain WHERE substrate IN ('Phoenix canariensis', 'Grape; Variety of grape: Monica', 'man nails');
+generated query: SELECT * FROM detailedstrain WHERE substrate = 'Phoenix canariensis' OR substrate = 'Grape; Variety of grape: Monica' OR substrate ='man nails'; 
+
+ID-query: C2-Q28
+question: Give me all strains that have nagoyaprotocol equal to STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION or DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION or NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol IN ('STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION', 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION', 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL');
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL'; 
+
+ID-query: C2-Q30
+question: Give me all strains that have euquarantine equal to True and (propagationhost is Chepodiaceae/Chepodium/quinoa or substrate is malafou (palm wine)).
+real query: SELECT * FROM detailedstrain WHERE euquarantine = True AND (propagationhost = 'Chepodiaceae/Chepodium/quinoa' OR substrate = 'malafou (palm wine)');
+generated query: SELECT * FROM detailedstrain WHERE euquarantine = True AND ((propagationhost = 'Chepodiaceae/Chepodium/quinoa' OR substrate ='malafou (palm wine)')); 
+
+ID-query: C3-Q1
+question: Give me strain with ineqa equal to Famse.
+real query: SELECT * FROM detaledstrain WHERE ineva = False;
+generated query: SELECT * FROM detaildstrain WHERE ineva = 'Famme'; 
+
+ID-query: C3-Q2
+question: Select the field 'stryinid' from strain.
+real query: SELECT strainid FROM detaildstrain;
+generated query: SELECT strainid FROM detailedstrain;  
+
+ID-query: C3-Q3
+question: Give me all strains that have the field riskgrpup equal to 1u.0.
+real query: SELECT * FROM detaledstrain WHERE riskgroup = 12.0;
+generated query: SELECT * FROM detailedstrain WHERE riskgroup = 12.0; 
+
+ID-query: C3-Q5
+question: Select the field 'recomoendedtemperature' from strain.
+real query: SELECT recommendedtemperature FROM detaildstrain;
+generated query: SELECT recommendedtemperature FROM detailedstrain;  
+
+ID-query: C3-Q6
+question: Give me all strains that have the field 'meuquaranpine' equal to Ttue.
+real query: SELECT * FROM detaildstrain WHERE meuquarantine = True;
+generated query: SELECT * FROM detailedstrain WHERE meuquarantine = True; 
+
+ID-query: C3-Q7
+question: Give me remfrks.
+real query: SELECT remarks FROM detaildstrain;
+generated query: SELECT remarks FROM detailedstrain WHERE strainid = 13445; 
+
+ID-query: C3-Q8
+question: Give me all strains that have the field 'geoowigin' equal to 2d20.0.
+real query: SELECT * FROM detaildstrain WHERE geoorigin = 2120.0;
+generated query: SELECT * FROM detailedstrain WHERE geoorigin = 20.0; 
+
+ID-query: C3-Q10
+question: Give me strain with mrgskgroup equal to 12q0.
+real query: SELECT * FROM detaledstrain WHERE mriskgroup = 12.0;
+generated query: SELECT * FROM detaildstrain WHERE mriskgroup = 12.0; 
+
+ID-query: C3-Q11
+question: Select the field 'accessionnuhber' from strain.
+real query: SELECT accessionnumber FROM detaildstrain;
+generated query: SELECT accessionnumber FROM detailedstrain;  
+
+ID-query: C3-Q12
+question: Give me all strains that have the field 'axdnic' equal to Tlue.
+real query: SELECT * FROM detaildstrain WHERE axenic = True;
+generated query: SELECT * FROM detailedstrain WHERE axenic = True; 
+
+ID-query: C3-Q14
+question: Give me all strains that have the field 'duauuse' equal to Trse.
+real query: SELECT * FROM detaildstrain WHERE dualuse = True;
+generated query: SELECT * FROM detailedstrain WHERE dualuse = True; 
+
+ID-query: C3-Q15
+question: Give me strain with mkuquarantine equal to Falne.
+real query: SELECT * FROM detaledstrain WHERE meuquarantine = False;
+generated query: SELECT * FROM detaildstrain WHERE meuquarantine = False; 
+
+ID-query: C3-Q16
+question: Give me transmisuionby.
+real query: SELECT transmissionby FROM detaildstrain;
+generated query: SELECT transmissionby FROM detailedstrain WHERE collection = 'INRA'; 
+
+ID-query: C3-Q18
+question: Give me applicatiocs.
+real query: SELECT applications FROM detaildstrain;
+generated query: SELECT applications FROM detailedstrain WHERE strainid = 13145; 
+
+ID-query: C3-Q19
+question: Give me strain with uderestrictions equal to 2.0.
+real query: SELECT * FROM detaledstrain WHERE userestrictions = 2.0;
+generated query: SELECT * FROM detaildstrain WHERE userestrictions = 2.0; 
+
+ID-query: C3-Q20
+question: Select the field 'otherdenombnations' from strain.
+real query: SELECT otherdenominations FROM detaildstrain;
+generated query: SELECT otherdenominations FROM detailedstrain; 
+
+ID-query: C3-Q22
+question: Give me strain with stwainid equal to 146z3.
+real query: SELECT * FROM detaledstrain WHERE strainid = 14693;
+generated query: SELECT * FROM detaildstrain WHERE strainid = 14683; 
+
+ID-query: C3-Q23
+question: Give me strain with tesredtgmax equal to 28p0.
+real query: SELECT * FROM detaledstrain WHERE testedtgmax = 28.0;
+generated query: SELECT * FROM detaildstrain WHERE testedtgmax = 28.0; 
+
+ID-query: C3-Q25
+question: Give me all strains that have the field confirked equal to Trte.
+real query: SELECT * FROM detaledstrain WHERE confirmed = True;
+generated query: SELECT * FROM detaildstrain WHERE confirmed = True; 
+
+ID-query: C3-Q29
+question: Give me all strains that have the field abbreviacion equal to PVY.
+real query: SELECT * FROM detaledstrain WHERE abbreviation = 'PVY';
+generated query: SELECT * FROM detailedstrain WHERE abbreviation = 'PVY'; 
+
+ID-query: C3-Q30
+question: Give me prodofmetabplites.
+real query: SELECT prodofmetabolites FROM detaildstrain;
+generated query: SELECT DISTINCT prodofmetabolites FROM detaildstrain; 
+
+ID-query: C4-Q2
+question: Give me all strains that have the nagoyaprotocol field equal to  STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION and the inclusiondate field with a date after 2000.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2000-12-31') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2000'));
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2)) > '2000-12-31') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2000')); 
+
+ID-query: C4-Q6
+question: Give me all strains that have the prodofmetabolites field equal to Beauvericin; Dehydrofusaric acidscosalitoxin; Enniatin B and the isolationdate field with a date before 1994-08-19.
+real query: SELECT * FROM detailedstrain WHERE prodofmetabolites = 'Beauvericin; Dehydrofusaric acidscosalitoxin; Enniatin B' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1994-08-19') OR (LENGTH(isolationdate) = 4 AND isolationdate <= '1994'));
+generated query: SELECT * FROM detailedstrain WHERE prodofmetabolites = 'Beauvericin; Dehydrofusaric acid; Soralen; Enniatin B' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1994-08-19') OR (LENGTH(isolationdate) = 4 AND isolationdate <= '1994')); 
+
+ID-query: C4-Q22
+question: Give me all strains that have the applications field equal to  Produces biosurfactants. Uses olive oil as sole carbon source (better than glucose). and the depositdate field with a date after 2000.
+real query: SELECT * FROM detailedstrain WHERE applications = 'Produces biosurfactants. Uses olive oil as sole carbon source (better than glucose).' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2000-12-31') OR (LENGTH(depositdate) = 4 AND depositdate > '2000'));
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Produces biosurfactants. Uses olive oil as sole carbon source (better than glucose).' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2)) > '2000-12-31' OR (LENGTH(depositdate) = 4 AND depositdate > '2000')); 
+
+ID-query: C5-Q8
+question: Select and count the number of strains, grouping the results by the storageconditions field.
+real query: SELECT COUNT(*), storageconditions FROM detailedstrain GROUP BY storageconditions;
+generated query: SELECT storageconditions, COUNT(*)  FROM detailedstrain  GROUP BY storageconditions; 
+
+
+
+Correct answers: 109
+Total questions: 150
+Model accuracy: 72.67%
+
+######################################################################################
+

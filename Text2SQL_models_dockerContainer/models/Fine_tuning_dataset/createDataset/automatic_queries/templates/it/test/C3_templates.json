@@ -1,0 +1,51 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Dammi tutti gli strain che hanno il campo '{column}' uguale a {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Seleziona il campo '{column}' da strain.",
+        "sql_template": "SELECT {column} FROM detailedstrain;",
+        "possible_sql_queries": [
+           "SELECT {column} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Seleziona '{column1}' e '{column2}' da strain.",
+        "sql_template": "SELECT {column1}, {column2} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column1}, {column2} FROM detailedstrain;",
+            "SELECT {column2}, {column1} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Dammi {column}.",
+        "sql_template": "SELECT {column} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 4,  
+        "question_template": "Dammi tutti gli strain che hanno il campo {column} uguale a {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 5,
+        "question_template": "Dammi gli strain con {column} uguale a {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    }
+]

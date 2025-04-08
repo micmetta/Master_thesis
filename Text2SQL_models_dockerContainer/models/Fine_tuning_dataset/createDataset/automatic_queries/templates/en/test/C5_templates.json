@@ -1,0 +1,42 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Select and count the number of strains, grouping the results by the {group_by} field.",
+        "sql_template": "SELECT COUNT(*), {group_by} FROM detailedstrain GROUP BY {group_by};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by} FROM detailedstrain GROUP BY {group_by};",
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain GROUP BY {group_by};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Select and count all the strains that have the {filter_column} field equal to {value} and group only those that have the same {group_by}.",
+        "sql_template": "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};",
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Select and count the number of strains by grouping them based on the {group_by1} and {group_by2} fields.",
+        "sql_template": "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT {group_by1}, COUNT(*), {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT {group_by2}, {group_by1}, COUNT(*) FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by2}, {group_by1};",
+            "SELECT {group_by1}, COUNT(*), {group_by2} FROM detailedstrain GROUP BY {group_by2}, {group_by1};",
+            "SELECT {group_by2}, {group_by1}, COUNT(*) FROM detailedstrain GROUP BY {group_by2}, {group_by1};"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Select and count all strains that have the {filter_column} field equal to {value} and group only those that have the same {group_by} field. I want it to also show only the groups that have more than {threshold} examples.",
+        "sql_template": "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};",
+        "possible_sql_queries": [
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};",
+            "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};"
+        ]
+    }
+]

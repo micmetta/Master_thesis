@@ -1,0 +1,965 @@
+
+Current category: C1
+
+Current question: Q1
+Seleziona solo il campo chiamato cacronym da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:01,15.18,15.29
+2025-02-28 12:15:02,15.29,15.72
+
+Current question: Q2
+Dammi tutti gli strain che hanno symptomatologyonisolationhost uguale a local lesions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:03,15.22,15.72
+
+Current question: Q3
+Seleziona solo il campo chiamato prodofmetabolites da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:04,15.22,15.92
+
+Current question: Q4
+Seleziona solo il campo chiamato substrate da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:05,15.22,15.92
+
+Current question: Q5
+Dammi tutti gli strain che hanno abbreviation uguale a LMV.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:06,15.22,15.92
+
+Current question: Q6
+Seleziona solo il campo chiamato symptomatologyonisolationhost da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:07,15.22,15.92
+
+Current question: Q7
+Seleziona solo il campo chiamato meuquarantine da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:08,15.22,15.92
+
+Current question: Q8
+Seleziona solo il campo chiamato pathotypeserotypetype da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:09,15.22,15.92
+
+Current question: Q9
+Dammi tutti gli strain che hanno mriskgroup uguale a 12.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:10,15.22,15.92
+
+Current question: Q10
+Seleziona solo il campo chiamato genus da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:11,15.22,15.92
+
+Current question: Q11
+Dammi tutti gli strain che hanno propagationhost uguale a Chenopodiaceae/Chenopodium/amaranticolor.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:12,15.22,15.92
+2025-02-28 12:15:13,15.32,16.13
+
+Current question: Q12
+Seleziona solo il campo chiamato confirmed da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:14,15.22,16.13
+
+Current question: Q13
+Seleziona solo il campo chiamato status da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:15,15.22,16.13
+
+Current question: Q14
+Dammi tutti gli strain che hanno prodofmetabolites uguale a Fumonisin B2.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:16,15.22,16.13
+
+Current question: Q15
+Seleziona solo il campo chiamato otherccnumbers da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:17,15.22,16.13
+
+Current question: Q16
+Seleziona solo il campo chiamato gmo da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:18,15.22,16.13
+
+Current question: Q17
+Seleziona solo il campo chiamato organismtype da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:19,15.22,16.13
+
+Current question: Q18
+Seleziona solo il campo chiamato identificationtechnique da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:20,15.22,16.13
+
+Current question: Q19
+Dammi tutti gli strain che hanno otherdenominations uguale a LC-4A1M17.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:21,15.22,16.13
+
+Current question: Q20
+Dammi tutti gli strain che hanno commentontaxonomy uguale a BCC6 p.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:22,15.22,16.13
+
+Current question: Q21
+Dammi tutti gli strain che hanno status uguale a Isotype of Torula utilis Henneberg; Isotype of Torula mineralis Hayduck & Haehn ex Harrison.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:23,15.22,16.13
+2025-02-28 12:15:24,15.32,16.35
+
+Current question: Q22
+Seleziona solo il campo chiamato abbreviation da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:25,15.22,16.35
+
+Current question: Q23
+Seleziona solo il campo chiamato sexualstate da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:26,15.22,16.35
+
+Current question: Q24
+Seleziona solo il campo chiamato testedtgmax da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:27,15.22,16.35
+
+Current question: Q25
+Dammi tutti gli strain che hanno restrictions uguale a NO KNOWN RESTRICTION APPLY.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:28,15.22,16.35
+
+Current question: Q26
+Seleziona solo il campo chiamato collection da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:29,15.22,16.35
+
+Current question: Q27
+Dammi tutti gli strain che hanno sexualstate uguale a MAT2.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:30,15.22,16.35
+
+Current question: Q28
+Seleziona solo il campo chiamato nagoyaprotocol da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:31,15.22,16.35
+
+Current question: Q29
+Dammi tutti gli strain che hanno accessionnumber uguale a 4832.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:32,15.22,16.35
+
+Current question: Q30
+Seleziona solo il campo chiamato nagoyaconditions da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:33,15.22,16.35
+
+Current category: C2
+
+Current question: Q1
+Dammi tutti gli strain che hanno transmissionby uguale a contact e (registeredcollection è True o userestrictions è 2.0).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:34,15.22,16.35
+2025-02-28 12:15:35,15.33,16.35
+
+Current question: Q2
+Dammi tutti gli strain che hanno nagoyaconditions uguale a 1.0 o 3.0 o 2.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:36,15.22,16.35
+2025-02-28 12:15:37,15.33,16.35
+
+Current question: Q3
+Dammi tutti gli strain che hanno name uguale a Radish mosaic virus o Fuchsia latent virus o Tobacco mosaic virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:38,15.22,16.35
+2025-02-28 12:15:39,15.32,16.35
+
+Current question: Q4
+Dammi tutti gli strain che hanno mriskgroup uguale a 12.0 o 1.0 o 2.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:40,15.22,16.35
+2025-02-28 12:15:41,15.33,16.35
+
+Current question: Q5
+"Dammi tutti gli strain che hanno identificationtechnique uguale a Identification techniques used: alt-a1, gpd, calm gene. e (cacronym è DBVPG o testedtgmin è 15.0)."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:42,15.22,16.35
+2025-02-28 12:15:43,15.33,16.58
+2025-02-28 12:15:44,15.35,16.58
+
+Current question: Q6
+Seleziona gli strain 'nagoyaconditions' e 'nagoyaprotocol' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:45,15.22,16.58
+2025-02-28 12:15:46,15.33,16.58
+
+Current question: Q7
+Dammi tutti gli strain che hanno testedtgmax uguale a 30.0 e il campo accessionnumber uguale a 5503 e testedtgmin è uguale a 15.0 o 25.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:47,15.22,16.58
+2025-02-28 12:15:48,15.34,16.81
+
+Current question: Q8
+Dammi tutti gli strain che hanno testedtgmax uguale a 28.0 o 30.0 o 35.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:49,15.22,16.81
+2025-02-28 12:15:50,15.32,16.81
+
+Current question: Q9
+Dammi tutti gli strain che hanno collection uguale a 8 o 10 o 3.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:51,15.22,16.81
+2025-02-28 12:15:52,15.32,16.81
+
+Current question: Q10
+Seleziona gli strain 'beforenagoya' e 'genus' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:53,15.22,16.81
+2025-02-28 12:15:54,15.32,16.81
+
+Current question: Q11
+Seleziona i campi collection e otherccnumbers da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:55,15.22,16.81
+
+Current question: Q12
+Dammi tutti gli strain che hanno pathotypeserotypetype uguale a diverso e il campo remarks uguale a NT81 e mriskgroup è uguale a 2.0 o 12.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:56,15.22,16.81
+2025-02-28 12:15:57,15.33,16.81
+2025-02-28 12:15:58,15.35,16.81
+
+Current question: Q13
+Dammi tutti gli strain che hanno cacronym uguale a PLAVIT o MEGic o CE-ICB.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:15:59,15.22,16.81
+2025-02-28 12:16:00,15.33,16.81
+
+Current question: Q14
+Seleziona i campi geoorigin e testedtgmax da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:01,15.22,16.81
+
+Current question: Q15
+Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e il campo organismtype uguale a Cryptophyta e recommendedtemperature è uguale a 0.0 o 10.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:02,15.22,16.81
+2025-02-28 12:16:03,15.33,16.81
+
+Current question: Q16
+Seleziona gli strain 'sexualstate' e 'name' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:04,15.22,16.81
+2025-02-28 12:16:05,15.32,16.81
+
+Current question: Q17
+Dammi tutti gli strain che hanno genus uguale a Polyporus e (dualuse è True o nagoyaconditions è 1.0).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:06,15.22,16.81
+2025-02-28 12:16:07,15.33,16.81
+
+Current question: Q18
+Dammi tutti gli strain che hanno nagoyaconditions uguale a 2.0 e identificationtechnique uguale a Electron microscopy.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:08,15.22,16.81
+2025-02-28 12:16:09,15.33,16.81
+
+Current question: Q19
+Dammi tutti gli strain che hanno name uguale a Amaranthus leaf mottle virus o Chrysanthemum virus B o Tobacco ringspot virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:10,15.22,16.81
+2025-02-28 12:16:11,15.33,16.81
+
+Current question: Q20
+"Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION o DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION o NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:12,15.22,16.81
+2025-02-28 12:16:13,15.35,17.05
+2025-02-28 12:16:14,15.36,17.05
+
+Current question: Q21
+"Dammi tutti gli strain che hanno nagoyaprotocol uguale a STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION e il campo beforenagoya uguale a True e dualuse è uguale a True o False."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:15,15.22,17.05
+2025-02-28 12:16:16,15.34,17.05
+2025-02-28 12:16:17,15.35,17.05
+
+Current question: Q22
+Seleziona gli strain 'propagationhost' e 'otherccnumbers' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:18,15.22,17.05
+2025-02-28 12:16:19,15.28,17.05
+
+Current question: Q23
+Seleziona i campi applications e storageconditions da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:20,15.22,17.05
+
+Current question: Q24
+Dammi tutti gli strain che hanno sexualstate uguale a MAT2 e (typestrain è False o ineva è True).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:21,15.22,17.05
+2025-02-28 12:16:22,15.33,17.05
+
+Current question: Q25
+Dammi tutti gli strain che hanno userestrictions uguale a 2.0 o 1.0 o 3.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:23,15.22,17.05
+2025-02-28 12:16:24,15.33,17.05
+
+Current question: Q26
+Dammi tutti gli strain che hanno organismtype uguale a Virus o Filamentous Fungi o Cryptophyta.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:25,15.22,17.05
+2025-02-28 12:16:26,15.32,17.05
+
+Current question: Q27
+Dammi tutti gli strain che hanno pathotypeserotypetype uguale a 1 e riskgroup uguale a 1.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:27,15.22,17.05
+2025-02-28 12:16:28,15.33,17.05
+
+Current question: Q28
+Seleziona i campi confirmed e organismtype da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:29,15.22,17.06
+
+Current question: Q29
+Dammi tutti gli strain che hanno pathogenicity uguale a Solanum tuberosum o Castanea spp o pathogen for animals and humans (cause of dermatological infections).
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:30,15.22,17.06
+2025-02-28 12:16:31,15.33,17.06
+2025-02-28 12:16:32,15.34,17.06
+
+Current question: Q30
+Seleziona gli strain 'prodofmetabolites' e 'pathogenicity' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:33,15.22,17.06
+2025-02-28 12:16:34,15.33,17.06
+
+Current category: C3
+
+Current question: Q1
+Seleziona il campo 'riskgroqp' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:35,15.22,17.06
+
+Current question: Q2
+Seleziona 'cacronzm' e 'meuqoarantine' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:36,15.22,17.06
+2025-02-28 12:16:37,15.32,17.06
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo morgacismtype uguale a Figamentous Fungi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:38,15.22,17.06
+
+Current question: Q4
+Dammi aciessionnumber.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:39,15.22,17.06
+
+Current question: Q5
+Seleziona 'sirainid' e 'qps' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:40,15.22,17.06
+
+Current question: Q6
+Dammi gli strain con stabus uguale a Isotkpe of Rhodotorula macerans Frederiksen.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:41,15.22,17.06
+2025-02-28 12:16:42,15.32,17.06
+
+Current question: Q7
+Dammi tutti gli strain che hanno il campo 'conmentontaxonomy' uguale a Lactobecillus brevis.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:43,15.22,17.06
+
+Current question: Q8
+Seleziona il campo 'cxcronym' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:44,15.22,17.06
+
+Current question: Q9
+Dammi tutti gli strain che hanno il campo sqbstrate uguale a shke.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:45,15.22,17.06
+
+Current question: Q10
+Dammi tutti gli strain che hanno il campo 'mriskgrzup' uguale a 1.0.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:46,15.22,17.06
+
+Current question: Q11
+Dammi tutti gli strain che hanno il campo statos uguale a Holotype of Naganishia nivalisnTurchetti & Buzzini.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:47,15.22,17.06
+2025-02-28 12:16:48,15.33,17.06
+
+Current question: Q12
+Seleziona il campo 'ideztificationtechnique' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:49,15.22,17.06
+
+Current question: Q13
+Seleziona 'recommendedtempeqature' e 'userestrictiods' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:50,15.22,17.06
+
+Current question: Q14
+Seleziona 'otherccnumaers' e 'availablefofdis' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:51,15.22,17.06
+
+Current question: Q15
+Dammi tutti gli strain che hanno il campo 'collewtion' uguale a 17.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:52,15.22,17.06
+
+Current question: Q16
+Dammi tutti gli strain che hanno il campo 'resgrictions' uguale a ONLY FOR NOb-COMMERCIAL PURPOSES.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:53,15.22,17.06
+
+Current question: Q17
+Dammi tutti gli strain che hanno il campo 'axehic' uguale a Tque.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:54,15.22,17.06
+
+Current question: Q18
+Dammi tutti gli strain che hanno il campo transmwssionby uguale a coftact.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:55,15.22,17.06
+
+Current question: Q19
+Dammi tutti gli strain che hanno il campo 'skxualstate' uguale a MAn1.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:56,15.22,17.06
+
+Current question: Q20
+Dammi tutti gli strain che hanno il campo 'commentontaaonomy' uguale a Lactobacilluk paraplantarum.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:57,15.22,17.06
+2025-02-28 12:16:58,15.33,17.06
+
+Current question: Q21
+Seleziona il campo 'sexualstabe' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:16:59,15.22,17.06
+
+Current question: Q22
+Dammi tutti gli strain che hanno il campo 'nawe' uguale a Sowbana mosaic virus.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:00,15.22,17.06
+
+Current question: Q23
+Dammi cultivkr.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:01,15.22,17.06
+
+Current question: Q24
+Seleziona il campo 'testeltgmax' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:02,15.22,17.06
+
+Current question: Q25
+Seleziona 'organismtipe' e 'beforeuagoya' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:03,15.22,17.06
+
+Current question: Q26
+Dammi gli strain con dualune uguale a Trze.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:04,15.22,17.06
+
+Current question: Q27
+Seleziona il campo 'otherlcnumbers' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:05,15.22,17.06
+
+Current question: Q28
+Seleziona 'cacronzm' e 'irfrasubspecificnames' da strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:06,15.22,17.06
+
+Current question: Q29
+Dammi rekarks.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:07,15.22,17.06
+
+Current question: Q30
+Dammi tutti gli strain che hanno il campo morganmsmtype uguale a Micrealgae.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:08,15.22,17.06
+
+Current category: C4
+
+Current question: Q1
+Dammi tutti gli strain che hanno il campo scientificname uguale a Lettuce Italian necrotic virus e il campo collectiondate compreso tra 1998 e 2008. Voglio anche che il campo pathotypeserotypetype sia 0 o 1.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:09,15.22,17.06
+2025-02-28 12:17:10,15.34,17.06
+2025-02-28 12:17:11,15.34,17.06
+2025-02-28 12:17:12,15.34,17.06
+2025-02-28 12:17:13,15.35,17.06
+2025-02-28 12:17:14,15.35,17.06
+2025-02-28 12:17:15,15.37,17.06
+2025-02-28 12:17:16,15.38,17.06
+
+Current question: Q2
+Dammi tutti gli strain che hanno il campo recommendedtemperature uguale a 24.0 e il campo isolationdate con una data precedente a 1998-10-28.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:17,15.22,17.06
+2025-02-28 12:17:18,15.33,17.06
+2025-02-28 12:17:19,15.33,17.06
+2025-02-28 12:17:20,15.34,17.06
+2025-02-28 12:17:21,15.35,17.06
+
+Current question: Q3
+Dammi tutti gli strain che hanno il campo beforenagoya uguale a False e il campo depositdate con una data precedente a 1991.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:22,15.22,17.06
+2025-02-28 12:17:23,15.27,17.06
+2025-02-28 12:17:24,15.28,17.06
+2025-02-28 12:17:25,15.29,17.06
+2025-02-28 12:17:26,15.29,17.06
+
+Current question: Q4
+Dammi tutti gli strain che hanno il campo propagationhost uguale a Caryophyllaceae/Dianthus/barbatus e il campo isolationdate compreso tra 1990 e 1997.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:27,15.22,17.06
+2025-02-28 12:17:28,15.33,17.06
+2025-02-28 12:17:29,15.33,17.06
+2025-02-28 12:17:30,15.34,17.06
+2025-02-28 12:17:31,15.35,17.06
+2025-02-28 12:17:32,15.29,17.06
+2025-02-28 12:17:33,15.3,17.06
+2025-02-28 12:17:34,15.3,17.06
+
+Current question: Q5
+Dammi tutti gli strain che hanno il campo ineva uguale a False e il campo collectiondate con una data successiva a 2003.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:35,15.22,17.06
+2025-02-28 12:17:36,15.33,17.06
+2025-02-28 12:17:37,15.34,17.06
+2025-02-28 12:17:38,15.34,17.06
+
+Current question: Q6
+Dammi tutti gli strain che hanno il campo availablefordis uguale a True e il campo depositdate compreso tra 2005 e 2019. Voglio anche che il campo transmissionby sia contact;insect;seeds o contact;pollen;seeds.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:39,15.22,17.06
+2025-02-28 12:17:40,15.34,17.06
+2025-02-28 12:17:41,15.35,17.06
+2025-02-28 12:17:42,15.36,17.06
+2025-02-28 12:17:43,15.29,17.06
+2025-02-28 12:17:44,15.37,17.06
+2025-02-28 12:17:45,15.3,17.06
+2025-02-28 12:17:46,15.3,17.06
+2025-02-28 12:17:47,15.3,17.06
+
+Current question: Q7
+Dammi tutti gli strain che hanno il campo restrictions uguale a ONLY FOR NON-COMMERCIAL PURPOSES e il campo inclusiondate con una data precedente a 2010.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:48,15.22,17.06
+2025-02-28 12:17:49,15.28,17.06
+2025-02-28 12:17:50,15.34,17.06
+2025-02-28 12:17:51,15.28,17.06
+2025-02-28 12:17:52,15.29,17.06
+
+Current question: Q8
+Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo isolationdate con una data successiva a 1999-03-14.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:53,15.22,17.06
+2025-02-28 12:17:54,15.33,17.06
+2025-02-28 12:17:55,15.33,17.06
+2025-02-28 12:17:56,15.34,17.06
+2025-02-28 12:17:57,15.35,17.06
+
+Current question: Q9
+Dammi tutti gli strain che hanno il campo commentontaxonomy uguale a doi:10.1099/ijsem.0.004107 e il campo inclusiondate con una data successiva a 2013-02-12.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:17:58,15.22,17.06
+2025-02-28 12:17:59,15.34,17.06
+2025-02-28 12:18:00,15.34,17.06
+2025-02-28 12:18:01,15.35,17.06
+2025-02-28 12:18:02,15.29,17.06
+
+Current question: Q10
+Dammi tutti gli strain che hanno il campo beforenagoya uguale a True e il campo depositdate con una data precedente a 2011-11-02.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:03,15.22,17.06
+2025-02-28 12:18:04,15.32,17.06
+2025-02-28 12:18:05,15.34,17.06
+2025-02-28 12:18:06,15.34,17.06
+2025-02-28 12:18:07,15.36,17.06
+
+Current question: Q11
+Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo depositdate con una data precedente a 2013.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:08,15.22,17.06
+2025-02-28 12:18:09,15.33,17.06
+2025-02-28 12:18:10,15.33,17.06
+2025-02-28 12:18:11,15.33,17.06
+2025-02-28 12:18:12,15.35,17.06
+
+Current question: Q12
+Dammi tutti gli strain che hanno il campo riskgroup uguale a 2.0 e il campo depositdate compreso tra 2003 e 2016. Voglio anche che il campo species sia gracile o cerevisiae;uvarum.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:13,15.22,17.06
+2025-02-28 12:18:14,15.35,17.06
+2025-02-28 12:18:15,15.35,17.06
+2025-02-28 12:18:16,15.35,17.06
+2025-02-28 12:18:17,15.29,17.06
+2025-02-28 12:18:18,15.3,17.06
+2025-02-28 12:18:19,15.31,17.06
+2025-02-28 12:18:20,15.31,17.06
+
+Current question: Q13
+Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;seeds e il campo collectiondate con una data successiva a 2004.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:21,15.22,17.06
+2025-02-28 12:18:22,15.32,17.06
+2025-02-28 12:18:23,15.33,17.06
+2025-02-28 12:18:24,15.34,17.06
+2025-02-28 12:18:25,15.35,17.06
+
+Current question: Q14
+Dammi tutti gli strain che hanno il campo identificationtechnique uguale a Bioassay;Immuno blot e il campo depositdate compreso tra 2003 e 2012.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:26,15.22,17.06
+2025-02-28 12:18:27,15.33,17.06
+2025-02-28 12:18:28,15.33,17.06
+2025-02-28 12:18:29,15.34,17.06
+2025-02-28 12:18:30,15.34,17.06
+2025-02-28 12:18:31,15.34,17.06
+2025-02-28 12:18:32,15.34,17.06
+2025-02-28 12:18:33,15.34,17.06
+
+Current question: Q15
+Dammi tutti gli strain che hanno il campo transmissionby uguale a contact;fungi e il campo inclusiondate con una data precedente a 1995.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:34,15.22,17.06
+2025-02-28 12:18:35,15.32,17.06
+2025-02-28 12:18:36,15.33,17.06
+2025-02-28 12:18:37,15.33,17.06
+2025-02-28 12:18:38,15.35,17.06
+
+Current question: Q16
+Dammi tutti gli strain che hanno il campo testedtgmax uguale a 35.0 e il campo collectiondate compreso tra 1998 e 2012.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:39,15.22,17.06
+2025-02-28 12:18:40,15.32,17.06
+2025-02-28 12:18:41,15.33,17.06
+2025-02-28 12:18:42,15.33,17.06
+2025-02-28 12:18:43,15.34,17.06
+2025-02-28 12:18:44,15.34,17.06
+2025-02-28 12:18:45,15.35,17.06
+
+Current question: Q17
+Dammi tutti gli strain che hanno il campo nagoyaconditions uguale a 3.0 e il campo inclusiondate con una data precedente a 1995-04-16.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:46,15.22,17.06
+2025-02-28 12:18:47,15.33,17.06
+2025-02-28 12:18:48,15.34,17.06
+2025-02-28 12:18:49,15.35,17.06
+2025-02-28 12:18:50,15.35,17.06
+
+Current question: Q18
+Dammi tutti gli strain che hanno il campo cacronym uguale a BNSS e il campo inclusiondate con una data precedente a 2012.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:51,15.22,17.06
+2025-02-28 12:18:52,15.33,17.06
+2025-02-28 12:18:53,15.33,17.06
+2025-02-28 12:18:54,15.33,17.06
+2025-02-28 12:18:55,15.34,17.06
+
+Current question: Q19
+Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. paracasei e il campo isolationdate compreso tra 2005 e 2018.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:18:56,15.22,17.06
+2025-02-28 12:18:57,15.32,17.06
+2025-02-28 12:18:58,15.33,17.06
+2025-02-28 12:18:59,15.34,17.06
+2025-02-28 12:19:00,15.34,17.06
+2025-02-28 12:19:01,15.35,17.06
+2025-02-28 12:19:02,15.35,17.06
+2025-02-28 12:19:03,15.35,17.06
+
+Current question: Q20
+Dammi tutti gli strain che hanno il campo morganismtype uguale a Archaea e il campo inclusiondate compreso tra 1997 e 2003.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:04,15.22,17.06
+2025-02-28 12:19:05,15.32,17.06
+2025-02-28 12:19:06,15.32,17.06
+2025-02-28 12:19:07,15.33,17.06
+2025-02-28 12:19:08,15.34,17.06
+2025-02-28 12:19:09,15.33,17.06
+2025-02-28 12:19:10,15.34,17.06
+2025-02-28 12:19:11,15.34,17.06
+
+Current question: Q21
+Dammi tutti gli strain che hanno il campo storageconditions uguale a Lyo e il campo collectiondate con una data successiva a 2010.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:12,15.22,17.06
+2025-02-28 12:19:13,15.33,17.06
+2025-02-28 12:19:14,15.33,17.06
+2025-02-28 12:19:15,15.33,17.06
+2025-02-28 12:19:16,15.34,17.06
+
+Current question: Q22
+Dammi tutti gli strain che hanno il campo propagationhost uguale a Solanaceae/Petunia/x hybrida e il campo inclusiondate con una data precedente a 1997-09-10.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:17,15.22,17.06
+2025-02-28 12:19:18,15.34,17.06
+2025-02-28 12:19:19,15.35,17.06
+2025-02-28 12:19:20,15.35,17.06
+2025-02-28 12:19:21,15.35,17.06
+
+Current question: Q23
+Dammi tutti gli strain che hanno il campo applications uguale a Resistant to hygromicyn B e il campo inclusiondate con una data successiva a 2014.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:22,15.22,17.06
+2025-02-28 12:19:23,15.32,17.06
+2025-02-28 12:19:24,15.33,17.06
+2025-02-28 12:19:25,15.34,17.06
+2025-02-28 12:19:26,15.34,17.06
+
+Current question: Q24
+Dammi tutti gli strain che hanno il campo sexualstate uguale a Mata/Matalpha e il campo isolationdate con una data precedente a 1996-04-26.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:27,15.22,17.06
+2025-02-28 12:19:28,15.32,17.06
+2025-02-28 12:19:29,15.33,17.06
+2025-02-28 12:19:30,15.33,17.06
+2025-02-28 12:19:31,15.33,17.06
+
+Current question: Q25
+Dammi tutti gli strain che hanno il campo applications uguale a Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); e il campo collectiondate compreso tra 2005 e 2016. Voglio anche che il campo otherdenominations sia Rs T33 C8 o LB5A6B05.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:32,15.22,17.06
+2025-02-28 12:19:33,15.35,17.31
+2025-02-28 12:19:34,15.36,17.31
+2025-02-28 12:19:35,15.36,17.31
+2025-02-28 12:19:36,15.29,17.31
+2025-02-28 12:19:37,15.3,17.31
+2025-02-28 12:19:38,15.31,17.31
+2025-02-28 12:19:39,15.31,17.31
+2025-02-28 12:19:40,15.32,17.31
+
+Current question: Q26
+Dammi tutti gli strain che hanno il campo scientificname uguale a Carnation mottle virus e il campo depositdate con una data successiva a 1997-10-29.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:41,15.22,17.31
+2025-02-28 12:19:42,15.33,17.31
+2025-02-28 12:19:43,15.33,17.31
+2025-02-28 12:19:44,15.34,17.31
+2025-02-28 12:19:45,15.35,17.31
+
+Current question: Q27
+Dammi tutti gli strain che hanno il campo scientificname uguale a Pepper mild mottle virus e il campo inclusiondate con una data precedente a 1991-09-20.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:46,15.22,17.31
+2025-02-28 12:19:47,15.33,17.31
+2025-02-28 12:19:48,15.35,17.31
+2025-02-28 12:19:49,15.34,17.31
+2025-02-28 12:19:50,15.36,17.31
+
+Current question: Q28
+Dammi tutti gli strain che hanno il campo infrasubspecificnames uguale a subsp. bulgaricus e il campo collectiondate con una data successiva a 2000-02-24.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:51,15.22,17.31
+2025-02-28 12:19:52,15.33,17.31
+2025-02-28 12:19:53,15.33,17.31
+2025-02-28 12:19:54,15.33,17.31
+2025-02-28 12:19:55,15.34,17.31
+
+Current question: Q29
+Dammi tutti gli strain che hanno il campo meuquarantine uguale a True e il campo depositdate con una data precedente a 1997-12-06.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:19:56,15.22,17.31
+2025-02-28 12:19:57,15.32,17.31
+2025-02-28 12:19:58,15.33,17.31
+2025-02-28 12:19:59,15.33,17.31
+2025-02-28 12:20:00,15.33,17.31
+
+Current question: Q30
+Dammi tutti gli strain che hanno il campo sexualstate uguale a MAT2 e il campo isolationdate con una data precedente a 2005.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:01,15.22,17.31
+2025-02-28 12:20:02,15.33,17.31
+2025-02-28 12:20:03,15.34,17.31
+2025-02-28 12:20:04,15.33,17.31
+2025-02-28 12:20:05,15.34,17.31
+
+Current category: C5
+
+Current question: Q1
+Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e recommendedtemperature.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:06,15.22,17.31
+
+Current question: Q2
+Seleziona e conta tutti i strain che hanno il campo accessionnumber uguale a MUT00006186 e raggruppa solo quelli che hanno lo stesso abbreviation.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:07,15.22,17.31
+2025-02-28 12:20:08,15.33,17.31
+
+Current question: Q3
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo dualuse."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:09,15.22,17.31
+
+Current question: Q4
+Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e infrasubspecificnames.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:10,15.22,17.31
+2025-02-28 12:20:11,15.32,17.31
+
+Current question: Q5
+Seleziona e conta il numero di strain raggruppandoli in base ai campi genus e riskgroup.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:12,15.22,17.31
+
+Current question: Q6
+Seleziona e conta tutti i strain che hanno il campo beforenagoya uguale a True e raggruppa solo quelli che hanno lo stesso campo applications. Voglio che mi mostri solo i gruppi con più di 1 esempi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:13,15.22,17.31
+2025-02-28 12:20:14,15.34,17.31
+
+Current question: Q7
+Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a CBS 121057;IBT 28362 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 6 esempi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:15,15.22,17.31
+2025-02-28 12:20:16,15.34,17.31
+
+Current question: Q8
+Seleziona e conta tutti i strain che hanno il campo strainid uguale a 9 e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:17,15.22,17.31
+2025-02-28 12:20:18,15.34,17.31
+
+Current question: Q9
+Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso pathogenicity.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:19,15.22,17.31
+2025-02-28 12:20:20,15.33,17.31
+
+Current question: Q10
+Seleziona e conta tutti i strain che hanno il campo pathogenicity uguale a Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. e raggruppa solo quelli che hanno lo stesso otherccnumbers.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:21,15.22,17.31
+2025-02-28 12:20:22,15.34,17.31
+2025-02-28 12:20:23,15.34,17.31
+
+Current question: Q11
+Seleziona e conta il numero di strain raggruppandoli in base ai campi scientificname e isolationhost.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:24,15.22,17.31
+
+Current question: Q12
+Seleziona e conta tutti i strain che hanno il campo identificationtechnique uguale a Identification techniques used: ITS e raggruppa solo quelli che hanno lo stesso symptomatologyonisolationhost.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:25,15.22,17.31
+2025-02-28 12:20:26,15.33,17.31
+
+Current question: Q13
+Seleziona e conta tutti i strain che hanno il campo remarks uguale a linkage group: A5; allele mutation: nit M e raggruppa solo quelli che hanno lo stesso campo testedtgmin. Voglio che mi mostri solo i gruppi con più di 5 esempi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:27,15.22,17.31
+2025-02-28 12:20:28,15.34,17.31
+
+Current question: Q14
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo nagoyaconditions."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:29,15.22,17.31
+
+Current question: Q15
+Seleziona e conta tutti i strain che hanno il campo organismtype uguale a Yeasts e raggruppa solo quelli che hanno lo stesso restrictions.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:30,15.22,17.31
+
+Current question: Q16
+Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e nagoyaprotocol.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:31,15.22,17.31
+2025-02-28 12:20:32,15.33,17.31
+
+Current question: Q17
+Seleziona e conta il numero di strain raggruppandoli in base ai campi propagationhost e infrasubspecificnames.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:33,15.22,17.31
+2025-02-28 12:20:34,15.33,17.31
+
+Current question: Q18
+Seleziona e conta tutti i strain che hanno il campo otherccnumbers uguale a KSU 853 e raggruppa solo quelli che hanno lo stesso confirmed.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:35,15.22,17.31
+2025-02-28 12:20:36,15.32,17.31
+
+Current question: Q19
+Seleziona e conta il numero di strain raggruppandoli in base ai campi axenic e isolationhabitat.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:37,15.22,17.31
+2025-02-28 12:20:38,15.32,17.31
+
+Current question: Q20
+Seleziona e conta il numero di strain raggruppandoli in base ai campi organismtype e scientificname.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:39,15.22,17.31
+
+Current question: Q21
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo othernames."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:40,15.22,17.31
+
+Current question: Q22
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo ineva."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:41,15.22,17.31
+
+Current question: Q23
+Seleziona e conta il numero di strain raggruppandoli in base ai campi pathogenicity e geoorigin.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:42,15.22,17.31
+2025-02-28 12:20:43,15.32,17.31
+
+Current question: Q24
+Seleziona e conta tutti i strain che hanno il campo strainid uguale a 25068 e raggruppa solo quelli che hanno lo stesso campo propagationhost. Voglio che mi mostri solo i gruppi con più di 4 esempi.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:44,15.22,17.31
+2025-02-28 12:20:45,15.34,17.31
+
+Current question: Q25
+Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e registeredcollection.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:46,15.22,17.31
+2025-02-28 12:20:47,15.32,17.31
+
+Current question: Q26
+Seleziona e conta il numero di strain raggruppandoli in base ai campi restrictions e registeredcollection.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:48,15.22,17.31
+
+Current question: Q27
+"Seleziona e conta il numero di strain, raggruppando i risultati in base al campo riskgroup."
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:49,15.22,17.31
+
+Current question: Q28
+Seleziona e conta il numero di strain raggruppandoli in base ai campi userestrictions e dualuse.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:50,15.22,17.31
+2025-02-28 12:20:51,15.32,17.31
+
+Current question: Q29
+Seleziona e conta tutti i strain che hanno il campo symptomatologyonisolationhost uguale a local lesions e raggruppa solo quelli che hanno lo stesso status.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:52,15.22,17.31
+2025-02-28 12:20:53,15.33,17.31
+
+Current question: Q30
+Seleziona e conta tutti i strain che hanno il campo axenic uguale a True e raggruppa solo quelli che hanno lo stesso identificationtechnique.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-02-28 12:20:54,15.22,17.31
+2025-02-28 12:20:55,15.33,17.31

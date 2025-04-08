@@ -1,0 +1,51 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Give me all strains that have the field '{column}' equal to {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Select the field '{column}' from strain.",
+        "sql_template": "SELECT {column} FROM detailedstrain;",
+        "possible_sql_queries": [
+           "SELECT {column} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Select '{column1}' and '{column2}' from strain.",
+        "sql_template": "SELECT {column1}, {column2} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column1}, {column2} FROM detailedstrain;",
+            "SELECT {column2}, {column1} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Give me {column}.",
+        "sql_template": "SELECT {column} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 4,
+        "question_template": "Give me all strains that have the field {column} equal to {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    },
+    {   
+        "index_template": 5,
+        "question_template": "Give me strain with {column} equal to {value}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column} = {value};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column} = {value};"
+        ]
+    }
+]

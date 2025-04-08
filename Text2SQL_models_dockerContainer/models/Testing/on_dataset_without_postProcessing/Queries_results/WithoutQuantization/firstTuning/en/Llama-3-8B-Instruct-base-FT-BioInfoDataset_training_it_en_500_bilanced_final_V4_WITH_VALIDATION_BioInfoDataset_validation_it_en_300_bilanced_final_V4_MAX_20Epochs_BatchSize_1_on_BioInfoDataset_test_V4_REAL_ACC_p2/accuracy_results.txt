@@ -1,0 +1,102 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q6
+question: Select only field called symptomatologyonisolationhost from strain.
+real variants query: ['SELECT symptomatologyonisolationhost FROM detailedstrain;']
+generated query: SELECT symptomatologyonisolationhost FROM strain; 
+
+ID-query: C1-Q8
+question: Select only field called pathotypeserotypetype from strain.
+real variants query: ['SELECT pathotypeserotypetype FROM detailedstrain;']
+generated query: SELECT pathotypeserotypetype FROM strain; 
+
+ID-query: C1-Q12
+question: Select only field called confirmed from strain.
+real variants query: ['SELECT confirmed FROM detailedstrain;']
+generated query: SELECT confirmed FROM strain;  
+
+ID-query: C1-Q13
+question: Select only field called status from strain.
+real variants query: ['SELECT status FROM detailedstrain;']
+generated query: SELECT status FROM strain; 
+
+ID-query: C1-Q24
+question: Select only field called testedtgmax from strain.
+real variants query: ['SELECT testedtgmax FROM detailedstrain;']
+generated query: SELECT testedtgmax FROM strain; 
+
+ID-query: C2-Q6
+question: Select the fields 'nagoyaconditions' and 'nagoyaprotocol' from strain.
+real variants query: ['SELECT nagoyaprotocol, nagoyaconditions FROM detailedstrain;', 'SELECT nagoyaconditions, nagoyaprotocol FROM detailedstrain;']
+generated query: SELECT nagoyaconditions, nagoyaprotocol FROM strain; 
+
+ID-query: C2-Q7
+question: Give me all strains that have testedtgmax equal to 30.0 and the accessionnumber equal to 5503 and testedtgmin is 15.0 or 25.0.
+real variants query: ["SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = '5503' AND (testedtgmin = 15.0 OR testedtgmin = 25.0);", "SELECT * FROM detailedstrain WHERE accessionnumber = '5503' AND testedtgmax = 30.0 AND (testedtgmin = 15.0 OR testedtgmin = 25.0);", "SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = '5503' AND (testedtgmin = 25.0 OR testedtgmin = 15.0);", "SELECT * FROM detailedstrain WHERE accessionnumber = '5503' AND testedtgmax = 30.0 AND (testedtgmin = 25.0 OR testedtgmin = 15.0);"]
+generated query: SELECT * FROM detailedstrain WHERE testedtgmax = 30.0 AND accessionnumber = 5503 AND (testedtgmin = 15.0 OR testedtgmin = 25.0); 
+
+ID-query: C2-Q14
+question: Select the fields geoorigin and testedtgmax from strain.
+real variants query: ['SELECT testedtgmax, geoorigin FROM detailedstrain;', 'SELECT geoorigin, testedtgmax FROM detailedstrain;']
+generated query: SELECT geoorigin, testedtgmax FROM strain; 
+
+ID-query: C3-Q3
+question: Give me all strains that have the field morgacismtype equal to Figamentous Fungi.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Filamentous Fungi';"]
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Fungal Fungi'; 
+
+ID-query: C3-Q8
+question: Select the field 'cxcronym' from strain.
+real variants query: ['SELECT cacronym FROM detailedstrain;']
+generated query: SELECT cxcronym FROM detailedstrain; 
+
+ID-query: C3-Q9
+question: Give me all strains that have the field sqbstrate equal to shke.
+real variants query: ["SELECT * FROM detailedstrain WHERE substrate = 'sake';"]
+generated query: SELECT * FROM detailedstrain WHERE substrate ='shells'; 
+
+ID-query: C3-Q11
+question: Give me all strains that have the field statos equal to Holotype of Naganishia nivalisnTurchetti & Buzzini.
+real variants query: ["SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis Turchetti & Buzzini';"]
+generated query: SELECT * FROM detailedstrain WHERE status = 'Holotype of Naganishia nivalis'.; 
+
+ID-query: C3-Q14
+question: Select 'otherccnumaers' and 'availablefofdis' from strain.
+real variants query: ['SELECT otherccnumbers, availablefordis FROM detailedstrain;', 'SELECT availablefordis, otherccnumbers FROM detailedstrain;']
+generated query: SELECT otherccnumbers, availablefordis FROM strain; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field 'skxualstate' equal to MAn1.
+real variants query: ["SELECT * FROM detailedstrain WHERE sexualstate = 'MAT1';"]
+generated query: SELECT * FROM detailedstrain WHERE sexualstate = 'MAT2'; 
+
+ID-query: C3-Q22
+question: Give me all strains that have the field 'nawe' equal to Sowbana mosaic virus.
+real variants query: ["SELECT * FROM detailedstrain WHERE name = 'Sowbane mosaic virus';"]
+generated query: SELECT * FROM detailedstrain WHERE nagoya = 'Sowbana mosaic virus'; 
+
+ID-query: C3-Q29
+question: Give me rekarks.
+real variants query: ['SELECT remarks FROM detailedstrain;']
+generated query: SELECT * FROM detailedstrain WHERE euquarantine = False; 
+
+ID-query: C3-Q30
+question: Give me all strains that have the field morganmsmtype equal to Micrealgae.
+real variants query: ["SELECT * FROM detailedstrain WHERE morganismtype = 'Microalgae';"]
+generated query: SELECT * FROM detailedstrain WHERE morganmsmtype = 'Micrenalgae'; 
+
+ID-query: C4-Q25
+question: Give me all the strains that have the applications field equal to Degrades alkanes (paraffin oil) as sole carbon source (more than glucose); and that have the collectiondate field with a date between 2005 and 2016. I also want the otherdenominations to be Rs T33 C8 or LB5A6B05.
+real variants query: ["SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND ((otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'));", "SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose);' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05');"]
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (more than glucose)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '2005-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2016-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '2005' AND collectiondate <= '2016')) AND (otherdenominations = 'Rs T33 C8' OR otherdenominations = 'LB5A6B05'); 
+
+
+
+Correct answers: 132
+Total questions: 150
+Model accuracy: 88.00%
+
+######################################################################################
+
+# BEST MODEL FOR LLAMA-8B-INSTRUCT.

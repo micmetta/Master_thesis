@@ -1,0 +1,69 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Give me all strains that have {column1} equal to {value1} and {column2} equal to {value2}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2};",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2};",
+            "SELECT * FROM detailedstrain WHERE {column2} = {value2} AND {column1} = {value1};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Give me all strains that have {column1} equal to {value1} and the {column2} equal to {value2} and {column3} is {value3} or {value4}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2} AND ({column3} = {value3} OR {column3} = {value4});",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2} AND ({column3} = {value3} OR {column3} = {value4});",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND {column2} = {value2} AND ({column3} = {value4} OR {column3} = {value3});",
+            "SELECT * FROM detailedstrain WHERE {column2} = {value2} AND {column1} = {value1} AND ({column3} = {value3} OR {column3} = {value4});",
+            "SELECT * FROM detailedstrain WHERE {column2} = {value2} AND {column1} = {value1} AND ({column3} = {value4} OR {column3} = {value3});"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Give me all strains that have {column1} equal to {value1} or {value2} or {value3}.",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column1} IN ({value1}, {value2}, {value3});",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value1}, {value2}, {value3});",
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value1}, {value3}, {value2});",
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value2}, {value1}, {value3});",
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value2}, {value3}, {value1});",
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value3}, {value1}, {value2});",
+            "SELECT * FROM detailedstrain WHERE {column1} IN ({value3}, {value2}, {value1});",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} OR {column1} = {value2} OR {column1} = {value3};",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} OR {column1} = {value3} OR {column1} = {value2};",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value2} OR {column1} = {value1} OR {column1} = {value3};",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value2} OR {column1} = {value3} OR {column1} = {value1};",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value3} OR {column1} = {value1} OR {column1} = {value2};",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value3} OR {column1} = {value2} OR {column1} = {value1};"
+        ]
+    },
+    {
+        "index_template": 3,
+        "question_template": "Select the fields '{column1}' and '{column2}' from strain.",
+        "sql_template": "SELECT {column1}, {column2} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column1}, {column2} FROM detailedstrain;",
+            "SELECT {column2}, {column1} FROM detailedstrain;"
+        ]
+    },
+    {   
+        "index_template": 4,
+        "question_template": "Give me all strains that have {column1} equal to {value1} and ({column2} is {value2} or {column3} is {value3}).",
+        "sql_template": "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND ({column2} = {value2} OR {column3} = {value3});",
+        "possible_sql_queries": [
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND ({column2} = {value2} OR {column3} = {value3});",
+            "SELECT * FROM detailedstrain WHERE {column1} = {value1} AND (({column2} = {value2}) OR ({column3} = {value3}));"
+        ]
+        
+    },
+    {   
+        "index_template": 5,
+        "question_template": "Select the fields {column1} and {column2} from strain.",
+        "sql_template": "SELECT {column1}, {column2} FROM detailedstrain;",
+        "possible_sql_queries": [
+            "SELECT {column1}, {column2} FROM detailedstrain;",
+            "SELECT {column2}, {column1} FROM detailedstrain;"
+        ]
+    }
+]

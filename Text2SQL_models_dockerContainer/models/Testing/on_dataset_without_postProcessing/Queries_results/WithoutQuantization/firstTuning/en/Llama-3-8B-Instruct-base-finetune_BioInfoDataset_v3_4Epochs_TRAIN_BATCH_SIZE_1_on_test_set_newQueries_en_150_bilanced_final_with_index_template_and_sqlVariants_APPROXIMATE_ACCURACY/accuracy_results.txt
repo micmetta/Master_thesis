@@ -1,0 +1,489 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q1
+question: Select only field called transmissionby from strain.
+real query: SELECT transmissionby FROM detailedstrain;
+generated query: SELECT transmissionby FROM strain; 
+
+ID-query: C1-Q13
+question: Give me all strains that have recommendedtemperature equal to 37.0.
+real query: SELECT * FROM detailedstrain WHERE recommendedtemperature = 37.0;
+generated query: SELECT * FROM detailedstrain WHERE recommendedtemperature = '37.0'; 
+
+ID-query: C1-Q18
+question: Give me all strains that have commentontaxonomy equal to doi:10.1099/ijsem.0.004107.
+real query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107';
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'doi:10.1099/ijsem.0.004107."; 
+
+ID-query: C1-Q24
+question: Select only field called dualuse from strain.
+real query: SELECT dualuse FROM detailedstrain;
+generated query: SELECT dualuse FROM strain; 
+
+ID-query: C1-Q27
+question: Give me all strains that have otherccnumbers equal to ATCC 22022; CBS 6023; CCRC 21651; IFO 1497; JCM 9452; TI-0020.
+real query: SELECT * FROM detailedstrain WHERE otherccnumbers = 'ATCC 22022; CBS 6023; CCRC 21651; IFO 1497; JCM 9452; TI-0020';
+generated query: SELECT * FROM detailedstrain WHERE otherccnumbers = 'ATCC 22022' OR otherccnumbers = 'CBS 6023' OR otherccnumbers = 'CCRC 21651' OR otherccnumbers = 'IFO 1497' OR otherccnumbers = 'JCM 9452' OR otherccnumbers = 'TI-0020'; 
+
+ID-query: C1-Q30
+question: Select only field called confirmed from strain.
+real query: SELECT confirmed FROM detailedstrain;
+generated query: SELECT confirmed FROM strain; 
+
+ID-query: C2-Q1
+question: Select the fields 'userestrictions' and 'sexualstate' from strain.
+real query: SELECT sexualstate, userestrictions FROM detailedstrain;
+generated query: SELECT userestrictions, sexualstate FROM strain; 
+
+ID-query: C2-Q2
+question: Give me all strains that have typestrain equal to True and (symptomatologyonisolationhost is systemic symptoms or nagoyaprotocol is DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION).
+real query: SELECT * FROM detailedstrain WHERE typestrain = True AND (symptomatologyonisolationhost = 'systemic symptoms' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION');
+generated query: SELECT * FROM detailedstrain WHERE typestrain = True AND ((symptomatologyonisolationhost ='systemic symptoms') OR (nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION')); 
+
+ID-query: C2-Q4
+question: Select the fields 'otherdenominations' and 'isolationhost' from strain.
+real query: SELECT isolationhost, otherdenominations FROM detailedstrain;
+generated query: SELECT otherdenominations, isolationhost FROM strain; 
+
+ID-query: C2-Q5
+question: Select the fields 'typestrain' and 'meuquarantine' from strain.
+real query: SELECT meuquarantine, typestrain FROM detailedstrain;
+generated query: SELECT typestrain, meuquarantine FROM detailedstrain; 
+
+ID-query: C2-Q6
+question: Give me all strains that have commentontaxonomy equal to Lactobacillus casei or synonym: Rhizophagus irregularis; basionym: Glomus irregulare or IIB group.
+real query: SELECT * FROM detailedstrain WHERE commentontaxonomy IN ('synonym: Rhizophagus irregularis; basionym: Glomus irregulare', 'Lactobacillus casei', 'IIB group');
+generated query: SELECT * FROM detailedstrain WHERE commentontaxonomy = 'Lactobacillus casei' OR (othernames = 'Rhizophagus irregularis' AND collectiondate ='synonym') OR (gmoconstructioninfo = 'basionym: Glomus irregulare' AND collectiondate = 'or') OR (pathotypeserotypetype = 'IIB group' AND collectiondate = 'or'); 
+
+ID-query: C2-Q7
+question: Select the fields qps and cacronym from strain.
+real query: SELECT cacronym, qps FROM detailedstrain;
+generated query: SELECT qps, cacronym FROM strain; 
+
+ID-query: C2-Q8
+question: Select the fields storageconditions and dualuse from strain.
+real query: SELECT storageconditions, dualuse FROM detailedstrain;
+generated query: SELECT storageconditions, dualuse FROM strain; 
+
+ID-query: C2-Q9
+question: Give me all strains that have identificationtechnique equal to Identification techniques used and morganismtype equal to Archaea.
+real query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used' AND morganismtype = 'Archaea';
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Identification techniques used' AND organismtype = 'Archaea'; 
+
+ID-query: C2-Q10
+question: Select the fields qps and userestrictions from strain.
+real query: SELECT userestrictions, qps FROM detailedstrain;
+generated query: SELECT qps, userestrictions FROM strain; 
+
+ID-query: C2-Q11
+question: Give me all strains that have ineva equal to True and the remarks equal to Organic corn and pathogenicity is Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. or Plant.
+real query: SELECT * FROM detailedstrain WHERE remarks = 'Organic corn' AND ineva = True AND (pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.' OR pathogenicity = 'Plant');
+generated query: SELECT * FROM detailedstrain WHERE ineva = True AND remarks = 'Organic corn' AND (pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.' OR pathogenicity = 'Plant'); 
+
+ID-query: C2-Q12
+question: Give me all strains that have restrictions equal to ONLY FOR NON-COMMERCIAL PURPOSES and the beforenagoya equal to False and storageconditions is Liquid nitrogen or Lyo.
+real query: SELECT * FROM detailedstrain WHERE beforenagoya = False AND restrictions = 'ONLY FOR NON-COMMERCIAL PURPOSES' AND (storageconditions = 'Lyo' OR storageconditions = 'Liquid nitrogen');
+generated query: SELECT * FROM detailedstrain WHERE restrictions = 'ONLY FOR NON-COMMERCIAL PURPOSES' AND beforenagoya = False AND (storageconditions = 'Liquid nitrogen' OR storageconditions = 'Lyo'); 
+
+ID-query: C2-Q13
+question: Select the fields 'cultivar' and 'nagoyaconditions' from strain.
+real query: SELECT nagoyaconditions, cultivar FROM detailedstrain;
+generated query: SELECT cultivar, nagoyaconditions FROM strain; 
+
+ID-query: C2-Q14
+question: Give me all strains that have identificationtechnique equal to Immuno blot and applications equal to Degrades alkanes (paraffin oil) as sole carbon source (comparably to glucose); produces biosurfactant..
+real query: SELECT * FROM detailedstrain WHERE applications = 'Degrades alkanes (paraffin oil) as sole carbon source (comparably to glucose); produces biosurfactant.' AND identificationtechnique = 'Immuno blot';
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique = 'Immuno blot' AND applications = 'Degrades alkanes (paraffin oil) as sole carbon source (comparably to glucose); produces biosurfactant.'; 
+
+ID-query: C2-Q15
+question: Give me all strains that have pathogenicity equal to Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. or Castanea spp or Geophilic species (i.e. residing in the soil) with low pathogenic value. Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans..
+real query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Castanea spp' OR pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.' OR pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans.';
+generated query: SELECT * FROM detailedstrain WHERE (pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value.' AND commentontaxonomy = 'Rare reports of superficial infections in humans and some animal species.' OR scientificname = 'Castanea spp' OR pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value.' AND remarks = 'Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans.') [/INST] Note: This is assuming that you want to match the pathogenicity field exactly. If you want to match only the genus and species, you should use a different query. Also, please be aware that this query is case sensitive. If you want a case insensitive match, you should use the lower() or upper() function. For example: 
+
+ID-query: C2-Q16
+question: Give me all strains that have availablefordis equal to False and the organismtype equal to Cyanobacteria and symptomatologyonisolationhost is local lesions or systemic symptoms.
+real query: SELECT * FROM detailedstrain WHERE organismtype = 'Cyanobacteria' AND availablefordis = False AND (symptomatologyonisolationhost = 'systemic symptoms' OR symptomatologyonisolationhost = 'local lesions');
+generated query: SELECT * FROM detailedstrain WHERE availablefordis = False AND organismtype = 'Cyanobacteria' AND symptomatologyonisolationhost = 'local lesions' OR symptomatologyonisolationhost ='systemic symptoms'; 
+
+ID-query: C2-Q17
+question: Select the fields 'nagoyaconditions' and 'name' from strain.
+real query: SELECT nagoyaconditions, name FROM detailedstrain;
+generated query: SELECT nagoyaconditions, name FROM strain; 
+
+ID-query: C2-Q19
+question: Select the fields sexualstate and propagationhost from strain.
+real query: SELECT sexualstate, propagationhost FROM detailedstrain;
+generated query: SELECT sexualstate, propagationhost FROM strain; 
+
+ID-query: C2-Q20
+question: Give me all strains that have storageconditions equal to Liquid nitrogen and the propagationhost equal to Solanaceae/Nicotiana/rustica and strainid is 22667 or 16846.
+real query: SELECT * FROM detailedstrain WHERE storageconditions = 'Liquid nitrogen' AND propagationhost = 'Solanaceae/Nicotiana/rustica' AND (strainid = 22667 OR strainid = 16846);
+generated query: SELECT * FROM detailedstrain WHERE storageconditions = 'Liquid nitrogen' AND propagationhost = 'Solanaceae/Nicotiana/rustica' AND strainid = 22667 OR strainid = 16846; 
+
+ID-query: C2-Q21
+question: Give me all strains that have riskgroup equal to 1.0 or 12.0 or 2.0.
+real query: SELECT * FROM detailedstrain WHERE riskgroup IN (1.0, 12.0, 2.0);
+generated query: SELECT * FROM detailedstrain WHERE riskgroup = 1.0 OR riskgroup = 12.0 OR riskgroup = 2.0; 
+
+ID-query: C2-Q22
+question: Give me all strains that have morganismtype equal to Cyanobacteria and the axenic equal to False and mriskgroup is 2.0 or 1.0.
+real query: SELECT * FROM detailedstrain WHERE morganismtype = 'Cyanobacteria' AND axenic = False AND (mriskgroup = 1.0 OR mriskgroup = 2.0);
+generated query: SELECT * FROM detailedstrain WHERE morganismtype = 'Cyanobacteria' AND axenic = False AND mriskgroup = 2.0 OR mriskgroup = 1.0; 
+
+ID-query: C2-Q23
+question: Select the fields 'identificationtechnique' and 'name' from strain.
+real query: SELECT name, identificationtechnique FROM detailedstrain;
+generated query: SELECT identificationtechnique, name FROM strain; 
+
+ID-query: C2-Q24
+question: Give me all strains that have transmissionby equal to contact;nematodes or contact;insect;pollen or contact;fungi.
+real query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact;fungi' OR transmissionby = 'contact;insect;pollen' OR transmissionby = 'contact;nematodes';
+generated query: SELECT * FROM detailedstrain WHERE transmissionby = 'contact;nematodes' OR transmissionby = 'contact;insect;pollen' OR transmissionby = 'contact;fungi'; 
+
+ID-query: C2-Q26
+question: Give me all strains that have genus equal to Didymogenes or Gordonia or Arthrographis.
+real query: SELECT * FROM detailedstrain WHERE genus IN ('Gordonia', 'Arthrographis', 'Didymogenes');
+generated query: SELECT * FROM detailedstrain WHERE genus = 'Didymogenes' OR genus = 'Gordonia' OR genus = 'Arthrographis'; 
+
+ID-query: C2-Q27
+question: Give me all strains that have nagoyaprotocol equal to STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION or NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL or DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL';
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'STRAIN PROBABLY IN SCOPE, PLEASE CONTACT THE CULTURE COLLECTION' OR nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' OR nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION'; 
+
+ID-query: C2-Q29
+question: Give me all strains that have cacronym equal to ACUF and (pathotypeserotypetype is 0 or cultivar is stella di natale).
+real query: SELECT * FROM detailedstrain WHERE cacronym = 'ACUF' AND (pathotypeserotypetype = '0' OR cultivar = 'stella di natale');
+generated query: SELECT * FROM detailedstrain WHERE cacronym = 'ACUF' AND (pathotypeserotypetype = 0 OR cultivar ='stella di natale'); 
+
+ID-query: C2-Q30
+question: Give me all strains that have substrate equal to sand by sea water and the gmo equal to True and symptomatologyonisolationhost is local lesions or systemic symptoms.
+real query: SELECT * FROM detailedstrain WHERE gmo = True AND substrate = 'sand by sea water' AND (symptomatologyonisolationhost = 'local lesions' OR symptomatologyonisolationhost = 'systemic symptoms');
+generated query: SELECT * FROM detailedstrain WHERE substrate ='sand by sea water' AND gmo = TRUE AND symptomatologyonisolationhost = 'local lesions' OR symptomatologyonisolationhost ='systemic symptoms'; 
+
+ID-query: C3-Q1
+question: Give me all strains that have the field accessiwnnumber equal to 8w67.
+real query: SELECT * FROM detailedstrain WHERE accessionnumber = '8167';
+generated query: SELECT * FROM detailedstrain WHERE accessionnumber = '8w67'; 
+
+ID-query: C3-Q2
+question: Give me all strains that have the field 'prodosmetabolites' equal to Alternariol monomethylgether.
+real query: SELECT * FROM detailedstrain WHERE prodofmetabolites = 'Alternariol monomethyl ether';
+generated query: SELECT * FROM detailedstrain WHERE prodofmetabolites = 'Alternariol monomethylgether'; 
+
+ID-query: C3-Q3
+question: Give me strain with applicatoons equal to Produces molecules with emulsffication activity..
+real query: SELECT * FROM detailedstrain WHERE applications = 'Produces molecules with emulsification activity.';
+generated query: SELECT * FROM detailedstrain WHERE applications = 'Produces molecules with emulsffication activity.'; 
+
+ID-query: C3-Q4
+question: Select the field 'qps' from strain.
+real query: SELECT qps FROM detailedstrain;
+generated query: SELECT qps FROM strain; 
+
+ID-query: C3-Q5
+question: Give me all strains that have the field ckcronym equal to TUjC.
+real query: SELECT * FROM detailedstrain WHERE cacronym = 'TUCC';
+generated query: SELECT * FROM detailedstrain WHERE ckcronym = 'TUjC'; 
+
+ID-query: C3-Q6
+question: Give me all strains that have the field isolationhabitat equal to wastwwater.
+real query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'wastewater';
+generated query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'wastwwater'; 
+
+ID-query: C3-Q7
+question: Select 'beforezagoya' and 'testadtgmin' from strain.
+real query: SELECT beforenagoya, testedtgmin FROM detailedstrain;
+generated query: SELECT beforezagoya, testedtgmin FROM strain; 
+
+ID-query: C3-Q8
+question: Select the field 'othetnames' from strain.
+real query: SELECT othernames FROM detailedstrain;
+generated query: SELECT othetnames FROM strain; 
+
+ID-query: C3-Q11
+question: Select the field 'segualstate' from strain.
+real query: SELECT sexualstate FROM detailedstrain;
+generated query: SELECT [segualstate] FROM detailedstrain; 
+
+ID-query: C3-Q12
+question: Give me all strains that have the field otherqenominations equal to ERp6.
+real query: SELECT * FROM detailedstrain WHERE otherdenominations = 'ERC6';
+generated query: SELECT * FROM detailedstrain WHERE otherqenominations = 'ERp6'; 
+
+ID-query: C3-Q13
+question: Select 'nmgoyaconditions' and 'substrbte' from strain.
+real query: SELECT substrate, nagoyaconditions FROM detailedstrain;
+generated query: SELECT nmgoyaconditions, substrate FROM detailedstrain; 
+
+ID-query: C3-Q14
+question: Give me all strains that have the field isolationhast equal to Brissica campestris.
+real query: SELECT * FROM detailedstrain WHERE isolationhost = 'Brassica campestris';
+generated query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'Brissica campestris'; 
+
+ID-query: C3-Q15
+question: Give me all strains that have the field applicatmons equal to cycloheximide resistant. Usel olive oil as sole carbon source (comparable to glucose)..
+real query: SELECT * FROM detailedstrain WHERE applications = 'cycloheximide resistant. Uses olive oil as sole carbon source (comparable to glucose).';
+generated query: SELECT * FROM detailedstrain WHERE applications = 'cycloheximide resistant' AND substrate = 'olive oil as sole carbon source (comparable to glucose)'; 
+
+ID-query: C3-Q16
+question: Give me all strains that have the field accessionnumser equal to 118w1.
+real query: SELECT * FROM detailedstrain WHERE accessionnumber = '11801';
+generated query: SELECT * FROM detailedstrain WHERE accessionnumber = '118w1'; 
+
+ID-query: C3-Q17
+question: Give me mrsskgroup.
+real query: SELECT mriskgroup FROM detailedstrain;
+generated query: SELECT mrsskgroup FROM detailedstrain; 
+
+ID-query: C3-Q19
+question: Give me all strains that have the field testextgmax equal to 3w.0.
+real query: SELECT * FROM detailedstrain WHERE testedtgmax = 30.0;
+generated query: SELECT * FROM detailedstrain WHERE testedtgmax = '3w.0'; 
+
+ID-query: C3-Q21
+question: Give me all strains that have the field applinations equal to It prodices yellowish pigment.
+real query: SELECT * FROM detailedstrain WHERE applications = 'It produces yellowish pigment';
+generated query: SELECT * FROM detailedstrain WHERE applications = 'It prodices yellowish pigment.'; 
+
+ID-query: C3-Q23
+question: Give me restrlctions.
+real query: SELECT restrictions FROM detailedstrain;
+generated query: SELECT * FROM detailedstrain WHERE restrictions IS NOT NULL; 
+
+ID-query: C3-Q24
+question: Give me strain with tesmedtgmax equal to 4v.0.
+real query: SELECT * FROM detailedstrain WHERE testedtgmax = 45.0;
+generated query: SELECT * FROM detailedstrain WHERE tesmedtgmax = '4v.0.'; 
+
+ID-query: C3-Q25
+question: Select 'nade' and 'isolationhoit' from strain.
+real query: SELECT name, isolationhost FROM detailedstrain;
+generated query: SELECT 'nade' as nade, isolationhost as isolationhoit FROM strain; 
+
+ID-query: C3-Q26
+question: Select the field 'tespedtgmax' from strain.
+real query: SELECT testedtgmax FROM detailedstrain;
+generated query: SELECT [tespedtgmax] FROM detailedstrain; 
+
+ID-query: C3-Q27
+question: Give me all strains that have the field 'ineya' equal to Trie.
+real query: SELECT * FROM detailedstrain WHERE ineva = True;
+generated query: SELECT * FROM detailedstrain WHERE ineva = 'True'; 
+
+ID-query: C3-Q28
+question: Give me propagatibnhost.
+real query: SELECT propagationhost FROM detailedstrain;
+generated query: SELECT propagatibnhost FROM detailedstrain; 
+
+ID-query: C3-Q29
+question: Give me strain with otqernames equal to tomato spotted wilt orthotospovirus.
+real query: SELECT * FROM detailedstrain WHERE othernames = 'tomato spotted wilt orthotospovirus';
+generated query: SELECT * FROM detailedstrain WHERE otqernames = 'tomato spotted wilt orthotospovirus'; 
+
+ID-query: C4-Q4
+question: Give me all strains that have the infrasubspecificnames field equal to subsp. bulgaricus and the isolationdate field with a date after 2000-12-06.
+real query: SELECT * FROM detailedstrain WHERE infrasubspecificnames = 'subsp. bulgaricus' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2000-12-06') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2000'));
+generated query: SELECT * FROM detailedstrain WHERE infrasubspecificnames ='subsp. bulgaricus' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2000-12-06') OR (LENGTH(isolationdate) = 4 AND isolationdate > '2000')); 
+
+ID-query: C4-Q6
+question: Give me all strains that have the storageconditions field equal to Lyo and the depositdate field with a date after 1992-02-13.
+real query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '1992-02-13') OR (LENGTH(depositdate) = 4 AND depositdate >= '1992'));
+generated query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1992-02-13') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1992')); 
+
+ID-query: C4-Q8
+question: Give me all strains that have the restrictions field equal to NO KNOWN RESTRICTION APPLY and the collectiondate field with a date before 2015-05-01.
+real query: SELECT * FROM detailedstrain WHERE restrictions = 'NO KNOWN RESTRICTION APPLY' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2015-05-01') OR (LENGTH(collectiondate) = 4 AND collectiondate <= '2015'));
+generated query: SELECT * FROM detailedstrain WHERE restrictions = 'NO KNOWN RESTRICTION APPLY' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2015-05-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2015')); 
+
+ID-query: C4-Q9
+question: Give me all strains that have the isolationhabitat field equal to bark shipped in bags and the isolationdate field with a date after 2015-06-30.
+real query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'bark shipped in bags' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2015-06-30') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2015'));
+generated query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'bark shipped in bags' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2015-06-30') OR (LENGTH(isolationdate) = 4 AND isolationdate > '2015')); 
+
+ID-query: C4-Q13
+question: Give me all strains that have the nagoyaprotocol field equal to DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION and the isolationdate field with a date after 2003-03-29.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2003-03-29') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2003'));
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2003-03-29') OR (LENGTH(isolationdate) = 4 AND isolationdate > '2003')); 
+
+ID-query: C4-Q14
+question: Give me all strains that have the nagoyaprotocol field equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL and the isolationdate field with a date after 2006-05-13.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2006-05-13') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2006'));
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2006-05-13') OR (LENGTH(isolationdate) = 4 AND isolationdate > '2006')); 
+
+ID-query: C4-Q15
+question: Give me all strains that have the mriskgroup field equal to 2.0 and the depositdate field with a date after 2015-10-02.
+real query: SELECT * FROM detailedstrain WHERE mriskgroup = 2.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2015-10-02') OR (LENGTH(depositdate) = 4 AND depositdate >= '2015'));
+generated query: SELECT * FROM detailedstrain WHERE mriskgroup = 2.0 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2015-10-02') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2015')); 
+
+ID-query: C4-Q16
+question: Give me all strains that have the restrictions field equal to NO KNOWN RESTRICTION APPLY and the inclusiondate field with a date before 2012-05-06.
+real query: SELECT * FROM detailedstrain WHERE restrictions = 'NO KNOWN RESTRICTION APPLY' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '2012-05-06') OR (LENGTH(inclusiondate) = 4 AND inclusiondate <= '2012'));
+generated query: SELECT * FROM detailedstrain WHERE restrictions = 'NO KNOWN RESTRICTION APPLY' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) < '2012-05-06') OR (LENGTH(inclusiondate) = 4 AND inclusiondate < '2012')); 
+
+ID-query: C4-Q17
+question: Give me all strains that have the nagoyaprotocol field equal to DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION and the isolationdate field with a date after 2002-05-08.
+real query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2002-05-08') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2002'));
+generated query: SELECT * FROM detailedstrain WHERE nagoyaprotocol = 'DOCUMENTS PROVIDING PROOF OF LEGAL ACCESS AND TERMS OF USE AVAILABLE AT THE COLLECTION' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) > '2002-05-08') OR (LENGTH(isolationdate) = 4 AND isolationdate > '2002')); 
+
+ID-query: C4-Q19
+question: Give me all strains that have the geoorigin field equal to 1945.0 and the depositdate field with a date before 2004.
+real query: SELECT * FROM detailedstrain WHERE geoorigin = 1945.0 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '2004-01-01') OR (LENGTH(depositdate) = 4 AND depositdate < '2004'));
+generated query: SELECT * FROM detailedstrain WHERE geoorigin = 1945.0 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2004-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2004')); 
+
+ID-query: C4-Q21
+question: Give me all strains that have the storageconditions field equal to Lyo and the inclusiondate field with a date after 2006-05-06.
+real query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2006-05-06') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '2006'));
+generated query: SELECT * FROM detailedstrain WHERE storageconditions = 'Lyo' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2006-05-06') OR (LENGTH(inclusiondate) = 4 AND inclusiondate > '2006')); 
+
+ID-query: C4-Q22
+question: Give me all the strains that have the cacronym field equal to CM-ICB and that have the isolationdate field with a date between 1995 and 2007. I also want the availablefordis to be True or False.
+real query: SELECT * FROM detailedstrain WHERE cacronym = 'CM-ICB' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) >= '1995-01-01' AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) <= '2007-01-01') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '1995' AND isolationdate <= '2007')) AND ((availablefordis = True OR availablefordis = False));
+generated query: SELECT * FROM detailedstrain WHERE cacronym = 'CM-ICB' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) >= '1995-01-01' AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) <= '2007-01-01') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '1995' AND isolationdate <= '2007')) AND (availablefordis = true OR availablefordis = false); 
+
+ID-query: C4-Q23
+question: Give me all strains that have the collection field equal to 12 and the depositdate field with a date before 2002.
+real query: SELECT * FROM detailedstrain WHERE collection = 12 AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) < '2002-01-01') OR (LENGTH(depositdate) = 4 AND depositdate < '2002'));
+generated query: SELECT * FROM detailedstrain WHERE collection = 12 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2002-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2002')); 
+
+ID-query: C4-Q24
+question: Give me all strains that have the pathogenicity field equal to Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species. and the inclusiondate field with a date after 2010-08-16.
+real query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) > '2010-08-16') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '2010'));
+generated query: SELECT * FROM detailedstrain WHERE pathogenicity = 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Rare reports of superficial infections in humans and some animal species.' AND inclusiondate > '2010-08-16'; 
+
+ID-query: C4-Q25
+question: Give me all strains that have the isolationhabitat field equal to commercial paper tissue and the collectiondate field with a date after 1996-07-09.
+real query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'commercial paper tissue' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1996-07-09') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1996'));
+generated query: SELECT * FROM detailedstrain WHERE isolationhabitat = 'commercial paper tissue' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '1996-07-09') OR (LENGTH(collectiondate) = 4 AND collectiondate > '1996')); 
+
+ID-query: C4-Q26
+question: Give me all the strains that have the infrasubspecificnames field equal to subsp. bulgaricus and that have the inclusiondate field with a date between 1994 and 2002. I also want the typestrain to be True or False.
+real query: SELECT * FROM detailedstrain WHERE infrasubspecificnames = 'subsp. bulgaricus' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1994-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2002-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1994' AND inclusiondate <= '2002')) AND (typestrain = True OR typestrain = False);
+generated query: SELECT * FROM detailedstrain WHERE infrasubspecificnames ='subsp. bulgaricus' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1994-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2002-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1994' AND inclusiondate <= '2002')) AND typestrain = true; 
+
+ID-query: C4-Q27
+question: Give me all strains that have the substrate field equal to Raphanus (Cruciferae) and the depositdate field between 1999 and 2008.
+real query: SELECT * FROM detailedstrain WHERE substrate = 'Raphanus (Cruciferae)' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) >= '1999-01-01' AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) <= '2008-01-01') OR (LENGTH(depositdate) = 4 AND depositdate >= '1999' AND depositdate <= '2008'));
+generated query: SELECT * FROM detailedstrain WHERE substrate = 'Raphanus (Cruciferae)' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) >= '1999-01-01' AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) <= '2008-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate >= '1999' AND collectiondate <= '2008')); 
+
+ID-query: C4-Q28
+question: Give me all strains that have the cultivar field equal to Spagnolet nano lamon and the isolationdate field between 2003 and 2014.
+real query: SELECT * FROM detailedstrain WHERE cultivar = 'Spagnolet nano lamon' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) >= '2003-01-01' AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) <= '2014-01-01') OR (LENGTH(isolationdate) = 4 AND isolationdate >= '2003' AND isolationdate <= '2014'));
+generated query: SELECT * FROM detailedstrain WHERE cultivar = 'Spagnolet nano lamon' AND ((LENGTH isolationdate) = 10 AND SUBSTR isolationdate 7 4) || '-' || SUBSTR isolationdate 4 2) || '-' || SUBSTR isolationdate 2 2) >= '2003-01-01' AND ((LENGTH isolationdate) = 10 AND SUBSTR isolationdate 7 4) || '-' || SUBSTR isolationdate 4 2) || '-' || SUBSTR isolationdate 2 2) <= '2014-01-01') 
+
+ID-query: C4-Q29
+question: Give me all strains that have the dualuse field equal to  False and the depositdate field with a date after 2000.
+real query: SELECT * FROM detailedstrain WHERE dualuse = False AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2000-12-31') OR (LENGTH(depositdate) = 4 AND depositdate > '2000'));
+generated query: SELECT * FROM detailedstrain WHERE dualuse = False AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2000-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2000')); 
+
+ID-query: C4-Q30
+question: Give me all strains that have the status field equal to ex type (received as F.lateritium) and the inclusiondate field between 1990 and 2005.
+real query: SELECT * FROM detailedstrain WHERE status = 'ex type (received as F.lateritium)' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1990-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2005-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1990' AND inclusiondate <= '2005'));
+generated query: SELECT * FROM detailedstrain WHERE status = 'ex type' AND ((LENGTH(inclusiondate) = 10 AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) >= '1990-01-01' AND SUBSTR(inclusiondate, 7, 4) || '-' || SUBSTR(inclusiondate, 4, 2) || '-' || SUBSTR(inclusiondate, 1, 2) <= '2005-01-01') OR (LENGTH(inclusiondate) = 4 AND inclusiondate >= '1990' AND inclusiondate <= '2005')); 
+
+ID-query: C5-Q2
+question: Select and count the number of strains, grouping the results by the nagoyaprotocol field.
+real query: SELECT nagoyaprotocol, COUNT(*) FROM detailedstrain GROUP BY nagoyaprotocol;
+generated query: SELECT COUNT(*), nagoyaprotocol FROM detailedstrain GROUP BY nagoyaprotocol; 
+
+ID-query: C5-Q3
+question: Select and count all strains that have the symptomatologyonisolationhost field equal to systemic symptoms and group only those that have the same isolationhost field. I want it to also show only the groups that have more than 4 examples.
+real query: SELECT COUNT(*), isolationhost FROM detailedstrain WHERE symptomatologyonisolationhost = 'systemic symptoms' GROUP BY isolationhost HAVING COUNT(*) > 4;
+generated query: SELECT COUNT(*), collection, COUNT(*) OVER (PARTITION BY collection) AS count FROM detailedstrain WHERE symptomatologyonisolationhost ='systemic symptoms' GROUP BY collection HAVING COUNT(*) > 4; 
+
+ID-query: C5-Q4
+question: Select and count all the strains that have the recommendedtemperature field equal to 28.0 and group only those that have the same othernames.
+real query: SELECT othernames, COUNT(*) FROM detailedstrain WHERE recommendedtemperature = 28.0 GROUP BY othernames;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE recommendedtemperature = 28.0 GROUP BY othernames; 
+
+ID-query: C5-Q5
+question: Select and count all the strains that have the recommendedtemperature field equal to 23.0 and group only those that have the same userestrictions.
+real query: SELECT COUNT(*), userestrictions FROM detailedstrain WHERE recommendedtemperature = 23.0 GROUP BY userestrictions;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE recommendedtemperature = 23.0 GROUP BY userestrictions; 
+
+ID-query: C5-Q6
+question: Select and count the number of strains by grouping them based on the mriskgroup and meuquarantine fields.
+real query: SELECT meuquarantine, mriskgroup, COUNT(*) FROM detailedstrain GROUP BY meuquarantine, mriskgroup;
+generated query: SELECT COUNT(*), mriskgroup, meuquarantine FROM detailedstrain GROUP BY mriskgroup, meuquarantine; 
+
+ID-query: C5-Q9
+question: Select and count the number of strains by grouping them based on the organismtype and species fields.
+real query: SELECT species, organismtype, COUNT(*) FROM detailedstrain GROUP BY organismtype, species;
+generated query: SELECT COUNT(*), organismtype, species FROM detailedstrain GROUP BY organismtype, species; 
+
+ID-query: C5-Q10
+question: Select and count the number of strains by grouping them based on the otherccnumbers and status fields.
+real query: SELECT status, otherccnumbers, COUNT(*) FROM detailedstrain GROUP BY status, otherccnumbers;
+generated query: SELECT COUNT(*), otherccnumbers, status FROM detailedstrain GROUP BY otherccnumbers, status; 
+
+ID-query: C5-Q11
+question: Select and count the number of strains by grouping them based on the species and morganismtype fields.
+real query: SELECT COUNT(*), species, morganismtype FROM detailedstrain GROUP BY morganismtype, species;
+generated query: SELECT COUNT(*), species, morganismtype FROM detailedstrain GROUP BY species, morganismtype; 
+
+ID-query: C5-Q13
+question: Select and count all strains that have the testedtgmax field equal to 45.0 and group only those that have the same testedtgmin field. I want it to also show only the groups that have more than 2 examples.
+real query: SELECT testedtgmin, COUNT(*) FROM detailedstrain WHERE testedtgmax = 45.0 GROUP BY testedtgmin HAVING COUNT(*) > 2;
+generated query: SELECT COUNT(*), testedtgmin FROM detailedstrain GROUP BY testedtgmin HAVING COUNT(*) > 2 AND testedtgmax = 45.0; 
+
+ID-query: C5-Q14
+question: Select and count all the strains that have the abbreviation field equal to BCMV and group only those that have the same symptomatologyonisolationhost.
+real query: SELECT COUNT(*), symptomatologyonisolationhost FROM detailedstrain WHERE abbreviation = 'BCMV' GROUP BY symptomatologyonisolationhost;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE abbreviation = 'BCMV' GROUP BY symptomatologyonisolationhost; 
+
+ID-query: C5-Q16
+question: Select and count the number of strains by grouping them based on the abbreviation and nagoyaprotocol fields.
+real query: SELECT nagoyaprotocol, abbreviation, COUNT(*) FROM detailedstrain GROUP BY nagoyaprotocol, abbreviation;
+generated query: SELECT COUNT(*), abbreviation, nagoyaprotocol FROM detailedstrain GROUP BY abbreviation, nagoyaprotocol; 
+
+ID-query: C5-Q19
+question: Select and count all the strains that have the meuquarantine field equal to True and group only those that have the same testedtgmax.
+real query: SELECT testedtgmax, COUNT(*) FROM detailedstrain WHERE meuquarantine = True GROUP BY testedtgmax;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE meuquarantine = TRUE GROUP BY testedtgmax; 
+
+ID-query: C5-Q20
+question: Select and count the number of strains, grouping the results by the abbreviation field.
+real query: SELECT abbreviation, COUNT(*) FROM detailedstrain GROUP BY abbreviation;
+generated query: SELECT COUNT(*), abbreviation FROM detailedstrain GROUP BY abbreviation; 
+
+ID-query: C5-Q23
+question: Select and count the number of strains by grouping them based on the nagoyaprotocol and pathotypeserotypetype fields.
+real query: SELECT nagoyaprotocol, COUNT(*), pathotypeserotypetype FROM detailedstrain GROUP BY nagoyaprotocol, pathotypeserotypetype;
+generated query: SELECT COUNT(*), nagoyaprotocol, pathotypeserotypetype FROM detailedstrain GROUP BY nagoyaprotocol, pathotypeserotypetype; 
+
+ID-query: C5-Q24
+question: Select and count the number of strains by grouping them based on the axenic and restrictions fields.
+real query: SELECT axenic, COUNT(*), restrictions FROM detailedstrain GROUP BY restrictions, axenic;
+generated query: SELECT COUNT(*), axenic, restrictions FROM detailedstrain GROUP BY axenic, restrictions; 
+
+ID-query: C5-Q25
+question: Select and count the number of strains by grouping them based on the scientificname and infrasubspecificnames fields.
+real query: SELECT scientificname, COUNT(*), infrasubspecificnames FROM detailedstrain GROUP BY infrasubspecificnames, scientificname;
+generated query: SELECT COUNT(*), scientificname, infrasubspecificnames FROM detailedstrain GROUP BY scientificname, infrasubspecificnames; 
+
+ID-query: C5-Q26
+question: Select and count the number of strains by grouping them based on the registeredcollection and cacronym fields.
+real query: SELECT COUNT(*), registeredcollection, cacronym FROM detailedstrain GROUP BY cacronym, registeredcollection;
+generated query: SELECT COUNT(*), registeredcollection, cacronym FROM detailedstrain GROUP BY registeredcollection, cacronym; 
+
+ID-query: C5-Q28
+question: Select and count all strains that have the applications field equal to It produces yellow pigment and group only those that have the same abbreviation field. I want it to also show only the groups that have more than 9 examples.
+real query: SELECT abbreviation, COUNT(*) FROM detailedstrain WHERE applications = 'It produces yellow pigment' GROUP BY abbreviation HAVING COUNT(*) > 9;
+generated query: SELECT COUNT(*), abbreviation FROM detailedstrain WHERE applications = 'It produces yellow pigment' GROUP BY abbreviation HAVING COUNT(*) > 9; 
+
+ID-query: C5-Q30
+question: Select and count all the strains that have the name field equal to Pelargonium line pattern and group only those that have the same dualuse.
+real query: SELECT COUNT(*), dualuse FROM detailedstrain WHERE name = 'Pelargonium line pattern' GROUP BY dualuse;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE name = 'Pelargonium line pattern' GROUP BY dualuse; 
+
+
+
+Correct answers: 55
+Total questions: 150
+Model accuracy: 36.67%
+
+######################################################################################
+
+NOTE:
+- The model retrained only on the "BioInfoDataset_v3_4Epochs_TRAIN_BATCH_SIZE_1" still produces a very low approximate accuracy 
+(this is because the number of samples in the training set was probably too small - around 80)

@@ -1,0 +1,90 @@
+{
+    "C_generic": [
+        {
+            "index_template": -1,
+            "question": "Give me all rows of strain.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Select the field pathogenicity",
+            "sql_query_variants": [
+                "SELECT pathogenicity FROM detailedstrain;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all the viruses that are also strains.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Virus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Seleziona tutti i virus che sono anche degli strain.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE organismtype = 'Virus';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain che hanno il campo availbefordis uguale a true",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE availablefordis = true;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "dammi gli strain che hanno il campo vailabefordis uguale a fals",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE availablefordis = false;"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2007-12-31' OR (LENGTH(depositdate) = 4 AND depositdate >= '2007');"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations",
+            "sql_query_variants": [
+                "SELECT collectiondate, otherdenominations FROM detailedstrain WHERE LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2007-12-31' OR (LENGTH(depositdate) = 4 AND depositdate >= '2007');"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Give me all viruses that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.';"
+            ]
+        },
+
+        {
+            "index_template": -1,
+            "question": "Dammi i virus che hanno il campo abbreviation 'LBVV', il campo isolationhost 'Compositae/Lactuca/sp.' e il campo cultivar 'lattuga Lollo bionda'",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda';"
+            ]
+        },
+
+        {
+            "index_template": -1,
+            "question": "Give me the strains that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.' and the field cultivar equal to 'lattuga Lollo bionda' and storageconditions equal to 'Lyo'.",
+            "sql_query_variants": [
+                "SELECT * FROM detailedstrain WHERE abbreviation = 'LBVV' AND isolationhost = 'Compositae/Lactuca/sp.' AND cultivar = 'lattuga Lollo bionda' AND storageconditions = 'Lyo';"
+            ]
+        },
+        {
+            "index_template": -1,
+            "question": "Quanti strain hanno il campo idetificationtecnique uguale a ELISA?",
+            "sql_query_variants": [
+                "SELECT COUNT(*)  FROM detailedstrain  WHERE identificationtechnique = 'ELISA';"
+            ]
+        }
+    ]
+}

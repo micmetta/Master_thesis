@@ -1,0 +1,439 @@
+
+Current category: C_generic
+
+Current question: Q1
+Give me all the Aspergillus strains with Marine sediment
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:17,40.58,41.07
+2025-03-18 09:04:18,40.93,41.8
+2025-03-18 09:04:19,40.83,41.96
+2025-03-18 09:04:20,40.78,41.96
+2025-03-18 09:04:21,40.88,41.96
+
+Current question: Q2
+Give me all strain with genus equal to Aspergillus and substrate equal to Marine sediment
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:22,40.61,41.96
+2025-03-18 09:04:23,40.83,41.96
+2025-03-18 09:04:24,40.8,41.96
+2025-03-18 09:04:25,40.8,41.96
+
+Current question: Q3
+dammi gli strain Isolation habitat ugale a  microalgal culture
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:26,40.61,41.96
+2025-03-18 09:04:27,40.82,41.96
+2025-03-18 09:04:28,40.8,41.96
+
+Current question: Q4
+Dammi gli strain con Isolation habitat uguale a marine sediment (water after centrifugation)
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:29,40.61,41.96
+2025-03-18 09:04:30,40.83,41.96
+2025-03-18 09:04:31,40.81,41.96
+2025-03-18 09:04:32,40.79,41.96
+
+Current question: Q5
+vorrei tutti i bacteria
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:33,40.61,41.96
+2025-03-18 09:04:34,40.82,41.96
+2025-03-18 09:04:35,40.8,41.96
+
+Current question: Q6
+vorrei tutti gli aspergillus
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:36,40.61,41.96
+2025-03-18 09:04:37,40.84,41.96
+2025-03-18 09:04:38,40.81,41.96
+
+Current question: Q7
+Give all the Aspergillus
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:39,40.61,41.96
+2025-03-18 09:04:40,40.83,41.96
+2025-03-18 09:04:41,40.81,41.96
+
+Current question: Q8
+Give me all the Aspergillus strains
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:42,40.61,41.96
+2025-03-18 09:04:43,40.82,41.96
+2025-03-18 09:04:44,40.81,41.96
+
+Current question: Q9
+Dammi tutti gli strain con organismtype uguale a bacteria
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:45,40.61,41.96
+2025-03-18 09:04:46,40.83,41.96
+2025-03-18 09:04:47,40.82,41.96
+
+Current question: Q10
+Give me all strain with fiel organismtype equal to bacteria
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:48,40.61,41.96
+2025-03-18 09:04:49,40.83,41.96
+2025-03-18 09:04:50,40.83,41.96
+
+Current question: Q11
+Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc1
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:51,40.61,41.96
+2025-03-18 09:04:52,40.84,41.96
+2025-03-18 09:04:53,40.84,41.96
+2025-03-18 09:04:54,40.83,41.96
+2025-03-18 09:04:55,40.83,41.96
+
+Current question: Q12
+Give me all strains with organismtype equal to bacteria and otherdenomination equal to mvpc1
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:04:56,40.61,41.96
+2025-03-18 09:04:57,40.84,41.96
+2025-03-18 09:04:58,40.84,41.96
+2025-03-18 09:04:59,40.84,41.96
+2025-03-18 09:05:00,40.83,41.96
+
+Current question: Q13
+Dammi tutti gli strain con organismtype diverso da bacteria e otherdenomination uguale a MVPC1 9
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:01,40.61,41.96
+2025-03-18 09:05:02,40.85,41.96
+2025-03-18 09:05:03,40.85,41.96
+2025-03-18 09:05:04,40.84,41.96
+2025-03-18 09:05:05,40.84,41.96
+
+Current question: Q14
+Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc e commentontaxonomy uguale a IIIB group
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:06,40.61,41.96
+2025-03-18 09:05:07,40.86,41.96
+2025-03-18 09:05:08,40.87,41.96
+2025-03-18 09:05:09,40.86,41.96
+2025-03-18 09:05:10,40.86,41.96
+2025-03-18 09:05:11,40.85,41.96
+
+Current question: Q15
+"Dammi tutti gli strain con organismtype uguale a bacteria e otherdenomination uguale a mvpc oppure (commentontaxonomy uguale a IIIB group) e mostrami solo i campi organismtype, otherdenominations e commentontaxonomy"
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:12,40.61,41.96
+2025-03-18 09:05:13,40.88,41.96
+2025-03-18 09:05:14,40.88,41.96
+2025-03-18 09:05:15,40.9,41.96
+2025-03-18 09:05:16,40.91,41.96
+2025-03-18 09:05:17,40.88,41.96
+2025-03-18 09:05:18,40.87,41.96
+2025-03-18 09:05:19,40.86,41.96
+
+Current question: Q16
+Dammi gli strain che hanno ineva uguale a true e collectiondate con una data successiva al 2020 
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:20,40.61,41.96
+2025-03-18 09:05:21,40.85,41.96
+2025-03-18 09:05:22,40.84,41.96
+2025-03-18 09:05:23,40.84,41.96
+2025-03-18 09:05:24,40.84,41.96
+2025-03-18 09:05:25,40.83,41.96
+2025-03-18 09:05:26,40.83,41.96
+2025-03-18 09:05:27,40.82,41.96
+2025-03-18 09:05:28,40.82,41.96
+2025-03-18 09:05:29,40.82,41.96
+2025-03-18 09:05:30,40.82,41.96
+2025-03-18 09:05:31,40.81,41.96
+2025-03-18 09:05:32,40.83,41.96
+
+Current question: Q17
+Quali sono gli strain che hanno il genus diverso da Nocardioides e species uguale a ambifaria?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:33,40.61,41.96
+2025-03-18 09:05:34,40.85,41.96
+2025-03-18 09:05:35,40.85,41.96
+2025-03-18 09:05:36,40.86,41.96
+
+Current question: Q18
+Show me the accessionnumber of the strains that have isolationdate not null
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:37,40.61,41.96
+2025-03-18 09:05:38,40.83,41.96
+2025-03-18 09:05:39,40.83,41.96
+
+Current question: Q19
+Tell me how many strains have applications equal to Agroindustry and group them by species field
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:40,40.61,41.96
+2025-03-18 09:05:41,40.84,41.96
+2025-03-18 09:05:42,40.86,41.96
+2025-03-18 09:05:43,40.84,41.96
+
+Current question: Q20
+Which strains have a regroup greater than 10 or a mrisgroup equal to 2?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:44,40.61,41.96
+2025-03-18 09:05:45,40.86,41.96
+2025-03-18 09:05:46,40.86,41.96
+2025-03-18 09:05:47,40.85,41.96
+
+Current question: Q21
+Give me strains that have depositdate with a date equal to 2022
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:48,40.61,41.96
+2025-03-18 09:05:49,40.83,41.96
+2025-03-18 09:05:50,40.83,41.96
+
+Current question: Q22
+Give me all the strain of collection called 'TUCC' that are GMO
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:51,40.61,41.96
+2025-03-18 09:05:52,40.85,41.96
+2025-03-18 09:05:53,40.83,41.96
+2025-03-18 09:05:54,40.83,41.96
+
+Current question: Q23
+Give me all the strain with substrate Posidonia oceanica from collection 'TUCC'
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:55,40.61,41.96
+2025-03-18 09:05:56,40.85,41.96
+2025-03-18 09:05:57,40.84,41.96
+2025-03-18 09:05:58,40.84,41.96
+
+Current question: Q24
+Dammi gli strain con il campo collectiondate compreso tra il 2002 e il 2005
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:05:59,40.61,41.96
+2025-03-18 09:06:00,40.85,41.96
+2025-03-18 09:06:01,40.84,41.96
+2025-03-18 09:06:02,40.84,41.96
+2025-03-18 09:06:03,40.84,41.96
+
+Current question: Q25
+Give me all strains that have the field inclusiondate between 1996 and 2001
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:04,40.61,41.96
+2025-03-18 09:06:05,40.84,41.96
+2025-03-18 09:06:06,40.84,41.96
+2025-03-18 09:06:07,40.84,41.96
+2025-03-18 09:06:08,40.83,41.96
+
+Current question: Q26
+Dammi gli strain con organismtype uguale a Virus appartenenti alla collezione 'EMCC'
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:09,40.61,41.96
+2025-03-18 09:06:10,40.85,41.96
+2025-03-18 09:06:11,40.85,41.96
+2025-03-18 09:06:12,40.84,41.96
+
+Current question: Q27
+Quali sono gli strain con collectiondate uguale a 2019?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:13,40.61,41.96
+2025-03-18 09:06:14,40.84,41.96
+2025-03-18 09:06:15,40.85,41.96
+
+Current question: Q28
+Dammi gli strain con gmo true
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:16,40.61,41.96
+2025-03-18 09:06:17,40.84,41.96
+
+Current question: Q29
+Give me the strains with gmo true
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:18,40.61,41.96
+2025-03-18 09:06:19,40.83,41.96
+2025-03-18 09:06:20,40.82,41.96
+
+Current question: Q30
+Dammi gli strain con identificationtechnique non nullo
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:21,40.61,41.96
+2025-03-18 09:06:22,40.83,41.96
+2025-03-18 09:06:23,40.83,41.96
+
+Current question: Q31
+Which strains were collected in 2019 or have a known identification technique?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:24,40.61,41.96
+2025-03-18 09:06:25,40.83,41.96
+2025-03-18 09:06:26,40.83,41.96
+2025-03-18 09:06:27,40.83,41.96
+
+Current question: Q32
+Which strains have infectivity testing equal true or have a known transmission vector?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:28,40.61,41.96
+2025-03-18 09:06:29,40.84,41.96
+2025-03-18 09:06:30,40.84,41.96
+2025-03-18 09:06:31,40.84,41.96
+
+Current question: Q33
+Give me strains that have the fields restrictions or transmissionby not null
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:32,40.61,41.96
+2025-03-18 09:06:33,40.85,41.96
+2025-03-18 09:06:34,40.83,41.96
+2025-03-18 09:06:35,40.84,41.96
+
+Current question: Q34
+Give me only strain with protocol natoya equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:36,40.61,41.96
+2025-03-18 09:06:37,40.85,41.96
+2025-03-18 09:06:38,40.86,41.96
+2025-03-18 09:06:39,40.86,41.96
+2025-03-18 09:06:40,40.87,41.96
+
+Current question: Q35
+"Quali sono gli strain che hanno genus uguale Nocardioides, species uguale a albus, applications uguale ad Agroindustry e isolationhabitat non nullo?"
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:41,40.61,41.96
+2025-03-18 09:06:42,40.87,41.96
+2025-03-18 09:06:43,40.89,41.96
+2025-03-18 09:06:44,40.88,41.96
+2025-03-18 09:06:45,40.9,41.96
+2025-03-18 09:06:46,40.9,41.96
+2025-03-18 09:06:47,40.91,41.96
+
+Current question: Q36
+Dammi gli strain con otherdenominations diverso da JN1 che hanno isolationdate diverso da 2015
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:48,40.61,41.96
+2025-03-18 09:06:49,40.86,41.96
+2025-03-18 09:06:50,40.86,41.96
+2025-03-18 09:06:51,40.87,41.96
+2025-03-18 09:06:52,40.87,41.96
+
+Current question: Q37
+Dammi gli strain con accessionnumb diverso da 0008 ma con collection maggiore di 2
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:53,40.61,41.96
+2025-03-18 09:06:54,40.86,41.96
+2025-03-18 09:06:55,40.87,41.96
+2025-03-18 09:06:56,40.87,41.96
+
+Current question: Q38
+Give me the strains with accessionnumb different from 0008 but with collection greater than 2
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:06:57,40.61,41.96
+2025-03-18 09:06:58,40.85,41.96
+2025-03-18 09:06:59,40.86,41.96
+2025-03-18 09:07:00,40.87,41.96
+
+Current question: Q39
+Conta gli strain che non hanno registeredcollection non null e raggruppameli in base allo strainid
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:01,40.61,41.96
+2025-03-18 09:07:02,40.85,41.96
+2025-03-18 09:07:03,40.86,41.96
+2025-03-18 09:07:04,40.88,41.96
+
+Current question: Q40
+I want all strains with temperature greater than or equal to 29 and values not null
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:05,40.61,41.96
+2025-03-18 09:07:06,40.85,41.96
+2025-03-18 09:07:07,40.86,41.96
+2025-03-18 09:07:08,40.87,41.96
+
+Current question: Q41
+Give me all rows of strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:09,40.61,41.96
+2025-03-18 09:07:10,40.83,41.96
+
+Current question: Q42
+Select the field pathogenicity
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:11,40.61,41.96
+2025-03-18 09:07:12,40.83,41.96
+
+Current question: Q43
+Give me all the viruses that are also strains.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:13,40.61,41.96
+2025-03-18 09:07:14,40.83,41.96
+2025-03-18 09:07:15,40.85,41.96
+
+Current question: Q44
+Seleziona tutti i virus che sono anche degli strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:16,40.61,41.96
+2025-03-18 09:07:17,40.84,41.96
+2025-03-18 09:07:18,40.84,41.96
+
+Current question: Q45
+dammi gli strain che hanno il campo availbefordis uguale a true
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:19,40.61,41.96
+2025-03-18 09:07:20,40.85,41.96
+2025-03-18 09:07:21,40.85,41.96
+
+Current question: Q46
+dammi gli strain che hanno il campo vailabefordis uguale a fals
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:22,40.61,41.96
+2025-03-18 09:07:23,40.86,41.96
+2025-03-18 09:07:24,40.85,41.96
+
+Current question: Q47
+Dammi tutti gli strain che hanno il valore di collectiondate dopo il 2007
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:25,40.61,41.96
+2025-03-18 09:07:26,40.85,41.96
+2025-03-18 09:07:27,40.86,41.96
+
+Current question: Q48
+"Give me all viruses that are also strains that have the field collectiondate after 2007, I want see the field collectiondate and the field otherdenominations"
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:28,40.61,41.96
+2025-03-18 09:07:29,40.87,41.96
+2025-03-18 09:07:30,40.87,41.96
+2025-03-18 09:07:31,40.88,41.96
+2025-03-18 09:07:32,40.88,41.96
+2025-03-18 09:07:33,40.89,41.96
+2025-03-18 09:07:34,40.89,41.96
+2025-03-18 09:07:35,40.9,41.96
+2025-03-18 09:07:36,40.91,41.96
+2025-03-18 09:07:37,40.92,41.96
+2025-03-18 09:07:38,40.93,41.96
+2025-03-18 09:07:39,40.94,41.96
+2025-03-18 09:07:40,40.94,41.96
+2025-03-18 09:07:41,40.94,41.96
+2025-03-18 09:07:42,40.95,41.96
+
+Current question: Q49
+Give me all viruses that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.'
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:43,40.61,41.96
+2025-03-18 09:07:44,40.87,41.96
+2025-03-18 09:07:45,40.88,41.96
+2025-03-18 09:07:46,40.89,41.96
+2025-03-18 09:07:47,40.88,41.96
+
+Current question: Q50
+"Dammi i virus che hanno il campo abbreviation 'LBVV', il campo isolationhost 'Compositae/Lactuca/sp.' e il campo cultivar 'lattuga Lollo bionda'"
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:48,40.61,41.96
+2025-03-18 09:07:49,40.87,41.96
+2025-03-18 09:07:50,40.88,41.96
+2025-03-18 09:07:51,40.89,41.96
+2025-03-18 09:07:52,40.89,41.96
+2025-03-18 09:07:53,40.89,41.96
+2025-03-18 09:07:54,40.9,41.96
+
+Current question: Q51
+Give me the strains that have the field abbreviation equal to 'LBVV' and the field isolationhost equal to 'Compositae/Lactuca/sp.' and the field cultivar equal to 'lattuga Lollo bionda' and storageconditions equal to 'Lyo'.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:07:55,40.61,41.96
+2025-03-18 09:07:56,40.89,41.96
+2025-03-18 09:07:57,40.89,41.96
+2025-03-18 09:07:58,40.92,41.96
+2025-03-18 09:07:59,40.92,41.96
+2025-03-18 09:08:00,40.92,41.96
+2025-03-18 09:08:01,40.92,41.96
+2025-03-18 09:08:02,40.93,41.96
+
+Current question: Q52
+Quanti strain hanno il campo idetificationtecnique uguale a ELISA?
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-03-18 09:08:03,40.61,41.96
+2025-03-18 09:08:04,40.85,41.96
+2025-03-18 09:08:05,40.86,41.96

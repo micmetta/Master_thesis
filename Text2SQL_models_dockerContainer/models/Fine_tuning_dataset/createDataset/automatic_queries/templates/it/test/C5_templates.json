@@ -1,0 +1,42 @@
+[
+    {   
+        "index_template": 0,
+        "question_template": "Seleziona e conta il numero di strain, raggruppando i risultati in base al campo {group_by}.",
+        "sql_template": "SELECT COUNT(*), {group_by} FROM detailedstrain GROUP BY {group_by};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by} FROM detailedstrain GROUP BY {group_by};",
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain GROUP BY {group_by};"
+        ]
+    },
+    {   
+        "index_template": 1,
+        "question_template": "Seleziona e conta tutti i strain che hanno il campo {filter_column} uguale a {value} e raggruppa solo quelli che hanno lo stesso {group_by}.",
+        "sql_template": "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};",
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by};"
+        ]
+    },
+    {   
+        "index_template": 2,
+        "question_template": "Seleziona e conta il numero di strain raggruppandoli in base ai campi {group_by1} e {group_by2}.",
+        "sql_template": "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+        "possible_sql_queries":[
+            "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT {group_by1}, COUNT(*), {group_by2} FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT {group_by2}, {group_by1}, COUNT(*) FROM detailedstrain GROUP BY {group_by1}, {group_by2};",
+            "SELECT COUNT(*), {group_by1}, {group_by2} FROM detailedstrain GROUP BY {group_by2}, {group_by1};",
+            "SELECT {group_by1}, COUNT(*), {group_by2} FROM detailedstrain GROUP BY {group_by2}, {group_by1};",
+            "SELECT {group_by2}, {group_by1}, COUNT(*) FROM detailedstrain GROUP BY {group_by2}, {group_by1};"
+        ]
+    },
+    {   
+        "index_template": 3,
+        "question_template": "Seleziona e conta tutti i strain che hanno il campo {filter_column} uguale a {value} e raggruppa solo quelli che hanno lo stesso campo {group_by}. Voglio che mi mostri solo i gruppi con più di {threshold} esempi.",
+        "sql_template": "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};",
+        "possible_sql_queries": [
+            "SELECT {group_by}, COUNT(*) FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};",
+            "SELECT COUNT(*), {group_by} FROM detailedstrain WHERE {filter_column} = {value} GROUP BY {group_by} HAVING COUNT(*) > {threshold};"
+        ]
+    }
+]

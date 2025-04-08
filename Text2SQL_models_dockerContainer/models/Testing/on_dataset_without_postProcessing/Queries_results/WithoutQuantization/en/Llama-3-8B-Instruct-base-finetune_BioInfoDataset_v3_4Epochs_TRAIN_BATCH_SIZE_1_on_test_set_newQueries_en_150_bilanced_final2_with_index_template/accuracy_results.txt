@@ -1,0 +1,101 @@
+
+SUMMARY OF INCORRECT QUERIES
+
+ID-query: C1-Q1
+question: fdgfdg
+real query: gfdgdfgd
+generated query: SELECT * FROM detailedstrain WHERE collectiondate = 'fdgfdg'; 
+
+ID-query: C2-Q1
+question: fdgfdg
+real query: gfdgdfgd
+generated query: SELECT * FROM detailedstrain WHERE collectiondate = 'fdgfdg'; 
+
+ID-query: C2-Q2
+question: Select the fields infrasubspecificnames and axenic from strain.
+real query: SELECT infrasubspecificnames, axenic FROM detailedstrain;
+generated query: SELECT infrasubspecificnames, axenic FROM strain; 
+
+ID-query: C2-Q6
+question: Give me all strains that have pathogenicity equal to Pathogen for Plants or Solanum tuberosum or Geophilic species (i.e. residing in the soil) with low pathogenic value. Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans..
+real query: SELECT * FROM detailedstrain WHERE pathogenicity IN ('Pathogen for Plants', 'Solanum tuberosum', 'Geophilic species (i.e. residing in the soil) with low pathogenic value. Isolated from the haircoat of some wild animals (chamois). Rare reports of dermatological infections in humans.');
+generated query: SELECT * FROM detailedstrain WHERE (pathogenicity = 'Pathogen for Plants' OR species = 'Solanum tuberosum' OR organismtype = 'Geophilic species' AND riskgroup = 0) AND (othernames = 'Rare reports of dermatological infections in humans.' AND isolationhost = 'chamois' OR remarks = 'Isolated from the haircoat of some wild animals (chamois).'); 
+
+ID-query: C3-Q1
+question: fdgfdg
+real query: gfdgdfgd
+generated query: SELECT * FROM detailedstrain WHERE collectiondate = 'fdgfdg'; 
+
+ID-query: C3-Q2
+question: Select the field 'specijs' from strain.
+real query: SELECT species FROM detaildstrain;
+generated query: SELECT specijs FROM detailedstrain; 
+
+ID-query: C3-Q3
+question: Select the field 'transmissbonby' from strain.
+real query: SELECT transmissionby FROM detaildstrain;
+generated query: SELECT transmissionby FROM strain; 
+
+ID-query: C3-Q4
+question: Give me all strains that have the field 'stsainid' equal to 13d69.
+real query: SELECT * FROM detaildstrain WHERE strainid = 13169;
+generated query: SELECT * FROM detailedstrain WHERE strainid = '13d69'; 
+
+ID-query: C3-Q5
+question: Give me strain with identificttiontechnique equal to Identification techniques used: m.
+real query: SELECT * FROM detaledstrain WHERE identificationtechnique = 'Identification techniques used: m';
+generated query: SELECT * FROM detailedstrain WHERE identificationtechnique ='m'; 
+
+ID-query: C3-Q6
+question: Select 'nagqyaprotocol' and 'abbreviacion' from strain.
+real query: SELECT nagoyaprotocol, abbreviation FROM detailedstrain;
+generated query: SELECT nagoyaprotocol, abbreviation FROM strain; 
+
+ID-query: C4-Q1
+question: fdgfdg
+real query: gfdgdfgd
+generated query: SELECT * FROM detailedstrain WHERE collectiondate = 'fdgfdg'; 
+
+ID-query: C4-Q3
+question: Give me all strains that have the substrate field equal to flux of oak tree, Quecus alba and the collectiondate field with a date before 2014.
+real query: SELECT * FROM detailedstrain WHERE substrate = 'flux of oak tree, Quecus alba' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2014-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2014'));
+generated query: SELECT * FROM detailedstrain WHERE substrate = 'flux of oak tree, Quercus alba' AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 2) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) < '2014-01-01') OR (LENGTH(collectiondate) = 4 AND collectiondate < '2014')); 
+
+ID-query: C4-Q5
+question: Give me all strains that have the status field equal to Isotype of Candida chiropterorum Grose & Marinkelle and the isolationdate field with a date before 1991-06-03.
+real query: SELECT * FROM detailedstrain WHERE status = 'Isotype of Candida chiropterorum Grose & Marinkelle' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1991-06-03') OR (LENGTH(isolationdate) = 4 AND isolationdate <= '1991'));
+generated query: SELECT * FROM detailedstrain WHERE status = 'Isotype of Candida chiropterorum Grose & Marinkelle' AND ((LENGTH(isolationdate) = 10 AND SUBSTR(isolationdate, 7, 4) || '-' || SUBSTR(isolationdate, 4, 2) || '-' || SUBSTR(isolationdate, 1, 2) < '1991-06-03') OR (LENGTH(isolationdate) = 4 AND isolationdate < '1991')); 
+
+ID-query: C4-Q6
+question: Give me all strains that have the pathotypeserotypetype field equal to  2 and the depositdate field with a date after 2015.
+real query: SELECT * FROM detailedstrain WHERE pathotypeserotypetype = '2' AND ((LENGTH(depositdate) = 10 AND SUBSTR(depositdate, 7, 4) || '-' || SUBSTR(depositdate, 4, 2) || '-' || SUBSTR(depositdate, 1, 2) > '2015-12-31') OR (LENGTH(depositdate) = 4 AND depositdate > '2015'));
+generated query: SELECT * FROM detailedstrain WHERE pathotypeserotypetype = 2 AND ((LENGTH(collectiondate) = 10 AND SUBSTR(collectiondate, 7, 4) || '-' || SUBSTR(collectiondate, 4, 2) || '-' || SUBSTR(collectiondate, 1, 2) > '2015-12-31') OR (LENGTH(collectiondate) = 4 AND collectiondate > '2015')); 
+
+ID-query: C5-Q1
+question: fdgfdg
+real query: gfdgdfgd
+generated query: SELECT * FROM detailedstrain WHERE collectiondate = 'fdgfdg'; 
+
+ID-query: C5-Q2
+question: Select and count all strains that have the cultivar field equal to Oscar and group only those that have the same testedtgmin field. I want it to also show only the groups that have more than 4 examples.
+real query: SELECT testedtgmin, COUNT(*) FROM detailedstrain WHERE cultivar = 'Oscar' GROUP BY testedtgmin HAVING COUNT(*) > 4;
+generated query: SELECT COUNT(*), testedtgmin FROM detailedstrain WHERE collectiondate = '2015' GROUP BY testedtgmin HAVING COUNT(*) > 4; 
+
+ID-query: C5-Q4
+question: Select and count all strains that have the collection field equal to 18 and group only those that have the same typestrain field. I want it to also show only the groups that have more than 8 examples.
+real query: SELECT typestrain, COUNT(*) FROM detailedstrain WHERE collection = 18 GROUP BY typestrain HAVING COUNT(*) > 8;
+generated query: SELECT COUNT(*), typestrain FROM detailedstrain WHERE collection = 18 GROUP BY typestrain HAVING COUNT(*) > 8; 
+
+ID-query: C5-Q6
+question: Select and count all the strains that have the nagoyaprotocol field equal to NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL and group only those that have the same otherdenominations.
+real query: SELECT COUNT(*), otherdenominations FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' GROUP BY otherdenominations;
+generated query: SELECT COUNT(*) FROM detailedstrain WHERE nagoyaprotocol = 'NO KNOWN RESTRICTIONS UNDER THE NAGOYA PROTOCOL' GROUP BY otherdenominations; 
+
+
+
+Correct answers: 12
+Total questions: 30
+Model accuracy: 40.00%
+
+######################################################################################
+

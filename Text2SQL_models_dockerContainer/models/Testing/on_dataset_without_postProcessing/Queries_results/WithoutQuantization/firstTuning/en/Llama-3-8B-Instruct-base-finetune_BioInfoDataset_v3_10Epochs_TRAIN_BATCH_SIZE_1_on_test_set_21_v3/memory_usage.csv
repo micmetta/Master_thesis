@@ -1,0 +1,25 @@
+
+Current category: C1
+
+Current question: Q1
+Give me all rows of strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-08 15:39:23,15.18,15.29
+2025-01-08 15:39:24,15.3,15.71
+
+Current question: Q2
+Give me all strain that have beforenagoya equal to true.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-08 15:39:25,15.22,15.71
+
+Current question: Q3
+Give me all strain that have identificationtechnique equal to Bioassay;ELISA.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-08 15:39:26,15.22,15.91
+
+Current question: Q4
+Select only field called pathogenicity from strain.
+timestamp,allocated_memory_GB,reserved_memory_GB
+2025-01-08 15:39:27,15.22,16.11
+2025-01-08 15:39:28,15.31,16.11
+2025-01-08 15:39:29,15.31,16.11

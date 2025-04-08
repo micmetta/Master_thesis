@@ -1,6 +1,8 @@
 ## General information
 
-- In this folder there is a single script, **'test_dataset.py'**, that allows you to test the accuracy of a fine-tuned LLM on a particular test set.
+- In this folder there are 2 scripts, **'test_dataset.py'** and **test_dataset_improved.py**, that allows you to test the accuracy of a fine-tuned LLM on a particular test set.
+
+- **The difference between 'test_dataset.py' and 'test_dataset_improved.py'** is that the first script does not take advantage of the different acceptable versions of the test sql queries. So since the models might generate a slightly different query than a single reference query, using 'test_dataset.py' will generally yield lower accuracy results than using 'test_dataset_improved.py'. 
 
 - You will be able to configure the values ​​of the model hyperparameters in a custom way.
 
