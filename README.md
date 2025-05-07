@@ -1,1 +1,1 @@
-# Master_thesis
+# Master's thesis - Tesi di Laurea Magistrale
