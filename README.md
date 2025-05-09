@@ -1,6 +1,7 @@
-# Master's thesis - Tesi di Laurea Magistrale
+# Tesi di Laurea Magistrale - Master's thesis
 
-- Il codice sviluppato per l'intero progetto non è pubblicamente disponibile.
+- IT: Il codice sviluppato per l'intero progetto non è pubblicamente disponibile.  
+- EN: The code developed for the entire project is not publicly available.
 
 ## 📄 Abstract (IT)
 Questa tesi si concentra sullo studio e l’implementazione di un sistema nel campo del **Natural Language Processing**, focalizzandosi sul task del **text-to SQ**L applicato all’ambito **biologico**. Verranno descritte le moderne tecniche di deep learning per la risoluzione di questo task, con particolare enfasi sul l’architettura **Transformer**. Inoltre, sarà descritto il database contenente informazioni riguardanti le **collezioni microbiche italiane**, sviluppato all’interno del progetto MIRRI-IT (Microbial Resource Research Infrastructure).   
