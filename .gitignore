@@ -1,2 +1,11 @@
 Text2SQL_models_dockerContainer/models/_lib/pytorch-2.3.0/
 Text2SQL_models_dockerContainer/models/_lib/bitsandbytes/
+
+# Environment and configuration files with sensitive data
+*.env
+.env
+.env.*
+**/configuration.env
+
+# Database dump (dati MIRRI-IT, non ridistribuibili)
+db_scripts/bioInfoDB.sql

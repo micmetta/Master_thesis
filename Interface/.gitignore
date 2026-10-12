@@ -20,6 +20,11 @@
 .DS_Store
 *.pem
 
+# Environment files with sensitive data
+.env
+.env.*
+*.env
+
 # debug
 npm-debug.log*
 yarn-debug.log*
