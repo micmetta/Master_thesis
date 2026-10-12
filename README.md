@@ -6,7 +6,7 @@ To install the TEXT2SQL application, follow these steps:
 You can download the project from the GitHub repository using the following command:
 
 ```bash
-git clone git@github.com:qBioTurin/NL2SQL.git
+git clone -b code https://github.com/micmetta/Master_thesis.git
 ```
 
 ## 2 - Setting cartella db_scripts (optional)
