@@ -15,8 +15,8 @@
 
 ---
 
-- IT: Il codice sviluppato per l'intero progetto è disponibile nel branch [`code`](https://github.com/micmetta/Master_thesis/tree/code) di questa repository.
-- EN: The code developed for the entire project is available in the [`code`](https://github.com/micmetta/Master_thesis/tree/code) branch of this repository.
+- IT: **Il codice sviluppato per l'intero progetto** è disponibile nel branch [`code`](https://github.com/micmetta/Master_thesis/tree/code) di questa repository.
+- EN: **The code developed for the entire project** is available in the [`code`](https://github.com/micmetta/Master_thesis/tree/code) branch of this repository.
 
 ## 📄 Abstract (IT)
 Questa tesi si concentra sullo studio e l’implementazione di un sistema nel campo del **Natural Language Processing**, focalizzandosi sul task del **text-to SQ**L applicato all’ambito **biologico**. Verranno descritte le moderne tecniche di deep learning per la risoluzione di questo task, con particolare enfasi sul l’architettura **Transformer**. Inoltre, sarà descritto il database contenente informazioni riguardanti le **collezioni microbiche italiane**, sviluppato all’interno del progetto MIRRI-IT (Microbial Resource Research Infrastructure).   
