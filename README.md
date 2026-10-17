@@ -1,5 +1,20 @@
 # Tesi di Laurea Magistrale - Master's thesis
 
+## 📁 Contenuto della repository / Repository contents
+
+- IT: Questa repository contiene i seguenti file:
+- EN: This repository contains the following files:
+
+  - **`tesi_magistrale.pdf`**:
+    - IT: Il documento completo della tesi di laurea magistrale.
+    - EN: The full master's thesis document.
+
+  - **`Presentazione_seduta_di_laurea.pdf`**:
+    - IT: Le slide utilizzate durante la seduta di laurea per la presentazione del lavoro.
+    - EN: The slides used during the graduation session to present the work.
+
+---
+
 - IT: Il codice sviluppato per l'intero progetto è disponibile nel branch [`code`](https://github.com/micmetta/Master_thesis/tree/code) di questa repository.
 - EN: The code developed for the entire project is available in the [`code`](https://github.com/micmetta/Master_thesis/tree/code) branch of this repository.
 
