@@ -1,3 +1,17 @@
+> **Disclaimer:** This repository is shared for demonstration purposes only, to showcase the work done during the master's thesis project. The application cannot be fully reproduced without the biological database (`bioInfoDB`), the remote HPC server, and the fine-tuned models, which are not publicly available.
+
+# Project Structure
+
+The repository is organized into 3 main folders:
+
+- **`db_scripts/`**: Contains the SQL script to initialize the experimental database (`experimentalDB.sql`), which stores the queries submitted by users. Note: the biological database dump (`bioInfoDB.sql`) is not included in this repository for privacy reasons.
+- **`Interface/`**: Contains the Next.js web application that provides the user interface for interacting with the NL2SQL system.
+- **`Text2SQL_models_dockerContainer/`**: Contains the scripts for downloading, fine-tuning, and testing the LLMs, as well as the Docker container used to run the inference backend.
+
+> **Note:** This repository includes `.example` configuration files for each `.env` file required by the project. To run the application, copy each `.example` file and rename it removing the `.example` extension, then fill in the required values. Note that the biological database (`bioInfoDB`) is not publicly available, so the application cannot be fully used without it.
+
+---
+
 # Installation
 
 To install the TEXT2SQL application, follow these steps:
